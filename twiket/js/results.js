@@ -1390,7 +1390,7 @@ tw.DrawResults.prototype.show = function(){
 tw.DrawResults.prototype.redrawColumn = function(){
 	var self = this;
 	$(this.dataFlights).empty();
-
+    console.log(this.Columns);
 	if (this.dirNumber == 0) {
 		for (var j=0, FL = this.Columns.arr[0].length; j< FL; j++ ) {
 			$($.tmpl('tmpl_singleTrip', this.Columns.arr[0][j].flight, {dir: 0, listlength: this.Columns.arr[0][j].list.length})).appendTo(this.dataFlights);
