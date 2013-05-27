@@ -859,6 +859,7 @@ function clearExtraElements(){
 	} catch(e){}	
 }
 function testLocalHost(host){
+    return true;
 	var host = host || window.location.host;
 	var re = /onetwotrip\.(az|ua|de|ch|at)$/i;
 	return re.test(host);
@@ -873,6 +874,7 @@ function getFranchiseHost(host){
 	}
 }
 function getSecureHost(){
+    return "http://www.onetwotrip.com/js/secure.onetwotrip.com";
 	var host = window.location.host;
 	if (host.indexOf("www.onetwotrip.") > -1) {
 		return "http://www.onetwotrip.com/js/secure.onetwotrip.com";
