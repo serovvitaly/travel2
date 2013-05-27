@@ -1,0 +1,185 @@
+div#layout_body { padding-top: 50px; }
+
+ul#recentSearches { display: inline-block; padding: 0 0 0 4px; margin: 0; white-space: nowrap; }
+ul#recentSearches li { position: relative; display: inline-block; padding: 0; margin: 0 0 0 -4px; background: #e9e7e0; vertical-align: top;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	   -moz-border-radius: 0 0 5px 5px;
+			border-radius: 0 0 5px 5px;
+	-webkit-box-shadow: 5px 0px 5px rgba(0,0,0,0.4), 0px 5px 5px rgba(0,0,0,0.4);
+	   -moz-box-shadow: 5px 0px 5px rgba(0,0,0,0.4), 0px 5px 5px rgba(0,0,0,0.4);
+			box-shadow: 5px 0px 5px rgba(0,0,0,0.4), 0px 5px 5px rgba(0,0,0,0.4);
+}
+ul#recentSearches li.B { background: #000000; }
+ul#recentSearches li.B a, ul#recentSearches li.B span, ul#recentSearches li.B.selected .route,  ul#recentSearches li.B.selected a { color: white;}
+ul#recentSearches li.B .route { border-bottom: 1px dashed white;}
+ul#recentSearches li.F { background: #EBC354; }
+ul#recentSearches li.selected { z-index: 66; border-bottom: 3px solid #df5333; margin-bottom: -3px; }
+ul#recentSearches a { display: block; text-decoration: none; padding: 3px 16px 3px 12px; }
+ul#recentSearches li.selected a { cursor: default; color: black; }
+ul#recentSearches span.route { display: inline-block; font-size: 80%; color: #346fab; border-bottom: 1px dashed #346fab; height: 1.1em; margin-left: 1ex; }
+ul#recentSearches span.route:first-child { margin-left: 0; }
+ul#recentSearches .selected span.route { color: black; border: 0;}
+ul#recentSearches span.date { font-size: 70%; color: #696564; margin-left: 0.5ex; text-transform: lowercase; }
+ul#recentSearches .close { z-index: 2; position: absolute; top: 1px; right: 1px; width: 15px; height: 14px; background: url(../images/small_cross_close_u0580.png)/*tpa=http://www.onetwotrip.com/images/small_cross_close_u0580.png*/ no-repeat left center; cursor: pointer; }
+ul#recentSearches .close:hover { background-position: -15px center; }
+
+.height0 { height: 0; }
+div#dirTongue, div#searchButtonTongue { z-index: 3; position: relative; padding: 0 15px 10px; background: black;
+	-webkit-border-bottom-left-radius: 7px;
+	-webkit-border-bottom-right-radius: 7px;
+	-webkit-border-radius: 0 0 7px 7px;
+	   -moz-border-radius: 0 0 7px 7px;
+			border-radius: 0 0 7px 7px;
+}
+div#dirTongue { margin: 0 -15px; }
+div#searchButtonTongue { margin: 0 auto; width: 103px; }
+div#searchButtonTongue input { width: 103px; color: white; background: url(../images/button_search.gif)/*tpa=http://www.onetwotrip.com/images/button_search.gif*/ no-repeat left top; text-shadow: 0 -1px 0 #111111, -1px 0 1px #111111; }
+div#searchButtonTongue input:hover, div#searchButtonTongue input:focus, div#searchButtonTongue input:active { background-position: left -35px; }
+div.dirRow { padding-top: 7px; position: relative; }
+div.dirRow:first-child { padding: 0; }
+
+
+form#form_search { text-align: left; }
+form#form_search .spreader { padding: 0 140px; }
+form#form_search #tongueSpreader { bottom: -7px; }
+form#form_search input { font-size: 140%; height: 35px; }
+form#form_search input[type="text"] { line-height: 27px; padding: 4px 9px; }
+form#form_search .suggestField.multiway { z-index: 10; position: absolute; top: 0; right: 0; left: 0; }
+form#form_search .multiway .change { z-index: 7; position: absolute; top: 0; right: 0; bottom: 0; height: 25px; font-size: 80%; line-height: 27px; padding: 5px 9px; color: silver; cursor: pointer;
+	-webkit-transition: .3s color;
+	   -moz-transition: .3s color;
+		 -o-transition: .3s color;
+			transition: .3s color;
+}
+form#form_search .multiway:hover .change { color: #696564; }
+form#form_search .multiway .content { z-index: 6; position: relative; height: 25px; padding: 5px 9px; color: black; }
+form#form_search .multiway .content * { vertical-align: baseline; line-height: 27px; }
+form#form_search .multiway .content .date { text-transform: lowercase; color: #AD1815; }
+form#form_search table.layout>tbody>tr>td { vertical-align: middle; }
+.betweenFromTo { width: 133px; }
+.flightTypeButtons { width: 103px; margin: 0 auto; }
+.flightTypeButtons * { display: inline-block; vertical-align: middle; width: 35px; height: 35px; background: url("../images/buttons_flightType_u0580.png")/*tpa=http://www.onetwotrip.com/images/buttons_flightType_u0580.png*/; cursor: pointer; }
+.flightTypeButtons .selected { cursor: default; }
+.flightTypeButtons .oneway { background-position: 0 0; }
+.flightTypeButtons .oneway:hover { background-position: -103px 0; }
+.flightTypeButtons .oneway.selected { background-position: -206px 0; }
+.flightTypeButtons .round { width: 33px; background-position: -35px 0; }
+.flightTypeButtons .round:hover { background-position: -138px; }
+.flightTypeButtons .round.selected { background-position: -241px 0; }
+.flightTypeButtons .multiway { background-position: -68px 0; }
+.flightTypeButtons .multiway:hover { background-position: -171px 0; }
+.flightTypeButtons .multiway.selected { background-position: -274px 0; }
+
+.suggestField .calendarButton { z-index: 7; position: absolute; top: 0; right: 1px; bottom: 0; padding: 0 8px 0 7px; min-width: 2ex; text-align: center; text-shadow: 0 -1px 0 #111, -1px 0 1px #111; color: white; cursor: pointer;
+	background: url(../images/button_calendar.gif)/*tpa=http://www.onetwotrip.com/images/button_calendar.gif*/ no-repeat right;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+			background-size: 100% 100%;
+}
+.suggestField .calendarButton div.lineSpreader { display: inline-block; vertical-align: middle; line-height: 35px; width: 1px; }
+.suggestField .calendarButton div.text { display: inline-block; vertical-align: middle; }
+.suggestField .calendarButton div.month { font-size: 70%; margin-top: -0.4em; font-variant: small-caps; }
+
+div#layout_recentSearches { z-index: 1; position: absolute; bottom: -35px; left: 0; right: 0; height: 35px; overflow: hidden; }
+div#layout_recentSearches div.spreader { padding-left: 140px; position: static; }
+
+#pressLinks { position: absolute; bottom: 0; left:0; right:0; z-index: 1; }
+#pressLinks .pressBlock { text-align: center;}
+#pressLinks ul { margin: 0; padding: 0; list-style-type: none; display: inline-block;}
+#pressLinks li { margin: 0 15px; display: inline;}
+#pressLinks li a { background-image: url("../images/map/press_u0580.png")/*tpa=http://www.onetwotrip.com/images/map/press_u0580.png*/; background-repeat: no-repeat; height: 44px; display: inline-block; outline: none; opacity: 0.4;}
+#pressLinks li a:hover { opacity: 1; }
+#pressLinks li a.bloomberg { background-position: 0px 0px; width: 142px;}
+#pressLinks li a.kommersant { background-position: -142px 0px; width: 143px;}
+#pressLinks li a.hopesfears { background-position: -285px 0px; width: 142px;}
+#pressLinks li a.itartass { background-position: -427px 0px; width: 88px;}
+#pressLinks li a.techcrunch { background-position: -515px 0px; width: 82px;}
+#pressLinks li a.tnooz { background-position: -597px 0px; width: 105px;}
+
+.tag_price { position: absolute; z-index: 2; }
+.tag_big, .tag_small { position: relative; }
+.tag_big { background-image: url("../images/tag/big_u0580.png")/*tpa=http://www.onetwotrip.com/images/tag/big_u0580.png*/; width: 244px; height: 359px; position: absolute; left: 85px; top: 58px; }
+.tag_small .empty_link { position: absolute; width: 75px; height: 25px; top: 22px; left: 10px; }
+.price_content { position: absolute; left: 0; right:0; top: 110px; padding-right: 15px;; color: #401d08; }
+.tag_close { position: absolute; right: 30px; top: -10px; cursor: pointer; white-space: nowrap; }
+.tag_close .w { font-size: 12px; text-decoration: underline;}
+.tag_close .c { background-image: url("../images/tag/cross_u0580.png")/*tpa=http://www.onetwotrip.com/images/tag/cross_u0580.png*/; width: 11px; height: 11px; margin: 0 0 -2px 5px; }
+.tag_close * { display: inline-block;}
+.tag_price .header { font-size: 24px; font-weight: bold; text-align: center; line-height: 21px; margin-top: -60px; }
+.tag_price .info { font-size: 12px; padding: 20px 10px 0; }
+
+iframe#ticker { z-index: 5; position: absolute; right: 160px; bottom: 60px; border: none; overflow: hidden; background: transparent;
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+			border-radius: 10px;
+	-webkit-box-shadow: 5px 0px 5px rgba(0,0,0,0.4), 0px 5px 5px rgba(0,0,0,0.4);
+	   -moz-box-shadow: 5px 0px 5px rgba(0,0,0,0.4), 0px 5px 5px rgba(0,0,0,0.4);
+			box-shadow: 5px 0px 5px rgba(0,0,0,0.4), 0px 5px 5px rgba(0,0,0,0.4);
+}
+
+div#infoPanel { z-index: 3; position: relative; height: 38px; background-image: url("../images/lead/leadpanel_u0580.png")/*tpa=http://www.onetwotrip.com/images/lead/leadpanel_u0580.png*/; background-repeat: repeat-x; display: none; }
+div#infoPanel .advText { text-shadow: #000000 3px 3px 5px; font-size: 88%; position: relative; display: inline-block; margin: 5px 0 0 125px; }
+div#infoPanel .attent { font-size: 142%; }
+div#infoPanel a { color: white; text-shadow: none; margin-left: 15px; text-decoration: none; border-bottom: 1px solid; }
+div#infoPanel .close_button { right: -60px; top: 0px; }
+
+.middleSearchRotation { text-align: center; margin-top: 15px; }
+.loader.moveTop { margin-top: -15px;}
+
+#promoCodePopup { width: 563px; padding: 30px 0 10px; color: #4D4D4D; }
+#promoCodePopup .head, #promoCodePopup .code, #promoCodePopup .description { text-align: center; }
+#promoCodePopup .head, #promoCodePopup .code { font-family: 'PT Serif', 'Times New Roman', Times, serif; font-size: 150%; }
+#promoCodePopup .code { font-weight: bold; margin: 0.4em 0; font-size: 130%; }
+#promoCodePopup .code span { position: relative; display: inline-block; }
+#promoCodePopup .code span:before, #promoCodePopup .code span:after { content: ''; display: inline-block; position: absolute; top: 0; bottom: 0; margin: auto 0; width: 50px; height: 1px; background: #C7C7C7; }
+#promoCodePopup .code span:before { left: -65px; }
+#promoCodePopup .code span:after { right: -65px; }
+#promoCodePopup .description { font-size: 85%; }
+#promoCodePopup table { width: 437px; margin: 0 auto; }
+#promoCodePopup table td { vertical-align: baseline; }
+#promoCodePopup table td:first-child { padding-left: 55px; }
+#promoCodePopup button { width: 107px; padding: 9px 0; color: White;
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+			border-radius: 4px;
+	border-collapse: separate;
+}
+#promoCodePopup .emailRow button { background-color: #44A9DA;
+	-webkit-box-shadow: 0 1px 0 1px #5189c5;
+	   -moz-box-shadow: 0 1px 0 1px #5189c5;
+			box-shadow: 0 1px 0 1px #5189c5;
+}
+#promoCodePopup .emailRow button:active { color: #B1C3CA; background-color: #398AB1;
+	-webkit-box-shadow: 0 1px 0 1px #647692;
+	   -moz-box-shadow: 0 1px 0 1px #647692;
+			box-shadow: 0 1px 0 1px #647692;
+}
+#promoCodePopup .timeRow button { background-color: #91A9AF;
+	-webkit-box-shadow: 0 1px 0 1px #7F8485;
+	   -moz-box-shadow: 0 1px 0 1px #7F8485;
+			box-shadow: 0 1px 0 1px #7F8485;
+}
+#promoCodePopup .timeRow button:active { color: #B1C3CA; background-color: #788A90;
+	-webkit-box-shadow: 0 1px 0 1px #767A7B;
+	   -moz-box-shadow: 0 1px 0 1px #767A7B;
+			box-shadow: 0 1px 0 1px #767A7B;
+}
+#promoCodePopup label { margin: 1.2em 0 0.6em; display: inline-block; font-size: 85%; }
+#promoCodePopup .emailRow input { border: 1px solid #B3B3B3; border-radius: 2px; width: 257px; }
+#promoCodePopup .counterBlock { position: relative; display: inline-block; text-align: center; }
+#promoCodePopup .counterLabel { margin-top: -1.2em; font-size: 90%; }
+#promoCodePopup .counter { font-size: 150%; }
+#promoCodePopup .counter span { position: relative; display: inline-block; text-align: left; margin: 0 0.3em; }
+#promoCodePopup .counter span span { position: absolute; left: 0px; bottom: -1.2em; font-size: 40%; color: #808080; text-transform: capitalize; }
+#promoCodePopup .emailRow div.field:before, #promoCodePopup .counterBlock:before, #promoCodePopup .counterBlock:after { content: ''; position: absolute; top: -9px; bottom: -9px; margin: auto 0; background: url(../images/ico/promoCode_u0580.png)/*tpa=http://www.onetwotrip.com/images/ico/promoCode_u0580.png*/ no-repeat; }
+#promoCodePopup .emailRow div.field:before { width: 36px; height: 25px; background-position: left center; left: -55px; }
+#promoCodePopup .counterBlock:before { width: 37px; height: 36px; background-position: -36px center; left: -55px; }
+#promoCodePopup .counterBlock:after { width: 55px; height: 46px; background-position: right center; right: -70px; }
+#promoCodePopup .timeRow td { padding-top: 1.2em; }
+#promoCodePopup button:focus { opacity: 0.9; }
+#promoCodePopup button[disabled] { opacity: 0.5; }
+#promoCodePopup .statusRow td { height: 1.2em; }
+#promoCodePopup .statusRow td div { padding: 0.4em 0 0.6em; font-size: 90%; color: Green; }
+#promoCodePopup .statusRow td div.error { color: Red; }

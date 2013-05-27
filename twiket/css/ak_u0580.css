@@ -1,0 +1,236 @@
+.akPlate { position: relative; background: #898989; color: white; }
+.akPlate .logo { z-index: 0; position: absolute; top: 0; right: 0; bottom: 0; width: 200px; background-repeat: no-repeat !important; background-position: 90px center !important;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+	-webkit-border-radius: 0 10px 10px 0;
+	   -moz-border-radius: 0 10px 10px 0;
+            border-radius: 0 10px 10px 0;
+}
+.akPlate.noBg {background:none;}
+.akPlate .logo.moved {background-position: 30px center !important;}
+.akPlate.A3 {background: #052960;}
+.akPlate.A3 .logo {opacity: 0.15}
+.akPlate.A9 {background: #ed1b23;}
+.akPlate.A9 .logo {opacity: 0.25}
+.akPlate.AA {background: #003478; color: #d2d9e9;}
+.akPlate.AA .logo {opacity: 0.15}
+.akPlate.AB {background: #cc1f2f;}
+.akPlate.AB .logo {opacity: 0.22}
+.akPlate.AF {background: #CDDDE9; color: #051039;}
+.akPlate.AF .logo {opacity: 0.3}
+.akPlate.AI {background: #fbf0c8; color: #b80909;}
+.akPlate.AI .logo {opacity: 0.5}
+.akPlate.AM {background: #152453;}
+.akPlate.AM .logo {opacity: 0.15}
+.akPlate.AT {background: #f08f00; color: #cd1e0b;}
+.akPlate.AT .logo {opacity: 0.25}
+.akPlate.AY {background: #182c7e; color: #ededed;}
+.akPlate.AY .logo {opacity: 0.15}
+.akPlate.AZ {background: #0f6735;}
+.akPlate.AZ .logo {opacity: 0.15}
+.akPlate.B2 {background: #48679e;}
+.akPlate.B2 .logo {opacity: 0.25}
+.akPlate.BA {background: #0046a6;}
+.akPlate.BA .logo {opacity: 0.15}
+.akPlate.BD {background: #000000; color: #85aad9;}
+.akPlate.BD .logo {opacity: 0.15}
+.akPlate.BT {background: #cdda32; color: #152649;}
+.akPlate.BT .logo {opacity: 0.4}
+.akPlate.BY {background: #c3e2ff; color: #ef0000;}
+.akPlate.BY .logo {opacity: 0.5}
+.akPlate.CA {background: #fa3139; color: #000000;}
+.akPlate.CA .logo {opacity: 0.3}
+.akPlate.CO {background: #003399; color: #ffcc00;}
+.akPlate.CO .logo {opacity: 0.23}
+.akPlate.CX {background: #0b5e64;}
+.akPlate.CX .logo {opacity: 0.23}
+.akPlate.CY {background: #2d377d; color: #ecd35f;}
+.akPlate.CY .logo {opacity: 0.25}
+.akPlate.CZ {background: #00214f;}
+.akPlate.CZ .logo {opacity: 0.25}
+.akPlate.D7 {background: #cf0000;}
+.akPlate.D7 .logo {opacity: 0.24}
+.akPlate.DJ {background: #c30000;}
+.akPlate.DJ .logo {opacity: 0.24}
+.akPlate.DL {background: #003366;}
+.akPlate.DL .logo {opacity: 0.23}
+.akPlate.EK {background: #cbc1b3; color: #cc3333;}
+.akPlate.EK .logo {opacity: 0.23}
+.akPlate.EY {background: #000000; color: #ddb345;}
+.akPlate.EY .logo {opacity: 0.25}
+.akPlate.FB {background: #00a551;}
+.akPlate.FB .logo {opacity: 0.25}
+.akPlate.FI {background: #00458b; color: #ff9c00;}
+.akPlate.FI .logo {opacity: 0.18}
+.akPlate.FM {background: #e51f3a;}
+.akPlate.FM .logo {opacity: 0.24}
+.akPlate.FR {background: #190b7e; color: #f8f859;}
+.akPlate.FR .logo {opacity: 0.25}
+.akPlate.FV {background: #d9d9d9; color: #e4583d;}
+.akPlate.FV .logo {opacity: 0.5}
+.akPlate.GA {background: #1f99a6; color: #05285e;}
+.akPlate.GA .logo {opacity: 0.23}
+.akPlate.GW {background: #00401e; color: #f7df00;}
+.akPlate.GW .logo {opacity: 0.13}
+.akPlate.HG {background: #d30027;}
+.akPlate.HG .logo {opacity: 0.16}
+.akPlate.HU {background: #d6040f; color: #ffdc20;}
+.akPlate.HU .logo {opacity: 0.22}
+.akPlate.HX {background: #006600;}
+.akPlate.HX .logo {opacity: 0.2}
+.akPlate.HY {background: #fedf00; color: #009049;}
+.akPlate.HY .logo {opacity: 0.4}
+.akPlate.IB {background: #ce0402; color: #e6b500;}
+.akPlate.IB .logo {opacity: 0.22}
+.akPlate.IG {background: #ed1e24;}
+.akPlate.IG .logo {opacity: 0.22}
+.akPlate.IT {background: #c70f23; color: #f99a1e;}
+.akPlate.IT .logo {opacity: 0.25}
+.akPlate.IZ {background: #ff6b00;}
+.akPlate.IZ .logo {opacity: 0.3}
+.akPlate.J2 {background: #0056a3;}
+.akPlate.J2 .logo {opacity: 0.22}
+.akPlate.JK {background: #102B52; color: #ef8213;}
+.akPlate.JK .logo {opacity: 0.18}
+.akPlate.JL {background: #CC0000; color: #000000;}
+.akPlate.JL .logo {opacity: 0.24}
+.akPlate.JP {background: #27347a;}
+.akPlate.JP .logo {opacity: 0.25}
+.akPlate.JU {background: #1d398d;}
+.akPlate.JU .logo {opacity: 0.2}
+.akPlate.KC {background: #a5965d; color: #304296;}
+.akPlate.KC .logo {opacity: 0.22}
+.akPlate.KE {background: #83aa8c; color: #00529c;}
+.akPlate.KE .logo {opacity: 0.33}
+.akPlate.KF {background: #acacb9; color: #1f7dd5;}
+.akPlate.KF .logo {opacity: 0.25}
+.akPlate.KK {background: #e61e25;}
+.akPlate.KK .logo {opacity: 0.21}
+.akPlate.KL {background: #2597cc;}
+.akPlate.KL .logo {opacity: 0.24}
+.akPlate.KM {background: #dfdfdf; color: #b52118;}
+.akPlate.KM .logo {opacity: 0.5}
+.akPlate.KV {background: #21409a;}
+.akPlate.KV .logo {opacity: 0.25}
+.akPlate.LA {background: #a1aab1; color: #073477;}
+.akPlate.LA .logo {opacity: 0.21}
+.akPlate.LH {background: #ffb300; color: #0d1d62;}
+.akPlate.LH .logo {opacity: 0.3}
+.akPlate.LO {background: #063177;}
+.akPlate.LO .logo {opacity: 0.2}
+.akPlate.LX {background: #CC0000;}
+.akPlate.LX .logo {opacity: 0.2}
+.akPlate.LY {background: #948771;}
+.akPlate.LY .logo {opacity: 0.2}
+.akPlate.MA {background: #cfcecd; color: #002082;}
+.akPlate.MA .logo {opacity: 0.4}
+.akPlate.MH {background: #d4d4d4; color: #3f58a2;}
+.akPlate.MH .logo {opacity: 0.5}
+.akPlate.MI {background: #016259;}
+.akPlate.MI .logo {opacity: 0.2}
+.akPlate.MK {background: #c4cb6e; color: #0f8abe;}
+.akPlate.MK .logo {opacity: 0.3}
+.akPlate.MP {background: #d90020;}
+.akPlate.MP .logo {opacity: 0.3}
+.akPlate.MQ {background: #fe0000;}
+.akPlate.MQ .logo {opacity: 0.4}
+.akPlate.MS {background: #39c0f3; color: #052c63;}
+.akPlate.MS .logo {opacity: 0.2}
+.akPlate.MU {background: #da4f0c;}
+.akPlate.MU .logo {opacity: 0.2}
+.akPlate.NH {background: #daebf3; color: #002596;}
+.akPlate.NH .logo {opacity: 0.5}
+.akPlate.NZ {background: #003E4A;}
+.akPlate.NZ .logo {opacity: 0.2}
+.akPlate.OK {background: #e4e4de; color: #dd2c36;}
+.akPlate.OK .logo {opacity: 0.5}
+.akPlate.OM {background: #6ed0ff; color: #00007c;}
+.akPlate.OM .logo {opacity: 0.25}
+.akPlate.OS {background: #b8d8ed; color: #d21c05;}
+.akPlate.OS .logo {opacity: 0.5}
+.akPlate.OU {background: #d5010d;}
+.akPlate.OU .logo {opacity: 0.3}
+.akPlate.OV {background: #fdbf00; color: #001a51;}
+.akPlate.OV .logo {opacity: 0.4}
+.akPlate.OZ {background: #9c9080;}
+.akPlate.OZ .logo {opacity: 0.2}
+.akPlate.PG {background: #dedfe1; color: #1c3f78;}
+.akPlate.PG .logo {opacity: 0.5}
+.akPlate.PS {background: #006fb4; color: #fed813;}
+.akPlate.PS .logo {opacity: 0.23}
+.akPlate.QF {background: #ed1c24;}
+.akPlate.QF .logo {opacity: 0.27}
+.akPlate.QK {background: #06a84e;}
+.akPlate.QK .logo {opacity: 0.21}
+.akPlate.QR {background: #63003D;}
+.akPlate.QR .logo {opacity: 0.23}
+.akPlate.RJ {background: #eae9db; color: #6e6c71;}
+.akPlate.RJ .logo {opacity: 0.5}
+.akPlate.RM {background: #ebac4f; color: #316698;}
+.akPlate.RM .logo {opacity: 0.24}
+.akPlate.S4 {background: #52c5e1; color: #002856;}
+.akPlate.S4 .logo {opacity: 0.19}
+.akPlate.S7 {background: #bbd506; color: #d21d3c;}
+.akPlate.S7 .logo {opacity: 0.5}
+.akPlate.SA {background: #537eb4;}
+.akPlate.SA .logo {opacity: 0.25}
+.akPlate.SK {background: #040498;}
+.akPlate.SK .logo {opacity: 0.24}
+.akPlate.SN {background: #e03700;}
+.akPlate.SN .logo {opacity: 0.22}
+.akPlate.SQ {background: #7f8996; color: #fcb130;}
+.akPlate.SQ .logo {opacity: 0.24}
+.akPlate.SU {background: #0e4274;}
+.akPlate.SU .logo {opacity: 0.21}
+.akPlate.TG {background: #3D1A6F; color: #fbc608;}
+.akPlate.TG .logo {opacity: 0.22}
+.akPlate.TK {background: #ee2e24;}
+.akPlate.TK .logo {opacity: 0.25}
+.akPlate.TP {background: #bed732; color: #333333;}
+.akPlate.TP .logo {opacity: 0.25}
+.akPlate.U6 {background: #d31b2b;}
+.akPlate.U6 .logo {opacity: 0.22}
+.akPlate.U8 {background: #f7941d;}
+.akPlate.U8 .logo {opacity: 0.25}
+.akPlate.U9 {background: #2b8aca; color: #e5d495;}
+.akPlate.U9 .logo {opacity: 0.23}
+.akPlate.UA {background: #003399;}
+.akPlate.UA .logo {opacity: 0.23}
+.akPlate.UL {background: #d91340;}
+.akPlate.UL .logo {opacity: 0.22}
+.akPlate.UN {background: #62b1e2; color: #0f4896;}
+.akPlate.UN .logo {opacity: 0.27}
+.akPlate.UO {background: #e50011; color: #fbf032;}
+.akPlate.UO .logo {opacity: 0.22}
+.akPlate.UR {background: #1d3068;}
+.akPlate.UR .logo {opacity: 0.23}
+.akPlate.US {background: #0a2b5c;}
+.akPlate.US .logo {opacity: 0.23}
+.akPlate.UT {background: #1d3068;}
+.akPlate.UT .logo {opacity: 0.23}
+.akPlate.UX {background: #d6e1ef; color: #4d83bf;}
+.akPlate.UX .logo {opacity: 0.4}
+.akPlate.VO {background: #b8d8ed; color: #1a171b;}
+.akPlate.VO .logo {opacity: 0.5}
+.akPlate.VS {background: #c30000;}
+.akPlate.VS .logo {opacity: 0.22}
+.akPlate.VV {background: #fae01a; color: #005dab;}
+.akPlate.VV .logo {opacity: 0.5}
+.akPlate.VY {background: #ffcd05; color: #666666;}
+.akPlate.VY .logo {opacity: 0.35}
+.akPlate.WN {background: #1A2B8A; color: #C2CAF1;}
+.akPlate.WN .logo {opacity: 0.2}
+.akPlate.WS {background: #00958f; color: #01295c;}
+.akPlate.WS .logo {opacity: 0.21}
+.akPlate.XF {background: #ef633a;}
+.akPlate.XF .logo {opacity: 0.49}
+.akPlate.XM {background: #00907f;}
+.akPlate.XM .logo {opacity: 0.2}
+.akPlate.XW {background: #c64594; color: #fcbd38;}
+.akPlate.XW .logo {opacity: 0.23}
+.akPlate.YM {background: #005BAA;}
+.akPlate.YM .logo {opacity: 0.21}
+.akPlate.Z6 {background: #0062af; color: #ffcc00;}
+.akPlate.Z6 .logo {opacity: 0.22}
+.akPlate.NN {background: #e5087d;}
+.akPlate.NN .logo {opacity: 0.21}

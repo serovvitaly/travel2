@@ -1,0 +1,67 @@
+#filter_block { position: relative; z-index: 1; width: 1000px; margin: 0px auto; }
+.FilterWrapper { position: absolute; right: 20px; top: 100px; }
+#Filter { position: relative;
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+			border-radius: 10px;
+	background: url("../images/filter/f_panel_u0580.png")/*tpa=http://www.onetwotrip.com/images/filter/f_panel_u0580.png*/ no-repeat; background-size: 100% 100%; /*Old*/
+	/* @alternate */ background: -webkit-gradient(linear, left top, left bottom, from(rgba(100,100,100,1)), to(rgba(1,1,1,0.9)) );
+	/* @alternate */ background: -webkit-linear-gradient(top, rgba(100,100,100,1), rgba(1,1,1,0.9));
+	/* @alternate */ background:    -moz-linear-gradient(top, rgba(100,100,100,1), rgba(1,1,1,0.9));
+	/* @alternate */ background: 	-ms-linear-gradient(top, rgba(100,100,100,1), rgba(1,1,1,0.9));
+	/* @alternate */ background: 	 -o-linear-gradient(top, rgba(100,100,100,1), rgba(1,1,1,0.9));
+	/* @alternate */ background: 		linear-gradient(to bottom, rgba(100,100,100,1), rgba(1,1,1,0.9));
+	/*filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorStr=#00646464,endColorStr=#cc010101); @TODO IE8*/
+}
+#Filter .f_content {position: relative;	padding: 0px .2em 1.5em .2em; color: white; font-size: 70%; text-shadow: #444444 1px 1px 0px;}
+#Filter .f_content table {border-collapse: collapse; width:100%;}
+#Filter .f_content table td {padding: 1em 0; }
+	#Filter .f_content table .f1_group td { padding: 1.5em 0 .5em 0;}
+	#Filter .f_content table .f2_group tr:first-child td { padding-top: 45px;}
+	#Filter .f_content table .f3_group tr td { padding: 0.7em 0;}
+	#Filter .f_content table .f3_group tr:first-child td { padding-top: 25px;}
+#Filter .f_directions { text-align: center;}
+#Filter .f_top_ico { display: inline-block; text-align: center; padding: 0px 20px; cursor: pointer; position: relative;}
+#Filter .f_directions .f_sea, #Filter .f_directions .f_mountain {background: url("../images/filter/f_nature_u0580.png")/*tpa=http://www.onetwotrip.com/images/filter/f_nature_u0580.png*/; width: 40px; height: 18px; background-position: 0px 0px;}
+#Filter .f_directions .f_mountain { background-position: -40px 0px; }
+/*#Filter .f_directions .selected {cursor: default; }*/
+#Filter .f_directions .selected .selection {display: block; position: absolute; top:-7px; left:3px; z-index: 0; background-image: url("../images/filter/selection_u0580.png")/*tpa=http://www.onetwotrip.com/images/filter/selection_u0580.png*/; width: 73px; height: 49px; background-repeat: no-repeat;}
+#Filter .f_directions .selection { display: none;}
+
+#Filter .ico {background: url("../images/filter/f_controls_u0580.png")/*tpa=http://www.onetwotrip.com/images/filter/f_controls_u0580.png*/; width: 26px; height: 26px; margin:0px .3em; }
+	#Filter .f_price {background-position: -52px 0px;}
+	#Filter .f_diamond {background-position: -78px 0px;}
+	#Filter .f_cold {background-position: -104px 0px;}
+	#Filter .f_hot {background-position: 26px 0px;}
+#Filter .ui-slider-handle { background: url("../images/filter/f_controls_u0580.png")/*tpa=http://www.onetwotrip.com/images/filter/f_controls_u0580.png*/; width: 26px; height: 26px; background-position: 0px 0px; border: 0px; cursor: pointer; outline: none;}
+#Filter #filter_time .ui-slider-handle {background-position: -26px 0px;}
+#filter_water, #filter_air {
+	background: url("../images/filter/f_temperature_u0580.png")/*tpa=http://www.onetwotrip.com/images/filter/f_temperature_u0580.png*/ no-repeat; background-size: 100% 100%; /*Old*/
+	/* @alternate */ background: -webkit-gradient(linear, left top, right top, from(rgba(35,145,250,1)), to(rgba(230,35,60,1)) );
+	/* @alternate */ background: -webkit-linear-gradient(left, rgba(35,145,250,1), rgba(230,35,60,1));
+	/* @alternate */ background:    -moz-linear-gradient(left, rgba(35,145,250,1), rgba(230,35,60,1));
+	/* @alternate */ background: 	-ms-linear-gradient(left, rgba(35,145,250,1), rgba(230,35,60,1));
+	/* @alternate */ background: 	 -o-linear-gradient(left, rgba(35,145,250,1), rgba(230,35,60,1));
+	/* @alternate */ background: 		linear-gradient(to right, rgba(35,145,250,1), rgba(230,35,60,1));
+	/*filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorStr='#2391fa', endColorStr='#e6233c'); @TODO IE8*/
+}
+#Filter .f_optiontext { position: absolute; z-index: 1; top: -25px;}
+#filter_price, #filter_time, #filter_air, #filter_water { width: 120px; }	
+
+.ui-slider { position: relative; text-align: left; }
+.ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 1.2em; height: 1.2em; cursor: default; }
+.ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; background-position: 0 0; }
+#Filter .ui-slider-horizontal { height: 5px; border: 1px solid #AAAAAA; border-top: 0px; background-color: #111111;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+			border-radius: 5px;
+}
+.ui-slider-horizontal .ui-slider-handle { top: -.9em; margin-left: -1.2em; }
+.ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; }
+.ui-slider-horizontal .ui-slider-range-min { left: 0; }
+.ui-slider-horizontal .ui-slider-range-max { right: 0; }
+.ui-slider-vertical { width: .8em; height: 100px; }
+.ui-slider-vertical .ui-slider-handle { left: -.3em; margin-left: 0; margin-bottom: -.6em; }
+.ui-slider-vertical .ui-slider-range { left: 0; width: 100%; }
+.ui-slider-vertical .ui-slider-range-min { bottom: 0; }
+.ui-slider-vertical .ui-slider-range-max { top: 0; }

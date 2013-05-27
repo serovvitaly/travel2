@@ -1,0 +1,29 @@
+body { font: 1em/1.2 Arial, sans-serif; }
+.nomargin { margin: 0px;}
+.FAQlist .listWrapper { background-color: #f5d244; color: #512609; font-size: 14px; }
+.FAQlist .common_block { padding: 10px 10px 0 25px; line-height: 21px; }
+.FAQlist .menu_content { list-style: decimal; line-height: 21px; }
+.FAQlist ul.list { list-style-type: none; margin: 0px; padding: 0px 20px 10px; line-height: 21px;}
+.FAQlist ul.list li { padding-top: 30px;}
+.FAQlist ul.list table { border-collapse: collapse; }
+.FAQlist ul.list table td:first-child { vertical-align: top; white-space: nowrap; padding-right: 10px; }
+.FAQlist .question { font-weight: bold; font-size: 35px; line-height: 30px; padding: 0; position: relative;}
+.FAQlist .answer { margin: 5px 0 0 2px; }
+.FAQlist ul.list .answer li {padding: 0;}
+.FAQlist .baggageList a { margin-right: 15px; display: inline-block;}
+.FAQlist .num { width: 22px; height: 27px; background-repeat: no-repeat; display: inline-block; }
+.FAQlist .one { background-image: url("/images/digits/1_u0580.png");}
+.FAQlist .two { background-image: url("/images/digits/2_u0580.png");}
+.FAQlist .three { background-image: url("/images/digits/3_u0580.png");}
+.FAQlist .four { background-image: url("/images/digits/4_u0580.png");}
+.FAQlist .five { background-image: url("/images/digits/5_u0580.png");}
+.FAQlist .six { background-image: url("/images/digits/6_u0580.png");}
+.FAQlist .seven { background-image: url("/images/digits/7_u0580.png");}
+.FAQlist .eight { background-image: url("/images/digits/8_u0580.png");}
+.FAQlist .nine { background-image: url("/images/digits/9_u0580.png");}
+.FAQlist .zero { background-image: url("/images/digits/0_u0580.png");}
+.FAQlist .phone { white-space: nowrap; }
+#helpSuggest { z-index: 100; }
+#helpSuggest ul { padding: 0;}
+#helpSuggest li { max-width: 920px;}
+#helpSuggest table td { padding: 0;}

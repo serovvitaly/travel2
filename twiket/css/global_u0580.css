@@ -1,0 +1,52 @@
+html, body { position: relative; margin: 0; padding: 0; color: black; }
+html { height:100%; font-size: 100.1%; }
+body { min-height: 100%; min-width: 1000px; font: 1em/1.2 Arial, sans-serif; }
+body.progress { cursor: progress; }
+
+* {
+	font: inherit;
+	color: inherit;
+}
+ul, ol, li,
+form, label, input, select, button, optgroup, option,
+table, thead, tfoot, tbody, tr, th, td { margin: 0; padding: 0; border: none; text-align: left; vertical-align: baseline; }
+
+b, .bold { font-weight: bold; }
+a, .link { color: #2b76ac; cursor: pointer; text-decoration: underline; }
+.dashed, .dotted { text-decoration: none; border-bottom: 1px dashed; cursor: pointer; }
+.dotted { border-bottom-style: dotted; display: inline-block; line-height: 0.9; }
+a img { border: none; vertical-align: middle; }
+
+table { border-collapse: collapse; }
+table.layout { width: 100%; table-layout: fixed; }
+table.layout > tbody > tr > td { padding: 0; vertical-align: top; }
+
+ul>li { list-style: none; }
+
+input:not([type="checkbox"]):not([type="radio"]) { outline: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+button, input[type="button"], input[type="submit"], input[type="reset"] { outline: none; background: none; text-align: center; cursor: pointer; }
+button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="reset"]::-moz-focus-inner { margin: 0; border: 0; padding: 0; }
+
+.abs, .abs>* { position: absolute; background-repeat: no-repeat; }
+.abs>.t { top: 0; background-position: top; background-repeat: repeat-x; }
+.abs>.b { bottom: 0; background-position: bottom; background-repeat: repeat-x; }
+.abs>.l { left: 0; background-position: left; background-repeat: repeat-y; }
+.abs>.r { right: 0; background-position: right; background-repeat: repeat-y; }
+.abs>.l, .abs>.r, .abs>.c {/* Opera */ padding: 0%; }
+.abs>.tl { top: 0; left: 0; background-position: top left; }
+.abs>.tr { top: 0; right: 0; background-position: top right; }
+.abs>.bl { bottom: 0; left: 0; background-position: bottom left; }
+.abs>.br { bottom: 0; right: 0; background-position: bottom right; }
+
+.invis { display: none; }
+.vis { display: block; }
+.invisible { display: none !important; }
+.inlineBlock { display: inline-block; }
+.clear { clear: both; }
+.hidden { visibility: hidden; }
+.unhidden { visibility: visible; }
+.italic {font-style: italic;}
+.nowrap { white-space: nowrap;}
+.capitalize { text-transform: capitalize;}
+/*ie10*/
+canvas {-ms-touch-action: double-tap-zoom;}

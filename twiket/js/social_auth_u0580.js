@@ -103,10 +103,11 @@ function SocialAuth(json){
 	}
 	this.initVisitor();
 }
-SocialAuth.prototype.initVisitor = function(isFromSocialRedirect){
+SocialAuth.prototype.initVisitor = function(isFromSocialRedirect){  return;
 	var self = this;
 	tw.params.referrer =  (document.referrer && document.referrer !== "") ? document.referrer : "empty";
-	tw.params.franchise_id = window.location.hostname;
+    //tw.params.franchise_id = window.location.hostname;
+	tw.params.franchise_id = 'onetwotrip';
 	var showForm = false;
 	if(tw.params.lid && !readCookie("vid") && !readCookie("lid")){
 		showForm = true;
@@ -117,7 +118,8 @@ SocialAuth.prototype.initVisitor = function(isFromSocialRedirect){
 	$.ajax({
 		type: "get",
 		cache: false,
-		url: (testLocalHost() ? ("https://" + getSecureHost()) : "") + "/_api/visitormanager/get/",
+        //url: (testLocalHost() ? ("https://" + getSecureHost()) : "") + "/_api/visitormanager/get/",
+		url: "https://secure.onetwotrip.com/_api/visitormanager/get/",
 		dataType: (testLocalHost() ? "jsonp" : "json"),
 		data: tw.params,
 		timeout: 10000,

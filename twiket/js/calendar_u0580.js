@@ -85,15 +85,15 @@ Calendar.prototype.createStructure = function(){
 	});
 	this.elPrevMonth = $('td.roll.left span.month', this.elMonths)[0];
 	this.elNextMonth = $('td.roll.right span.month', this.elMonths)[0];
-	this.elMonthLeft = $('http://www.onetwotrip.com/js/td.month.left', this.elMonths)[0];
+	this.elMonthLeft = $('td.month.left', this.elMonths)[0];
 	this.elMonthRight = $('td.month.right', this.elMonths)[0];
 	
-	this.elRollTable = $("http://www.onetwotrip.com/js/div.body table.roll", this.elCalendar)[0];
+	this.elRollTable = $("div.body table.roll", this.elCalendar)[0];
 	this.elRollRow = this.elRollTable.rows[0];
 	
 	this.drawMonths();
 	this.drawNavigation();
-	this.elBody = $("http://www.onetwotrip.com/js/div.body", this.elCalendar)[0];
+	this.elBody = $("div.body", this.elCalendar)[0];
 	$(this.elCalendar).appendTo(this.appendTo);
 };
 Calendar.prototype.drawNavigation = function(){
@@ -289,7 +289,7 @@ Calendar.prototype.checkSchedule = function(){
 		}
 	}
 };
-Calendar.prototype.getSchedule = function(period){
+Calendar.prototype.getSchedule = function(period){   return;
 	var self = this;
 	var key = this.dataDir.from + this.dataDir.to + firstSelectedStraightDirIndex;
 	var dirs = [];

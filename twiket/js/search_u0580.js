@@ -50,12 +50,12 @@ function initTicker(){
 		$(tickerFrame).addClass('invisible');
 	});
 }
-function loadMapFiles() {
+function loadMapFiles() {  return;
 	var mapUrls = [
-		"extendedApi.js"/*tpa=http://www.onetwotrip.com/js/extendedApi.js*/,
-		"map.js"/*tpa=http://www.onetwotrip.com/js/map.js*/
+		"http://www.onetwotrip.com/js/extendedApi.js"/*tpa=http://www.onetwotrip.com/js/extendedApi.js*/,
+		"http://www.onetwotrip.com/js/map.js"/*tpa=http://www.onetwotrip.com/js/map.js*/
 	];
-	$('head').append($('<link rel="stylesheet"/>').attr('href', '../css/map.css'/*tpa=http://www.onetwotrip.com/css/map.css*/));
+	//$('head').append($('<link rel="stylesheet"/>').attr('href', '../twiket/css/map.css'/*tpa=http://www.onetwotrip.com/css/map.css*/));
 	for (var i in mapUrls) {
 		$.ajax({
 			dataType: "script",
@@ -1293,12 +1293,17 @@ Avia.prototype.getFares = function(data){
 		}
 		_gaq.push(['_trackEvent', 'search', 'push', cityFrom+'-'+cityTo, gglTypeRoad]);
 		
+        params.source    = twiket.setup.source;
+        params.srcmarker = twiket.setup.marker;
+        params.step      = 'r';
+        params.callback  = 'jQuery18305560317372437567_1369395326063';
+        
 	MakeRequest();
 	function MakeRequest(){
 		$.ajax({
 			cache: false,
 			dataType: "json",
-			url: "https://secure.onetwotrip.com/_api/searching/startSync/",
+			url: twiket.setup.urls.search,
 			data: params,
 			timeout: 70000,
 			beforeSend: function(){},

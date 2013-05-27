@@ -838,21 +838,27 @@
       </aside>
 
       <div class="span10 tickets">
-      
-        <div style="display: none;" id="tw-layout_language" class="tw-invisible"><ul><li class="tw-ru"></li><li class="tw-ua"></li><li class="tw-az"></li></ul></div>
-        <div id="tw-layout_search" class="tw-invisible"></div>
-        <div style="display: none;" id="tw-layout_searchHeader" class="tw-invisible"></div>
-        <div style="display: none;" id="tw-layout_statistics" class="tw-invisible"></div>
-        <div style="display: none;" id="tw-layout_currency" class="tw-invisible"></div>
-        <div style="display: none;" id="tw-layout_prefered" class="tw-invisible"><table><tr><td id="tw-Prefered1"></td><td id="tw-Prefered2"></td></tr></table></div>
-        <div style="display: none;" id="tw-layout_matrix" class="tw-invisible"></div>
-        <div style="display: none;" id="tw-layout_order" class="tw-invisible"></div>
-        <div style="display: none;" id="tw-layout_ticket" class="tw-invisible"></div>
         
-        <div style="display: none;" id="tw-layout_passengersForm" class="tw-invisible"></div>
-        <div style="display: none;" id="tw-layout_payment" class="tw-invisible"></div>
-        <div style="display: none;" id="tw-layout_loader" class="tw-invisible"></div>
+        <? include 'content.html'; ?>
         
+        <div id="topPanel2">
+            <form id="form_search">
+                <div class="spreader" id="topPanel2spreader"></div>
+                <div class="spreader invisible" id="priceDynamicSpreader"><div class="priceDynamic"></div></div>
+                <div class="spreader" id="tongueSpreader"><div class="height0">
+                    <div id="dirTongue" class="invisible"></div>
+                    <div id="searchButtonTongue" class="invis">
+                        <input type="submit"/>
+                    </div>
+                </div></div>
+            </form>
+            <div id="pageTitlePanel" class="spreader invisible"><div id="pageTitle"></div></div>
+        </div>
+        <div id="layout_recentSearches">
+            <div class="spreader">
+                <ul class="spreader" id="recentSearches"></ul>
+            </div>
+        </div>
         
       
         <article class="ticket top">
@@ -1112,8 +1118,6 @@
         </article>
           
         <h2 class="moreVariants">Еще варианты</h2>
-        
-        <div id="tw-layout_result" class="tw-invisible"></div>
         
         <!--
         <article class="ticket small">
@@ -1535,6 +1539,7 @@
   <!-- javascript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
+  <!--
   <script src="/js/jquery-1.9.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/jquery.sliderkit.1.9.2.js"></script>
@@ -1542,5 +1547,6 @@
   <script src="/js/custom_el.js"></script>
   <script src="/js/jquery.ui.datepicker-ru.js"></script>
   <script src="/js/custom.js"></script>
+  -->
 </body>
 </html>

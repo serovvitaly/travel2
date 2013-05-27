@@ -1,0 +1,722 @@
+.nowrap { white-space: nowrap;}
+#layout_results { z-index: 10; position: relative; }
+
+table.ResultTable { width: 100%; border-collapse: collapse; }
+table.ResultTable td { vertical-align: top; padding:0px;}
+table.ResultTable td.FlightFilter { width: 220px; color: white; font-size: 13px;}
+
+/*#FirstPrefered .FlightTicket {margin-right: 20px; }*/
+#preferedBlock {width: 100%; table-layout: fixed;}
+#FirstPrefered, #SecondPrefered { display: inline-block; vertical-align: top;}
+.FlightTicket { position: relative; z-index: 11; padding: 0; width: 353px; }
+.mini { width: 230px; }
+.FlightTicket .bold { font-weight: bold; }
+
+.akPlate { position: relative; padding: 6px 10px;
+	-webkit-border-top-left-radius: 10px; /*safari 4*/
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-radius: 10px 10px 0 0;
+	   -moz-border-radius: 10px 10px 0 0;
+			border-radius: 10px 10px 0 0;
+}
+
+.multivariants .akPlate { font-size:20px; text-shadow: none; }
+
+.akPlate .pf_light_speck { z-index: 0; position: absolute; top: 0; right: 0; bottom: 0; left: 0; height: 17px; opacity: 0.1; background-color: white;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-radius: 10px 10px 0 0;
+	   -moz-border-radius: 10px 10px 0 0;
+			border-radius: 10px 10px 0 0;
+}
+.FlightsByAKBlock .star {margin-left: 0px;}
+.FlightsByAKBlock .logo.moved { right: 112px; width: 250px;}
+/*.StarsInformation:hover .star {background: url('/images/stars/StarHover_u0580.png') repeat-x;} 
+.StarsInformation:hover .halfstar {background: url('/images/stars/HalfStarHover_u0580.png') repeat-x;}
+.StarsInformation:hover .emptystar {background: url('/images/stars/EmptyStarHover_u0580.png') repeat-x;}*/
+
+.pf_bottom {
+	color: black;
+	background-color: #dededf;
+	font-size: 80%;
+	text-shadow: #e6e6e6 0px 1px 0px;	
+}
+.pf_bottom.multiway { background-color: #dededf !important; }
+.pf_bottom.multiway .pf_button { background-color: #adaeb5;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	   -moz-border-radius: 0 0 10px 10px;
+			border-radius: 0 0 10px 10px;
+}
+.mini .pf_bottom { font-size: 70%;}
+.pf_bottom .content { 
+	padding: 6px 12px 10px;
+	/*background: -webkit-gradient(linear, left top, left bottom, from(rgba(202,202,204,1)), to(rgba(164,165,168,1)) );
+	background: -moz-linear-gradient(top, rgba(202,202,204,1), rgba(164,165,168,1));*/
+}
+.pf_bottom .color_puller div { height: 1px; }
+.pf_bottom .color_puller .gray1 { background-color: #818183;}
+.pf_bottom .color_puller .gray2 { background-color: #a6a6a8;}
+.pf_bottom .color_puller .gray3 { background-color: #c4c4c5;}
+.pf_bottom .color_puller .gray4 { background-color: #cccdce;}
+.pf_bottom .color_puller .gray6 { background-color: #999a9c;}
+.pf_bottom .color_puller .gray7 { background-color: #d1d2d4;}
+.pf_bottom .DirectionPoint { font-size: 9px; letter-spacing: 1.5px; color: #000000; margin-left: -1px; padding-bottom: 3px;}
+
+.StartTime { font-size: 16px; font-weight: bold;}
+.mini .StartTime { font-size: 14px;}
+
+.pf_AKname { position: relative; z-index: 2; /*font-weight: bold;*/}
+.RedrawOptions { display: inline-block; font-size: 14px;}
+.RedrawOptions span { display: inline-block; border-bottom: 1px dashed; cursor: pointer;}
+.RedrawOptions .selected { font-weight: bold; border: 0px; cursor: default;}
+
+.smallAKname { font-size: 14px; height: 19px;}
+.pf_bottom table { border-collapse: collapse; width: 100%; }
+.pf_bottom table td { padding: 0px; vertical-align: top;}
+.pf_bottom table td:first-child { padding-right: 3px;}
+.pf_bottom table td.noPadding { padding: 0px;}
+.pf_bottom table .seatsCount {margin-top: 3px;}
+.pf_puller { height: 2px;  background: url("../images/dashes-h_u0580.png")/*tpa=http://www.onetwotrip.com/images/dashes-h_u0580.png*/ repeat-x;}
+.pf_button { position: relative; height: 54px; }
+.pf_button .bg, .pf_button .bg * { position: absolute;}
+.pf_button .bg { top:0; right: 0; bottom:0; left: 0; z-index:-1;}
+.pf_button .bg .l, .pf_button .bg .r {width: 12px; height: 54px; background-image: url("../images/ticket_footer_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/ticket_footer_lr_u0580.png*/; background-repeat: no-repeat;}
+.pf_button .bg .l { left: 0; background-position: 0 0;}
+.pf_button .bg .r { right: 0; background-position: -12px 0;}
+.pf_button .bg .c { height: 54px; background-image: url("../images/ticket_footer_bg_u0580.png")/*tpa=http://www.onetwotrip.com/images/ticket_footer_bg_u0580.png*/; background-repeat: repeat-x; left: 10px; right: 10px;}
+.pf_button .bg .more { background-image: url("../images/ticket_footer_more_u0580.png")/*tpa=http://www.onetwotrip.com/images/ticket_footer_more_u0580.png*/; background-repeat: no-repeat; width: 75px; height: 54px; left: 0; z-index:1; }
+.pf_button .bg .more.Big { background-image: url("../images/ticket_footer_more_big_u0580.png")/*tpa=http://www.onetwotrip.com/images/ticket_footer_more_big_u0580.png*/; width: 120px; }
+.pf_button .price_button { position: absolute; right: 7px; top: 7px;}
+.pf_bottom .info_time { float: right; text-align: right; white-space: nowrap; max-width: 115px; overflow: hidden; text-overflow: ellipsis;}
+.mini .pf_bottom .info_time {max-width: 110px;}
+.pf_button.def { text-align: right;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	   -moz-border-radius-bottomright: 10px;
+	   -moz-border-radius-bottomleft: 10px;
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(190,191,195,1)), to(rgba(145,147,155,1)) );
+	/* @alternate */ background: -webkit-linear-gradient(top, rgba(190,191,195,1), rgba(145,147,155,1));
+	/* @alternate */ background:    -moz-linear-gradient(top, rgba(190,191,195,1), rgba(145,147,155,1));
+	/* @alternate */ background:		-ms-linear-gradient(top, rgba(190,191,195,1), rgba(145,147,155,1));
+	/* @alternate */ background: 	 -o-linear-gradient(top, rgba(190,191,195,1), rgba(145,147,155,1));
+	/* @alternate */ background: 		linear-gradient(to bottom, rgba(190,191,195,1), rgba(145,147,155,1));
+}
+.pf_stops { color: #CC4C00; }
+.infotitle { cursor: help; }
+
+.FlightTicket .airport { cursor: help; }
+
+.showAKvariants { position: absolute; left: 15px; top: 25px; font-size: 75%; cursor: pointer; text-shadow: none; }
+.showAKvariants span { display: inline-block; color: white; border-bottom: 1px solid white;}
+/*.mini .showAKvariants { font-size: 11px;}*/
+
+.tiket_shadow_wrapper {position: relative;}
+.tiket_shadow_wrapper .shadow {
+	position: absolute;
+	left:0;
+	right:0;
+}
+.prefered_shadow { margin: 0px -2px;}
+.prefered_shadow .shadow {
+	bottom: -23px;
+	height:35px;
+	background: url("../images/ShadowForPreferedTicket_u0580.png")/*tpa=http://www.onetwotrip.com/images/ShadowForPreferedTicket_u0580.png*/;
+}
+.single_shadow .shadow {
+	bottom: -15px;
+	height:20px;
+	background: url("../images/ShadowForSmallTicket_u0580.png")/*tpa=http://www.onetwotrip.com/images/ShadowForSmallTicket_u0580.png*/;
+}
+
+/*Filter */
+#DirectionsFilter { margin-top: 0px; }
+#DirectionsFilter table td { padding: 0px;}
+.direction_body {
+	padding-bottom:30px;
+}
+.min_priceword { font-size: 90%;}
+.direction_body .db_wrapper { position: relative; padding: 6px; margin: 15px 0 5px 0;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+			border-radius: 5px;
+	/*-moz-box-shadow: inset 0 0 1px #000;
+	-webkit-box-shadow: inset 0 0 1px #000;
+	box-shadow: inner 0 0 1px #000;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorStr=#99ba7827,endColorStr=#99ba7827);*/	
+}
+.direction_body .db_wrapper {	
+/*	background-color: #6a6f73;
+	background: rgba(106,111,115,0.8);*/
+	background-color: #000000;
+	background: rgba(0,0,0,0.5);
+}/*
+body.wood1 .direction_body .db_wrapper {
+	background-color: #b64e15;
+	background: rgba(212,150,63,0.8);
+}
+body.wood2 .direction_body .db_wrapper {
+	background-color: #ad5323;
+	background: rgba(182,78,21,0.8);
+}
+body.aluminium .direction_body .db_wrapper {
+	background-color: #acb7bb;
+	background: rgba(172,183,187,0.8);
+}*/
+.direction_body .db_wrapper .tr, .direction_body .db_wrapper .tl, .direction_body .db_wrapper .t, .direction_body .db_wrapper .br, .direction_body .db_wrapper .bl, .direction_body .db_wrapper .b, .direction_body .db_wrapper .l, .direction_body .db_wrapper .r { position: absolute; }   
+.direction_body .db_wrapper .tr, .direction_body .db_wrapper .tl, .direction_body .db_wrapper .br, .direction_body .db_wrapper .bl { width: 6px; height: 6px; background-image: url("../images/filter_corners_u0580.png")/*tpa=http://www.onetwotrip.com/images/filter_corners_u0580.png*/; background-repeat: no-repeat;}
+.direction_body .db_wrapper .tl { top: 0px; left: 0px; background-position: 0px 0px;}
+.direction_body .db_wrapper .tr { top: 0px; right: 0px; background-position: -6px 0px;}
+.direction_body .db_wrapper .bl { bottom: 0px; left: 0px; background-position: 0px -6px;}
+.direction_body .db_wrapper .br { bottom: 0px; right: 0px;background-position: -6px -6px;}
+.direction_body .db_wrapper .t, .direction_body .db_wrapper .b {left: 6px; right: 6px; background-image: url("../images/filter_tb_u0580.png")/*tpa=http://www.onetwotrip.com/images/filter_tb_u0580.png*/; background-repeat: repeat-x;}
+.direction_body .db_wrapper .t { top: 0px; height: 6px; background-position: 0px 0px; }
+.direction_body .db_wrapper .b { bottom: 0px; height: 2px; background-position: 0px -6px;}
+.direction_body .db_wrapper .l, .direction_body .db_wrapper .r { top: 6px; bottom:6px; width: 1px; background-color: #000000; opacity: 0.15;}
+.direction_body .db_wrapper .l { left:0;}
+.direction_body .db_wrapper .r { right:0;}
+.direction_body .logo_arrow { background-image: url("../images/filter_logo_arrow_u0580.png")/*tpa=http://www.onetwotrip.com/images/filter_logo_arrow_u0580.png*/; background-repeat: no-repeat; width: 45px; height: 25px; position: absolute; z-index: 1; margin: 0px auto; top: -37px; left: 0; right: 0; }
+.direction_body .db_wrapper .iewrapper { display: none;}
+.d_option {
+	color: white; 
+	font-size: 13px;
+	margin: auto;
+	height: 24px; 
+	text-align: center;
+	line-height: 23px;	
+	/*text-shadow: #999999 1px 0px 2px;*/	
+}
+.direction_body .d_option {
+	position: absolute;
+	top: -12px;
+	left: 0;
+	right: 0;
+}
+/*.d_option .d_direction {display: inline-block; //display: inline; width: 68px; height: 24px; background: url('/images/direction_option_u0580.png'); cursor: pointer; background-position: -73px 0;}
+.d_option .selected { width: 73px; background-position: 0 0; }*/
+.d_option .d_direction {
+	background-color: #3c4042;
+}
+/*body.wood1 .d_option .d_direction {
+	background-color: #d4963f;
+}*/
+body.wood2 .d_option .d_direction {
+	background-color: #6a392a;
+}
+body.aluminium .d_option .d_direction {
+	background-color: #5a5e5f;
+}
+.d_option .d_direction {
+	position: relative;
+	display: inline-block;
+	width: 70px;
+	height: 24px;
+	cursor: pointer;
+	/*-moz-box-shadow: inset 0 0 1px #333;
+	-webkit-box-shadow: inset 0 0 1px #333;
+	box-shadow: inner 0 0 1px #333;*/
+	opacity: 0.99;
+}
+.d_option .d_direction .text {position: relative; z-index: 1;}
+.d_option .selected {
+	cursor: default;
+	color: #FFED00;
+}
+.d_option .disabled {
+	opacity: 0.3; filter: alpha(opacity=30);
+	cursor: default;
+}
+/*dark*/
+.d_option .button_shadow_lr, .d_option .button_shadow_bg { position: absolute; z-index: 0;}
+.d_option .button_shadow_lr { top:0; bottom:0; width: 5px; background-image: url("../images/buttons_shadowdark_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/buttons_shadowdark_lr_u0580.png*/; background-position: 0px 0px;}
+.d_option .d_first .button_shadow_lr { left:0px; }
+.d_option .d_last .button_shadow_lr { right: 0px; background-position: -5px 0px;}
+.d_option .button_shadow_bg { top: 0; bottom: 0; background-image: url("../images/buttons_shadowdark_bg_u0580.png")/*tpa=http://www.onetwotrip.com/images/buttons_shadowdark_bg_u0580.png*/; 
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+			background-size: 100% 100%;
+}
+.d_option .button_shadow_bg {left: 0px; right:0;}
+.d_option .d_first .button_shadow_bg {left: 5px; }
+.d_option .d_last .button_shadow_bg {right: 5px;}
+.d_option .selected .button_shadow_lr { background-image: url("../images/buttons_shadowdark_selected_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/buttons_shadowdark_selected_lr_u0580.png*/;}
+.d_option .selected .button_shadow_bg {	background-image: url("../images/buttons_shadowdark_selected_bg_u0580.png")/*tpa=http://www.onetwotrip.com/images/buttons_shadowdark_selected_bg_u0580.png*/;}
+/*light*/
+body.aluminium .d_option .button_shadow_lr {
+	background-image: url("../images/buttons_shadowlight_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/buttons_shadowlight_lr_u0580.png*/; 	
+}
+body.aluminium .d_option .selected .button_shadow_lr {
+	background-image: url("../images/buttons_shadowlight_selected_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/buttons_shadowlight_selected_lr_u0580.png*/; 	
+}
+body.aluminium .d_option .button_shadow_bg {
+	background-image: url("../images/buttons_shadowlight_bg_u0580.png")/*tpa=http://www.onetwotrip.com/images/buttons_shadowlight_bg_u0580.png*/; 	
+}
+body.aluminium .d_option .selected .button_shadow_bg {
+	background-image: url("../images/buttons_shadowlight_selected_bg_u0580.png")/*tpa=http://www.onetwotrip.com/images/buttons_shadowlight_selected_bg_u0580.png*/; 	
+}
+.d_option .d_first {
+	-webkit-border-top-left-radius: 5px; /*safari 4*/
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-radius: 5px 0 0 5px;
+	   -moz-border-radius: 5px 0 0 5px;
+			border-radius: 5px 0 0 5px;
+}
+.d_option .d_last {
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-radius:  0 5px 5px 0;
+	   -moz-border-radius: 0 5px 5px 0;
+			border-radius: 0 5px 5px 0;
+}
+.direction_option input {position: absolute; margin-left: -50px;}
+.d_option .rBorder { position: absolute; width: 1px; top: 1px; right:0; bottom: 1px; background-color: #464646; }
+
+.direction_option label { cursor: pointer; margin-left: 15px; border-bottom: 1px dotted #ffffff; }
+.direction_option label.inline { display: inline-block; margin-left:0px;}
+.direction_option ul { list-style-type: none; margin: 0px; padding:5px 0px;}
+.direction_option ul li { margin: 3px 0;}
+/*.direction_option li .disabled { opacity: 0.6; filter: alpha(opacity=60); }*/
+.direction_option .radio_button { width: 10px; height: 10px; margin-right: 10px; display: inline-block; background-image: url("../images/buttons_radio_u0580.png")/*tpa=http://www.onetwotrip.com/images/buttons_radio_u0580.png*/; background-position: -10px 0px; position: absolute; top: 0;bottom:0; left:0;margin: auto; }
+.direction_option .selected .radio_button {background-position: 0px 0px;}
+/*body.aluminium .direction_option .radio_button, body.wood1 .direction_option .radio_button { background-position: -30px 0px; }
+body.aluminium .direction_option .selected .radio_button, body.wood1 .direction_option .selected .radio_button { background-position: -10px 0px; }*/
+
+.direction_option .option_row { position: relative; line-height: 1.5; padding: 0 5px;}
+.direction_option .direction_item { position: relative; z-index:2; white-space: nowrap; overflow: hidden; opacity: 0.99;}
+.direction_option .direction_item.short { width: 105px;}
+.direction_option .selected label {border: 0px;}
+
+.direction_option .direction_price { white-space: nowrap; position: absolute; right:5px; top:0; z-index:2; opacity: 0.6; }
+
+.db_direction_name { font-size: 100%; padding: 15px 0px 0px 0px; text-align: center; opacity: 0.99;}
+.db_direction_name div { display: inline-block; background-color:#ffed00; color: black; padding: 3px 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+.db_direction_name .longName { font-size: 90%;}
+.db_direction_name .db_date {font-size: 90%;}
+
+tr.selected .db_optionBlock {position: relative;}
+tr.selected .db_optionBlock .db_option_bkg {position: absolute; top: 0; right:0; bottom:0; left: 0;}
+tr.selected .db_optionBlock .db_option_bkg div {
+	background-image: url("../images/direction_selected_u0580.png")/*tpa=http://www.onetwotrip.com/images/direction_selected_u0580.png*/;
+	bottom: 0;
+	position: absolute;
+	top: 0;
+	width: 8px;
+	background-position: 0 0;
+}
+tr.selected .db_optionBlock .db_option_bkg .db_l {
+	left:0;
+}
+tr.selected .db_optionBlock .db_option_bkg .db_r {
+	background-position: -8px 0;
+	right:0;	
+}
+tr.selected .db_optionBlock .db_c {
+	position: relative;
+	background: url("../images/direction_selected_bkg_u0580.png")/*tpa=http://www.onetwotrip.com/images/direction_selected_bkg_u0580.png*/ repeat-x;
+	margin: 0px 8px;
+}
+
+/*.FilterResult, .FlightsByAKBlock { position: relative; width: 720px;}*/
+.FlightsByAKBlock {position: relative; /*width: 720px;*/ display: none; padding-bottom: 50px;}
+.FlightsByAKBlock .stopinfo.direct { font-style: italic;}
+.FlightsByAKBlock .pf_bottom {
+	-webkit-border-bottom-left-radius: 10px; /*safari 4*/
+	-webkit-border-bottom-right-radius: 10px;	
+	-webkit-border-radius: 0 0 10px 10px;
+	   -moz-border-radius: 0 0 10px 10px;
+			border-radius: 0 0 10px 10px;
+}
+.FilterResult { position: relative;}
+.FilterResult ul { list-style-type: none; margin: 0px; padding :0px;}
+.FilterResult ul li { margin: 0 15px 30px 0px; display: inline-block; vertical-align: top;}
+.FilterResult ul li:nth-child(3n) { margin-right: 0;}
+
+.FlightSliderWrapper { position: relative; height:40px; padding-top:30px; float: left; }
+.FlightSlider { position: absolute; left: 20px; height: 30px; width: 190px !important; font-size: 11px; color: #000000; /* @alternate */ width: 85%; }
+.FlightSlider .steps {position: absolute; z-index: -1;}
+.FlightSlider .steps * { display: inline-block; width: 48px; height: 5px; border-right: 1px solid white;}
+/*.slide_spread {height: 50px;}*/
+table.ResultTable table.miniTickets_Fix { width: 100%; table-layout: fixed;}
+table.ResultTable .AdditionalFilterOptions td {vertical-align: middle; }
+table.ResultTable .AdditionalFilterOptions .filterRaspr {height: 25px;}
+.FlightSlider .slide_time { position: absolute; bottom:0; left: 0; z-index:2}
+.FlightSlider .slide_price { position: absolute; bottom:0; right: 0; z-index:2}
+/*.FlightSlider .slide_time span, .FlightSlider .slide_price span {
+	position: absolute;
+	z-index: 2
+}*/
+.FlightSlider .additional {
+	color: #ffffff; z-index: 1;
+	bottom: 1px; 
+	opacity: 0.20;	
+}
+.FlightSlider .text1 { left: -1px;}
+.FlightSlider .text2 { right: 1px;}
+	body.gray .FlightSlider, body.wood2 .FlightSlider {	color: #cecece;}
+	body.gray .FlightSlider .additional, body.wood2 .FlightSlider .additional {	color: #1a1a1a;	bottom: -1px;opacity: 0.45; filter: alpha(opacity=45);}
+	body.gray .FlightSlider .text1, body.wood2 .FlightSlider .text1 {left: 1px;	}
+	body.gray .FlightSlider .text2, body.wood2 .FlightSlider .text2 {right: -1px;}
+
+.FlightSlider .ui-slider { position: relative; }
+.FlightSlider .slider_wrapper {position: relative;}
+.FlightSlider .ui-slider-handle {position: absolute; z-index: 2; background: url("../images/flight_slider_u0580.png")/*tpa=http://www.onetwotrip.com/images/flight_slider_u0580.png*/; width: 25px; height: 48px; cursor: pointer; outline: none; top: -12px; margin-left: -10px;}
+.FlightSlider .ui-slider-horizontal {
+	cursor: pointer;
+	height: 4px;
+	background: url("../images/flight_slider_slot_u0580.png")/*tpa=http://www.onetwotrip.com/images/flight_slider_slot_u0580.png*/ no-repeat; position: absolute; z-index:0; top: 0; right:0; bottom: 0; left: 0;
+	-webkit-background-size: 100% 100%;
+	   -moz-background-size: 100% 100%;
+			background-size: 100% 100%;	
+}
+.FlightsDifficulties { font-size: 80%; padding-bottom: 35px;}
+.FlightsDifficulties .fd_wrapper { white-space: nowrap;}
+.FlightsDifficulties .d_option { position: relative; }
+.FlightsDifficulties .d_direction { width: 110px;}
+#RefundSelection { position: relative;  padding-bottom: 15px; }
+#SocialDepend.noSocial { margin-top: -34px; }
+#CurrenciesBlock { display: inline-block; }
+#CurrenciesBlock .d_option .d_direction { width: 50px;}
+#CurrenciesBlock .d_middle { width: 80px;}
+.refund_wrapper { white-space: nowrap;}
+.refund_wrapper .d_direction { width: 110px;}
+
+
+/*.FlightsByAKBlock ul input {position: absolute; margin-left: -50px;}*/
+.multivariants { width: auto; /*margin-top: 15px;*/}
+.multivariants ul { margin:0px; padding: 0px; list-style-type: none;}
+.multivariants ul li { margin: 0px;}
+.multivariants .pf_bottom { background: none;}
+.multivariants .pf_bottom .content { padding-bottom: 0;}
+.multivariants .pf_bottom table td { padding: 0 15px 10px 0; }
+.multivariants .pf_bottom .ticket_spreader {height: 10px;}
+.multivariants .pf_bottom table.fixed {table-layout: fixed}
+.multivariants .pf_bottom .content table.simple { border-collapse: collapse;}
+.multivariants .pf_bottom .content table.simple td { padding: 0px; vertical-align: middle;}
+
+.multivariants .pf_bottom .content { padding: 0;}
+.multivariants .pf_bottom .simpleVariants table tr td { background-color: #dededf;}
+.multivariants .pf_bottom .simpleVariants .noBkg, .multivariants .pf_bottom .simpleVariants .noBkg td { background: none;} 
+.multivariants .pf_bottom .simpleVariants .noPadding { padding: 0px;}
+.multivariants .pf_bottom table td { vertical-align: top; padding: 7px 10px 5px 10px;}
+.multivariants .pf_bottom .simpleVariants td.variant_direction {width: 425px; }
+.multivariants .pf_bottom .simpleVariants td.cellButton {width: 155px; text-align: right; padding-right: 10px; background-color: #adaeb5;}
+.ConfirmInfoFlight .pf_bottom table { table-layout: fixed;}
+.ConfirmInfoFlight { padding-bottom: 5px;}
+.ConfirmInfoFlight .pf_bottom .multiTrip { padding-bottom: 5px;}
+.ConfirmInfoFlight .pf_bottom table td:first-child { padding: 0 10px 0 0;}
+.ConfirmInfoFlight .pf_bottom table td:last-child { padding: 0 0 0 10px;}
+.ConfirmInfoFlight .pf_bottom table tr.single td { padding: 0;}
+.ConfirmInfoFlight .pf_bottom .selected .slat { width: 100% !important;}
+.ConfirmInfoFlight .pf_bottom .variant_direction .optTime, .ConfirmInfoFlight .pf_bottom .variant_direction .opt2 { padding: 0px !important;}
+.ConfirmInfoFlight .showFareRules { white-space: nowrap;}
+
+.multivariants .pf_bottom .simpleVariants .topRound {
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-radius: 10px 10px 0 0;
+	   -moz-border-radius: 10px 10px 0 0;
+			border-radius: 10px 10px 0 0;	
+}
+.multivariants .pf_bottom .simpleVariants .bottomRound {
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	   -moz-border-radius: 0 0 10px 10px;
+			border-radius: 0 0 10px 10px;
+}
+.multivariants .pf_bottom .simpleVariants .bottomLeftRound {
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-radius: 0 0 0 10px;
+	   -moz-border-radius: 0 0 0 10px;
+			border-radius: 0 0 0 10px;
+}
+.multivariants .pf_bottom .simpleVariants .bottomRightRound {
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-radius: 0 0 10px 0;
+	   -moz-border-radius: 0 0 10px 0;
+			border-radius: 0 0 10px 0;
+}
+
+.multivariants .pf_bottom .simpleVariants td.cellButton .hideButton button { display: none;}
+.multivariants .pf_bottom .simpleVariants td.cellButton .alternate { display: none;}
+.multivariants .pf_bottom .simpleVariants td.cellButton .alternate .chooseOpt {height: 29px; }
+.multivariants .pf_bottom .simpleVariants td.cellButton .alternate .chooseOpt span { overflow: visible; padding-top: 6px;}
+/*.multivariants .pf_bottom .simpleVariants td.cellButton .hideButton .alternate { padding-top: 7px;}*/
+.multivariants .pf_bottom .simpleVariants td.cellButton .hideButton .alternate span {color: black;}
+
+.multivariants .pf_bottom .simpleVariants .PriceButtonWrapper { position: relative; /* margin-top: -3px; */}
+.multivariants .pf_bottom .simpleVariants .PriceButtonWrapper .price_button { margin-top: -8px;}
+.multivariants .pf_bottom .simpleVariants .PriceButtonWrapper .alternate {position: absolute; right:5px; top:0; display: none;}
+
+.multivariants .pf_bottom .simpleVariants .variant td {height: 70px;}
+.multivariants .pf_bottom .simpleVariants .emptyVariant { opacity: 0.5; background-color: transparent;}
+
+.multivariants .pf_bottom .DirRoute {padding: 10px 0; font-weight: bold; font-size: 120%;}
+.multivariants .pf_bottom .DirRoute span {font-weight: normal; font-size: 80%;}
+.multivariants .pf_bottom .table_header {font-size: 80%; }
+.multivariants .pf_bottom .table_header td { padding: 0px 10px; }
+.multivariants .pf_bottom .stat_info {font-size: 90%; height: 20px; }
+.multivariants .pf_bottom .opt1 { width: 90px; }
+.multivariants .pf_bottom .stat_info .opt1 { color: black; } 
+.multivariants .pf_bottom .opt2 { width: 50px; }
+.multivariants .pf_bottom .opt3 { width: 50px; }
+.multivariants .pf_bottom .stat_info .opt2 span {display: inline-block; padding-left:3px; }
+.multivariants .pf_bottom .stat_info .opt3 span, .multivariants .pf_bottom .table_header .opt3 span {display: inline-block; padding-left:3px; }
+.multivariants .pf_bottom .variant_direction .opt1 {text-align: right;}
+.multivariants .pf_bottom .variant_direction .label .opt1 {line-height: 16px;}
+.multivariants .pf_bottom .opt4 { width: 110px; color: #CC4C00; overflow: hidden; white-space: nowrap; }
+.multivariants .pf_bottom .m_row_item .opt4 {width: 110px;}
+.multivariants .pf_bottom .opt4.direct { color: black;}
+.multivariants .pf_bottom .tranfers {color: #CC4C00;}
+.multivariants .pf_bottom .opt5 { width: 80px; }
+.multivariants .pf_bottom .opt6 { display: none; padding-left: 5px;}
+.multivariants .pf_bottom .table_header .opt6 { display: inline-block; padding:0;}
+.multivariants .pf_bottom .variant_direction .opt6 { display: inline-block; }
+.multivariants .pf_bottom .variant.selected .opt6 { display: inline-block; }
+.multivariants .pf_bottom .variant .opt7 {padding-left: 5px;}
+.multivariants .pf_bottom .variant.selected .opt7 {display: none; }
+.multivariants .pf_bottom .diffAK {/* color: #CC4C00;*/ font-weight: bold;}
+
+
+.ResultTableWrapper .showTripInfo, .FlightsByAKBlock .showTripInfo { display: inline-block; border-bottom: 1px dashed #1a3968; color: #1a3968 !important; cursor: pointer;}
+.multivariants .pf_bottom .showTripInfo { display: none;}
+.multivariants .pf_bottom .flightLate { display: inline-block;}
+.multivariants .pf_bottom .variant_direction.selected .showTripInfo,
+.multivariants .pf_bottom .variant.selected .showTripInfo {display: inline-block;}
+.multivariants .pf_bottom .variant_direction.selected .flightLate,
+.multivariants .pf_bottom .variant.selected .flightLate {display: none;}
+
+.multivariants .pf_bottom .optTime { width: 100px; margin-top:-2px;}
+.multivariants .pf_bottom .variant_direction .optTime, .multivariants .pf_bottom .variant_direction .opt2 { padding-left: 10px;}
+.multivariants .pf_bottom .leftIndent .opt2 { padding-left: 100px;}
+
+.multivariants .pf_bottom .variant .optTime .showStartTime { display: none; }
+.multivariants .pf_bottom .variant.selected .optTime .showStartTime { display: inline-block; }
+.multivariants .pf_bottom .variant .optTime label { display: inline-block; }
+.multivariants .pf_bottom .variant.selected .optTime label {display: none; }
+.multivariants .pf_bottom .optTime label {color: #1a3968; border-bottom: 1px dashed #1a3968; height:18px;}
+.multivariants .pf_bottom .selected .optTime label {color: black; border: 0px;}
+
+.multivariants .pf_bottom .variant_direction .slat { width: 425px;}
+.multivariants .pf_bottom .opt1 label { font-weight: bold; color: #1a3968; border-bottom: 1px dashed #1a3968; cursor: pointer;}
+.multivariants .pf_bottom .selected .opt1 label { display: none;}
+.multivariants .pf_bottom .opt1 .PriceText { display: none;}
+.multivariants .pf_bottom .selected .stat_info .opt1 { visibility:hidden;}
+.multivariants .pf_bottom .selected .opt1 .PriceText { display: block;}
+.multivariants .pf_bottom .stat_info span { color: gray;}
+.multivariants .pf_bottom .table_header td span {color: black !important;}
+
+.multivariants .pf_bottom .simpleVariants .spline {display: none; position: absolute; background-color: #889aa9;}
+.multivariants .pf_bottom .simpleVariants .selected .spline {display: block;}
+.multivariants .pf_bottom .simpleVariants .Vspline {width: 1px; top:0; right: -8px; }
+.multivariants .pf_bottom .simpleVariants .HLspline, .multivariants .pf_bottom .simpleVariants .HRspline {height: 1px; width: 9px; top:13px; }
+.multivariants .pf_bottom .simpleVariants .variant_direction .HRspline { right: -8px; width: 6px;}
+.multivariants .pf_bottom .simpleVariants .variant .HLspline { left: -13px;}
+.multivariants .pf_bottom .simpleVariants .variant .HRspline { right: -110px; width: 108px;}
+.multivariants .pf_bottom .simpleVariants .HBothspline { right: 0px; top: 13px; /* @alternate */ right:-110px; width: 108px; height: 1px;}
+.multivariants .pf_bottom .firstRowInfo td { padding-top: 3px;}
+.multivariants .pf_bottom .ib {float: left; white-space: nowrap; overflow: hidden;}
+.multivariants .pf_bottom .simpleVariants div.label { padding: 6px 0 4px 0;}
+.multivariants .pf_bottom .simpleVariants .m_row_item label { width: auto; padding:0; }
+
+.multivariants .pf_bottom .single .opt2 { margin-top: -2px; width: 140px; margin-right: 10px; }
+.multivariants .pf_bottom .single .opt3 { width: 140px; margin-right: 10px; }
+.multivariants .pf_bottom .single .opt4 { width: 200px; }
+
+.multivariants .pf_bottom .simpleVariants .m_StartTime {border: 0px; }
+.bottomRoundie { display: none;}
+
+.multivariants .pf_bottom.multiway table .single td { padding: 1px 10px;}
+.multivariants .pf_bottom.multiway .pf_button { height: 60px; position: relative;}
+.multivariants .pf_bottom.multiway .pf_button .FareStarInfo {position: absolute; right:0; top: 5px;}
+.multivariants .pf_bottom.multiway .pf_button .FareStarInfo .TripsStars { margin-right: 12px;}
+.multivariants .pf_bottom.multiway .pf_button .price_button { top: 5px;}
+/*.multivariants .multiway .selected {font-size: 120%;}
+.multivariants .multiway .selected .opt2 { margin-top:0;}
+.multivariants .multiway .selected .m_StartTime { font-size: 100%;}*/
+
+/*.multivariants .pf_bottom .simpleVariants table.variantInfo td { vertical-align: top; }*/
+/*.multivariants .pf_bottom .simpleVariants table.variantInfo td { padding: 0;}
+.multivariants .pf_bottom .simpleVariants table.variantInfo td.cellButton {vertical-align: middle;}*/
+.multivariants .pf_bottom .simpleVariants td.cellButton { padding-left: 0;}
+/*.multivariants .pf_bottom .simpleVariants tr.odd td { background-color: #e8e8e8;}
+.multivariants .pf_bottom .simpleVariants tr.odd td:first-child { background: none;}*/
+/*.multivariants .pf_bottom .simpleVariants tr td:first-child { background-color: #d0d0d0 ;}*/
+
+.multivariants .pf_bottom .simpleVariants .m_direction {padding-bottom:3px;}
+
+.multivariants .pf_bottom .simpleVariants li { padding-bottom: 10px; height: 60px;}
+/*.multivariants .pf_bottom table.fixed td { padding-right: 0px; }*/
+/*.multivariants .pf_bottom .secondDirection { padding-right: 0px;}*/
+.multivariants .pf_bottom table td:last-child { text-align: left; padding-right: 0;}
+.multivariants .pf_bottom table td.m_priceCell { vertical-align: bottom; width: 150px; padding: 10px 0px; text-align: center; }
+.multivariants .pf_bottom table td.puller_spreader { padding: 5px 0 15px 0;}
+.multivariants .pf_bottom table tr.m_row_bottom_AKticket td { padding: 5px 0px;}
+.multivariants .pf_bottom table td.PriceRowContent {text-align: right; padding: 10px 0px 6px;}
+.multivariants .pf_bottom table td.lastTicket {padding-bottom: 0px;}
+.multivariants .pf_bottom .ib {display: inline-block; vertical-align: middle;}
+.multivariants .ontime {color: gray; display: inline-block; margin-left: 10px; font-size: 90%;}
+.multivariants .pf_bottom .simpleVariants .ontime {margin-left: 0px;}
+/*.multivariants .FlightTicketInformation { margin: -12px -12px;}*/
+
+
+.TripsStars {font-size: 11px; margin-left: 5px; text-align: left; position: relative; }
+.single .TripsStars { margin: 0; display: inline-block;}
+/*.single .TripsStars .trip_rate * {vertical-align: bottom;}
+.PriceRowContent .trip_rate {padding-bottom: 5px;}
+.PriceRowContent .tripSeats { padding: 3px 0px 5px 0px; text-shadow: 0 1px 0 gray;}*/
+.multivariants .tripSeats .stars_block { position: absolute; left: 0; top: -2px; }
+.multivariants .tripSeats .text { margin-left: 75px;display: inline-block;}
+.tripSeats .lowSeats {color: red; }
+/*.tripSeats .StarsInformation { margin-bottom: 3px;}*/
+
+/*.PriceCellContent { display: inline-block; margin-right: -5px;}*/
+.multivariants .pf_bottom table td.m_priceCell .PriceCellContent td {padding: 0;}
+
+.multivariants .slat div { /*background: none;*/}
+.multivariants .slat .radio_button { position: relative; overflow: hidden; float: left;}
+.multivariants .slat .radio_button input {position: absolute; margin-left: -50px;}
+.slat { position: relative; display: inline-block; width: 98%; height: 26px; z-index: 1;}
+.slat .bg .r, .slat .bg .l, .slat .bg { position: absolute; top: 0; bottom: 0; }
+.multivariants .selected .slat .bg .r, .multivariants .selected .slat .bg .l {  width: 5px; background: url("../images/slat_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/slat_lr_u0580.png*/ no-repeat; background-position: 0px 0px; }
+.multivariants .selected .slat .bg .r { width: 13px;}
+.multivariants .selected .roundslat .bg .r, .multivariants .selected .roundslat .bg .l { width: 5px; background: url("../images/slatRound_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/slatRound_lr_u0580.png*/ no-repeat; }
+.slat .bg .l {left:-5px}
+.slat .bg .r { right:-13px; background-position: -5px 0px !important;}
+.roundslat .bg .r { right:-5px; background-position: -5px 0px !important;}
+.multivariants .selected .slat .bg { left: 0px; right: 10px; background: url("../images/slat_bg_u0580.png")/*tpa=http://www.onetwotrip.com/images/slat_bg_u0580.png*/ repeat-x; z-index:-1;}
+.multivariants .selected .roundslat .bg { right:0px;}
+
+/*.list_wrapper { position: relative;}*/
+.m_row_item { height: 26px; /*max-width: 270px;*/ position: relative;}
+.m_stops { color: #CC4C00; white-space: nowrap; }
+.m_stops, .m_journeytime {width: 75px;}
+.m_row_item .m_stops, .m_row_item .m_journeytime {margin-left: 10px;}
+.m_row_item label { position: relative; width: 100%; display: inline-block;  padding: 6px 0 4px; cursor: pointer; }
+.selected .m_row_item label { cursor: default;}
+.m_row_item div.label { padding: 5px 0;}
+
+.m_row_item label span {display: inline-block; }
+.m_direction { padding-bottom:5px;}
+.m_cities { font-size: 120%; font-weight: bold; }
+.multivariants .m_puller { width:2px; position: absolute; right:170px; top:0; bottom:0; background: url("../images/dashes-v_u0580.png")/*tpa=http://www.onetwotrip.com/images/dashes-v_u0580.png*/ repeat-y;}
+.multivariants .pf_puller { margin: 0 0 0 -10px;}
+.m_StartTime { font-size: 120%; font-weight: bold; display: inline-block; color: #1a3968; border-bottom: 1px dashed #1a3968;}
+.multivariants .selected .m_StartTime { border-color: transparent; color: black; }
+.m_bottom_AKticket { position: relative;}
+.m_bottom_AKticket div { position: absolute; top: -27px; right: 0; bottom: 0; left: 0; height: 15px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	   -moz-border-radius-bottomright: 10px;
+	   -moz-border-radius-bottomleft: 10px;
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+	-webkit-box-shadow: 0px 3px 4px #aaaaaa;
+	   -moz-box-shadow: 0px 3px 4px #aaaaaa;
+			box-shadow: 0px 3px 4px #aaaaaa;;
+}
+
+/*Price Buttons*/
+	.price_button { display: inline-block; cursor: pointer;}
+	.price_wrapper { position: relative; display: inline-block; height: 40px; line-height: 40px; padding: 0px 15px; z-index:1; font-size: 22px; white-space: nowrap;}
+	.price_button.Big .price_wrapper {height: 45px; line-height: 45px;}
+	
+	.multivariants .pf_bottom .simpleVariants .additionalText { font-size: 10px; margin: 3px 0 -10px 0; line-height: 10px; text-align: right;}
+	.multivariants .pf_bottom .simpleVariants .price_wrapper { font-size: 20px; text-align: right;}
+	
+	.price_wrapper .buynow { font-size: 12px; display: inline-block; padding-right: 5px;}
+	.price_wrapper .bg, .price_wrapper .bg .r, .price_wrapper .bg .l { position: absolute; top: 0; bottom: 0;}
+	.price_wrapper .bg { left: 14px; right: 14px; background-image: url("../images/price_bg_u0580.png")/*tpa=http://www.onetwotrip.com/images/price_bg_u0580.png*/; background-repeat: repeat-x; z-index:-1;}
+	.price_button.Big .price_wrapper .bg {background-image: url("../images/priceBig_bg_u0580.png")/*tpa=http://www.onetwotrip.com/images/priceBig_bg_u0580.png*/;}
+	
+	.price_wrapper .bg .r, .price_wrapper .bg .l { width: 15px; background-image: url("../images/price_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/price_lr_u0580.png*/; background-repeat: no-repeat; background-position: 0px 0px;}
+	.price_button.Big .price_wrapper .bg .r, .price_button.Big .price_wrapper .bg .l {background-image: url("../images/priceBig_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/priceBig_lr_u0580.png*/;}
+	
+	.price_wrapper .bg .l {left:-14px;}
+	.price_wrapper .bg .r { right:-14px; background-position: -15px 0px;}
+	.price_button.Big .price_wrapper .bg .l {left: -15px;}
+	.price_button.Big .price_wrapper .bg .r {right: -15px;}
+	/*обычная кнопка на 2 пикселся слева-справа больше чтобы при цсс зуминге не было разрывов*/
+		.hover .price_wrapper .bg .r, .hover .price_wrapper .bg .l, .down .price_wrapper .bg .r, .down .price_wrapper .bg .l { width: 14px;}
+		.hover .price_wrapper .bg .r, .down .price_wrapper .bg .r {background-position: -14px 0px;}
+	
+	.hover .price_wrapper .bg .r, .hover .price_wrapper .bg .l { background-image: url("../images/price_hover_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/price_hover_lr_u0580.png*/; }
+	.hover .price_wrapper .bg { background-image: url("../images/price_hover_bg_u0580.png")/*tpa=http://www.onetwotrip.com/images/price_hover_bg_u0580.png*/;}
+	.down .price_wrapper .bg .r, .down .price_wrapper .bg .l { background-image: url("../images/price_down_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/price_down_lr_u0580.png*/; }
+	.down .price_wrapper .bg { background-image: url("../images/price_down_bg_u0580.png")/*tpa=http://www.onetwotrip.com/images/price_down_bg_u0580.png*/;}
+	
+.FlightPriceInformation { color: white; font-size: 13px; padding: 0 0 10px 5px; opacity: 0.99; }
+.FlightPriceInformation .final { display: inline-block; background-color: #FFED00; color: black; padding: 3px 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;	}
+.classSearch_wrapper { position: relative; /*height: 40px; margin-top: -30px;*/ display: inline-block; margin: 0 5px;}
+.ComparePriceSelection { position: relative; display: inline-block; margin: 0 5px;}
+.ComparePriceSelection .d_option .d_first { width: 80px;}
+.ComparePriceSelection .d_option .d_last { width: 110px;}
+
+.manyCompanies {cursor: help;}
+
+#FlightsByAKList .list { display: block;}
+#FlightsByAKList .direction_option direction_item.short {width: 125px;}
+#FlightsByAKList .lastAK { margin-bottom: 10px;}
+#SeatsSelection { text-align: center; /*margin-top: -40px; padding-bottom: 30px;*/}
+#SeatsWrapper { padding-bottom: 10px;}
+#SeatsWrapper .db_wrapper {margin-top: -40px; background: rgba(0,0,0,0.2);}
+#SeatsSelection ul { margin: 0; padding: 0; list-style-type: none;cursor: pointer; }
+#SeatsSelection li {background-image: url("../images/seats_u0580.png")/*tpa=http://www.onetwotrip.com/images/seats_u0580.png*/; background-repeat: no-repeat; width: 19px; height:29px; display: inline-block; background-position: -19px 0; margin: 0 2px;}
+#SeatsSelection .selected {background-position: 0 0;}
+body.aluminium #SeatsSelection li {background-image: url("../images/seats_black_u0580.png")/*tpa=http://www.onetwotrip.com/images/seats_black_u0580.png*/; }
+#SeatsPlane { background-image: url("../images/seats_plane_u0580.png")/*tpa=http://www.onetwotrip.com/images/seats_plane_u0580.png*/; background-repeat: no-repeat; width: 387px; height:140px; position: absolute; z-index:-1;}
+.ReturnToResult { position: absolute; z-index:5; right:20px; top:10px; cursor: pointer;}
+.ReturnToResult.default { color: #1a3968; }
+.ReturnToResult .return {font-size: 14px; border-bottom: 1px dashed;}
+.ReturnToResult .close_button { right: -30px; top: -20px;}
+
+.popup.notConfirmed { width: 700px;}
+.notConfirmed .prelist { padding-bottom: 10px;}
+.ratingInfo { padding: 0 0 10px; font-weight: bold;}
+.FlightTicket .TicketOut * {visibility:hidden;}
+
+.priceDynamic { position: absolute; top: -36px; right: 20px; width: 103px; height: 37px; background-image: url("/images/button_dynamic_u0580.png"); cursor: pointer; }
+.popup.Adviser { padding: 0; width: 670px; }
+.Adviser.single { }
+.popup.Adviser_preload { width: 360px; height: 330px;}
+
+.popup.Adviser table td { padding: 5px 7px;}
+.popup.color .AdviserContent .paper .arrow {right:auto;}
+.Adviser .container { width: 70px; padding: 3px; border: 1px dashed gray; cursor: pointer; 
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+			border-radius: 5px;
+}
+.Adviser .container.selected { border-width: 2px 1px 0; border-style: solid solid none; border-color: gray; cursor: default; background-color: #d1e397;}
+.Adviser .container:hover { background-color: #C5D1EB; }
+.Adviser .container.selected:hover {background-color: #d1e397 !important; cursor: default;}
+.Adviser .container.disabled { cursor: default !important; background-color: #cecece; }
+ 
+.AdviserContent { padding-bottom: 10px;}
+.AdviserContent .topBlock {padding: 0 15px 20px;}
+.AdviserContent .bottomBlock {padding: 0 15px;}
+.Adviser .price_button {margin-top: 10px;}
+.Adviser .price_button .price_wrapper { padding: 0 45px;}
+.Adviser .header {font-weight: bold; font-size: 18px; padding: 10px 0;}
+.Adviser .route { padding: 15px 0 5px; }
+.Adviser .months td {padding-bottom: 0; font-size: 80%; font-weight: bold;}
+.Adviser .date { font-size: 80%; padding: 2px 0 10px 5px;}
+.Adviser .percent { padding-left: 5px;}
+.Adviser .selected .date {font-weight: bold;}
+.Adviser .green { color: green;}
+.Adviser .red { color: red;}
+.Adviser .center { text-align: center; }
+.Adviser .holiday {color: #EB5D3D;}
+.Adviser .info { font-size: 80%;}
+.Adviser .chooseRoutes {display: inline-block; margin: 10px 10px 0 0; cursor: pointer; border-bottom: 1px dashed #1a3968; color: #1a3968;}
+.Adviser .chooseRoutes.selected { cursor: default; border: none; font-weight: bold; color: black;}
+
+.popup.TripsInfo { width: 870px; }
+#ticket_rotation, #ticket_rotation * {
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+			border-radius: 10px;
+}

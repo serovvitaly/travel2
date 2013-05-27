@@ -1,0 +1,197 @@
+.ticket { position: relative; background-color: #fbfbfb;
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+			border-radius: 10px;
+	-webkit-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+	   -moz-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+			box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+}
+.ticket>*:first-child {
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-radius: 10px 10px 0 0;
+	   -moz-border-radius: 10px 10px 0 0;
+			border-radius: 10px 10px 0 0;
+}
+.ticket>*:last-child {
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-radius: 0 0 10px 10px;
+	   -moz-border-radius: 0 0 10px 10px;
+			border-radius: 0 0 10px 10px;
+}
+.ticket .akPlate { font-weight: bold; font-size: 140%; line-height: 2.1em; }
+.ticket .akPlate .logo { width: 392px; background-position: 117px center !important; }
+.ticket .akPlate * { vertical-align: middle; }
+.ticket .akPlate .stars { display: inline-block; height: 23px; width: 23px; background: red; }
+.ticket .akPlate, .ticket .direction { padding: 0 40px; }
+.ticket .dashedBorder { position: relative; height: 2px; margin: -1px 0; background: url("../images/dashes-h_u0580.png")/*tpa=http://www.onetwotrip.com/images/dashes-h_u0580.png*/ repeat-x center; }
+.ticket .direction { padding-top: 10px; padding-bottom: 10px;
+	/* @TODO Градиент картнкой для старых браузеров */
+	background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#f4f4f4));
+	/* @alternate */ background: -webkit-linear-gradient(top, #fbfbfb, #f4f4f4);
+	/* @alternate */ background:    -moz-linear-gradient(top, #fbfbfb, #f4f4f4);
+	/* @alternate */ background: 	-ms-linear-gradient(top, #fbfbfb, #f4f4f4);
+	/* @alternate */ background: 	 -o-linear-gradient(top, #fbfbfb, #f4f4f4);
+	/* @alternate */ background: 		linear-gradient(to bottom, #fbfbfb, #f4f4f4);
+}
+.ticket .trip { margin-top: 1em; }
+.ticket .trip:first-child { margin-top: 0; }
+.ticket .directionTitle { position: relative; }
+.ticket .directionTitle span.date, .ticket .trip:first-child .directionTitle span.from, .ticket .trip.last .directionTitle span.to { font-weight: bold; font-size: 140%; }
+.ticket .trip.last { margin-bottom: 1em; }
+.ticket .directionBody { margin: 0.4em 0; }
+.ticket .directionBody table { table-layout: fixed; width: 100%; border-collapse: collapse; }
+.ticket .directionBody table th, .ticket .directionBody table td { padding: 0; text-align: left; vertical-align: baseline; }
+.ticket .directionBody table th { font-size: 70%; font-weight: normal; }
+.ticket .directionBody table col.place { width: 20.5%; }
+.ticket .directionBody table col.departure { width: 6.5%; }
+.ticket .directionBody table col.arrival { width: 6.5%; }
+.ticket .directionBody table col.flightNumber { width: 11%; }
+.ticket .directionBody table col.ak { width: 15%; }
+.ticket .directionBody table col.cs { width: 11%; }
+.ticket .directionBody table col.plane { width: 13%; }
+.ticket .directionBody .time, .ticket .directionBody .flightNumber { font-weight: bold; font-size: 110%; }
+.ticket .directionBody .airport, .ticket .directionBody .ak, .ticket .directionBody .cs, .ticket .directionBody .plane { font-size: 80%; }
+.ticket .directionBody .airport { cursor: help; }
+.ticket .directionBody .plane { white-space: nowrap; }
+.ticket .directionBody .ak span.warn { display: inline-block; padding: 0.2em 0.5em; margin: 0 0 -0.2em -0.5em; }
+.ticket .duration span { display: inline-block; padding-right: 1em; border-top: 1px solid #BFC7C9; padding-top: 0.2em; font-size: 80%; }
+.ticket .change { color: #C94B00; margin: 1em 0; }
+.ticket .stop { color: #C94B00; font-size: 80%; }
+.ticket .stop .airport { cursor: help; }
+.ticket .baggage { font-size: 80%; }
+.ticket .baggage span { font-weight: bold; }
+.ticket .visaInfo { font-size: 80%; }
+.ticket .visaInfo .select { position: relative; display: inline-block; }
+.ticket .visaInfo select { z-index: 1; position: absolute; top: 0; bottom: 0; left: 0; width: 100%; font-size: 100%; line-height: 40px; opacity: 0; border: none; cursor: pointer; }
+.ticket .passengers { position: relative; background-color: #CCCECE;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-radius: 10px 10px 0 0;
+	   -moz-border-radius: 10px 10px 0 0;
+			border-radius: 10px 10px 0 0;
+}
+.ticket .passengers .passenger { position: relative; padding: 15px 40px; text-transform: capitalize; background-color: #CCCECE;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-radius: 10px 10px 0 0;
+	   -moz-border-radius: 10px 10px 0 0;
+			border-radius: 10px 10px 0 0;
+	-webkit-box-shadow: 0 -5px 5px #818282;
+	   -moz-box-shadow: 0 -5px 5px #818282;
+			box-shadow: 0 -5px 5px #818282;
+}
+.ticket .passengers table { border-collapse: collapse; width: 100%; table-layout: fixed; }
+.ticket .passengers table th, .ticket .passengers table td { padding: 0; text-align: left; font-weight: normal; vertical-align: top; }
+.ticket .passengers table th { font-size: 70%; }
+.ticket .passengers table .passanger {  }
+.ticket .passengers table .ticketNumber { width: 20%; white-space: nowrap; }
+.ticket .passengers table .ticketPrint { width: 17%; }
+.ticket .passengers table .ticketPrint iframe { position: absolute; left: -10000px; width:1px; height: 1px; visibility: hidden;}
+.ticket .passengers table .ticketPrint div { display: inline-block; cursor: pointer; white-space: nowrap; }
+.ticket .passengers table .ticketPrint img { margin-bottom: -4px;}
+.ticket .passengers table .ticketPrint a {display: inline-block; font-size: 90%; padding-left: 5px; }
+.ticket .passengers table .status { width: 14%; }
+.ticket .passengers table .operation { width: 17%;  }
+.ticket .passengers table .applicationStatus { width: 37%;  }
+.ticket .passengers table .applicationStatus .payTo {font-size: 80%; color: gray; text-transform: none !important;}
+.ticket .passengers .passenger .operation { text-transform: none; }
+.ticket .passengers table td.passenger { text-transform: capitalize; }
+.ticket .passengers .passenger:first-child {
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+			box-shadow: none;
+}
+.ticket .stars_block .star {margin-left:0;}
+.ticket .passengers .ChangedRoute {text-decoration:line-through;}
+
+.popup.visa_info_popup { width: 670px; padding: 20px 0; }
+.visa_info_iframe_container { position: relative; }
+.visa_info_iframe_container, .visa_info_iframe_container iframe { width: 640px; height: 350px; }
+.visa_info_iframe_container iframe { border: none; overflow: auto; }
+.visa_info_iframe_container .loader { margin: auto; position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
+
+.Application, .sms { position: relative; margin: 20px 0 10px 0; padding: 6px 10px;
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+			border-radius: 10px;
+	background-color: #000000;
+	background: rgba(0,0,0,0.5);
+	color: white;
+}
+.Application.cardApp {background-color: #F2F2F2; color: black;}
+.Application .block_payment { padding: 0 20px; margin: 1em 0 0; }
+
+.sms {width: 480px; display: block; padding: 0px 0px 5px;}
+.sms table.first {width: 100%;}
+.sms table td {vertical-align: top;}
+.sms table td.img { vertical-align: bottom; text-align: right; width: 85px;}
+.sms table td.img div {position: relative;}
+.sms table td.img img {position: absolute; right:0px; bottom: -4px;}
+.sms table tr:first-child .content { padding-top: 5px;}
+.sms table tr:last-child .content { padding-bottom: 10px;}
+.sms .header { font-size: 14px;}
+.sms .comment { font-size: 12px;}
+.sms .content { padding: 0px 15px;}
+.sms .header, .sms .comment {padding: 5px 0px;}
+.sms .plus { font-size: 22px; vertical-align: middle;}
+.sms .plus div {margin-left: -17px;}
+.sms .suggestField {width: 170px; margin-left: -5px}
+.sms #smsTaxi { font-size: 20px; padding: 5px 5px 4px; }
+.sms input[type="submit"] { margin: 0px 0px 0px 5px; width: 127px; height:33px; font-size: 110%; color: white; background: url("../images/button_green2_u0580.png")/*tpa=http://www.onetwotrip.com/images/button_green2_u0580.png*/ no-repeat left top; }
+.sms ul {margin: 0px; padding: 0px; list-style-type: none; font-size: 12px;}
+.sms ul li {margin: 3px 0;}
+.sms ul li label { margin-left: 5px;}
+
+.Return .Routes, .Return .Passengers, .sms .content { opacity: 0.99;}
+
+.popup.smspopup { width: 500px !important;}
+.successTaxi { padding: 20px;}
+.successTaxi .header {font-size: 140%; font-weight: bold;}
+.successTaxi p { font-size: 80%;}
+.popup.preload { width: 360px; height: 330px;}
+/*body.aluminium .Application {
+	background-color: #acb7bb;
+	background: rgba(172,183,187,0.8);
+}
+body.wood2 .Application {
+	background-color: #ad5323;
+	background: rgba(182,78,21,0.8);
+}*/
+.OrderOptions { padding: 20px 0 0;}
+.OrderOptions button { margin-right: 15px; }
+.Application ul { margin: 0px; padding: 0px; list-style-type: none;}
+.Application ul li { margin: 5px 10px; }
+.Application ul label { margin-left: 10px;}
+.Application ul li input { margin-top: -5px; vertical-align: middle;}
+.Application .directionTitle {display: inline-block;}
+.Application .directionTitle span.date, .Application .directionTitle span.from, .Application .directionTitle span.to { font-size: 140%; }
+.Application .Passengers {padding-top: 10px;}
+.Application .Passengers li {text-transform: capitalize; font-size: 140%;}
+.Application .Passengers .title { font-size: 180%;}
+.Application .block_creditCard { margin-left: 20px; }
+.Application .block_makePayment {padding-left: 20px;}
+.Application .SSL { padding-bottom: 10px; }
+.Application .additionalWarn { padding: 5px 0px 15px 0px; opacity: 0.99; }
+.Application .warn {display: inline-block; padding: 2px 5px; color: black; }
+.InfoStatus { position: absolute; bottom: 0; left: 0; padding: 10px; background-color: #cecece; color: white;
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+			border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 1px #000;
+	   -moz-box-shadow: inset 0 0 1px #000;
+			box-shadow: inset 0 0 1px #000;
+}
+.appInfo { font-size: 80%; color: gray; text-transform: none !important;}
+.appInfo div {padding: 3px 0;}
+.oper_button { position: relative;}
+.oper_button button { position: absolute; top: -4px;}
+
+.ApplicationContent { padding: 20px 20px 10px;}
+.ApplicationContent .Header {font-size: 140%; font-weight: bold;}
+.block_unpaidReservations { margin: 2em 0; }
+.block_unpaidReservations button { text-transform: capitalize; }
+.form_cardContainer { display: none; padding: 30px 35px; opacity: 0; background: #FBFBFB; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
+.form_cardContainer .block_creditCard { margin: 0 0 1.2em 0; }
+.form_cardContainer button { margin-top: 1em; }

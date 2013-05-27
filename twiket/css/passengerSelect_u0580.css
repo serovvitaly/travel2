@@ -1,0 +1,87 @@
+#popup_passengerSelect , #popup_passengerSelect .innerContent {
+	position: relative;
+	color: Black; background-color: #DEDEDF;
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+			border-radius: 10px;	
+}
+#popup_passengerSelect { width: 720px; margin: auto; margin-top: -30px;
+	display: none;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+	/*-webkit-box-shadow: 5px 5px 20px black;
+	-moz-box-shadow: 5px 5px 20px black;
+	box-shadow: 5px 5px 20px black;*/
+	/*border: 1px solid; border-color: #414141 #101010 #0c0c0c;*/
+}
+#popup_passengerSelect .innerContent { padding: 0px 19px 80px; }
+#popup_passengerSelect div.popupTitle span.AK { font-size: 180%; }
+#popup_passengerSelect div.popupTitle span.Passenger { font-size: 140%; }
+#popup_passengerSelect .seats { font-size: 80%; }
+#popup_passengerSelect div.ageinfo, #popup_passengerSelect .timeWarn, #popup_passengerSelect .priceWarn {font-size: 80%; padding: 0.5em 10px; margin-bottom: 15px;}
+#popup_passengerSelect .priceWarn { color: black; margin-bottom: -20px; }
+#popup_passengerSelect div.ageinfo { color: black; }
+#popup_passengerSelect .timeWarn {color: red;}
+#popup_passengerSelect #addCildrenLink { margin: 0.5em 0 0; font-size: 140%; }
+#popup_passengerSelect #childrenBlock { display: none; }
+#popup_passengerSelect .renew { display: inline-block; color: #346FAB; border-bottom: 1px dashed #346FAB; cursor: pointer;}
+#popup_passengerSelect div.ADT, #popup_passengerSelect div.CNN, #popup_passengerSelect div.INF { padding-top: 12px; }
+#popup_passengerSelect td.category { width: 140px; }
+#popup_passengerSelect div.categoryTitle { font-size: 140%; }
+#popup_passengerSelect div.annotation { font-size: 80%; }
+#popup_passengerSelect div.priceInf { font-size: 80%; }
+#popup_passengerSelect td.controls { width: 126px; }
+#popup_passengerSelect td.controls table { border-collapse: collapse; table-layout: fixed; }
+#popup_passengerSelect td.controls td { padding: 0; width: 42px; height: 42px; text-align: center; vertical-align: middle; font-size: 140%; }
+#popup_passengerSelect td.controls td.plus, #popup_passengerSelect td.controls td.minus { background: url("../images/calendar/day_u0580.png")/*tpa=http://www.onetwotrip.com/images/calendar/day_u0580.png*/ no-repeat left top; cursor: pointer; color: white; }
+#popup_passengerSelect td.controls td.plus:hover, #popup_passengerSelect td.controls td.minus:hover { background-position: left -42px; }
+#popup_passengerSelect td.controls td.plus.disabled { cursor: default; opacity: 0.3; background-position: left top; }
+#popup_passengerSelect td.fields { width: 100%; padding-left: 20px; }
+#popup_passengerSelect td.fields table { table-layout: fixed; border-collapse: collapse; width: 100%; margin-top: -0.96em; margin-bottom: 0.8em; }
+#popup_passengerSelect td.fields th { padding: 0; text-transform: uppercase; font-weight: normal; text-align: left; font-size: 80%; line-height: 1.2em; }
+#popup_passengerSelect td.fields th span { margin-left: 10px;}
+#popup_passengerSelect td.fields td { padding: 0; border: 1px solid #CCCCCC; }
+#popup_passengerSelect td.fields th:first-child, #popup_passengerSelect td.fields td:first-child { width: 41px; }
+#popup_passengerSelect td.fields .field { width: 100%; }
+#popup_passengerSelect div.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 54px; z-index:1; }
+#popup_passengerSelect div.footer>.bg { z-index: -1; top: 0; right: 0; bottom: 0; left: 0; }
+#popup_passengerSelect div.footer>.bg .bl, #popup_passengerSelect div.footer .bg .br { height: 54px; width: 12px; background-image: url(../images/ticket_footer_lr_u0580.png)/*tpa=http://www.onetwotrip.com/images/ticket_footer_lr_u0580.png*/; }
+#popup_passengerSelect div.footer>.bg .c { top: 0; right: 12px; bottom: 0; left: 12px; background: url(../images/ticket_footer_bg_u0580.png)/*tpa=http://www.onetwotrip.com/images/ticket_footer_bg_u0580.png*/ repeat-x; }
+#popup_passengerSelect div.footer>table { height:54px; }
+#popup_passengerSelect div.footer>table>tbody>tr>td { padding: 0 20px; vertical-align: middle; text-align: right; }
+#popup_passengerSelect div.footer>table>tbody>tr>td:first-child { text-align: left; font-size: 150%; padding-right: 0; width: 450px; }
+#popup_passengerSelect input[type="submit"] { margin: 1px 0 0 0; width: 197px; text-align: center; height:45px; font-size: 130%; color: white; background: url(../images/button_green_u0580.png)/*tpa=http://www.onetwotrip.com/images/button_green_u0580.png*/ no-repeat left top; }
+#popup_passengerSelect div.promo label { display: block; padding-left: 25px; margin-top: 0.8em; position: relative; font-size: 80%; }
+#popup_passengerSelect div.promo label input { position: absolute; left: 0; top: -9px; bottom: -9px; margin: auto 0; }
+#popup_passengerSelect div.promo div.field { margin-left: 25px; margin-top: 0.2em; border: 1px solid #CCC; }
+
+.genderSelect { text-align: center; height: 40px; }
+.genderSelect label, span.gender { z-index: 77; position: relative; cursor: pointer; display: inline-block; width: 13px; height: 21px; margin-top: 10px; background: url(../images/gender_u0580.png)/*tpa=http://www.onetwotrip.com/images/gender_u0580.png*/ no-repeat; overflow: hidden; }
+span.gender { margin-top: 5px; }
+.genderSelect label.focus { outline: 1px dotted black; }
+.genderSelect label.ADT.M { background-position: left top; }
+.genderSelect label.ADT.M.checked, span.gender.ADT.M { background-position: left -21px; }
+.genderSelect label.ADT.F { background-position: -13px top; }
+.genderSelect label.ADT.F.checked, span.gender.ADT.F { background-position: -13px -21px; }
+.genderSelect label.CNN.M { background-position: -26px top; }
+.genderSelect label.CNN.M.checked, span.gender.CNN.M { background-position: -26px -21px; }
+.genderSelect label.CNN.F { background-position: -39px top; }
+.genderSelect label.CNN.F.checked, span.gender.CNN.F { background-position: -39px -21px; }
+.genderSelect label.INF.M { background-position: -52px top; }
+.genderSelect label.INF.M.checked, span.gender.INF.M { background-position: -52px -21px; }
+.genderSelect label.INF.F { background-position: -65px top; }
+.genderSelect label.INF.F.checked, span.gender.INF.F { background-position: -65px -21px; }
+.genderSelect input[type="radio"] { position: absolute; left: -40px; }
+
+#passSuggest {  }
+#passSuggest li { padding: 0; }
+#passSuggest li table { table-layout: fixed; border-collapse: collapse; width: 100%; }
+#passSuggest li table td { padding: 0.2em 10px; font-size: 90%; text-align: left; vertical-align: middle; }
+#passSuggest li table td:first-child { width: 41px; text-align: center; padding: 0; }
+#passSuggest li table td div { font-size: 85%; text-transform: lowercase; color: #696564; }
+.ConfirmInfoFlight .FlightTicket { padding: 0 19px; }
+.ConfirmInfoFlight .akPlate .name { font-weight: bold; font-size: 140%; line-height: 2.1em; }
+.ConfirmInfoFlight .akPlate span.dashed {position: relative; z-index: 1; margin-left: 5px;}
+.ConfirmInfoFlight .akPlate .logo { width: 392px; background-position: 117px center !important; }
+.ConfirmInfoFlight .akPlate { padding: 0 20px;}

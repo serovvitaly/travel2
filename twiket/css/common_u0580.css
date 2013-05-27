@@ -1,0 +1,594 @@
+span.x-small { font-size: 60%; }
+span.small { font-size: 80%; }
+span.large { font-size: 140%; }
+.warn { background: #FFE958; }
+
+iframe.pm { position: absolute; top: -1px; left: -1px; height: 1px; width: 1px; border: none; visibility: hidden; }
+
+body { background-color: transparent; background-repeat: repeat; background-position: left top; }
+body.gray { background-image: url("../images/bg/GreyFabric_u0580.jpg")/*tpa=http://www.onetwotrip.com/images/bg/GreyFabric_u0580.jpg*/; }
+body.wood2 { background-image: url("../images/bg/DarkWood_u0580.jpg")/*tpa=http://www.onetwotrip.com/images/bg/DarkWood_u0580.jpg*/; }
+body.aluminium { background-image: url("../images/bg/Aluminium_u0580.jpg")/*tpa=http://www.onetwotrip.com/images/bg/Aluminium_u0580.jpg*/; }
+
+#layout_bg, #layout_bg div { z-index: 1; position: absolute; top: 0; right: 0; bottom: 0; left: 0; padding: 0%; }
+#layout_bg { background: url("../images/bg/topShadow_u0580.png")/*tpa=http://www.onetwotrip.com/images/bg/topShadow_u0580.png*/ repeat-x top; max-height: 100%; overflow: hidden; }
+#layout_bg div { top: 565px; background: black; opacity: 0.4; }
+
+div.spreader {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+	width: 1000px; padding: 0 20px; margin: 0 auto;
+}
+
+div#layout_panels { z-index: 3; position: relative; color: white; }
+
+div#rotationPanel {position: relative; background: rgba(0, 0, 0, 0.8);}
+div#rotationPanel:after { content: ''; position: absolute; left: 0; right: 0; opacity: 0.2; }
+div#rotationPanel .spreader { padding: 0;}
+
+div#topPanel { z-index: 3; position: relative; background: rgba(0, 0, 0, 0.8); padding: 4px 0; height: 21px; }
+div#topPanel div.spreader { padding-left: 140px; margin-top: -4px; }
+div#topPanel table { border-collapse: collapse; }
+div#topPanel table td { padding: 0; vertical-align: middle; }
+
+ul#topMenu { display: inline-block; list-style-type: none; margin: 0; padding: 0; }
+ul#topMenu li { display: inline-block; margin: 0 5px 0 0; }
+ul#topMenu li.selected { background: url("../images/topMenu_selected_u0580.png")/*tpa=http://www.onetwotrip.com/images/topMenu_selected_u0580.png*/ no-repeat center; background-size: 100% 100%; }
+ul#topMenu li { color: white; text-decoration: none; display: inline-block; cursor: pointer; margin: 0px; padding: 7px 10px; }
+
+ul#topMenu li span { vertical-align: middle; }
+ul#topMenu li .ico { display: inline-block; width: 20px; height: 21px; margin-left: -25px; margin-right: 5px; background: url("../images/topMenu_u0580.png")/*tpa=http://www.onetwotrip.com/images/topMenu_u0580.png*/ no-repeat center; }
+ul#topMenu li#link_avia .ico { background-position: 0px 0px; }
+ul#topMenu li#link_auto .ico { background-position: -20px 0px; }
+ul#topMenu li#link_hotels .ico { background-position: -40px 0px; }
+ul#topMenu li#link_trains .ico { background-position: -60px 0px; }
+ul#topMenu li#link_auto, ul#topMenu li#link_hotels, ul#topMenu li#link_trains { color: #535454; }
+
+div#topPanel table td#topSocialIn { padding-left: 30px;}
+div#topPanel table td#topSocialIn * {vertical-align: middle;}
+#topSocialIn div { display: inline-block; }
+#topSocialIn a { display: inline-block; vertical-align: middle; width: 21px; height: 21px; background: url("../images/social_buttons_u0580.png")/*tpa=http://www.onetwotrip.com/images/social_buttons_u0580.png*/ no-repeat; margin-left: 4px; }
+#topSocialIn a.vk { background-position: 0 0; }
+#topSocialIn a.fb { background-position: -22px 0; }
+#topSocialIn a.tw { background-position: -43px 0; }
+#topSocialIn a.jj { background-position: -63px 0; }
+
+.panelDropMenu .dm_wrapper { display: inline-block; position: relative;}
+.panelDropMenu ul { background-color: black; position: absolute; top: 29px; white-space: nowrap; padding: 0; margin: 0; display: none;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;	
+	-webkit-border-radius: 0 0 5px 5px;
+	   -moz-border-radius: 0 0 5px 5px;
+			border-radius: 0 0 5px 5px;	
+}
+.panelDropMenu ul li *, .panelDropMenu .dm_selected * {vertical-align: middle;}
+.panelDropMenu .dm_selected { position: relative; padding: 7px 20px 7px 10px; cursor: pointer; white-space: nowrap;}
+.panelDropMenu ul li {padding: 5px 10px; cursor: pointer;}
+.panelDropMenu li:hover  { background-color: #4c4c4c;
+	-webkit-transition: .2s background-color;
+	   -moz-transition: .2s background-color;
+		 -o-transition: .2s background-color;
+			transition: .2s background-color;
+}
+.panelDropMenu li:last-child {
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;	
+	-webkit-border-radius: 0 0 5px 5px;
+	   -moz-border-radius: 0 0 5px 5px;
+			border-radius: 0 0 5px 5px;	
+}
+.panelDropMenu .arrow { position: absolute; right:5px; top: 13px; width: 0px; height: 0px; border-style: solid; border-width: 4px 4px 0 4px; border-color: #ffffff transparent transparent transparent;}
+ul#topMenu li:hover, .panelDropMenu .dm_selected:hover  { background-color: #4c4c4c;
+	-webkit-transition: .4s background-color;
+	   -moz-transition: .4s background-color;
+		 -o-transition: .4s background-color;
+			transition: .4s background-color;
+}
+ul#topMenu li a, .panelDropMenu li a { text-decoration: none; color: white; }
+.panelDropMenu ul li.link { padding: 0;}
+.panelDropMenu ul li.link a {padding: 5px 10px; display: inline-block;}
+#languageSelect ul li {padding: 5px;}
+#languageSelect .lang { background: url("../images/languages_u0580.png")/*tpa=http://www.onetwotrip.com/images/languages_u0580.png*/ no-repeat; width: 24px; height: 19px; cursor: pointer; display: inline-block; margin-right: 6px; }
+#languageSelect .ru { background-position: 0px 0px; }
+#languageSelect .ua { background-position: -24px 0px; }
+#languageSelect .az { background-position: -48px 0px; }
+#languageSelect .en { background-position: -72px 0px; }
+#languageSelect .de { background-position: -96px 0px; }
+#languageSelect .es { background-position: -120px 0px; }
+#languageSelect .dm_selected { padding: 7px 20px 7px 35px; }
+#languageSelect .dm_selected .lang { position: absolute; left: 5px; top: 5px;}
+
+div#topPanel {font-size: 80%;}
+div#topPanel table td.profileCell { padding-left: 30px; }
+.loginLoader { display: inline-block; padding-right: 10px; background: url(../images/loader/login.gif)/*tpa=http://www.onetwotrip.com/images/loader/login.gif*/ no-repeat left center; width: 43px; height: 11px; }
+.profileInfo { display: inline-block; margin: 5px 0; padding: 2px 10px; color: black; background-color: #e4a200;
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+			border-radius: 10px;
+}
+.profileInfo span { text-decoration: underline; cursor: pointer; }
+.profileInfo a { color: black; }
+.profileInfo .myprofile, .profileInfo .register { text-overflow: ellipsis; max-width: 130px; overflow: hidden; margin-bottom: -3px; display: inline-block; white-space: nowrap; }
+#logo { z-index: 7; position: absolute; margin-top: -25px; outline: none; }
+
+div#topPanel2 {
+	z-index: 2; position: relative; padding: 7px 0 8px; min-height: 35px; text-align: center;
+	background: url(../images/topPanel2_grad_u0580.png)/*tpa=http://www.onetwotrip.com/images/topPanel2_grad_u0580.png*/ repeat-x top;/* IE & Old */
+	/* @alternate */ background: -webkit-gradient(linear, left top, left bottom, from(rgba(105,105,105,0.6)), to(Black));
+	/* @alternate */ background: -webkit-linear-gradient(top, rgba(105,105,105,0.6), Black);
+	/* @alternate */ background:    -moz-linear-gradient(top, rgba(105,105,105,0.6), Black);
+	/* @alternate */ background: 	-ms-linear-gradient(top, rgba(105,105,105,0.6), Black);
+	/* @alternate */ background: 	 -o-linear-gradient(top, rgba(105,105,105,0.6), Black);
+	/* @alternate */ background: 		linear-gradient(to bottom, rgba(105,105,105,0.6), Black);
+}
+div#topPanel2:before {
+	content: ""; position: absolute; top: 0; left: 0; right: 0; height: 50%;
+	background: url("../images/topPanel2_blick_u0580.png")/*tpa=http://www.onetwotrip.com/images/topPanel2_blick_u0580.png*/ repeat-x top;/* IE & Old */
+	/* @alternate */ background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.1)), to(rgba(255,255,255,0.04)));
+	/* @alternate */ background: -webkit-linear-gradient(top, rgba(255,255,255,0.1), rgba(255,255,255,0.04));
+	/* @alternate */ background:    -moz-linear-gradient(top, rgba(255,255,255,0.1), rgba(255,255,255,0.04));
+	/* @alternate */ background: 	-ms-linear-gradient(top, rgba(255,255,255,0.1), rgba(255,255,255,0.04));
+	/* @alternate */ background: 	 -o-linear-gradient(top, rgba(255,255,255,0.1), rgba(255,255,255,0.04));
+	/* @alternate */ background: 		linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.04));
+}
+div#topPanel:after, div#topPanel2:after { content: ''; position: absolute; left: 0; right: 0; border-top: 1px solid; opacity: 0.2; }
+div#topPanel:after { bottom: 0; border-color: black; }
+div#topPanel2:after { top: 0; border-color: white; }
+
+div#topPanel2 .spreader { position: relative; }
+
+#pageTitle { font-size: 140%; line-height: 35px; }
+
+#topPanel2 .button { z-index: 1; position: absolute; top: 0; bottom: 0; margin: auto 0; height: 35px; line-height: 35px; padding: 0 15px; cursor: pointer; color: white; text-decoration: none; outline: none; }
+#topPanel2 .button.back, #topPanel2 .button.left { left: 140px; }
+#topPanel2 .button.foward, #topPanel2 .button.right { right: 20px; }
+#topPanel2 .button.back { padding-left: 20px; }
+#topPanel2 .button.forward { padding-right: 20px; }
+#topPanel2 .button .l, #topPanel2 .button .r, #topPanel2 .button .c { z-index: -1; position: absolute; top: 0; bottom: 0; }
+#topPanel2 .button .c { left: 15px; right: 15px; background: url("../images/button_topPanel2_c_u0580.png")/*tpa=http://www.onetwotrip.com/images/button_topPanel2_c_u0580.png*/ repeat-x left; }
+#topPanel2 .button.back .c { left: 20px; }
+#topPanel2 .button.foward .c { right: 20px; }
+#topPanel2 .button .l, #topPanel2 .button .r { background: url("../images/button_topPanel2_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/button_topPanel2_lr_u0580.png*/ no-repeat; width: 15px; }
+#topPanel2 .button .l { left: 0; background-position: -35px 0; }
+#topPanel2 .button.back .l { width: 20px; background-position: left; }
+#topPanel2 .button .r { right: 0; background-position: -20px 0; }
+#topPanel2 .button.foward .r { width: 20px; background-position: right; }
+
+div#layout_body { z-index: 1; position: relative; padding-top: 35px; padding-bottom: 35px; }
+
+.blank { position: relative; color: black; padding: 1px 0; min-height: 518px; }
+.blank>.bg { z-index: -1; position: absolute; top: 0; right: 0; bottom: 0; left: 0; border-bottom: 1px solid #4d4d4d;
+	-webkit-box-shadow: 10px 10px 10px 1px rgba(0,0,0,0.4);
+	   -moz-box-shadow: 10px 10px 10px 1px rgba(0,0,0,0.4);
+			box-shadow: 10px 10px 10px 1px rgba(0,0,0,0.4);
+}
+.blank>.bg table { height: 100%; width: 100%; border-collapse: collapse; table-layout: fixed; }
+.blank>.bg table td { padding: 0; background: #f2f2f2; }
+.blank.carbon>.bg table td { background: #F0F0D7; }
+.blank>.bg table col:first-child { width: 45px; }
+.blank>.bg table tr:first-child, .blank>.bg table tr:last-child { height: 230px; }
+.blank>.bg table tr.hole { height: 29px; }
+.blank>.bg table tr.hole td:first-child { background: transparent url("../images/blank_hole_u0580.png")/*tpa=http://www.onetwotrip.com/images/blank_hole_u0580.png*/ no-repeat left; }
+.blank.carbon>.bg table tr.hole td:first-child { background-position: right; }
+/*.blank>.logo { z-index: 2; position: absolute; top: 35px; left: 65px; width: 120px; height: 119px; background: url("/images/blank_logo_u0580.png") no-repeat center; }*/
+
+.field { display: inline-block; position: relative; background: white; vertical-align: middle; }
+.field.error, .field.warn { background-color: #FFE958; }
+.field.disabled, .suggestField.disabled { background: #E9E9E9; }
+.suggestField.disabled input { background: transparent; }
+.field input[type="text"], .field input[type="password"] { z-index: 6; position: relative; font-size: 100%; height: 40px; line-height: 20px; padding: 10px; width: 100%; background: transparent; text-overflow: ellipsis; }
+.field input[type="text"].placeholder { z-index: 4; position: absolute; top: 0; left: 0; color: silver; }
+.field.checkbox input[type="text"] { padding-left: 40px; }
+.field div.checkbox { z-index: 7; position: absolute; top: 0; bottom: 0; left: 0; width: 30px; background: #E9E9E9; text-align: center; line-height: 40px; }
+.field .bg { z-index:1; top: 0; right: 0; bottom: 0; left: 0; }
+.field.checkbox .bg { left: 30px; }
+.field .bg .tl, .field .bg .tr, .field .bg .bl, .field .bg .br { width: 6px; height: 6px; background-image: url("../images/field_corners_u0580.png")/*tpa=http://www.onetwotrip.com/images/field_corners_u0580.png*/; }
+.field .bg .t, .field .bg .b { height: 6px; left: 6px; right: 6px; background-image: url("../images/field_tb_u0580.png")/*tpa=http://www.onetwotrip.com/images/field_tb_u0580.png*/; }
+.field .bg .l, .field .bg .r { width: 6px; top: 6px; bottom: 6px; background-image: url("../images/field_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/field_lr_u0580.png*/; }
+.field div.focus { display: none; }
+
+/*Loader*/
+.loader { z-index:5; position: relative; width: 189px; height: 186px; margin: 60px auto 0; }
+.loader div { position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+.loader .l_background { z-index: 1; background: url("../images/loader/bg_u0580.png")/*tpa=http://www.onetwotrip.com/images/loader/bg_u0580.png*/ no-repeat 0 0; width: 189px; height: 186px; }
+.loader .l_shadow { z-index: 2; background: url("../images/loader/shadow_u0580.png")/*tpa=http://www.onetwotrip.com/images/loader/shadow_u0580.png*/ no-repeat 0 0; width: 189px; height: 186px; }
+.loader .l_arrows { z-index: 2; background: url("../images/loader/arrows_u0580.png")/*tpa=http://www.onetwotrip.com/images/loader/arrows_u0580.png*/ no-repeat; width: 76px; height: 76px; background-position: 0px 0px; left: 57px; top: 1px; }
+.loader .content { position: relative; z-index: 1; padding-top: 100px; font-size: 16px; color: white; text-align: center;}
+body.wood2 .l_background { background-position: -189px 0px; }
+div.popup .loader .l_background {background-position: 0px 0px;}
+div.popup .loader .l_shadow {background-position: 0px 0px;}
+.smallLoader { vertical-align: middle; background: url(../images/loader/small.gif)/*tpa=http://www.onetwotrip.com/images/loader/small.gif*/ no-repeat left center; min-width: 16px; min-height: 16px; }
+span.smallLoader { display: inline-block; }
+#fadeBlock .loader { position: fixed; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
+
+#ChooseBG { z-index: 5; position: fixed; bottom: 70px; right: -26px; padding: 0 10px; }
+#ChooseBG ul { display: block; list-style-type: none; margin:0; padding: 0; }
+#ChooseBG ul li { position: relative; display: block; margin: 10px 0; width: 32px; height: 32px; }
+#ChooseBG ul li .bg_style { position: absolute; width: 32px; height: 32px; background: url("../images/bg/background_list_u0580.png")/*tpa=http://www.onetwotrip.com/images/bg/background_list_u0580.png*/ no-repeat; }
+#ChooseBG ul li.gray .bg_style { background-position: 0 0; }
+#ChooseBG ul li.aluminium .bg_style { background-position: -32px 0px; }
+#ChooseBG ul li.wood2 .bg_style { background-position: -64px 0px; }
+#ChooseBG ul li .selected { visibility: hidden; }
+#ChooseBG ul li .bg_zoom { position: absolute; width: 32px; height: 32px; }
+#ChooseBG ul li.gray .bg_zoom { background: url("../images/bg/GreyFabric_u0580.jpg")/*tpa=http://www.onetwotrip.com/images/bg/GreyFabric_u0580.jpg*/ repeat center; }
+#ChooseBG ul li.wood2 .bg_zoom { background: url("../images/bg/DarkWood_u0580.jpg")/*tpa=http://www.onetwotrip.com/images/bg/DarkWood_u0580.jpg*/ repeat center; }
+#ChooseBG ul li.aluminium .bg_zoom { background: url("../images/bg/Aluminium_u0580.jpg")/*tpa=http://www.onetwotrip.com/images/bg/Aluminium_u0580.jpg*/ repeat center; }
+#ChooseBG ul li .pointer { cursor: pointer; }
+
+#fadeBlock { z-index: 76; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: black; opacity: 0.4; filter: alpha(opacity=40); }
+
+div.popup { z-index: 100; visibility: hidden; position: relative; top: 0; right: 0; left: 0; bottom: 0; margin: auto; width: 630px; }
+div.popup>div.loader { z-index: 1; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto; }
+div.popup>div.content { z-index: 2; position: absolute; top: 30px; right: 0; bottom: 30px; left: 0; padding: 0 30px; overflow: auto; }
+div.popup .wrapper { z-index: -1; position: absolute; top: -8px; right: -19px; bottom: -28px; left: -19px; }
+div.popup .wrapper .tl, div.popup .wrapper .tr, div.popup .wrapper .bl, div.popup .wrapper .br { background-image: url("../images/popup_corners_u0580.png")/*tpa=http://www.onetwotrip.com/images/popup_corners_u0580.png*/; width: 35px; height: 40px;}
+div.popup.yellow .wrapper .tl, div.popup.yellow .wrapper .tr, div.popup.yellow .wrapper .bl, div.popup.yellow .wrapper .br {background-image: url("../images/popup_corners_yellow_u0580.png")/*tpa=http://www.onetwotrip.com/images/popup_corners_yellow_u0580.png*/;}
+div.popup.color .wrapper .tl, div.popup.color .wrapper .tr, div.popup.color .wrapper .bl, div.popup.color .wrapper .br {background-image: url("../images/popup_corners_color_u0580.png")/*tpa=http://www.onetwotrip.com/images/popup_corners_color_u0580.png*/;}
+
+div.popup .wrapper .tl { background-position: 0px 0px;}
+div.popup .wrapper .tr { background-position: -35px 0px;}
+div.popup .wrapper .br { background-position: -35px -40px;}
+div.popup .wrapper .bl { background-position: 0px -40px;}
+div.popup .wrapper .t, div.popup .wrapper .b { background-image: url("../images/popup_tb_u0580.png")/*tpa=http://www.onetwotrip.com/images/popup_tb_u0580.png*/; background-repeat: repeat-x; left:35px; right:35px; height: 40px; }
+div.popup.yellow .wrapper .t, div.popup.yellow .wrapper .b { background-image: url("../images/popup_tb_yellow_u0580.png")/*tpa=http://www.onetwotrip.com/images/popup_tb_yellow_u0580.png*/;}
+div.popup.color .wrapper .t, div.popup.color .wrapper .b { background-image: url("../images/popup_tb_color_u0580.png")/*tpa=http://www.onetwotrip.com/images/popup_tb_color_u0580.png*/;}
+
+div.popup .wrapper .t { top:0px; background-position: 0px 0px;}
+div.popup .wrapper .b { bottom: 0px; background-position: 0px -40px;}
+div.popup .wrapper .l, .popup .wrapper .r { background-image: url("../images/popup_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/popup_lr_u0580.png*/; background-repeat: repeat-y; width: 18px; top:40px; bottom:40px; }
+div.popup .wrapper .l { left:1px; background-position: 0px 0px;}
+div.popup .wrapper .r { right:1px; background-position: -18px 0px;}
+div.popup .wrapper .c { top: 20px; right:19px; bottom:40px; left: 19px; background-color: white; z-index:-1; }
+div.popup.yellow .wrapper .c {background-color: #f5d244; color: #512609;}
+div.popup .aSign { font-size: 72px; white-space: nowrap; width: 90px; text-align: center; }
+div.popup .comment { font-size: 80%; }
+div.popup .comment p:first-child { margin: 5px 0 12px;}
+div.popup ul.disc { padding-left: 15px; }
+div.popup ul.disc li { list-style: disc; }
+div.popup.color .paper {position: relative; background-color: #f6f5e2; border-top: 2px solid #ede0bf;}
+div.popup.color .paper .arrow { background-image: url("../images/popup_arrow_u0580.png")/*tpa=http://www.onetwotrip.com/images/popup_arrow_u0580.png*/; width: 23px; height: 17px; position: absolute; top:-17px;right:0;left:0; margin: auto; }
+div.popup>div.content1 { padding: 30px; }
+div.popup>div.content1>*:first-child { margin-top: 0; }
+div.popup>div.content1>*:last-child { margin-bottom: 0; }
+div.popup div.popupHeader, div.popup div.title, div.popup .reason { font-size: 140%; font-weight: bold; }
+div.popup .wide_s { padding: 10px 0;}
+div.popup .wide_s table td { padding: 5px 10px; vertical-align: top; }
+div.popup .actionButton { padding-top: 10px;}
+
+.close_button { z-index: 7; position: absolute; height:30px; width: 30px; top:-12px; right:-12px; background: url("../images/close_button_u0580.png")/*tpa=http://www.onetwotrip.com/images/close_button_u0580.png*/; cursor: pointer; }
+.cross_close { z-index: 7; position: absolute; height: 21px; width:21px; right: 3px; top: 3px; background: url("../images/cross_close_u0580.png")/*tpa=http://www.onetwotrip.com/images/cross_close_u0580.png*/ no-repeat left top;  cursor: pointer; }
+.cross_close:hover { background-position: -21px 0px; }
+
+.button.disabled, button[disabled], input[type="button"][disabled], input[type="submit"][disabled], input[type="reset"][disabled], button.disabled, input[type="button"].disabled, input[type="submit"].disabled, input[type="reset"].disabled { cursor: default; opacity: 0.3; }
+.button { z-index: 1; position: relative; display: inline-block; white-space: nowrap; cursor: pointer; }
+/*button.button>.bg { -moz-transform: translateX(-10px); }*/
+.button .bg, .button .bg:before, .button .bg:after { content: ''; z-index: -1; position: absolute; top: 0; bottom: 0; padding: 0%;/* Opera */ background-repeat: no-repeat; }
+.button .bg:before { background-position: top left; }
+.button .bg:after { background-position: top right; }
+
+.button.small { padding: 0 10px; height: 28px; line-height: 28px; font-size: 80%; color: black; }
+.button.small .bg { left: 14px; right: 14px; background: url(../images/buttons/small_c_u0580.png)/*tpa=http://www.onetwotrip.com/images/buttons/small_c_u0580.png*/ repeat-x top; }
+.button.small .bg:before, .button.small .bg:after { width: 14px; background-image: url(../images/buttons/small_lr_u0580.png)/*tpa=http://www.onetwotrip.com/images/buttons/small_lr_u0580.png*/; }
+.button.small .bg:before { left: -14px; }
+.button.small .bg:after { right: -14px; }
+.button.small.green { color: white; }
+.button.small.green .bg { background-image: url(../images/buttons/small_green_c_u0580.png)/*tpa=http://www.onetwotrip.com/images/buttons/small_green_c_u0580.png*/ }
+.button.small.green .bg:before, .button.small.green .bg:after { background-image: url(../images/buttons/small_green_lr_u0580.png)/*tpa=http://www.onetwotrip.com/images/buttons/small_green_lr_u0580.png*/ }
+
+.button.big { padding: 0 15px; height: 40px; line-height: 40px; color: black; }
+.button.big .bg { left: 14px; right: 14px; background: url(../images/buttons/big_c_u0580.png)/*tpa=http://www.onetwotrip.com/images/buttons/big_c_u0580.png*/ repeat-x top; }
+.button.big:hover .bg, .button.big:focus .bg { background-position: left -40px; }
+.button.big .bg:before, .button.big .bg:after { width: 14px; background-image: url(../images/buttons/big_lr_u0580.png)/*tpa=http://www.onetwotrip.com/images/buttons/big_lr_u0580.png*/; }
+.button.big .bg:before { left: -14px; }
+.button.big .bg:after { right: -14px; }
+.button.big:hover .bg:before, .button.big:focus .bg:before { background-position: left -40px; }
+.button.big:hover .bg:after, .button.big:focus .bg:after { background-position: right -40px; }
+
+.hint { z-index:666; position: absolute; min-height: 16px; min-width: 22px; padding: 5px 15px 4px; font-size: 80%; color: black; background: none; }
+.hint.error { z-index: 777; color: white; }
+.hint.black { color: white; }
+.hint .abs { z-index:-1; top: -7px; right:-9px; bottom:-13px; left:-9px; }
+.hint .tl, .hint .tr, .hint .bl, .hint .br { width: 20px; background-image: url("../images/hint/white_corners_u0580.png")/*tpa=http://www.onetwotrip.com/images/hint/white_corners_u0580.png*/; }
+.hint.error .tl, .hint.error .tr, .hint.error .bl, .hint.error .br { background-image: url("../images/hint/red_corners_u0580.png")/*tpa=http://www.onetwotrip.com/images/hint/red_corners_u0580.png*/; }
+.hint.black .tl, .hint.black .tr, .hint.black .bl, .hint.black .br { background-image: url("../images/hint/black_corners_u0580.png")/*tpa=http://www.onetwotrip.com/images/hint/black_corners_u0580.png*/; }
+.hint .tl, .hint .tr { height: 20px; }
+.hint .bl, .hint .br { height: 25px; }
+.hint .t,  .hint .b { left: 20px; right: 20px; background-image: url("../images/hint/white_tb_u0580.png")/*tpa=http://www.onetwotrip.com/images/hint/white_tb_u0580.png*/; }
+.hint.error .t,  .hint.error .b { background-image: url("../images/hint/red_tb_u0580.png")/*tpa=http://www.onetwotrip.com/images/hint/red_tb_u0580.png*/; }
+.hint.black .t,  .hint.black .b { background-image: url("../images/hint/black_tb_u0580.png")/*tpa=http://www.onetwotrip.com/images/hint/black_tb_u0580.png*/; }
+.hint .t { height: 7px;}
+.hint .b { height: 13px;}
+.hint .l,  .hint .r { top: 20px; bottom: 25px; background-image: url("../images/hint/white_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/hint/white_lr_u0580.png*/; }
+.hint.error .l,  .hint.error .r { background-image: url("../images/hint/red_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/hint/red_lr_u0580.png*/; }
+.hint.black .l,  .hint.black .r { background-image: url("../images/hint/black_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/hint/black_lr_u0580.png*/; }
+.hint .l { width: 20px;}
+.hint .r { width: 20px;}
+.hint .c { top: 7px; bottom: 13px; left: 20px; right: 20px; background-color: white; }
+.hint.error .c { background-color: #b80000; }
+.hint.black .c { background-color: rgba(0,0,0,0.85); }
+.hint .arrUp { width: 24px; height: 15px; top: -7px; left: 0; right: 0; margin: 0 auto; background-image: url("../images/hint/white_arrUp_u0580.png")/*tpa=http://www.onetwotrip.com/images/hint/white_arrUp_u0580.png*/; }
+.hint.error .arrUp { background-image: url("../images/hint/red_arrUp_u0580.png")/*tpa=http://www.onetwotrip.com/images/hint/red_arrUp_u0580.png*/; }
+.hint.black .arrUp { background-image: url("../images/hint/black_arrUp_u0580.png")/*tpa=http://www.onetwotrip.com/images/hint/black_arrUp_u0580.png*/; }
+.hint .question { display: inline-block; background-image: url("../images/QuestionIcon_u0580.png")/*tpa=http://www.onetwotrip.com/images/QuestionIcon_u0580.png*/; width: 17px; height: 17px; cursor: pointer; }
+.hint .text { }
+.hint .hiddenText { display: none; margin-top: 10px; }
+
+.TitleStyle {
+	position: absolute;
+	overflow: hidden;
+	z-index: 666;
+	background-color: white;
+	color: black;
+	padding: 7px 10px;
+	font-size: 80%;
+	white-space: nowrap;
+	-webkit-box-shadow: 0px 3px 15px black;
+	   -moz-box-shadow: 0px 3px 15px black;
+			box-shadow: 0px 3px 15px black;
+}
+.attention { background-color: #FFED00; color: black;}
+
+#LearnFAQ { height: 560px; width: 900px;}
+#LearnFAQ .questions { overflow: hidden; padding: 0; margin-top: -30px;background-color: #f5d244; color: #512609;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-radius: 10px 10px 0 0;
+	   -moz-border-radius: 10px 10px 0 0;
+			border-radius: 10px 10px 0 0;
+}
+.popup .FAQlist .listWrapper { height: 480px; overflow-y: scroll; outline: none; position: absolute; top: 50px;}
+.FAQlist .suggestField { margin: 0px 25px; }
+.FAQlist .suggestField input[type="text"]  {font-size: 20px; width: 100%; padding: 5px 9px;}
+.popup .FAQlist .comment { font-size: 13px; padding: 5px; line-height: 16px;}
+.popup .FAQlist .Fieldpanel {
+	z-index: 2; position: absolute; padding: 8px 0; left:0; right:0; top:0;
+	background: url(../images/topPanel2_grad_u0580.png)/*tpa=http://www.onetwotrip.com/images/topPanel2_grad_u0580.png*/ repeat-x top;/* IE & Old */
+	/* @alternate */ background: -webkit-gradient(linear, left top, left bottom, from(rgba(105,105,105,0.6)), to(Black));
+	/* @alternate */ background: -webkit-linear-gradient(top, rgba(105,105,105,0.6), Black);
+	/* @alternate */ background:    -moz-linear-gradient(top, rgba(105,105,105,0.6), Black);
+	/* @alternate */ background: 	-ms-linear-gradient(top, rgba(105,105,105,0.6), Black);
+	/* @alternate */ background: 	 -o-linear-gradient(top, rgba(105,105,105,0.6), Black);
+	/* @alternate */ background: 		linear-gradient(to bottom, rgba(105,105,105,0.6), Black);
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-radius: 10px 10px 0 0;
+	   -moz-border-radius: 10px 10px 0 0;
+			border-radius: 10px 10px 0 0;
+}
+
+.Social { position: absolute; color: white; padding: 0; font-size: 13px; opacity: 0.99; top:2px; right: 0;}
+.Social.friends { right: 200px; top: 10px; }
+.Social.friends .speak {display: inline-block; padding-right: 10px;}
+.Social * { vertical-align: middle; }
+.Social ul {margin: 0; padding: 0; list-style-type: none; display: inline-block;}
+.Social ul li {display: inline-block; margin: 0 2px;}
+.Social .shareable {display: inline-block;}
+.Social .img { display: inline-block; background-image: url("../images/social_buttons_u0580.png")/*tpa=http://www.onetwotrip.com/images/social_buttons_u0580.png*/; width: 21px; height: 21px; background-repeat: no-repeat; background-position: 0 0;}
+.Social .jj { background-position: -63px 0;}
+.Social .fb { background-position: -21px 0;}
+.Social .vk { background-position: 0 0;}
+.Social .tw { background-position: -42px 0;}
+
+.Contacts .c_info { max-height: 500px; overflow: auto; margin-top: 20px; }
+.Contacts h1 { font-size: 26px; font-weight: bold;} 
+.Contacts h2, .About h2 { margin-bottom: 0px; font-size: 19px; font-weight: bold;}
+.Contacts { padding: 0 20px 20px; font-size: 13px; width: 550px;}
+.Contacts ul { margin: 0; padding: 0; }
+.Contacts .de_info { font-size: 80%;}
+.Contacts .de_info table td { padding: 0 20px 0 0;}
+.popup.Contacts li {margin: 2px 0; list-style: none;}
+.Contacts .email {unicode-bidi:bidi-override; direction: rtl;}
+.About { width: 640px !important; }
+.About .wrapper { display: none;}
+.About .close_button { top:10px; right: 10px;}
+#temp_about {visibility: hidden;}
+#carousel_container { position: relative; }
+#carousel_inner { width: 640px; height: 480px; padding: 0; margin: 0; background-repeat: no-repeat;
+	-webkit-border-radius: 28px;
+       -moz-border-radius: 28px;
+    		border-radius: 28px;
+	-webkit-box-shadow: 5px 5px 20px black;
+	   -moz-box-shadow: 5px 5px 20px black;
+			box-shadow: 5px 5px 20px black;
+}
+#carousel_container .left,#carousel_container .right { position: absolute; top: 425px; cursor: hand; }
+#carousel_container .left { left: 220px;}
+#carousel_container .right { left: 375px; }
+#carousel_container .scroll { z-index: 2; position: absolute; height: 46px; width: 45px; background: url("../images/about/arrows_about_u0580.png")/*tpa=http://www.onetwotrip.com/images/about/arrows_about_u0580.png*/ no-repeat 0 0; }
+#carousel_container .right .scroll { background-position: -45px 0; }
+#carousel_container .bkg { z-index: 1; position: absolute; top: 5px; left: 10px; width: 25px; height: 30px; background: none; }
+#carousel_container .right:hover .bkg, #carousel_container .left:hover .bkg { background-color: #16739d; }
+#carousel_container .movetop { top: 385px !important; }
+
+.popup.commonPopup { padding: 20px 20px 0px; width: 640px; }
+.commonPopup .header { font-size: 24px; font-weight: bold; padding-bottom: 10px; }
+.commonPopup .text { padding: 10px 0; font-size: 90%; }
+.commonPopup .p { padding: 5px 0px; }
+.commonPopup .smallText { font-size: 14px; }
+.commonPopup .Comment { padding-bottom: 10px; }
+.commonPopup #notAgree { float: right; }
+.commonPopup button { font-size: 20px; }
+.commonPopup.small button { font-size: 100%; }
+.popup.regConfirm { width: 680px; }
+
+.PopupForm { z-index: 77; position: absolute; display: block; top: 100px; right: 0; left: 0; width: 720px; margin: auto; padding: 9px 19px 73px; color: Black; background-color: #DEDEDF;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+			border-radius: 10px;
+	-webkit-box-shadow: 5px 5px 20px black;
+	   -moz-box-shadow: 5px 5px 20px black;
+			box-shadow: 5px 5px 20px black;
+}
+.PopupForm div.popupTitle { font-size: 30px; padding-bottom: 5px; }
+.PopupForm table, .PopupForm .field { width: 100%; }
+.PopupForm div.footer { position: absolute; bottom: 0; left: 0; right: 0; height: 54px; }
+.PopupForm div.footer>.bg { z-index: -1; top: 0; right: 0; bottom: 0; left: 0; }
+.PopupForm div.footer>.bg .bl, .PopupForm div.footer .bg .br { height: 54px; width: 12px; background-image: url(../images/ticket_footer_lr_u0580.png)/*tpa=http://www.onetwotrip.com/images/ticket_footer_lr_u0580.png*/; }
+.PopupForm div.footer>.bg .c { top: 0; right: 12px; bottom: 0; left: 12px; background: url(../images/ticket_footer_bg_u0580.png)/*tpa=http://www.onetwotrip.com/images/ticket_footer_bg_u0580.png*/ repeat-x; }
+.PopupForm div.footer>table { height:54px; }
+.PopupForm div.footer>table>tbody>tr>td { padding: 0 20px; vertical-align: middle; text-align: right; }
+.PopupForm.dual { width: 690px; }
+.PopupForm.dual table td { vertical-align: top; }
+.PopupForm.dual table td.middle { width: 100%;}
+.dual .v_line {position: absolute; top: 20px; bottom: 70px; left: 345px; width: 1px; background-color: gray;}
+.dual table td.middle>div>div {position: absolute; width: 1px; top: 0; bottom:0; border-right: 1px solid gray;}
+/*.dual table td:first-child form { padding-right: 20px; border-right: 1px solid gray;}
+.dual table td:last-child form { padding-left: 15px;}
+*/
+.SocialForm {width: 300px; }
+.SocialForm .field input[type="text"], .SocialForm .field input[type="password"] { z-index: 6; position: relative; font-size: 100%; height: 40px; line-height: 20px; padding: 10px; width: 100%; background: transparent; }
+.SocialForm .field input[type="text"].placeholder { z-index: 4; position: absolute; top: 0; left: 0; color: silver; }
+.SocialForm .text { font-size: 12px; color: #555555; }
+.SocialForm ul { margin: 13px 0; padding: 0px; display: block; list-style: none; }
+.SocialForm .social_list li { display: inline-block; vertical-align: middle; width: 34px; height: 33px; margin-right: 7px; }
+.SocialForm .social_list a { display: block; width: 100%; height: 100%; background: url("../images/social_auth_u0580.png")/*tpa=http://www.onetwotrip.com/images/social_auth_u0580.png*/ no-repeat; }
+.SocialForm .social_list .fb { background-position: 0 0; }
+.SocialForm .social_list .tw { background-position: -34px 0; }
+.SocialForm .social_list .vk { background-position: -68px 0; }
+.SocialForm .social_list .ok { background-position: -102px 0; }
+.SocialForm .social_list .ya { background-position: -136px 0; }
+.SocialForm .social_list .mr { background-position: -170px 0; }
+.SocialForm .social_list .lj { background-position: -204px 0; }
+.SocialForm .headName { text-transform: uppercase; font-weight: normal; font-size: 13px; padding-top: 10px; }
+#SocialReg .addSpace { padding-bottom: 7px;}
+.SocialForm .pos_but { z-index: 2; position: absolute; bottom: 7px; right: 370px; }
+#SocialReg .pos_but { right: 19px;}
+.SocialForm div.footer>table>tbody>tr>td { text-align: center;}
+.SocialForm .Error {font-size: 80%; padding: 3px 0; margin-top: 5px; text-align: center; color: white; background-color: red;}
+.PopupForm.dual table td.passCell  { vertical-align: bottom; text-align: right;}
+.SocialForm .passCell .getNewPas { font-size: 80%; display: inline-block; border-bottom: 1px dashed black; cursor: pointer; }
+.SocialForm .savePas { font-size: 80%; padding-top: 10px;}
+.SocialForm .savePas input { margin-right: 5px;}
+.popup.sendPasPopup { width: 500px; padding: 20px; }
+.popup.sendPasPopup { padding: 20px 20px 0px;}
+.popup.sendPasPopup .header { font-size: 26px; font-weight: bold; padding-bottom: 10px;}
+.popup .color_green {color: green; margin-bottom: 15px;}
+.popup .color_orange {color: #FF9000;}
+
+.suggest {
+	z-index: 78; position: absolute;
+	margin-top: 2px;
+	background: white; color: black;
+	border: 1px solid #535353;
+	-webkit-border-bottom-left-radius: 7px;
+	-webkit-border-bottom-right-radius: 7px;
+	-webkit-border-radius: 0 0 7px 7px;
+	   -moz-border-radius: 0 0 7px 7px;
+			border-radius: 0 0 7px 7px;
+	-webkit-box-shadow: 10px 10px 14px 14px rgba(0,0,0,0.4);
+	   -moz-box-shadow: 10px 10px 14px 14px rgba(0,0,0,0.4);
+			box-shadow: 10px 10px 14px 14px rgba(0,0,0,0.4);
+}
+.suggest ul { display: block; list-style: none; margin:0; padding:0; }
+.suggest li { display:block; margin:0; padding: 0.4em 10px; }
+.suggest li:last-child {
+	-webkit-border-bottom-left-radius: 7px;
+	-webkit-border-bottom-right-radius: 7px;
+	-webkit-border-radius: 0 0 7px 7px;
+	   -moz-border-radius: 0 0 7px 7px;
+			border-radius: 0 0 7px 7px;
+}
+.suggest li:hover, .suggest li.hover {
+	cursor: pointer;
+	background: #78a8cc url(../images/suggestHoverRow.gif)/*tpa=http://www.onetwotrip.com/images/suggestHoverRow.gif*/ repeat-x top; background-size: 100% 100%;/* IE & Old */
+	/* @alternate */ background: -webkit-linear-gradient(top, #9cc1de, #bbdbf4 1px, #78a8cc);
+	/* @alternate */ background:    -moz-linear-gradient(top, #9cc1de, #bbdbf4 1px, #78a8cc);
+	/* @alternate */ background: 	-ms-linear-gradient(top, #9cc1de, #bbdbf4 1px, #78a8cc);
+	/* @alternate */ background: 	 -o-linear-gradient(top, #9cc1de, #bbdbf4 1px, #78a8cc);
+	/* @alternate */ background: 		linear-gradient(to bottom, #9cc1de, #bbdbf4 1px, #78a8cc);
+}
+
+.suggest span { color: #7f7f7f; }
+.suggest table { border-collapse: collapse; width: 100%; }
+.suggest table td { padding: 0; vertical-align: baseline; }
+.suggest table td.code { color: #7f7f7f; font: small "Lucida Console", Monaco, monospace; width: 3ex; padding-left: 1em; }
+
+.StarsInformation {cursor: help;}
+.stars_block {display: inline-block; }
+.stars_baloon { color: black; position: absolute; z-index:101; top: 0px; left:0; display: none; }
+.stars_baloon .wrapper { position: absolute; top:0; right:0; bottom:0; left:0;}
+.stars_baloon .tl, .stars_baloon .t, .stars_baloon .tr, .stars_baloon .r, .stars_baloon .br, .stars_baloon .b, .stars_baloon .bl, .stars_baloon .l { position: absolute;} 
+.stars_baloon .tl, .stars_baloon .tr, .stars_baloon .bl, .stars_baloon .br { background-image: url("../images/stars/baloon_borders2_u0580.png")/*tpa=http://www.onetwotrip.com/images/stars/baloon_borders2_u0580.png*/; width: 60px;}  
+.revert.stars_baloon .tl, .revert.stars_baloon .tr, .revert.stars_baloon .bl, .revert.stars_baloon .br { background-image: url("../images/stars/baloon_borders2_revert_u0580.png")/*tpa=http://www.onetwotrip.com/images/stars/baloon_borders2_revert_u0580.png*/; }
+.stars_baloon .t, .stars_baloon .b { background: url("../images/stars/baloon_tb2_u0580.png")/*tpa=http://www.onetwotrip.com/images/stars/baloon_tb2_u0580.png*/ repeat-x; left:45px; right:45px; }
+.stars_baloon .l, .stars_baloon .r { background: url("../images/stars/baloon_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/stars/baloon_lr_u0580.png*/ repeat-y; width: 15px; top:0; bottom:0; }
+.stars_baloon .tl, .stars_baloon .tr, .stars_baloon .t { height: 20px; top: -20px; }
+.stars_baloon .bl, .stars_baloon .br, .stars_baloon .b { height: 27px; bottom:-27px; }
+.stars_baloon .tl, .stars_baloon .bl, .stars_baloon .l { left:-15px;}
+.stars_baloon .tr, .stars_baloon .br, .stars_baloon .r { right:-15px;}
+
+.stars_baloon .l { background-position: 0px 0px; }
+.stars_baloon .r { background-position: -15px 0px; }
+.stars_baloon .tl { background-position: 0px 0px; }
+.stars_baloon .tr { background-position: -60px 0px; }
+.stars_baloon .br { background-position: -60px -20px; }
+.stars_baloon .bl { background-position: 0px -20px; }
+.stars_baloon .t { background-position: 0px 0px; }
+.stars_baloon .b { background-position: 0px -20px; }
+
+.bottom.stars_baloon .tl, .bottom.stars_baloon .tr, .bottom.stars_baloon .bl, .bottom.stars_baloon .br { background-image: url("../images/stars/baloon_borders2_bottom_u0580.png")/*tpa=http://www.onetwotrip.com/images/stars/baloon_borders2_bottom_u0580.png*/; }
+.revert.bottom.stars_baloon .tl, .revert.bottom.stars_baloon .tr, .revert.bottom.stars_baloon .bl, .revert.bottom.stars_baloon .br { background-image: url("../images/stars/baloon_borders2_bottom_revert_u0580.png")/*tpa=http://www.onetwotrip.com/images/stars/baloon_borders2_bottom_revert_u0580.png*/; }
+.bottom.stars_baloon .tl, .bottom.stars_baloon .tr, .bottom.stars_baloon .t { height: 27px; top: -27px; }
+.bottom.stars_baloon .bl, .bottom.stars_baloon .br, .bottom.stars_baloon .b { height: 20px; bottom:-20px; }
+.bottom.stars_baloon .tl { background-position: 0px 0px;}
+.bottom.stars_baloon .tr { background-position: -60px 0px;}
+.bottom.stars_baloon .br { background-position: -60px 20px;}
+.bottom.stars_baloon .bl { background-position: 0px 20px;}
+.bottom.stars_baloon .t, .bottom.stars_baloon .b { background: url("../images/stars/baloon_tb2_bottom_u0580.png")/*tpa=http://www.onetwotrip.com/images/stars/baloon_tb2_bottom_u0580.png*/ repeat-x; }
+.bottom.stars_baloon .t { background-position: 0px 0px;}
+.bottom.stars_baloon .b { background-position: 0px -27px;}
+
+.stars_baloon .cross_close { right: 0px; top: -8px;}
+.stars_baloon .content { font-size: 13px; position: relative; background-color: white; padding: 0px 10px; margin: -5px 0; }
+.stars_baloon .content ul { list-style-type: none; padding: 0px; margin: 0px;}
+.stars_baloon .content ul li { display: block; margin: 0px; padding: 1px 0px; white-space: nowrap; }
+.stars_baloon .content ul li div { display: inline-block; }
+.stars_baloon .content .info_stars { background: url('/images/stars/BaloonStar_u0580.png') repeat-x; height: 13px; width:14px;} 
+.stars_baloon .content .info_half_stars { background: url('/images/stars/BaloonHalfStar_u0580.png') no-repeat; height: 13px; width:14px;}
+.stars_baloon .content .info_empty_stars { background: url('/images/stars/BaloonGrayStar_u0580.png') repeat-x; height: 13px; width:14px;}
+.stars_baloon .content .comment {margin-left: 10px; font-size: 13px}
+/*.stars_baloon .content .noStarsComment {margin-left: 80px;}
+.revert .content .noStarsComment {margin-left: 10px;}*/
+
+.airport_info_balloon .content { min-height: 17px; min-width: 70px; }
+.airport_info_balloon .smallLoader { display: block; width: 16px; height: 16px; margin: 0 auto; }
+
+.star, .halfstar, .emptystar, .graystar, .halfgraystar { display: inline-block; height: 14px; width:14px; vertical-align: middle; }
+.star {background: url('/images/stars/Star_u0580.png') repeat-x; margin-left: 5px;}
+.halfstar {background: url('/images/stars/HalfStar_u0580.png') no-repeat;}
+.emptystar {background: url('/images/stars/EmptyStar_u0580.png') repeat-x;}
+.graystar {background: url('/images/stars/GrayStar_u0580.png') repeat-x;}
+.halfgraystar {background: url('/images/stars/HalfGrayStar_u0580.png') no-repeat;}
+
+.icon_temperature_positive, .icon_temperature_negative, .icon_map_marker, .icon_home, .icon_info_sign, .icon_time { display: inline-block; background: url('/images/airport_icons_u0580.png') no-repeat; }
+.icon_temperature_positive, .icon_temperature_negative { width: 15px; height: 15px; }
+.icon_temperature_positive { background-position: 0 0; }
+.icon_temperature_negative { width: 14px; background-position: -15px 0; }
+.icon_map_marker { width: 9px; height: 13px; background-position: -29px 0; }
+.icon_home { width: 13px; height: 13px; background-position: -38px 0; }
+.icon_info_sign { width: 12px; height: 13px; background-position: -63px 0; }
+.icon_time { width: 12px; height: 13px; background-position: -51px 0; }
+.airport_info_balloon .icon_temperature_positive, .airport_info_balloon .icon_temperature_negative, .airport_info_balloon .icon_map_marker,
+.airport_info_balloon .icon_home, .airport_info_balloon .icon_info_sign, .airport_info_balloon .icon_time { margin: 0; position: absolute; left: 0; top: 2px; }
+.airport_info_balloon .icon_temperature_positive, .airport_info_balloon .icon_temperature_negative { top: 1px; }
+.airport_info_balloon .icon_map_marker { left: 2px; }
+.airport_info_balloon .icon_info_sign, .airport_info_balloon .icon_time { left: 1px; }
+.airport_info_balloon ul.airport_info_list li { padding-left: 18px; margin: 5px 0; position: relative; }
+
+.zingaya { position: relative; display: inline-block; color: white; cursor: pointer; margin: 0 0 0 20px; height: 30px; line-height: 30px; min-width: 100px; z-index:1; white-space: nowrap; text-align: center; }
+.faqOverlay .zingaya { margin: 10px 0 0 0; }
+.zingaya .online_call { margin-left: 10px; margin-top: -1px; padding: 0px 20px; background-image: url("/images/phone_u0580.png"); background-repeat: no-repeat; background-position: 0px 50%;}
+.zingaya .bg, .zingaya .bg .r, .zingaya .bg .l { position: absolute; top: 0; bottom: 0;}
+.zingaya .bg { left: 15px; right: 20px; background-image: url("/images/map/button_bg_u0580.png"); background-repeat: repeat-x; z-index:-1;}
+.zingaya .bg .r, .zingaya .bg .l { background-image: url("/images/map/button_lr_u0580.png"); }
+.zingaya .bg .l { width: 15px;left:-15px; background-position: 0px 0px;}
+.zingaya .bg .r { width: 20px; right:-20px; background-position: -15px 0px !important;}
+
+.bonusPocket { margin-top: 20px; min-height: 81px; color: black; background: url(/images/bonus_pocket_u0580.png) no-repeat left top; padding-left: 90px; }
+.bonusPocket .bonusesIn, .bonusPocket .bonuses, .bonusPocket .useBonuses { font-size: 80%; }
+.bonusPocket .strong, .bonusPocket .bonusAmount { font-size: 130%; font-weight: bold; }
+.metaSearchers { font-size: 80%; padding: 10px 0 0; font-weight: bold;}

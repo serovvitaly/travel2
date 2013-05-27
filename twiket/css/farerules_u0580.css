@@ -1,0 +1,18 @@
+#fareRules { width: 900px; height: 630px; }
+#fareRules div.head { font-size: 130%; }
+#fareRules div.caution { margin-bottom: 1em; font-size: 80%; }
+#fareRules ul.menu { margin: 1em 0; }
+#fareRules ul.menu li.selected span { border-bottom: none; color: inherit; }
+#fareRules ul.rules li { display: none; }
+#fareRules ul.rules li.selected { display: block; }
+#fareRules div.title { font-size: 140%; font-weight: bold; margin-bottom: 0.5em; }
+/*#fareRules div.title span.weekday { font-weight: normal; }*/
+#fareRules div.subTitle { margin: 0.5em 0 0; font-weight: bold; }
+#fareRules div.note { font-size: 80%;  margin-bottom: 0.5em; }
+#fareRules div.full { white-space: pre; position: relative; font-size: 80%; border: 1px solid #CCC; background: #EAEAEA; margin: 0 -30px; }
+#fareRules div.full>div { padding: 10px 30px; }
+
+#fareRules.directions1 div.full { height: 390px; /* @alternate */ height: 350px; }
+#fareRules.directions2 div.full { height: 310px; }
+#fareRules.directions3 div.full { height: 290px; }
+#fareRules.directions4 div.full { height: 270px; }

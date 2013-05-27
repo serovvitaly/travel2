@@ -1,0 +1,38 @@
+div#layout_map { z-index: 2; position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+div#layout_map div.shadow { z-index: 33; position: absolute; left: 0; right: 0; bottom: -7px; height: 7px; background: url(/images/bottomPanel_shadow_u0580.png) repeat-x top; }
+div#map { position: absolute; overflow: hidden; top: 0; left: 0; bottom: 0; right: 0; }
+div.map div.gmnoprint[controlheight="44"] { margin-top: 114px !important; }
+div.map img[src*='google_white.png'], div.map a[href*='terms_maps.html'] { display: none; }
+div.map div.cloud1, div.map div.cloud2, div.map div.cloud3, div.map div.cloud4, div.map div.cloud5 { position: absolute; display: none; }
+div.map div.cloud1 { width: 432px; height: 329px; margin-top: -216px; background: url(/images/map/cloud1_u0580.png) no-repeat center; }
+div.map div.cloud2 { width: 432px; height: 329px; margin-top: -216px; background: url(/images/map/cloud2_u0580.png) no-repeat center; }
+div.map div.cloud3 { width: 264px; height: 151px; margin-top: -132px; background: url(/images/map/cloud3_u0580.png) no-repeat center; }
+div.map div.cloud4 { width: 600px; height: 600px; margin-top: -300px; background: url(/images/map/cloud4_u0580.png) no-repeat center; }
+div.map div.cloud5 { width: 297px; height: 314px; margin-top: -149px; background: url(/images/map/cloud5_u0580.png) no-repeat center; }
+div.map div.polyline { position: absolute; }
+
+div.map div.infoOverlay { z-index: 1; position: absolute; color: white; padding: 10px 20px 20px; min-height: 20px; white-space: nowrap; }
+div.map div.infoOverlay .abs { z-index:-1; top:0; right:0; bottom:0; left:0; }
+div.map div.infoOverlay .tl, div.map div.infoOverlay .tr, div.map div.infoOverlay .bl, div.map div.infoOverlay .br { background-image: url("/images/map/baloon_map_corners_u0580.png"); width: 30px; height: 20px; }
+div.map div.infoOverlay .bl, div.map div.infoOverlay .br { height: 30px;}
+div.map div.infoOverlay .t, div.map div.infoOverlay .b { background-image: url("/images/map/baloon_map_tb_u0580.png"); background-repeat: repeat-x; left:30px; right:30px; height: 20px; }
+div.map div.infoOverlay .b { height: 30px; }
+div.map div.infoOverlay .l, div.map div.infoOverlay .r { background-image: url("/images/map/baloon_map_lr_u0580.png"); background-repeat: repeat-y; top:20px; bottom:30px; width: 30px;}
+div.map div.infoOverlay .abs .c { top:20px;right: 30px; bottom: 30px; left: 30px; background-color: #171717; opacity: 0.95; }
+div.map div.infoOverlay div.leg { bottom: 5px; left: 0; right: 0; margin: 0 auto; width: 16px; height:10px; background: url("/images/map/infoOverlayLeg_u0580.png") no-repeat center top; }
+div.map div.infoOverlay div.caption { margin-bottom: 0.5em; }
+div.map div.infoOverlay div.caption:only-child { margin-bottom: 0; }
+div.map div.infoOverlay div.caption span { font-size: 80%; }
+
+div.map div.infoOverlay .buttonFlight { position: relative; height: 30px; font-size: 90%; min-width: 100px; line-height: 30px; z-index:1; white-space: nowrap; text-align: center; margin-top: 10px; }
+div.map div.infoOverlay .buttonFlight .bg, div.map div.infoOverlay .buttonFlight .bg .r, div.map div.infoOverlay .buttonFlight .bg .l { position: absolute; top: 0; bottom: 0; }
+div.map div.infoOverlay	.buttonFlight .bg { left: 15px; right: 20px; background-image: url("/images/map/button_bg_u0580.png"); background-repeat: repeat-x; z-index:-1; }
+div.map div.infoOverlay	.buttonFlight .bg .r, div.map div.infoOverlay .buttonFlight .bg .l { background-image: url("/images/map/button_lr_u0580.png"); }
+div.map div.infoOverlay	.buttonFlight .bg .l { width: 15px;left:-15px; background-position: 0px 0px; }
+div.map div.infoOverlay	.buttonFlight .bg .r { width: 20px; right:-20px; background-position: -15px 0px !important; }
+div.map div.infoOverlay .small { font-size: 80%; }
+div.map div.infoOverlay .silver { color: silver; }
+
+div.map div.faqOverlay { position: absolute; width: 20em; color: #B8E0EE; font: lighter italic 14px Georgia, "Times New Roman", Times, serif; }
+div.map div.faqOverlay span.link { color: #B8E0EE; }
+div.map div.faqOverlay span.phone { font-size: 180%; }

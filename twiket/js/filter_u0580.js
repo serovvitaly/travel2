@@ -510,7 +510,7 @@ initAllCities.prototype.draw = function() {
 								+'position:absolute; '
 						+'">'
 							+'<img '
-								+'src="../images/map/pin_blue_small.png"/*tpa=http://www.onetwotrip.com/images/map/pin_blue_small.png*/ '
+								+'src="../images/map/pin_blue_small.png" '
 								+'style="position: absolute; top: -2px; left: -2px" '
 							+'/>'
 						+'</div>');

@@ -1,0 +1,65 @@
+/* global.css */
+input { outline: none; box-sizing: border-box; }
+.dashed { border-bottom-style: dashed; border-bottom-width: 1px; }
+.dotted { border-bottom-width: 1px; }
+/* common.css */
+#layout_bg div { filter: alpha(opacity=40); }
+div#topPanel { background: url(../images/topPanel_bg_u0580.png)/*tpa=http://www.onetwotrip.com/images/topPanel_bg_u0580.png*/ repeat; }
+ul#topMenu li.selected { background: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/topMenu_selected_u0580.png", sizingMethod="scale"); }
+.profileInfo { behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+div#topPanel:after { border-color: #262627; }
+div#topPanel2:after { border-color: #B9BABB; }
+button.disabled, input[type="button"].disabled, input[type="submit"].disabled { filter: alpha(opacity=30); }
+.hint.black .c { filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#D9000000,endColorstr=#D9000000); }
+/* index.css */
+ul#recentSearches li { box-shadow: 1px 0px 5px Black, 0px 1px 5px Black; behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+div#dirTongue, div#searchButtonTongue { behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+.suggest { box-shadow: 5px 5px 20px black; behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+div.map div.infoOverlay .abs .c { filter: alpha(opacity=95); }
+/* calendar.css */
+div.calendar { behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+div.calendar div.stroke { border: none; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3000000,endColorstr=#24FFFFFF); }
+
+.pf_top .pf_light_speck { filter: alpha(opacity=10);}
+.d_option .d_direction { /*filter: alpha(opacity=99);*/ }
+.db_direction_name { /*filter: alpha(opacity=99); */}
+.direction_option .direction_price {filter: alpha(opacity=60);}
+.direction_body .db_wrapper .l, .direction_body .db_wrapper .r  { filter: alpha(opacity=15); }
+.zero_opacity {filter: alpha(opacity=0);}
+.FlightSlider .additional { filter: alpha(opacity=20); }
+
+#LearnHowTo { background-image: url('data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw%3D%3D');}
+.FlightPriceInformation .final { behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+.akPlate { border-radius: 10px 10px 0 0; behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+.ieBottomAKPlate { border-radius: 0 0 10px 10px; behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+.akPlate .pf_light_speck { background: none; filter: alpha(opacity=10); }
+.akPlate .pf_light_speck div { border-radius: 10px 10px 0 0; background-color: white;height: 17px; behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+.akPlate .logo  { behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+.direction_body .db_wrapper { background: none; /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#90000000,endColorstr=#90000000);*/ }
+.d_option .d_first, .d_option .d_last { behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+.db_direction_name div { behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+.direction_body .db_wrapper .iewrapper { display: block; filter: alpha(opacity=50); position: absolute; top:0; right: 0; bottom: 0; left:0; z-index: -2; }
+.direction_body .db_wrapper .iewrapper div { border-radius: 5px; background-color: black; position: absolute; top:0; right: 0; bottom: 0; left:0; behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+
+.ieNoBkg { background: none !important; padding: 0px !important; }
+.topRound div { height: 36px; background-color: #ADAEB5; border-radius: 10px 10px 0 0; behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+.bottomRoundie { display: block;}
+.bottomRoundie td div {height: 10px; background-color: #E6E6E6; border-radius: 0 0 10px 10px; behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+.bottomRoundie .cellButton div { background-color: #ADAEB5; }
+
+#carousel_inner {behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/;}
+/* ticket.css */
+.ticket { behavior: url(PIE.htc)/*tpa=http://www.onetwotrip.com/css/PIE.htc*/; }
+.ticket .visaInfo select { filter: alpha(opacity=0); width: auto; }
+.ticket .passengers { behavior: url(/css/PIE.htc); }
+.ticket .passengers .passenger.last { box-shadow: none; }
+.ticket .passengers .passenger { behavior: url(/css/PIE.htc); }
+/* makeorder.css */
+.blank>.bg table tr:first-child, .blank>.bg table tr.last-child { height: 230px; }
+.block_buyer .phone .field { width: 175px; }
+div.passengersTable>table td.passCountry select, .block_contacts .country select, div.passengersTable>table th span.bonusMiles select { filter: alpha(opacity=0); }
+#layout_price .moneyAk { background-color: #B2B1B1; }
+/* passengerSelect.css */
+#popup_passengerSelect { behavior: url(/css/PIE.htc); }
+/* profile.css */
+.block_bonuses select { filter: alpha(opacity=0); }

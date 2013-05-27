@@ -83,11 +83,11 @@ function getCurrentPosition(){
 		ErrorFunction: function(){
 		}
 	};
-	function getByIp(){
+	function getByIp(){  return;
 		$.ajax({
 			cache: false,
 			dataType: "json",
-			url: "https://secure.onetwotrip.com/_api/ipinfo/get/",
+			url: twiket.setup.urls.ipinfo,
 			success: function(json){
 				tw.ipinfo = json;
 				if (json.lat && json.lon) {
@@ -667,7 +667,7 @@ function initTopMenu(){
 		$('#m_booking_link').attr('href', bookingHref).on('click', function(){
 			kmqRecord({name: 'hotel_bookingCom', obj: {"initOnPage": 'Navtab'} });
 		});
-		$(document).on('visitormanager_complete', function(event) {
+		$(document).on('visitormanager_complete', function(event) {  return;
 			if(tw.visitor.lead){
 				bookingHref = 'http://www.booking.com/?aid=358564&label=Onetwotrip-Navtab-LID-'+tw.visitor.lead + addParams;
 				$('#m_booking_link').attr('href', bookingHref);
@@ -875,7 +875,7 @@ function getFranchiseHost(host){
 function getSecureHost(){
 	var host = window.location.host;
 	if (host.indexOf("www.onetwotrip.") > -1) {
-		return "http://www.onetwotrip.com/js/secure.onetwotrip.com";
+		return "secure.onetwotrip.com";
 	} else {
 		return host;
 	}

@@ -14,7 +14,8 @@ twiket.setup = {
 		orderInfo: 'https://secure.onetwotrip.com/_api/buyermanager/findOrder/',
 		itinerary: 'https://secure.onetwotrip.com/itinerary/',
 		customeragreement: 'https://secure.onetwotrip.com/customeragreement/',
-		tLiveCookie: 'https://www.twiket.com/cookie.html'
+		tLiveCookie: 'https://www.twiket.com/cookie.html',
+        ipinfo: 'https://secure.onetwotrip.com/_api/ipinfo/get/'
 	},
 	source: 'whitelabel',
 	marker: 'marker',

@@ -1,0 +1,16 @@
+.suggestField { position: relative; }
+.suggestField input { z-index: 6; position: relative; display: block; width: 100%; padding: 0 9px; background: transparent; color: black; }
+.suggestField input {/* IE */ background-image: url('data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw%3D%3D'); }
+.suggestField input[readonly] { z-index: 5; position: absolute; top: 0; left: 0; background: transparent; color: silver; }
+.suggestField .bg { z-index:1; top: 0; right: 0; bottom: 0; left: 0; }
+.suggestField .bg .c { background: white; top: 3px; right: 3px; bottom: 3px; left: 3px; z-index: -1; }
+.suggestField .bg .tl, .suggestField .bg .tr, .suggestField .bg .bl, .suggestField .bg .br { width: 4px; height: 4px; background-image: url("../images/field_search_corners_u0580.png")/*tpa=http://www.onetwotrip.com/images/field_search_corners_u0580.png*/; }
+.suggestField .bg .t,  .suggestField .bg .b { height: 4px; left: 4px; right: 4px; background-image: url("../images/field_search_tb_u0580.png")/*tpa=http://www.onetwotrip.com/images/field_search_tb_u0580.png*/; }
+.suggestField .bg .l,  .suggestField .bg .r { width: 4px; top: 4px; bottom: 4px; background-image: url("../images/field_search_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/field_search_lr_u0580.png*/; }
+.suggestField .glow { z-index: 2; top: -10px; right: -10px; bottom: -10px; left: -10px; display: none; }
+.suggestField .glow .tl, .suggestField .glow .tr, .suggestField .glow .bl, .suggestField .glow .br { width: 15px; height: 15px; background-image: url("../images/field_search_focus_corners_u0580.png")/*tpa=http://www.onetwotrip.com/images/field_search_focus_corners_u0580.png*/; }
+.suggestField .glow .t,  .suggestField .glow .b { height: 15px; left: 15px; right: 15px; background-image: url("../images/field_search_focus_tb_u0580.png")/*tpa=http://www.onetwotrip.com/images/field_search_focus_tb_u0580.png*/; }
+.suggestField .glow .l,  .suggestField .glow .r { width: 15px; top: 15px; bottom: 15px; background-image: url("../images/field_search_focus_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/field_search_focus_lr_u0580.png*/; }
+.suggestField.error .glow .tl, .suggestField.error .glow .tr, .suggestField.error .glow .bl, .suggestField.error .glow .br { background-image: url('/images/field_search_red_corners_u0580.png'); }
+.suggestField.error .glow .t,  .suggestField.error .glow .b { background-image: url('/images/field_search_red_tb_u0580.png'); }
+.suggestField.error .glow .l,  .suggestField.error .glow .r { background-image: url('/images/field_search_red_lr_u0580.png'); }
