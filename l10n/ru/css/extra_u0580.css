@@ -1,0 +1,15 @@
+/*results*/
+.akPlate .pf_mark { background: url("../images/stickers_u0580.png")/*tpa=http://www.onetwotrip.com/l10n/ru/images/stickers_u0580.png*/ no-repeat; width: 77px; height: 77px; background-position: 0px 0px; position: absolute; right: -1px; top: -1px; z-index:1;}
+.akPlate .price {background-position: 0px 0px;}
+.akPlate .price_direct {background-position: -154px 0px;}
+.akPlate .reliable {background-position: -231px 0px;}
+.akPlate .time {background-position: -77px 0px;}
+/*index*/
+.tag_small { background-image: url("../images/tag/small_u0580.png")/*tpa=http://www.onetwotrip.com/l10n/ru/images/tag/small_u0580.png*/; width: 104px; height: 64px; margin-left: 5px; margin-top: 63px;}
+#carousel_container .img_1 { background-image: url("../images/about/1_u0580.jpg")/*tpa=http://www.onetwotrip.com/l10n/ru/images/about/1_u0580.jpg*/; }
+#carousel_container .img_2 { background-image: url("../images/about/2_u0580.png")/*tpa=http://www.onetwotrip.com/l10n/ru/images/about/2_u0580.png*/; }
+#carousel_container .img_3 { background-image: url("../images/about/3_u0580.png")/*tpa=http://www.onetwotrip.com/l10n/ru/images/about/3_u0580.png*/; }
+#carousel_container .img_4 { background-image: url("../images/about/4_u0580.png")/*tpa=http://www.onetwotrip.com/l10n/ru/images/about/4_u0580.png*/; }
+#carousel_container .img_5 { background-image: url("/l10n/ru/images/about/5_u0580.png"); }
+#carousel_container .img_6 { background-image: url("/l10n/ru/images/about/6_u0580.png"); }
+#carousel_container .img_7 { background-image: url("/l10n/ru/images/about/7_u0580.jpg"); }
