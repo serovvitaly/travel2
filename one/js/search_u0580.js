@@ -8,8 +8,8 @@ $(function(){
 	if(tw.params.ticker){
 		initTicker();
 	}
-	initPressLinks();
-	initBackgroundSelect();
+	//initPressLinks();
+	//initBackgroundSelect();
 
 	tmpl_Direction = $("#tmpl_Direction").trim();
 	tmpl_Multiway = $("#tmpl_Multiway").trim();

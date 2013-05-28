@@ -1,16 +1,5 @@
-        <script type="text/javascript">
-            var elIframe = createIframe('https://' + getSecureHost() + '/pm.html', 'pm');
-            $("#pm").load(function(){
-                setCookie({
-                    name: "franchise_id",
-                    value: window.location.hostname,
-                    days: 180,
-                    xdm: true
-                });
-                initDefaultCurrency();
-            });
-        </script>
-        <div id="layout_bg"><div></div></div>
+
+        <div id="layout_bg" style="display: none;"><div></div></div>
         <div id="layout_panels">
             <div id="rotationPanel"><div class="spreader" id="rotationPanelTop"></div></div>
             <div id="infoPanel">
@@ -81,7 +70,7 @@
                 </div>
             </div>
         </div>
-        <div id="layout_map" class="invisible">
+        <div id="layout_map" class="invisible" style="display: none;">
             <div class="shadow"></div>
         </div>
         
