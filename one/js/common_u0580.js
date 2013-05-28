@@ -1086,7 +1086,7 @@ function fetchAirportContent($airport, $baloon) {
 	// Если данных ещё нет, сделаем запрос
 	else {
 		$.ajax({
-			dataType: "json",
+			dataType: "jsonp",
 			data: {
 				iata: code
 			},

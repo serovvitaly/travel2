@@ -1107,6 +1107,8 @@
         </article>
           
         <h2 class="moreVariants">Еще варианты</h2> 
+        
+        <div class="FilterResult"><ul></ul></div>
 
         <article class="ticket small">
           <table class="table">

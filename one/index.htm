@@ -211,7 +211,7 @@ if(document.location.host != 'ott.local'){
 			<div id="layout_results"></div>		
 		</div>
 
-		<script id="tmpl_PressLinks" type="text/x-jquery-tmpl">
+<script id="tmpl_PressLinks" type="text/x-jquery-tmpl">
 			{{if tw.language == 'ru'}}
 				<div id="pressLinks">
 					<div class="spreader pressBlock">
@@ -236,7 +236,7 @@ if(document.location.host != 'ott.local'){
 			{{/if}}
 		</script>
 
-		<script id="tmpl_LanguagesSelect" type="text/x-jquery-tmpl">
+<script id="tmpl_LanguagesSelect" type="text/x-jquery-tmpl">
 	<div class="dm_wrapper">
 		<div class="dm_selected"><span class="lang ${tw.language}"></span>${l10n.languages[tw.language]}<div class="arrow"></div></div>
 		<ul>
@@ -250,7 +250,7 @@ if(document.location.host != 'ott.local'){
 		</ul>
 	</div>
 </script>
-		<script id="tmpl_subMenu" type="text/x-jquery-tmpl">
+<script id="tmpl_subMenu" type="text/x-jquery-tmpl">
 	<div class="dm_wrapper">
 		<div class="dm_selected">${l10n.topMenu.subMenu.ott}<div class="arrow"></div></div>
 		<ul>
@@ -263,7 +263,7 @@ if(document.location.host != 'ott.local'){
 		</ul>
 	</div>
 </script>
-		<script id="tmpl_SuggestField" type="text/x-jquery-tmpl">
+<script id="tmpl_SuggestField" type="text/x-jquery-tmpl">
 	<div class="suggestField">
 		<input type="text" autocomplete="off" name="${name}" id="${name}" value="${value}"/>
 		<input type="text" autocomplete="off" value="${defaultValue}" readonly="readonly" tabindex="-1"/>
@@ -286,7 +286,7 @@ if(document.location.host != 'ott.local'){
 		<div class="abs bg"><div class="c"></div><div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div><div class="t"></div><div class="r"></div><div class="b"></div><div class="l"></div></div>
 	</div>
 </script>
-		<script id="tmpl_Calendar" type="text/x-jquery-tmpl">
+<script id="tmpl_Calendar" type="text/x-jquery-tmpl">
 	<div class="calendar">
 		<div class="caption">
 			<table class="caption"><tr>
@@ -337,7 +337,7 @@ if(document.location.host != 'ott.local'){
 	</div>
 </script>
 		
-		<script id="tmpl_ResultStructure" type="text/x-jquery-tmpl">
+<script id="tmpl_ResultStructure" type="text/x-jquery-tmpl">
 	<div class="FlightPriceInformation">
 		{{if tw.language == 'ru'}}
 			Цена
@@ -562,7 +562,7 @@ if(document.location.host != 'ott.local'){
 		</table>
 	</div>
 </script>
-		<script id="tmpl_FlightBlock" type="text/x-jquery-tmpl">
+<script id="tmpl_FlightBlock" type="text/x-jquery-tmpl">
 	{{if $item.adriver}}
 		<div class="FlightTicket mini">
 			<div id="ticket_rotation"/>
@@ -783,7 +783,7 @@ if(document.location.host != 'ott.local'){
 		</div>
 	{{/if}}
 </script>
-		<script id="tmpl_AirlineFlights" type="text/x-jquery-tmpl">
+<script id="tmpl_AirlineFlights" type="text/x-jquery-tmpl">
 	<div class="FlightTicket multivariants">
 		<div class="akPlate ${AK}">
 			<div class="pf_light_speck"><div></div></div>
@@ -929,7 +929,7 @@ if(document.location.host != 'ott.local'){
 	{{/each}}
 	</tbody>
 </script>
-		<script id="tmpl_newAirlineFlights" type="text/x-jquery-tmpl">
+<script id="tmpl_newAirlineFlights" type="text/x-jquery-tmpl">
 	<div class="FlightTicket multivariants">
 		{{if !$data.single}}
 			<div class="ReturnToResult default">
@@ -1292,7 +1292,7 @@ if(document.location.host != 'ott.local'){
 	<span class="ib opt5 nowrap">${l10n.searchResult.block.titles[4]}</span>
 	<span class="ib opt6">${l10n.searchResult.block.seats}</span>
 </script>
-		<script id="tmpl_PreferedFlightFilter" type="text/x-jquery-tmpl">
+<script id="tmpl_PreferedFlightFilter" type="text/x-jquery-tmpl">
 	<div class="direction_body {{if (!Departure.time[1] && Departure.pointCount==1) || (!Arrival.time[1] && Arrival.pointCount==1)}}invisible{{/if}}">				
 		<div class="db_wrapper">
 			<div class="tl"></div>
@@ -1571,7 +1571,7 @@ if(document.location.host != 'ott.local'){
 		</div>
 	</div>
 </script>
-		<script id="tmpl_BaloonFlightStars" type="text/x-jquery-tmpl">
+<script id="tmpl_BaloonFlightStars" type="text/x-jquery-tmpl">
 	<div class="stars_baloon">
 		<div class="wrapper">
 			<div class="tl"></div>
@@ -1848,7 +1848,7 @@ if(document.location.host != 'ott.local'){
 	</div>
 </script>
 
-		<script id="tmpl_Adviser" type="text/x-jquery-tmpl">
+<script id="tmpl_Adviser" type="text/x-jquery-tmpl">
 	<div class="topBlock">
 		<div class="header">${l10n.adviser.header}</div>
 		<div class="info">
@@ -1950,7 +1950,7 @@ if(document.location.host != 'ott.local'){
 		</div>
 	</button>
 </script>
-		<script id="tmpl_cancelPrereservationPopup" type="text/x-jquery-tmpl">
+<script id="tmpl_cancelPrereservationPopup" type="text/x-jquery-tmpl">
 	<div class="content">
 		<div class="header">${l10n.popup.warning}</div>
 		<div class="text">${l10n.searchResult.popup.cancelPrereservation}</div>
@@ -1992,7 +1992,7 @@ if(document.location.host != 'ott.local'){
 	</div>
 </script>
 		
-		<script id="tmpl_PassengerSelect" type="text/x-jquery-tmpl">
+<script id="tmpl_PassengerSelect" type="text/x-jquery-tmpl">
 	<form id="popup_passengerSelect">
 		<div class="ConfirmInfoFlight"></div>
 		<div class="innerContent">
@@ -2409,7 +2409,7 @@ if(document.location.host != 'ott.local'){
 		<div class="abs bg focus"><div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div><div class="t"></div><div class="r"></div><div class="b"></div><div class="l"></div></div>
 	</div>
 </script>
-		<script id="tmpl_Field" type="text/x-jquery-tmpl">
+<script id="tmpl_Field" type="text/x-jquery-tmpl">
 	<div class="field{{if $data.checkbox}} checkbox{{/if}}">
 		{{if $data.checkbox}}
 			<div class="checkbox">
@@ -2444,7 +2444,7 @@ if(document.location.host != 'ott.local'){
 		<div style="margin-top: 0.5em;">${l10n.warnNamesPopup.text3[0] + ' '}<button class="continue"><div class="button small">${l10n.warnNamesPopup.text3[1]}<div class="bg"></div></div></button>${' ' + l10n.warnNamesPopup.text3[2] + ' '}<button class="improve"><div class="button small">${l10n.warnNamesPopup.text3[3]}<div class="bg"></div></div></button></div>
 	</div>
 </script>
-		<script id="tmpl_Ticket" type="text/x-jquery-tmpl">
+<script id="tmpl_Ticket" type="text/x-jquery-tmpl">
 	<div class="ticket">
 		{{if !$item.bottomAKpanel}}
 			<div class="akPlate {{if $data.AKform}}${$data.AKform}{{else}}${$data.directions[0].trips[0].airCmp}{{/if}}">
@@ -2691,7 +2691,7 @@ if(document.location.host != 'ott.local'){
 		{{/if}}
 	</div>
 </script>
-		<script id="tmpl_hint" type="text/x-jquery-tmpl">
+<script id="tmpl_hint" type="text/x-jquery-tmpl">
 	<div class="hint ${$data.className}">
 		<div class="abs"><div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div><div class="t"></div><div class="r"></div><div class="b"></div><div class="l"></div><div class="c"></div><div class="arrUp"></div></div>
 		{{if $data.error}}
@@ -2757,7 +2757,7 @@ if(document.location.host != 'ott.local'){
 		{{/if}}
 	</div>
 </script>
-		<script id="tmpl_Popup" type="text/x-jquery-tmpl">
+<script id="tmpl_Popup" type="text/x-jquery-tmpl">
 	<div class="popup ${$data.className}" {{if $data.id}}id="${$data.id}"{{/if}}>
 		{{if $data.close_button}}
 			<div class="close_button"></div>
@@ -2805,7 +2805,7 @@ if(document.location.host != 'ott.local'){
 		{{/if}}
 	</div>
 </script>
-		<script id="tmpl_SocialRegAuth" type="text/x-jquery-tmpl">
+<script id="tmpl_SocialRegAuth" type="text/x-jquery-tmpl">
 	<div class="PopupForm dual">
 		<div class="v_line"></div>
 		<table>
@@ -2967,7 +2967,7 @@ if(document.location.host != 'ott.local'){
 		<button type="button" onclick="removePopup();"><div class="button small">${l10n.popup.close}<div class="bg"></div></div></button>
 	</div>
 </script>
-		<script id="tmpl_Contacts" type="text/x-jquery-tmpl">
+<script id="tmpl_Contacts" type="text/x-jquery-tmpl">
 	<h1>${l10n.topMenu.contacts.info}</h1>
 		{{html l10n.topMenu.contacts.workTime}}
 	{{if tw.language != 'az'}}
@@ -3105,7 +3105,7 @@ if(document.location.host != 'ott.local'){
 		</div>
 	</div>
 </script>
-		<script type="text/javascript">
+<script type="text/javascript">
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-21448683-1']);
 	try{
@@ -3151,7 +3151,7 @@ var google_remarketing_only = true;
 	}
 </script>
 		
-			<script id="tmpl_PromoCodePopup" type="text/x-jquery-tmpl">
+<script id="tmpl_PromoCodePopup" type="text/x-jquery-tmpl">
 	<div>
 		<div class="head">Поздравляем! Вы получаете скидку<br/>${formatMoney($data.amount) + ' ' + CurrencyString($data.amount, $data.currency)} на любой авиабилет.</br>Ваш промокод на скидку:</div>
 		<div class="code"><span>${$data.code}</span></div>

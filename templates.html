@@ -126,7 +126,7 @@
 </script>
         
 <script id="tmpl_ResultStructure" type="text/x-jquery-tmpl">
-    <div class="FlightPriceInformation">
+    <div class="FlightPriceInformation" style="display: none">
         {{if tw.language == 'ru'}}
             Цена
             <div class="ComparePriceSelection">
@@ -267,7 +267,7 @@
                                     </tr>
                                     <tr>
                                         <td colspan="3">
-                                            <div class="FilterResult"><ul></ul></div>
+                                          <!--  <div class="FilterResult"><ul></ul></div> -->
                                             <div class="invisible" id="QuickSandBlock"></div>
                                         </td>
                                     </tr>
@@ -276,7 +276,7 @@
                         </tr>
                     </table>
                 </td>
-                <td class="FlightFilter">
+                <td class="FlightFilter" style="display: none">
                     <!--div id="SeatsWrapper" class="direction_body">
                         <div class="db_wrapper">
                             <div class="tl"></div>
