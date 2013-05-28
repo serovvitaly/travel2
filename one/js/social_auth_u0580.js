@@ -309,7 +309,7 @@ SocialAuth.prototype.initOptions = function(){
 		self.PMCaller.ajax({
 			iframeId: "pm",
 			type: "post",
-			dataType: "json",
+			dataType: "jsonp",
 			url: "https://secure.onetwotrip.com/_api/visitormanager/exit/",
 			success: function(json){
 				if (json) {
@@ -535,7 +535,7 @@ SocialAuth.prototype.makeRegistration = function(){
 	this.PMCaller.ajax({
 		iframeId: "pm",
 		type: "post",
-		dataType: "json",
+		dataType: "jsonp",
 		data: self.request,
 		url: "https://secure.onetwotrip.com/_api/visitormanager/register/",
 		timeout: 10000,
@@ -624,7 +624,7 @@ SocialAuth.prototype.makeAuthorization = function(){
 	this.PMCaller.ajax({
 		iframeId: "pm",
 		type: "post",
-		dataType: "json",
+		dataType: "jsonp",
 		data: self.request,
 		url: "https://secure.onetwotrip.com/_api/visitormanager/auth/",
 		timeout: 20000,
@@ -692,7 +692,7 @@ SocialAuth.prototype.makeReminder = function(){
 	this.PMCaller.ajax({
 		iframeId: "pm",
 		type: "post",
-		dataType: "json",
+		dataType: "jsonp",
 		data: self.request,
 		url: "https://secure.onetwotrip.com/_api/visitormanager/generatePassword/",
 		timeout: 10000,

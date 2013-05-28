@@ -1397,7 +1397,7 @@ PromoCodePopup.prototype.submitForm = function(){
 	var self = this;
 	if (!this.inProcess) {
 		$.ajax({
-			dataType: "json",
+			dataType: "jsonp",
 			url: "https://secure.onetwotrip.com/_api/visitormanager/sendPromoEmail/",
 			data: {
 				"email":  this.elForm.promoCodeEmail.value
