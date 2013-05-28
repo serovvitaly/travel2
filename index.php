@@ -843,6 +843,13 @@
       </aside>
 
       <div class="span10 tickets">
+      
+      
+        <div id="layout_body" class="spreader">
+            <div id="layout_results"></div>        
+        </div>
+      
+      
         <article class="ticket top">
           <h2>САМЫЙ БЫСТРЫЙ БИЛЕТ</h2>
           <table class="table">
