@@ -29,6 +29,9 @@
 
 <body>
 
+  <? include 'content.html'; ?>
+  <? include 'templates.html'; ?>
+
   <div class="h-popupSide">
   <!-- popupSideHelp -->
     <div class="popupSide text-center" id="popupSideHelp">
