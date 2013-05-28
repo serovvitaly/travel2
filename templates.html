@@ -2893,3 +2893,34 @@
         </div>
     </div>
 </script>
+
+<script id="tmpl_PromoCodePopup" type="text/x-jquery-tmpl">
+    <div>
+        <div class="head">Поздравляем! Вы получаете скидку<br/>${formatMoney($data.amount) + ' ' + CurrencyString($data.amount, $data.currency)} на любой авиабилет.</br>Ваш промокод на скидку:</div>
+        <div class="code"><span>${$data.code}</span></div>
+        <div class="description">Сохраните промокод, срок его действия ограничен.<br/>Ввести промокод Вы сможете после выбора варианта перелёта.<br/>Промокод не действует, если Ваш номер телефона или почта<br/>уже были использованы ранее при покупке билетов на нашем сайте.</div>
+        <form id="form_promoCodePopup">
+            <table>
+                <tr>
+                    <td colspan="2"><label for="input_promoCodeEmail">Ваш e-mail (или друга):</label></td>
+                </tr>
+                <tr class="emailRow">
+                    <td></td>
+                    <td><button type="submit">Отправить</button></td>
+                </tr>
+                <tr class="statusRow">
+                    <td span="2"><div class="status invisible"></div></td>
+                </tr>
+                <tr class="timeRow">
+                    <td>
+                        <div class="counterBlock">
+                            <div class="counterLabel">Промокод действителен</div>
+                            <div  class="counter"></div>
+                        </div>
+                    </td>
+                    <td><button>Закрыть</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</script>
