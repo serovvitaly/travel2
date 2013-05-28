@@ -16,7 +16,7 @@ $(function(){
 	objAvia = new Avia();
 	objSearchForm = new SearchForm();
 	objRecentSearches = new RecentSearches();
-	if (window.screen.width > 765 && !tw.testResult && !(/windows nt 5.1/.test(_ua) && IEVersion == 8)) $.getScript("http://maps.googleapis.com/maps/api/js?v=3.11&libraries=geometry&sensor=true&language=" + tw.language + "&callback=loadMapFiles");
+	//if (window.screen.width > 765 && !tw.testResult && !(/windows nt 5.1/.test(_ua) && IEVersion == 8)) $.getScript("http://maps.googleapis.com/maps/api/js?v=3.11&libraries=geometry&sensor=true&language=" + tw.language + "&callback=loadMapFiles");
 });
 
 function initPressLinks(){
@@ -52,10 +52,10 @@ function initTicker(){
 }
 function loadMapFiles() {
 	var mapUrls = [
-		"extendedApi.js"/*tpa=http://www.onetwotrip.com/js/extendedApi.js*/,
-		"map.js"/*tpa=http://www.onetwotrip.com/js/map.js*/
+		"http://www.onetwotrip.com/js/extendedApi.js"/*tpa=http://www.onetwotrip.com/js/extendedApi.js*/,
+		"http://www.onetwotrip.com/js/map.js"/*tpa=http://www.onetwotrip.com/js/map.js*/
 	];
-	$('head').append($('<link rel="stylesheet"/>').attr('href', '../css/map.css'/*tpa=http://www.onetwotrip.com/css/map.css*/));
+	$('head').append($('<link rel="stylesheet"/>').attr('href', 'http://www.onetwotrip.com/css/map.css'/*tpa=http://www.onetwotrip.com/css/map.css*/));
 	for (var i in mapUrls) {
 		$.ajax({
 			dataType: "script",
@@ -1293,11 +1293,14 @@ Avia.prototype.getFares = function(data){
 		}
 		_gaq.push(['_trackEvent', 'search', 'push', cityFrom+'-'+cityTo, gglTypeRoad]);
 		
+        params.source    = twiket.setup.source;
+        params.srcmarker = twiket.setup.marker;
+        
 	MakeRequest();
 	function MakeRequest(){
 		$.ajax({
 			cache: false,
-			dataType: "json",
+			dataType: "jsonp",
 			url: "https://secure.onetwotrip.com/_api/searching/startSync/",
 			data: params,
 			timeout: 70000,

@@ -398,7 +398,7 @@ SocialAuth.prototype.getTwitterLink = function(form){
 	var self = this;
 	$.ajax({
 		type: "post",
-		dataType: "json",
+		dataType: "jsonp",
 		url: "https://secure.onetwotrip.com/_api/visitormanager/getProviderURL/",
 		timeout: 10000,
 		success: function(json){
