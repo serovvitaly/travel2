@@ -126,7 +126,7 @@
 </script>
         
 <script id="tmpl_ResultStructure" type="text/x-jquery-tmpl">
-    <div class="FlightPriceInformation" style="display: none">
+    <div class="FlightPriceInformation">
         {{if tw.language == 'ru'}}
             Цена
             <div class="ComparePriceSelection">
@@ -170,7 +170,7 @@
         </div>
         ${l10n.searchResult.filters.incur} 
         <div id="CurrenciesBlock">
-            <div class="d_option">
+            <div class="d_option btn-group last" data-toggle="buttons-radio">
                 {{if tw.language == 'de' || tw.language == 'en' || tw.language == 'es'}}
                     <div class="d_direction d_first" data-cur="USD">
                         <div class="button_shadow_lr"></div>
@@ -199,19 +199,19 @@
                             <div class="text">AZN</div>
                         </div>
                     {{else}}
-                        <div class="d_direction d_first" data-cur="RUB">
+                        <div class="d_direction d_first btn active" data-cur="RUB">
                             <div class="button_shadow_lr"></div>
                             <div class="button_shadow_bg"></div>
                             <div class="rBorder"></div>
                             <div class="text">RUB</div>
                         </div>
                     {{/if}}
-                    <div class="d_direction d_middle" data-cur="USD">
+                    <div class="d_direction d_middle btn" data-cur="USD">
                         <div class="button_shadow_bg"></div>
                         <div class="rBorder"></div>
                         <div class="text">USD</div>
                     </div>
-                    <div class="d_direction d_last" data-cur="EUR">
+                    <div class="d_direction d_last btn" data-cur="EUR">
                         <div class="button_shadow_lr"></div>
                         <div class="button_shadow_bg"></div>
                         <div class="text">EUR</div>
