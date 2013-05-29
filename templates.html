@@ -543,7 +543,7 @@
                 </div>
                 {{if $item.count>1}}
                     <div class="showAKvariants{{if $item.mini}} TicketOut{{/if}}" opt="${$item.direct},${AK}">
-                        <div><span>${l10n.searchResult.block.more} {{if $item.markClass}}${l10n.searchResult.block.variants}{{/if}}</span></div>
+                        <div><span>${l10n.searchResult.block.more} ${l10n.searchResult.block.variants}</span></div>
                     </div>
                 {{/if}}
                 <button class="price_button{{if $item.mini}} TicketOut{{/if}}" onclick="FareConfirmation({FlightIndex: ${FlightIndex}, element: this})" data-markclass="${$item.markClass}">
