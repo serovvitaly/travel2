@@ -468,7 +468,7 @@
                                         <table>
                                             <tr>
                                                 <td>
-                                                    <div>
+                                                    <div class="commoner">
                                                         ${l10n.searchResult.block.noChangeBoard}
                                                         {{if !$item.mini}}
                                                             ${', '}<span class="showTripInfo" info="${FlightIndex},${$index}">${l10n.searchResult.block.moreInfo}</span>
@@ -551,6 +551,8 @@
                     <div class="showAKvariants{{if $item.mini}} TicketOut{{/if}}" opt="${$item.direct},${AK}">
                         <div><span>${l10n.searchResult.block.more} ${l10n.searchResult.block.variants}</span></div>
                     </div>
+                {{else}}
+                    <div style="height:16px"></div>
                 {{/if}}
                 <button class="price_button{{if $item.mini}} TicketOut{{/if}}" onclick="FareConfirmation({FlightIndex: ${FlightIndex}, element: this})" data-markclass="${$item.markClass}">
                     <div class="price_wrapper">

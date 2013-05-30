@@ -141,6 +141,9 @@
     font-size: 32px;
     color: #F15A22;
 }
+.FlightTicket .commoner{
+    padding: 4px 0;
+}
 
 
 .FlightTicket.mini .StartTime {
@@ -198,6 +201,9 @@
     font-family: 'AAvanteTitlerCpsUpCBold';
     font-size: 22px;
     color: #F15A22;
+}
+.FlightTicket.mini .commoner{
+    padding: 4px 0;
 }
 
 
