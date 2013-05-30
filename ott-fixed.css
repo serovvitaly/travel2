@@ -1,22 +1,9 @@
 .FilterResult ul{
     margin: 0;
+    list-style: none;
 }
 
-.FlightTicket.mini{
-    color: #4B4B4B;
-    display: block;
-    float: left;
-    font-family: Arial, sans-serif;
-    font-size: 10px;
-    line-height: 16px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 0px;
-    margin-top: 0px;
-    width: 248px;
-    background-color: #F7F9FB;
-    border: 1px solid #DDD;
-}
+
 
 .pf_AKname{
     font-family: 'PFAgoraSansPro-Light';
@@ -62,33 +49,68 @@
 .StartTime {
     
 }
-.mini .StartTime {
-    font-size: 13px;
-    color: #1D1D1D;
+
+
+.FlightTicket{
+    color: #4B4B4B;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0px;
+    background-color: #F7F9FB;
+    border: 1px solid #DDD;
+}
+.FlightTicket.mini{
+    color: #4B4B4B;
+    display: block;
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    line-height: 16px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 0px;
+    margin-top: 0px;
+    width: 248px;
+    background-color: #F7F9FB;
+    border: 1px solid #DDD;
+}
+
+.FlightTicket .StartTime {
+    font-size: 18px;
+    color: #4b4b4b;
 }
 .FlightTicket .bold {
-    font-size: 13px;
-    color: #1D1D1D;
+    font-size: 18px;
+    color: #4b4b4b;
 }
 .FlightTicket .nowrap {
-    font-size: 13px;
-    color: #1D1D1D;
+    font-size: 18px;
+    color: #4b4b4b;
+}
+.FlightTicket .DirectionPoint .nowrap {
+    font-size: 12px;
+    color: #4b4b4b;
+}
+.FlightTicket .DirectionPoint {
+    padding: 4px 0;
 }
 .FlightTicket .pf_stops, .FlightTicket .pf_stops .nowrap {
-    font-size: 10px;
+    font-size: 12px;
     color: #F15A22;
+    padding: 4px 0;
 }
 .FlightTicket .showTripInfo {
     text-decoration: underline;
     cursor: pointer;
     color: #0f9dec;
 }
-
-.pf_bottom table {
+.FlightTicket .pf_bottom table {
     border-collapse: collapse;
     width: 100%;
 }
-.pf_bottom .info_time {
+.FlightTicket .pf_bottom .info_time {
     float: right;
     text-align: right;
     white-space: nowrap;
@@ -96,28 +118,120 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
-
-.pf_button{
-    margin: 5px 18px 10px; 
+.FlightTicket .pf_button{
+    margin: 11px 18px 17px; 
 }
-.pf_button .showAKvariants span{
+.FlightTicket .pf_button .showAKvariants span{
     color: #0F9DEC;
     text-decoration: underline;
 }
-.pf_button .showAKvariants span:hover{
+.FlightTicket .pf_button .showAKvariants span:hover{
     color: #0A6DA4;
 }
-
-.pf_button .price_button{
+.FlightTicket .pf_button .price_button{
     border: none;
     background: none;
     float: right;
     padding: 0;
-    margin-top: -18px;
+    margin-top: -22px;
+    height: 30px;
 }
-.pf_button .price_button .price_wrapper{
+.FlightTicket .pf_button .price_button .price_wrapper{
+    font-family: 'AAvanteTitlerCpsUpCBold';
+    font-size: 32px;
+    color: #F15A22;
+}
+
+
+.FlightTicket.mini .StartTime {
+    font-size: 13px;
+    color: #1D1D1D;
+}
+.FlightTicket.mini .bold {
+    font-size: 13px;
+    color: #1D1D1D;
+}
+.FlightTicket.mini .nowrap {
+    font-size: 13px;
+    color: #1D1D1D;
+}
+.FlightTicket.mini .pf_stops, .FlightTicket .pf_stops .nowrap {
+    font-size: 10px;
+    color: #F15A22;
+}
+.FlightTicket.mini .showTripInfo {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #0f9dec;
+}
+.FlightTicket.mini .pf_bottom table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.FlightTicket.mini .pf_bottom .info_time {
+    float: right;
+    text-align: right;
+    white-space: nowrap;
+    max-width: 115px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.FlightTicket.mini .pf_button{
+    margin: 5px 18px 10px; 
+}
+.FlightTicket.mini .pf_button .showAKvariants span{
+    color: #0F9DEC;
+    text-decoration: underline;
+}
+.FlightTicket.mini .pf_button .showAKvariants span:hover{
+    color: #0A6DA4;
+}
+
+.FlightTicket.mini .pf_button .price_button{
+    border: none;
+    background: none;
+    float: right;
+    padding: 0;
+    margin-top: -22px;
+}
+.FlightTicket.mini .pf_button .price_button .price_wrapper{
     font-family: 'AAvanteTitlerCpsUpCBold';
     font-size: 22px;
     color: #F15A22;
+}
+
+
+#preferedBlock h2 {
+    background: #F15A22;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 32px;
+    margin: 0;
+    text-align: center;
+    font-family: 'PFAgoraSansPro-Bold';
+    text-transform: uppercase;
+}
+#preferedBlock h2.blue {
+    background: #0F9DEC;
+}
+
+#preferedBlock{
+    width: 100%;
+}
+
+#layout_body{
+    padding: 0 !important;
+    width: auto !important;
+}
+.ResultTable{
+    width: 100%;
+}
+
+#FirstPrefered, #SecondPrefered{
+    width: 380px !important;
+    margin: 0 0 10px 10px;
+}
+
+.ResultTableWrapper table td{
+    padding: 0;
 }

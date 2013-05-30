@@ -605,11 +605,19 @@
       </div>  <!-- /selectors -->
 
       <aside class="span2">
+      
+        <div id="LuckyMe" class="invisible">
+            <div id="DirectionsFilter"></div>
+        </div>
+      
+        
+      
         <article class="side faster">
           <h2>БЫСТРЕЕ / ДЕШЕВЛЕ</h2>
-          <div class="inn">
-            <div class="slider sliderType1"></div>
-          </div>
+          <div class="inn">            
+            <div id="slide_filter" class="slider sliderType1"></div>
+          </div> 
+          
         </article>
 
         <article class="side flight">
@@ -850,269 +858,16 @@
       
       
         <div id="layout_body" class="spreader">
-            <div id="layout_results"></div>        
+            <div id="layout_results"></div> 
+            
+            <h2 class="moreVariants">Еще варианты</h2> 
+            <div class="FilterResult"><ul></ul></div>
+                   
         </div>
-      
-      
-        <article class="ticket top">
-          <h2>САМЫЙ БЫСТРЫЙ БИЛЕТ</h2>
-          <table class="table">
-            <thead>
-              <tr>
-                <td class="ticCompany td1">El Al Israel Airlines</td>
-                <td class="ticLogo td2"><img src="./i/ticLogo.jpg" alt=""></td>
-              </tr>
-              <tr>
-                <td class="ticRating td1">
-                  <div class="star_big">
-                    <div class="star_big-ok"></div>
-                  </div>
-                </td>
-                <td class="td2"></td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="ticDate td1">Туда, 13 февраля, Суббота</td>
-                <td class="td2"></td>
-              </tr>
-              <tr>
-                <td class="ticTime td1"><b>22:50</b> - 11:20 (20 фев)</td>
-                <td class="ticSeat td2">мест 1</td>
-              </tr>
-              <tr>
-                <td class="ticThrow td1"><a href="javascript:;">через Лондон</a></td>
-                <td class="ticTimeThrow td2">12 ч 10 мин</td>
-              </tr>
-              <tr>
-                <td class="ticTrip td1">из Домодедово - в Гатвик</td>
-                <td class="ticTimeFull td2">16 ч 30 мин</td>
-              </tr>
-            </tbody>
-
-            <tbody>
-              <tr>
-                <td class="ticDate td1">Обратно, 27 февраля, Пятница</td>
-                <td class="td2"></td>
-              </tr>
-              <tr>
-                <td class="ticTime td1"><b>12:30</b> - 9:50 (29 фев)</td>
-                <td class="ticSeat td2">мест 1</td>
-              </tr>
-              <tr>
-                <td class="ticThrow td1"><a href="javascript:;">через Лондон</a></td>
-                <td class="ticTimeThrow td2">12 ч 10 мин</td>
-              </tr>
-              <tr>
-                <td class="ticTrip td1">из Домодедово - в Гатвик</td>
-                <td class="ticTimeFull td2">16 ч 30 мин</td>
-              </tr>
-            </tbody>
-
-            <tfoot>
-              <tr>
-                <td class="ticMore td1"><a href="javascript:;">еще варианты</a></td>
-                <td class="ticPrice td2">230 $</td>
-              </tr>
-            </tfoot>
-          </table>
-        </article>
-
-        <article class="ticket top">
-          <h2 class="blue">САМЫЙ дешевый БИЛЕТ</h2>
-          <table class="table">
-            <thead>
-              <tr>
-                <td class="ticCompany td1">El Al Israel Airlines</td>
-                <td class="ticLogo td2"><img src="./i/ticLogo.jpg" alt=""></td>
-              </tr>
-              <tr>
-                <td class="ticRating td1">
-                  <div class="star_big">
-                    <div class="star_big-ok"></div>
-                  </div>
-                </td>
-                <td class="td2"></td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="ticDate td1">Туда, 13 февраля, Суббота</td>
-                <td class="td2"></td>
-              </tr>
-              <tr>
-                <td class="ticTime td1"><b>22:50</b> - 11:20 (20 фев)</td>
-                <td class="ticSeat td2">мест 1</td>
-              </tr>
-              <tr>
-                <td class="ticThrow td1"><a href="javascript:;">через Лондон</a></td>
-                <td class="ticTimeThrow td2">12 ч 10 мин</td>
-              </tr>
-              <tr>
-                <td class="ticTrip td1">из Домодедово - в Гатвик</td>
-                <td class="ticTimeFull td2">16 ч 30 мин</td>
-              </tr>
-            </tbody>
-
-            <tbody>
-              <tr>
-                <td class="ticDate td1">Обратно, 27 февраля, Пятница</td>
-                <td class="td2"></td>
-              </tr>
-              <tr>
-                <td class="ticTime td1"><b>12:30</b> - 9:50 (29 фев)</td>
-                <td class="ticSeat td2">мест 1</td>
-              </tr>
-              <tr>
-                <td class="ticThrow td1"><a href="javascript:;">через Лондон</a></td>
-                <td class="ticTimeThrow td2">12 ч 10 мин</td>
-              </tr>
-              <tr>
-                <td class="ticTrip td1">из Домодедово - в Гатвик</td>
-                <td class="ticTimeFull td2">16 ч 30 мин</td>
-              </tr>
-            </tbody>
-
-            <tfoot>
-              <tr>
-                <td class="ticMore td1"><a href="javascript:;">еще варианты</a></td>
-                <td class="ticPrice td2">230 $</td>
-              </tr>
-            </tfoot>
-          </table>
-        </article>
-
-        <article class="ticket top">
-          <h2>САМЫЙ БЫСТРЫЙ БИЛЕТ</h2>
-          <table class="table">
-            <thead>
-              <tr>
-                <td class="ticCompany td1">El Al Israel Airlines</td>
-                <td class="ticLogo td2"><img src="./i/ticLogo.jpg" alt=""></td>
-              </tr>
-              <tr>
-                <td class="ticRating td1">
-                  <div class="star_big">
-                    <div class="star_big-ok"></div>
-                  </div>
-                </td>
-                <td class="td2"></td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="ticDate td1">Туда, 13 февраля, Суббота</td>
-                <td class="td2"></td>
-              </tr>
-              <tr>
-                <td class="ticTime td1"><b>22:50</b> - 11:20 (20 фев)</td>
-                <td class="ticSeat td2">мест 1</td>
-              </tr>
-              <tr>
-                <td class="ticThrow td1"><a href="javascript:;">через Лондон</a></td>
-                <td class="ticTimeThrow td2">12 ч 10 мин</td>
-              </tr>
-              <tr>
-                <td class="ticTrip td1">из Домодедово - в Гатвик</td>
-                <td class="ticTimeFull td2">16 ч 30 мин</td>
-              </tr>
-            </tbody>
-
-            <tbody>
-              <tr>
-                <td class="ticDate td1">Обратно, 27 февраля, Пятница</td>
-                <td class="td2"></td>
-              </tr>
-              <tr>
-                <td class="ticTime td1"><b>12:30</b> - 9:50 (29 фев)</td>
-                <td class="ticSeat td2">мест 1</td>
-              </tr>
-              <tr>
-                <td class="ticThrow td1"><a href="javascript:;">через Лондон</a></td>
-                <td class="ticTimeThrow td2">12 ч 10 мин</td>
-              </tr>
-              <tr>
-                <td class="ticTrip td1">из Домодедово - в Гатвик</td>
-                <td class="ticTimeFull td2">16 ч 30 мин</td>
-              </tr>
-            </tbody>
-
-            <tbody>
-              <tr>
-                <td class="ticDate td1">Туда, 13 февраля, Суббота</td>
-                <td class="td2"></td>
-              </tr>
-              <tr>
-                <td class="ticTime td1"><b>22:50</b> - 11:20 (20 фев)</td>
-                <td class="ticSeat td2">мест 1</td>
-              </tr>
-              <tr>
-                <td class="ticThrow td1"><a href="javascript:;">через Лондон</a></td>
-                <td class="ticTimeThrow td2">12 ч 10 мин</td>
-              </tr>
-              <tr>
-                <td class="ticTrip td1">из Домодедово - в Гатвик</td>
-                <td class="ticTimeFull td2">16 ч 30 мин</td>
-              </tr>
-            </tbody>
-
-            <tfoot>
-              <tr>
-                <td class="ticMore td1"><a href="javascript:;">еще варианты</a></td>
-                <td class="ticPrice td2">230 $</td>
-              </tr>
-            </tfoot>
-          </table>
-        </article>
-
-        <article class="ticket top">
-          <h2>САМЫЙ БЫСТРЫЙ БИЛЕТ</h2>
-          <table class="table">
-            <thead>
-              <tr>
-                <td class="ticCompany td1">El Al Israel Airlines</td>
-                <td class="ticLogo td2"><img src="./i/ticLogo.jpg" alt=""></td>
-              </tr>
-              <tr>
-                <td class="ticRating td1">
-                  <div class="star_big">
-                    <div class="star_big-ok"></div>
-                  </div>
-                </td>
-                <td class="td2"></td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="ticDate td1">Туда, 13 февраля, Суббота</td>
-                <td class="td2"></td>
-              </tr>
-              <tr>
-                <td class="ticTime td1"><b>22:50</b> - 11:20 (20 фев)</td>
-                <td class="ticSeat td2">мест 1</td>
-              </tr>
-              <tr>
-                <td class="ticThrow td1"><a href="javascript:;">через Лондон</a></td>
-                <td class="ticTimeThrow td2">12 ч 10 мин</td>
-              </tr>
-              <tr>
-                <td class="ticTrip td1">из Домодедово - в Гатвик</td>
-                <td class="ticTimeFull td2">16 ч 30 мин</td>
-              </tr>
-            </tbody>
-
-            <tfoot>
-              <tr>
-                <td class="ticMore td1"><a href="javascript:;">еще варианты</a></td>
-                <td class="ticPrice td2">230 $</td>
-              </tr>
-            </tfoot>
-          </table>
-        </article>
           
-        <h2 class="moreVariants">Еще варианты</h2> 
         
-        <div class="FilterResult"><ul></ul></div>
+        
+        
 
       </div>  <!-- /tickets -->
     </div>

@@ -252,7 +252,7 @@
                                     <tr class="AdditionalFilterOptions">
                                         <td><div class="filterRaspr"></div></td>
                                         <td>
-                                            <div class="FlightSliderWrapper">
+                                            <!--div class="FlightSliderWrapper">
                                                 <div class="FlightSlider">
                                                     <div id="slide_filter"></div>
                                                     <div class="steps invisible"><div class="step1"></div><div class="step2"></div><div class="step3"></div></div>
@@ -261,7 +261,7 @@
                                                     <div class="slide_price text2 additional">${l10n.searchResult.filters.slider[1]}</div>
                                                     <div class="slide_price">${l10n.searchResult.filters.slider[1]}</div>
                                                 </div>
-                                            </div> 
+                                            </div-->
                                         </td>
                                         <td></td>
                                     </tr>
@@ -276,7 +276,7 @@
                         </tr>
                     </table>
                 </td>
-                <td class="FlightFilter" style="display: none">
+                <td class="FlightFilter" style="display:none">
                     <!--div id="SeatsWrapper" class="direction_body">
                         <div class="db_wrapper">
                             <div class="tl"></div>
@@ -327,9 +327,9 @@
                             </div>
                         </div>
                     </div>
-                    <div id="LuckyMe" class="invisible">
+                    <!--div id="LuckyMe" class="invisible">
                         <div id="DirectionsFilter"></div>
-                    </div>
+                    </div-->
 
                     <div id="FlightsByAKList" class="direction_body">
                         <div class="db_wrapper">
@@ -356,6 +356,14 @@
             <div id="ticket_rotation"/>
         </div>
     {{else}}
+        {{if $item.markClass}}
+            <div class="pf_mark ${$item.markClass}"></div>
+            {{if $item.markClass=="time"}}
+                <h2 class="blue">САМЫЙ БЫСТРЫЙ БИЛЕТ</h2>
+            {{else}}
+                <h2>САМЫЙ дешевый БИЛЕТ</h2>
+            {{/if}}
+        {{/if}}
         <div class="FlightTicket {{if $item.mini}}mini{{/if}}">
             <div class="akPlate ${AK}">
                 <div class="pf_light_speck"><div></div></div>
@@ -372,9 +380,7 @@
                 {{if parseInt(ref.AirlineLogos[AK],10)>0}}
                     <div class="logo{{if $item.markClass}} moved{{/if}}" style="background: url('images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png'/*tpa=http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png*/);"></div>
                 {{/if}}
-                {{if $item.markClass}}
-                    <div class="pf_mark ${$item.markClass}"></div>
-                {{/if}}
+                
             </div>
             <div class="pf_bottom{{if $item.mini}} TicketOut{{/if}}">
                 <div class="color_puller">
