@@ -2147,13 +2147,13 @@ DrawResults.prototype.initComparingPrices = function(){
 	}
 	this.ComparingPrices = $('.FlightPriceInformation .ComparePriceSelection')[0];
 	if(tw.comparedPrice) {
-		$('.d_last',this.ComparingPrices).addClass('selected');
+		$('.d_last',this.ComparingPrices).addClass('active');
 	} else {
-		$('.d_first',this.ComparingPrices).addClass('selected');
+		$('.d_first',this.ComparingPrices).addClass('active');
 	}
-	$('.d_option', this.ComparingPrices).delegate('div[class*="d_direction"]:not(.selected):not(.disabled)', 'click', function(){
+	$('.d_option', this.ComparingPrices).delegate('button[class*="d_direction"]:not(.active):not(.disabled)', 'click', function(){
 		if(self.QuickSandProcess) {return;}
-		$(this).addClass('selected').siblings().removeClass('selected');
+		$(this).addClass('active').siblings().removeClass('active');
 		if($(this).hasClass('d_first')){
 			tw.comparedPrice = false;
 		} else {
@@ -2200,22 +2200,22 @@ DrawResults.prototype.initFilter = function(){
 
 	//бизнес - эконом
 		if(this.obj.cs == "F") {
-			$('div[cs="F"]',this.FlightClassBlock).addClass('selected');	
+			$('button[cs="F"]',this.FlightClassBlock).addClass('active');	
 		} else if(this.obj.cs == "B"){
-			$('div[cs="B"]',this.FlightClassBlock).addClass('selected');
+			$('button[cs="B"]',this.FlightClassBlock).addClass('active');
 		} else {
-			$('div[cs="E"]',this.FlightClassBlock).addClass('selected');
+			$('button[cs="E"]',this.FlightClassBlock).addClass('active');
 		}
-		$('.d_option', this.FlightClassBlock).delegate('div[class*="d_direction"]:not(.selected)', 'click', function(){
-			$(this).addClass('selected').siblings().removeClass('selected');
+		$('.d_option', this.FlightClassBlock).delegate('button[class*="d_direction"]:not(.active)', 'click', function(){
+			$(this).addClass('selected').siblings().removeClass('active');
 			var data = objAvia.parseKey(self.obj.getKey());
 			data.cs = $(this).attr('cs');
 			objAvia.changeRequest(objAvia.addDataToRequestsList(data));
 		});
 
 	// спаны вылет-прилёт 
-	$('.d_option', this.filter).delegate('div[class*="d_direction"]:not(.selected)', 'click', function() {
-		$(this).addClass('selected').siblings().removeClass('selected');
+	$('.d_option', this.filter).delegate('div[class*="d_direction"]:not(.active)', 'click', function() {
+		$(this).addClass('active').siblings().removeClass('active');
 		var doptions = $(this).parents('.direction_body').find('div.direction_option');
 		$(doptions).hide();
 		if( $(this).hasClass('d_first') ) {

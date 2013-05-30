@@ -126,7 +126,7 @@
 </script>
         
 <script id="tmpl_ResultStructure" type="text/x-jquery-tmpl">
-    <div class="FlightPriceInformation">
+    <div class="FlightPriceInformation" style="display:none">
         {{if tw.language == 'ru'}}
             Цена
             <div class="ComparePriceSelection">
@@ -226,57 +226,9 @@
     <div class="FlightsByAKBlock"></div>
     <div class="ResultTableWrapper">
         <!--div id="SeatsPlane"></div-->
-        <table class="ResultTable">
-            <tr>
-                <td class="ResultTickets">
-                    <table style="width: 100%;">
-                        <tr>
-                            <td>
-                                <table id="preferedBlock">
-                                    <tr>
-                                        <td>
-                                            <div id="FirstPrefered"></div>
-                                            <div class="invisible" id="QuickSandFirstPrefered"></div>
-                                        </td>
-                                        <td>
-                                            <div id="SecondPrefered"></div>
-                                            <div class="invisible" id="QuickSandSecondPrefered"></div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table class="miniTickets_Fix">
-                                    <tr class="AdditionalFilterOptions">
-                                        <td><div class="filterRaspr"></div></td>
-                                        <td>
-                                            <!--div class="FlightSliderWrapper">
-                                                <div class="FlightSlider">
-                                                    <div id="slide_filter"></div>
-                                                    <div class="steps invisible"><div class="step1"></div><div class="step2"></div><div class="step3"></div></div>
-                                                    <div class="slide_time text1 additional">${l10n.searchResult.filters.slider[0]}</div>
-                                                    <div class="slide_time">${l10n.searchResult.filters.slider[0]}</div>
-                                                    <div class="slide_price text2 additional">${l10n.searchResult.filters.slider[1]}</div>
-                                                    <div class="slide_price">${l10n.searchResult.filters.slider[1]}</div>
-                                                </div>
-                                            </div-->
-                                        </td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3">
-                                          <!--  <div class="FilterResult"><ul></ul></div> -->
-                                            <div class="invisible" id="QuickSandBlock"></div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-                <td class="FlightFilter" style="display:none">
+        <div class="ResultTable">
+          
+                <aside class="FlightFilter span2">
                     <!--div id="SeatsWrapper" class="direction_body">
                         <div class="db_wrapper">
                             <div class="tl"></div>
@@ -327,9 +279,9 @@
                             </div>
                         </div>
                     </div>
-                    <!--div id="LuckyMe" class="invisible">
+                    <div id="LuckyMe" class="invisible">
                         <div id="DirectionsFilter"></div>
-                    </div-->
+                    </div>
 
                     <div id="FlightsByAKList" class="direction_body">
                         <div class="db_wrapper">
@@ -345,9 +297,57 @@
                             <div class="direction_option list"></div>
                         </div>
                     </div>
-                </td>
-            </tr>
-        </table>
+                </aside>
+                <div class="ResultTickets span10 tickets">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <table id="preferedBlock">
+                                    <tr>
+                                        <td>
+                                            <div id="FirstPrefered"></div>
+                                            <div class="invisible" id="QuickSandFirstPrefered"></div>
+                                        </td>
+                                        <td>
+                                            <div id="SecondPrefered"></div>
+                                            <div class="invisible" id="QuickSandSecondPrefered"></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table class="miniTickets_Fix">
+                                    <tr class="AdditionalFilterOptions">
+                                        <td><div class="filterRaspr"></div></td>
+                                        <td>
+                                            <!--div class="FlightSliderWrapper">
+                                                <div class="FlightSlider">
+                                                    <div id="slide_filter"></div>
+                                                    <div class="steps invisible"><div class="step1"></div><div class="step2"></div><div class="step3"></div></div>
+                                                    <div class="slide_time text1 additional">${l10n.searchResult.filters.slider[0]}</div>
+                                                    <div class="slide_time">${l10n.searchResult.filters.slider[0]}</div>
+                                                    <div class="slide_price text2 additional">${l10n.searchResult.filters.slider[1]}</div>
+                                                    <div class="slide_price">${l10n.searchResult.filters.slider[1]}</div>
+                                                </div>
+                                            </div-->
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <h2 class="moreVariants">Еще варианты</h2>
+                                            <div class="FilterResult"><ul></ul></div>
+                                            <div class="invisible" id="QuickSandBlock"></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+          </div>  
     </div>
 </script> 
 <script id="tmpl_FlightBlock" type="text/x-jquery-tmpl">

@@ -578,20 +578,27 @@
       <div class="span9 offset3 selectors">
         <div class="btn-row">
           <div class="btn-toolbar">
-            <div class="btn-group" data-toggle="buttons-radio">
-              <button class="btn">Итоговая</button>
-              <button class="btn active">Сравнительная</button>
-            </div>
-
+            
             <div class="btn-group" data-toggle="buttons-radio">
               <button class="btn">Все рейсы</button>
               <button class="btn active">Прямые</button>
             </div>
+            
+            <div class="FlightPriceInformation" style="display: inline-block;">
+              <div class="ComparePriceSelection" style="display: inline-block;">
+                <div class="btn-group d_option" data-toggle="buttons-radio">
+                  <button class="d_direction btn d_first">Итоговая</button>
+                  <button class="d_direction btn d_last">Сравнительная</button>
+                </div>
+              </div>
 
-            <label class="checkbox">класс: </label>
-            <div class="btn-group" data-toggle="buttons-radio">
-              <button class="btn">Эконом</button>
-              <button class="btn active">Бизнес</button>
+              <div class="classSearch_wrapper" style="display: inline-block;">
+                <label class="checkbox">класс: </label>
+                <div class="btn-group d_option" data-toggle="buttons-radio">
+                  <button class="d_direction btn d_first" cs="E">Эконом</button>
+                  <button class="d_direction btn d_middle" cs="B">Бизнес</button>
+                </div>
+              </div>
             </div>
             
             <div id="CurrenciesBlock" style="float: right;">
@@ -606,11 +613,16 @@
         </div>
       </div>  <!-- /selectors -->
 
+      
+      <div id="layout_body" class="spreader">
+        <div id="layout_results"></div>                   
+      </div>
+      
       <aside class="span2">
       
-        <div id="LuckyMe" class="invisible">
+        <!--div id="LuckyMe" class="invisible">
             <div id="DirectionsFilter"></div>
-        </div>
+        </div-->
       
         
       
@@ -857,20 +869,6 @@
       </aside>
 
       <div class="span10 tickets">
-      
-      
-        <div id="layout_body" class="spreader">
-            <div id="layout_results"></div> 
-            
-            <h2 class="moreVariants">Еще варианты</h2> 
-            <div class="FilterResult"><ul></ul></div>
-                   
-        </div>
-          
-        
-        
-        
-
       </div>  <!-- /tickets -->
     </div>
   </section> <!-- /container -->
