@@ -578,10 +578,10 @@
       <div class="span9 offset3 selectors">
         <div class="btn-row">
           <div class="btn-toolbar">
-            <!-- <div class="btn-group" data-toggle="buttons-radio">
-              <button class="btn">Все билеты</button>
-              <button class="btn active">Сдаваемые</button>
-            </div> -->
+            <div class="btn-group" data-toggle="buttons-radio">
+              <button class="btn">Итоговая</button>
+              <button class="btn active">Сравнительная</button>
+            </div>
 
             <div class="btn-group" data-toggle="buttons-radio">
               <button class="btn">Все рейсы</button>
@@ -594,10 +594,12 @@
               <button class="btn active">Бизнес</button>
             </div>
             
-            <div class="btn-group last" data-toggle="buttons-radio">
-              <button class="btn">RUB</button>
-              <button class="btn active">USD</button>
-              <button class="btn">EUR</button>
+            <div id="CurrenciesBlock" style="float: right;">
+              <div class="btn-group last d_option" data-toggle="buttons-radio">
+                <button class="d_direction btn" data-cur="RUB">RUB</button>
+                <button class="d_direction btn" data-cur="USD">USD</button>
+                <button class="d_direction btn" data-cur="EUR">EUR</button>
+              </div>
             </div>
             <label class="last">валюта:</label>
           </div>  <!-- /btn-toolbar -->
@@ -937,5 +939,8 @@
   <script src="/js/jquery.ui.datepicker-ru.js"></script>
   <script src="/js/custom.js"></script>
   -->
+  
+  <script src="/js/bootstrap.min.js"></script>
+  
 </body>
 </html>

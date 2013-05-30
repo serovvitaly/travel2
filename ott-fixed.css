@@ -241,3 +241,13 @@
 .ResultTableWrapper table td{
     padding: 0;
 }
+
+
+
+.selectors {
+    margin-left: 30px;
+    width: 980px;
+}
+.selectors .btn-group {
+    margin-right: 29px;
+}

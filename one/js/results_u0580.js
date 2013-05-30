@@ -2168,18 +2168,18 @@ DrawResults.prototype.initComparingPrices = function(){
 		self.RedrawResults(false);
 	});	
 };
-DrawResults.prototype.initCurrencySelection = function(){
+DrawResults.prototype.initCurrencySelection = function(){  
 	var self = this;
 	this.CurrenciesBlock = $('#CurrenciesBlock')[0];
 
 	$('.d_direction',this.CurrenciesBlock).each(function(){
 		if( $(this).attr('data-cur') == tw.currency) {
-			$(this).addClass('selected');
+			$(this).addClass('active');
 		}
 	});
-	$('.d_option', this.CurrenciesBlock).delegate('div[class*="d_direction"]:not(.selected):not(.disabled)', 'click', function(){
-		if(self.QuickSandProcess) {return;}
-		$(this).addClass('selected').siblings().removeClass('selected');
+	$('.d_option', this.CurrenciesBlock).delegate('button[class*="d_direction"]:not(.active):not(.disabled)', 'click', function(){
+        if(self.QuickSandProcess) {return;}
+		$(this).addClass('active').siblings().removeClass('active');
 		tw.currency = $(this).attr('data-cur');
 		setCookie({
 			name: "currency",
