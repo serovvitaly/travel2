@@ -401,7 +401,7 @@ SearchForm.prototype.changeRequest = function(){
 };
 SearchForm.prototype.setForm = function(){
 	$(this.elForm).unbind("submit", this.link_submit);
-	$(this.elSearchButtonTongue).hide();
+	//$(this.elSearchButtonTongue).hide();
 	$("input").blur();
 	$(this.elFirstRowContainer).empty();
 	$(this.elDirTongue).empty().addClass("invisible");
@@ -548,7 +548,7 @@ SearchForm.prototype.setFlightTypeButtons = function(){
 			self.setFlightType("multiway");
 		}
 	});
-	$("span", this.flightTypeButtons).mouseover(function(){
+	$("span", this.flightTypeButtons).mouseover(function(){ return;
 		var button = this;
 		this.hint = $.tmpl(tmpl_Hint, {
 			className: "flightType"
@@ -799,11 +799,11 @@ SearchForm.prototype.checkData = function(){
 	}
 	if(dataFilled){
 		$(this.elForm).unbind("submit", this.link_submit);
-		$(this.elSearchButtonTongue).slideDown("fast");
+		//$(this.elSearchButtonTongue).slideDown("fast");
 		$(this.elForm).bind("submit", this.link_submit);
 	} else {
 		$(this.elForm).unbind("submit", this.link_submit);
-		$(this.elSearchButtonTongue).hide();
+		//$(this.elSearchButtonTongue).hide();
 	}
 };
 SearchForm.prototype.onSubmit = function(isKey){
@@ -830,7 +830,7 @@ SearchForm.prototype.onSubmit = function(isKey){
 		return;
 	}
 	$(this.elForm).unbind("submit", this.link_submit);
-	$(this.elSearchButtonTongue).slideUp("fast");
+	//$(this.elSearchButtonTongue).slideUp("fast");
 	if(this.data.getFlightType() == this.data.flightType){
 		$(document.body).unbind("changeRequest.regenForm", this.link_changeRequest);
 	}

@@ -248,7 +248,80 @@
   <section class="container">
     <div class="row">
       <div class="span12 mainSearch">
-        <form class="form-inline row" action="">
+      
+        <div id="layout_panels">
+            <div id="rotationPanel"><div class="spreader" id="rotationPanelTop"></div></div>
+            <div id="infoPanel">
+                <div class="spreader"><div class="advText"></div></div>
+            </div>
+            <div id="topPanel" style="display: none;">
+                <div class="spreader">
+                    <table><tr>
+                        <td id="languageSelect" class="panelDropMenu"></td>
+                        <td>
+                            <ul id="topMenu">
+                                <li id="about" class="invisible">О проекте</li>
+                                <li class="invisible">Авиабилеты</li>
+                                <li><a href="javascript:if(confirm(%27http://www.booking.com/?aid=358564&label=Onetwotrip-Navtab  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.booking.com/?aid=358564&label=Onetwotrip-Navtab%27" tppabs="http://www.booking.com/?aid=358564&label=Onetwotrip-Navtab" target="_blank" id="m_booking_link">Отели</a></li>
+                                <li><a href="javascript:if(confirm(%27http://www.onetwotrip.com/bonus/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a path excluded by the site\%27s Robot Exclusion parameters.  (Teleport Pro\%27s compliance with this system is optional; see the Project Properties, Netiquette page.)  \n\nDo you want to open it from the server?%27))window.location=%27http://www.onetwotrip.com/bonus/%27" tppabs="http://www.onetwotrip.com/bonus/" target="_blank">Бонусы</a></li>
+                            </ul>
+                        </td>
+                        <td id="subMenu" class="panelDropMenu"></td>
+                        <td id="topSocialIn">
+                            <div>
+                                <span>OneTwoTrip в</span>
+                                <a rel="nofollow" target="_blank" class="fb" href="javascript:if(confirm(%27http://www.facebook.com/onetwotrip  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.facebook.com/onetwotrip%27" tppabs="http://www.facebook.com/onetwotrip" title="Facebook"></a>
+                            </div>
+                        </td>
+                        <td class="profileCell">
+                            <div class="loginLoader invisible"></div>
+                            <div class="profileInfo invisible">
+                                <div class="unknownUser">
+                                    <span class="register">Зарегистрироваться</span> | <span class="enter">Войти</span>
+                                </div>
+                                <div class="knownUser invisible">
+                                    <a href="" class="myprofile"></a> | <span class="exit">Выйти</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr></table>
+                </div>
+            </div>
+            <div class="spreader" style="display: none;">
+                <div class="tag_price">
+                    <div class="tag_small invisible"><a href="#" class="empty_link"></a></div>
+                    <div class="tag_big invisible">
+                        <div class="price_content">
+                            <div class="tag_close"><div class="w"></div><div class="c"></div></div>
+                            <div class="header"></div>
+                            <div class="info"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="topPanel2">
+                <form id="form_search" class="form-inline row" action="">
+                    <div class="spreader well span10" id="topPanel2spreader"></div>
+                    <div class="spreader invisible" id="priceDynamicSpreader"><div class="priceDynamic"></div></div>
+                    <div class="spreader" id="tongueSpreader"><div class="height0">
+                        <div id="dirTongue" class="invisible"></div>
+                        <div id="searchButtonTongue" class="invis">
+                            <input type="submit" class="btn btn-danger span2" value="ПОИСК"/>
+                        </div>
+                    </div></div>
+                </form>
+                <div id="pageTitlePanel" class="spreader invisible"><div id="pageTitle"></div></div>
+            </div>
+            <div id="layout_recentSearches">
+                <div class="spreader">
+                    <ul class="spreader" id="recentSearches"></ul>
+                </div>
+            </div>
+        </div>
+      
+        <form class="form-inline row" action="" style="display: none;">
+        
+          
           <div class="well span10">
             <div class="btn-toolbar">
               <div class="input-append">
@@ -579,9 +652,11 @@
         <div class="btn-row">
           <div class="btn-toolbar">
             
-            <div class="btn-group" data-toggle="buttons-radio">
-              <button class="btn">Все рейсы</button>
-              <button class="btn active">Прямые</button>
+            <div class="FlightsDifficulties" style="display: inline-block;">
+              <div class="btn-group d_option" data-toggle="buttons-radio">
+                <button class="d_direction btn d_first active">Все рейсы</button>
+                <button class="d_direction btn d_last">Прямые</button>
+              </div>
             </div>
             
             <div class="FlightPriceInformation" style="display: inline-block;">
@@ -618,258 +693,6 @@
         <div id="layout_results"></div>                   
       </div>
       
-      <aside class="span2">
-      
-        <!--div id="LuckyMe" class="invisible">
-            <div id="DirectionsFilter"></div>
-        </div-->
-      
-        
-      
-        <article class="side faster">
-          <h2>БЫСТРЕЕ / ДЕШЕВЛЕ</h2>
-          <div class="inn">            
-            <div id="slide_filter" class="slider sliderType1"></div>
-          </div> 
-          
-        </article>
-
-        <article class="side flight">
-          <h2>Вылет и прилет</h2>
-          <div class="inn">
-            <div class="fl1"></div>
-            <div class="slider sliderType2"></div>
-            <div class="fl2"></div>
-            <div class="clearfix"></div>
-            <h3><span class="flightFrom">Москва</span> до <span class="flightTo">Нью-Йорк</span></h3>
-
-            <form action="" class="form-inline">
-              <div class="control-group">
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad1" checked> в любое время
-                  </label>
-                </div>
-                
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad1"> 05:00-15:54
-                  </label>
-                  <span class="cost radio inline">300 $</span>
-                </div>
-
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad1"> 05:00-15:54
-                  </label>
-                  <span class="cost radio inline">260 $</span>
-                </div>
-              </div>
-
-              <div class="control-group">
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad2" checked> из любого аэропорта
-                  </label>
-                </div>
-                
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad2"> Шереметьево
-                  </label>
-                  <span class="cost radio inline">300 $</span>
-                </div>
-
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad2"> Домодедово
-                  </label>
-                  <span class="cost radio inline">260 $</span>
-                </div>
-
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad2"> Внуково
-                  </label>
-                  <span class="cost radio inline">260 $</span>
-                </div>
-              </div>
-
-            </form>
-          </div>
-        </article>
-
-        <article class="side flight flight2">
-          <h2>Вылет и прилет</h2>
-          <div class="inn">
-            <div class="fl1"></div>
-            <div class="slider sliderType2"></div>
-            <div class="fl2"></div>
-            <div class="clearfix"></div>
-            <h3><span class="flightFrom">Нью-Йорк</span> до <span class="flightTo">Москва</span></h3>
-
-            <form action="" class="form-inline">
-              <div class="control-group">
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad5" checked> в любое время
-                  </label>
-                </div>
-                
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad5"> 07:00-15:40
-                  </label>
-                  <span class="cost radio inline">3010 $</span>
-                </div>
-
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad5"> 05:00-15:54
-                  </label>
-                  <span class="cost radio inline">250 $</span>
-                </div>
-              </div>
-
-              <div class="control-group">
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad6" checked> из любого аэропорта
-                  </label>
-                </div>
-                
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad6"> Шереметьево
-                  </label>
-                  <span class="cost radio inline">300 $</span>
-                </div>
-
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad6"> Домодедово
-                  </label>
-                  <span class="cost radio inline">260 $</span>
-                </div>
-              </div>
-
-            </form>
-          </div>
-        </article>
-
-        <article class="side avialines">
-          <h2>Авиалинии</h2>
-          <div class="inn">
-            <form action="" class="form-inline">
-              <div class="control-group">
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad3" checked> Аэрофлот
-                  </label>
-                </div>
-                
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad3"> Трансаэро
-                  </label>
-                </div>
-
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad3"> S7 Airlins
-                  </label>
-                </div>
-
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad3"> Трансаэро
-                  </label>
-                </div>
-
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad3"> S7 Airlins
-                  </label>
-                </div>
-              </div>
-            </form>
-
-            <h4><a href="">Посмотреть еще</a></h4>
-          </div>
-        </article>
-
-        <article class="side aviatravel">
-          <h2>Авиаперевозчики</h2>
-          <div class="inn">
-            <form action="" class="form-inline">
-              <div class="control-group">
-                <div class="controls-row">
-                  <label class="radio inline">
-                    <input type="radio" name="rad4" checked>все перевозчики
-                  </label>
-                </div>
-                
-                <div class="controls-row">
-                  <label class="radio inline short">
-                    <input type="radio" name="rad4"> SkyTeam
-                  </label>
-                  <div class="star">
-                    <div class="star-ok"></div>
-                  </div>
-                </div>
-
-                <div class="controls-row">
-                  <label class="radio inline short">
-                    <input type="radio" name="rad4"> StarAlliance
-                  </label>
-                  <div class="star">
-                    <div class="star-ok"></div>
-                  </div>
-                </div>
-
-                <div class="controls-row">
-                  <label class="radio inline short">
-                    <input type="radio" name="rad4"> OneWorld
-                  </label>
-                  <div class="star">
-                    <div class="star-ok"></div>
-                  </div>
-                </div>
-
-                <div class="controls-row">
-                  <label class="radio inline short">
-                    <input type="radio" name="rad4"> SkyTeam
-                  </label>
-                  <div class="star">
-                    <div class="star-ok"></div>
-                  </div>
-                </div>
-
-                <div class="controls-row">
-                  <label class="radio inline short">
-                    <input type="radio" name="rad4"> StarAlliance
-                  </label>
-                  <div class="star">
-                    <div class="star-ok"></div>
-                  </div>
-                </div>
-
-                <div class="controls-row">
-                  <label class="radio inline short">
-                    <input type="radio" name="rad4"> OneWorld
-                  </label>
-                  <div class="star">
-                    <div class="star-ok"></div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </article>
-      </aside>
-
-      <div class="span10 tickets">
-      </div>  <!-- /tickets -->
     </div>
   </section> <!-- /container -->
 
@@ -937,8 +760,13 @@
   <script src="/js/jquery.ui.datepicker-ru.js"></script>
   <script src="/js/custom.js"></script>
   -->
-  
+
   <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/jquery.sliderkit.1.9.2.js"></script>
+
+  <script src="/js/custom_el.js"></script>
+
+  <script src="/js/custom.js"></script>
   
 </body>
 </html>

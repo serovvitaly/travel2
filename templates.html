@@ -60,12 +60,12 @@
     </div>
 </script>
 <script id="tmpl_Direction" type="text/x-jquery-tmpl">
-    <div class="dirRow">
-        <table class="layout"><tr>
-            <td class="directionFrom"></td>
-            <td class="betweenFromTo"></td>
-            <td class="directionTo"></td>
-        </tr></table>
+    <div class="dirRow btn-toolbar">
+        
+            <div class="directionFrom input-append"></div>
+            <div class="betweenFromTo btn-group calend"></div>
+            <div class="directionTo input-append"></div>
+        
     </div>
 </script>
 <script id="tmpl_Multiway" type="text/x-jquery-tmpl">
@@ -243,7 +243,7 @@
                             <div id="SeatsSelection"></div>
                         </div>
                     </div-->
-                    <div id="SocialDepend" class="{{if !tw.socialShare}}noSocial{{/if}}">
+                    <!--div id="SocialDepend" class="{{if !tw.socialShare}}noSocial{{/if}}">
                         <div id="RefundSelection" class="invisible">
                             <div class="refund_wrapper">
                                 <div class="d_option">
@@ -278,25 +278,27 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div-->
+                    
+                    <article class="side faster">
+                      <h2>БЫСТРЕЕ / ДЕШЕВЛЕ</h2>
+                      <div class="inn">            
+                        <div id="slide_filter" class="slider sliderType1"></div>
+                      </div>
+                    </article>
+                    
                     <div id="LuckyMe" class="invisible">
                         <div id="DirectionsFilter"></div>
                     </div>
 
-                    <div id="FlightsByAKList" class="direction_body">
-                        <div class="db_wrapper">
-                            <div class="tl"></div>
-                            <div class="tr"></div>
-                            <div class="t"></div>
-                            <div class="bl"></div>
-                            <div class="br"></div>
-                            <div class="b"></div>
-                            <div class="l"></div>
-                            <div class="r"></div>
-                            <div class="iewrapper"><div></div></div>
+                    <article class="side avialines">
+                      <h2>Авиаперевозчики</h2>
+                      <div id="FlightsByAKList" class="direction_body">
+                        <div class="inn db_wrapper">
                             <div class="direction_option list"></div>
                         </div>
-                    </div>
+                      </div>
+                    </article>
                 </aside>
                 <div class="ResultTickets span10 tickets">
                     <table style="width: 100%;">
@@ -1089,46 +1091,32 @@
     <span class="ib opt6">${l10n.searchResult.block.seats}</span>
 </script>
 <script id="tmpl_PreferedFlightFilter" type="text/x-jquery-tmpl">
-    <div class="direction_body {{if (!Departure.time[1] && Departure.pointCount==1) || (!Arrival.time[1] && Arrival.pointCount==1)}}invisible{{/if}}">                
+  <article class="side flight">
+    <h2>Вылет и прилет</h2>
+    <div class="inn direction_body {{if (!Departure.time[1] && Departure.pointCount==1) || (!Arrival.time[1] && Arrival.pointCount==1)}}invisible{{/if}}">                
         <div class="db_wrapper">
-            <div class="tl"></div>
-            <div class="tr"></div>
-            <div class="t"></div>
-            <div class="bl"></div>
-            <div class="br"></div>
-            <div class="b"></div>
-            <div class="l"></div>
-            <div class="r"></div>
-            <div class="iewrapper"><div></div></div>                    
             <div class="logo_arrow"></div>
             <div class="d_option">
-                <div class="d_direction selected d_first">
-                    <div class="button_shadow_lr"></div>
-                    <div class="button_shadow_bg"></div>
-                    <div class="rBorder"></div>
-                    <div class="text">${l10n.searchResult.filters.move[0]}</div>                            
-                </div>
-                <div class="d_direction d_last">
-                    <div class="button_shadow_lr"></div>
-                    <div class="button_shadow_bg"></div>
-                    <div class="text">${l10n.searchResult.filters.move[1]}</div>                            
-                </div>
+                <div class="d_direction active d_first fl1"></div>
+                <div class="slider sliderType2"></div>
+                <div class="d_direction d_last fl2"></div>
+                <div class="clearfix"></div>
             </div>
             <div class="db_direction_name">
-                <div>
+                <h3>
                     {{if String(Direction.From.Name).length + String(Direction.To.Name).length > 25 }}
-                    <span class="longName nowrap">${Direction.From.Name}</span> &ndash; <span class="longName nowrap">${Direction.To.Name}</span>
+                    <span class="longName flightFrom">${Direction.From.Name}</span> до <span class="longName flightTo">${Direction.To.Name}</span>
                     {{else}}
-                    <span class="nowrap">${Direction.From.Name}</span> &ndash; <span class="nowrap">${Direction.To.Name}</span>
+                    <span class="flightFrom">${Direction.From.Name}</span> до <span class="flightTo">${Direction.To.Name}</span>
                     {{/if}}                            
-                </div>                        
+                </h3>                        
             </div>
             <div class="direction_option">
                 <ul class="{{if !Departure.time[1]}}invisible{{/if}}" data-filtertype="time">
                     <li>
                         <div class="option_row selected">
                             <div class="direction_item">
-                                <label for="dep_${Id}" class="inline"><span class="radio_button"></span></label>
+                                <!--label for="dep_${Id}" class="inline"><span class="radio_button"></span></label-->
                                 <input type="radio" name="dep_${Id}" value="any" id="dep_${Id}" checked="checked" group="${Id}0"/>
                                 <label for="dep_${Id}" class="selected">${l10n.searchResult.filters.anyTime}</label>
                             </div>
@@ -1137,7 +1125,7 @@
                     <li name="${Id}0">
                         <div class="option_row">
                             <div class="direction_item">
-                                <label for="dep_${Id}_${Departure.time[0].sys}" class="inline"><span class="radio_button"></span></label>
+                                <!--label for="dep_${Id}_${Departure.time[0].sys}" class="inline"><span class="radio_button"></span></label-->
                                 <input type="radio" name="dep_${Id}" value="${Departure.time[0].sys}" id="dep_${Id}_${Departure.time[0].sys}" group="${Id}0"/>
                                 <label for="dep_${Id}_${Departure.time[0].sys}" title="${Departure.time[0].name}">${Departure.time[0].clock}</label>
                             </div>
@@ -1148,7 +1136,7 @@
                         <li name="${Id}0">
                             <div class="option_row">
                                 <div class="direction_item">
-                                    <label for="dep_${Id}_${Departure.time[1].sys}" class="inline"><span class="radio_button"></span></label>
+                                    <!--label for="dep_${Id}_${Departure.time[1].sys}" class="inline"><span class="radio_button"></span></label-->
                                     <input type="radio" name="dep_${Id}" value="${Departure.time[1].sys}" id="dep_${Id}_${Departure.time[1].sys}" group="${Id}0"/>
                                     <label for="dep_${Id}_${Departure.time[1].sys}" title="${Departure.time[1].name}">${Departure.time[1].clock}</label>
                                 </div>
@@ -1255,6 +1243,7 @@
             
         </div>
     </div>
+  </article>
 </script>
 
 <script id="tmpl_FlightsByAK" type="text/x-jquery-tmpl">

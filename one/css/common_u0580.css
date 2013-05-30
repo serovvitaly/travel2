@@ -14,12 +14,7 @@ body.aluminium { background-image: url("../images/bg/Aluminium_u0580.jpg")/*tpa=
 #layout_bg { background: url("../images/bg/topShadow_u0580.png")/*tpa=http://www.onetwotrip.com/images/bg/topShadow_u0580.png*/ repeat-x top; max-height: 100%; overflow: hidden; }
 #layout_bg div { top: 565px; background: black; opacity: 0.4; }
 
-div.spreader {
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-			box-sizing: border-box;
-	width: 1000px; padding: 0 20px; margin: 0 auto;
-}
+
 
 div#layout_panels { z-index: 3; position: relative; color: white; }
 

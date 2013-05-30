@@ -1,3 +1,7 @@
+.invisible{
+    display: none;
+}
+
 .FilterResult ul{
     margin: 0;
     list-style: none;
@@ -26,13 +30,13 @@
 }
 
 .star {
-    background: url('http://www.onetwotrip.com/images/stars/Star_u0859.png') repeat-x;
+    background: url('/images/stars/Star_u0859.png') repeat-x;
 }
 .halfstar {
-    background: url('http://www.onetwotrip.com/images/stars/HalfStar_u0859.png') no-repeat;
+    background: url('/images/stars/HalfStar_u0859.png') no-repeat;
 }
 .emptystar {
-    background: url('http://www.onetwotrip.com/images/stars/EmptyStar_u0859.png') repeat-x;
+    background: url('/images/stars/EmptyStar_u0859.png') repeat-x;
 }
 
 .pf_bottom .content {
@@ -250,4 +254,224 @@
 }
 .selectors .btn-group {
     margin-right: 29px;
+}
+
+
+aside article.side .inn .direction_option {
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+aside article.side .inn .direction_option ul{
+    list-style: none;
+    margin: 15px 10px 10px 10px;
+}
+aside article.side .inn .direction_option ul label{
+    display: inline;
+    padding-left: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+    padding-top: 0;
+    line-height: 25px;
+}
+
+
+aside article.side .inn .fl1 {
+    background: url(../i/fl1.png) no-repeat bottom;
+}
+aside article.side .inn .fl1.active {
+    background: url(../i/fl1.png) no-repeat top;
+}
+aside article.side .inn .fl2 {
+    background: url(../i/fl2.png) no-repeat bottom;
+}
+aside article.side .inn .fl2.active {
+    background: url(../i/fl2.png) no-repeat top;
+}
+
+.ui-slider-range {
+    border-radius: 6px;
+}
+
+
+.FlightFilter input[type="radio"], .FlightFilter input[type="checkbox"] {
+    margin: 0px;
+    line-height: normal;
+}
+
+.direction_option .option_row {
+    position: relative;
+    line-height: 1.5;
+    padding: 0 5px;
+}
+.direction_option .direction_item.short {
+    width: 84px;
+}
+.direction_option .direction_item {
+    position: relative;
+    z-index: 2;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0.99;
+}
+
+
+
+div#topPanel2 {
+    z-index: 2;
+    position: relative;
+    padding: 0;
+    min-height: 35px;
+    text-align: left;
+    background: none;
+    margin: 0;
+}
+
+
+
+
+.suggestField input {
+    z-index: 6;
+    position: relative;
+    display: block;
+    background: none;
+}
+.suggestField input[readonly] {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #FFF;
+    color: #C0C0C0;
+}
+
+
+#tongueSpreader{
+    z-index: 3;
+}
+#topPanel2spreader{
+    z-index: 4;
+}
+
+
+.flightTypeButtons {
+    width: 151px;
+    margin: 0 auto;
+}
+.flightTypeButtons .selected {
+    cursor: default;
+}
+.flightTypeButtons * {
+    display: inline-block;
+    vertical-align: middle;
+    width: 52px;
+    height: 42px;
+    background: url('/images/buttons_flightType_u0861.png');
+    cursor: pointer;
+}
+
+.flightTypeButtons .oneway.selected, .flightTypeButtons .oneway.selected:hover {
+    background-position: -312px 0;
+}
+.flightTypeButtons .oneway:hover {
+    background-position: -155px 0;
+}
+.flightTypeButtons .oneway {
+    background-position: 0 0;
+}
+
+.flightTypeButtons .round.selected, .flightTypeButtons .round.selected:hover {
+    background-position: -364px 0;
+}
+.flightTypeButtons .round:hover {
+    background-position: -208px;
+}
+.flightTypeButtons .round {
+    background-position: -52px 0;
+}
+
+.flightTypeButtons .multiway.selected, .flightTypeButtons .multiway.selected:hover {
+    background-position: -416px 0;
+}
+.flightTypeButtons .multiway {
+    background-position: -104px 0;
+}
+.flightTypeButtons .multiway:hover {
+    background-position: -260px 0;
+}
+
+
+
+.suggestField .calendarButton {
+    z-index: 7;
+    position: absolute;
+    top: 0;
+    right: 1px;
+    bottom: 0;
+    text-align: center;
+    cursor: pointer;
+    color: #FFF;
+    
+    line-height: 32px;
+    padding: 8px 10px;
+    
+    -webkit-border-radius: 0 4px 4px 0;
+       -moz-border-radius: 0 4px 4px 0;
+            border-radius: 0 4px 4px 0;
+            
+
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #0996e2;
+  background-image: -moz-linear-gradient(top, #0f9dec, #008cd4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0f9dec), to(#008cd4));
+  background-image: -webkit-linear-gradient(top, #0f9dec, #008cd4);
+  background-image: -o-linear-gradient(top, #0f9dec, #008cd4);
+  background-image: linear-gradient(to bottom, #0f9dec, #008cd4);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0f9dec', endColorstr='#ff008cd4', GradientType=0);
+  border-color: #008cd4 #008cd4 #005988;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #008cd4;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.suggestField .calendarButton div.lineSpreader {
+    display: none;
+}
+.suggestField .calendarButton div.text {
+    font-size: 21px;
+    line-height: 0.7em;
+    text-align: center;
+}
+.suggestField .calendarButton div.month {
+    font-size: 14px;
+    text-align: center;
+}
+
+section .mainSearch .well .input-append input {
+    width: 205px;
+    padding-right: 50px;
+}
+
+
+.input-append input, .input-append select, .input-append .uneditable-input {
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+}
+
+
+#layout_recentSearches{
+    position: absolute;
+    padding: 10px;
+    margin: 30px 0 0 0;
+    background: #f2f2f4;
+    width: 98%;
+}
+#recentSearches{
+    list-style: none;
+    margin: 0;
+}
+#recentSearches li{
+    display: inline;
+    padding: 0 20px 0 0;
 }

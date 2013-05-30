@@ -40,9 +40,9 @@ $(document).ready(function(){
 	});
 
 	//$.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
-	$( ".datepicker" ).datepicker({
+	/*$( ".datepicker" ).datepicker({
 		numberOfMonths: 2
-	});
+	}); */
 
 	$('.datepicker .ui-state-default').append('<span class="grad"></span>');
 

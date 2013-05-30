@@ -1360,6 +1360,7 @@ DrawResults.prototype.initSlider = function(){
 		min: 1,
 		max: 100,
 		step: 1,
+        range: "min",
 		slide: function( event, ui ) {
 			self.currentSliderTime = ui.value;
 			self.initSliderValues();
@@ -2575,9 +2576,9 @@ DrawResults.prototype.initFlightsDifficulties = function(){
 	} else {
 		this.showFlightsDifficulties = true;	
 	}
-	$('.d_option', this.FlightsDifficulties).delegate('div[class*="d_direction"]:not(.selected):not(.disabled)', 'click', function() {
+	$('.d_option', this.FlightsDifficulties).delegate('button[class*="d_direction"]:not(.active):not(.disabled)', 'click', function() {
 		if(self.QuickSandProcess) {return;}
-		$(this).addClass('selected').siblings().removeClass('selected');
+		$(this).addClass('active').siblings().removeClass('active');
 		if( $(this).hasClass('d_last') ) {
 			self.SelectedDirectRoutes = true;
 			fadeOutBlock(self.FlightSliderBlock);
