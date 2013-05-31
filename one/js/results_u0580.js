@@ -1274,6 +1274,10 @@ DrawResults.prototype.initStructure = function(){
 	this.initFilter();
 	this.initOperatedAKList();
 	//this.initSeats();
+    
+    $('aside article.side h2').click(function(){
+        $(this).next('.inn').toggle();
+    });
 
 	this.ResultTable = $('.ResultTableWrapper')[0];
 	this.FilterResult = $('.FilterResult')[0];
@@ -2198,6 +2202,25 @@ DrawResults.prototype.initFilter = function(){
 	var self= this;
 	//$('#DirectionsFilter').empty();
 	$.tmpl($("#tmpl_PreferedFlightFilter").trim(), self.FilterObject ).appendTo( $('#DirectionsFilter') ) ;
+    
+    $( ".slider.sliderType2" ).on('click', function(){
+        $(this).slider("value", !$(this).slider("value"));
+    }).slider({
+        orientation: "horizontal",
+        range: "min",
+        min: 0,
+        max: 1,
+        value: 0,
+        change: function(event, ui){
+            event.stopPropagation();
+            if (ui.value == 1) {
+                $(this).parent('.d_option').find('.d_direction.d_last').click();
+            } else {
+                $(this).parent('.d_option').find('.d_direction.d_first').click();
+            }
+        }
+    });
+    
 
 	//бизнес - эконом
 		if(this.obj.cs == "F") {
@@ -2221,8 +2244,10 @@ DrawResults.prototype.initFilter = function(){
 		$(doptions).hide();
 		if( $(this).hasClass('d_first') ) {
 			$(doptions[0]).fadeIn(300);
+            $(this).parent('.d_option').find('.slider').slider("value", 0);
 		} else {
 			$(doptions[1]).fadeIn(300);
+            $(this).parent('.d_option').find('.slider').slider("value", 1)
 		}
 	});
 	

@@ -81,7 +81,7 @@ l10n.languages = {
 };
 l10n.and = 'и';
 l10n.loaders = {
-	moment: 'Секундочку…',
+	moment: 'ПОИСК БИЛЕТОВ',
 	loading: 'Загрузка…'
 };
 l10n.popup = {
@@ -274,7 +274,8 @@ l10n.searchResult = {
 		viewAirportSite: 'Открыть в новом окне сайт аэропорта',
 		showOnMap: 'Показать аэропорт на карте в новом окне',
 		airportPhone: 'Справочный телефон аэропорта',
-		currentDateTime: 'Текущее время/дата',
+        currentDateTime: 'Текущее время',
+		//currentDateTime: 'Текущее время/дата',
 		unableToGetAirportInfo: 'Невозможно получить информацию об аэропорте'
 	},
 	block: {

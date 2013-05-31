@@ -24,19 +24,13 @@ $(document).ready(function(){
 		value: 50
 	});
 
-	$( ".slider.sliderType2" ).slider({
-		orientation: "horizontal",
-		range: "min",
-		min: 0,
-		max: 1,
-		value: 1
-	});
+	
 	
 	$( ".slider.sliderType1" ).slider( "value", 60 );
-	$( ".slider.sliderType2" ).slider( "value", 0 );
+	//$( ".slider.sliderType2" ).slider( "value", 0 );
 
 	$( ".slider.sliderType2" ).slider({
-		slide: function(){$(this).parent().toggleClass('toggle');}
+		//slide: function(){$(this).parent().toggleClass('toggle');}
 	});
 
 	//$.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
@@ -73,10 +67,11 @@ $(document).ready(function(){
 	$('.popupSide .close').click(function(){
 		$(this).parent().removeClass('open');
 	})
-
+    
+    /** перенесено в /one/js/results_u0580.js
 	$('aside article.side h2').click(function(){
 		$(this).next('.inn').toggle();
-	})
+	}) */
 
 	$('.labelDynamics').click(function(){
 		$('.dynamics .hided').slideToggle();

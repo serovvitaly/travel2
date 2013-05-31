@@ -1,6 +1,10 @@
 .invisible{
     display: none;
 }
+.disnone{
+    display: none !important;
+}
+
 
 .FilterResult ul{
     margin: 0;
@@ -39,10 +43,10 @@
     background: url('/images/stars/EmptyStar_u0859.png') repeat-x;
 }
 
-.pf_bottom .content {
+.ResultTickets .pf_bottom .content {
     padding: 6px 18px 10px;
 }
-.pf_puller {
+.ResultTickets .pf_puller {
     border-top: 2px dotted #DDD;
 }
 .stars_block {
@@ -55,7 +59,7 @@
 }
 
 
-.FlightTicket{
+.ResultTickets .FlightTicket{
     color: #4B4B4B;
     display: block;
     font-family: Arial, sans-serif;
@@ -65,7 +69,7 @@
     background-color: #F7F9FB;
     border: 1px solid #DDD;
 }
-.FlightTicket.mini{
+.ResultTickets .FlightTicket.mini{
     color: #4B4B4B;
     display: block;
     float: left;
@@ -81,40 +85,40 @@
     border: 1px solid #DDD;
 }
 
-.FlightTicket .StartTime {
+.ResultTickets .FlightTicket .StartTime {
     font-size: 18px;
     color: #4b4b4b;
 }
-.FlightTicket .bold {
+.ResultTickets .FlightTicket .bold {
     font-size: 18px;
     color: #4b4b4b;
 }
-.FlightTicket .nowrap {
+.ResultTickets .FlightTicket .nowrap {
     font-size: 18px;
     color: #4b4b4b;
 }
-.FlightTicket .DirectionPoint .nowrap {
+.ResultTickets .FlightTicket .DirectionPoint .nowrap {
     font-size: 12px;
     color: #4b4b4b;
 }
-.FlightTicket .DirectionPoint {
+.ResultTickets .FlightTicket .DirectionPoint {
     padding: 4px 0;
 }
-.FlightTicket .pf_stops, .FlightTicket .pf_stops .nowrap {
+.ResultTickets .FlightTicket .pf_stops, .ResultTickets .FlightTicket .pf_stops .nowrap {
     font-size: 12px;
     color: #F15A22;
     padding: 4px 0;
 }
-.FlightTicket .showTripInfo {
+.ResultTickets .FlightTicket .showTripInfo {
     text-decoration: underline;
     cursor: pointer;
     color: #0f9dec;
 }
-.FlightTicket .pf_bottom table {
+.ResultTickets .FlightTicket .pf_bottom table {
     border-collapse: collapse;
     width: 100%;
 }
-.FlightTicket .pf_bottom .info_time {
+.ResultTickets .FlightTicket .pf_bottom .info_time {
     float: right;
     text-align: right;
     white-space: nowrap;
@@ -122,17 +126,17 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.FlightTicket .pf_button{
+.ResultTickets .FlightTicket .pf_button{
     margin: 11px 18px 17px; 
 }
-.FlightTicket .pf_button .showAKvariants span{
+.ResultTickets .FlightTicket .pf_button .showAKvariants span{
     color: #0F9DEC;
     text-decoration: underline;
 }
-.FlightTicket .pf_button .showAKvariants span:hover{
+.ResultTickets .FlightTicket .pf_button .showAKvariants span:hover{
     color: #0A6DA4;
 }
-.FlightTicket .pf_button .price_button{
+.ResultTickets .FlightTicket .pf_button .price_button{
     border: none;
     background: none;
     float: right;
@@ -140,42 +144,42 @@
     margin-top: -22px;
     height: 30px;
 }
-.FlightTicket .pf_button .price_button .price_wrapper{
+.ResultTickets .FlightTicket .pf_button .price_button .price_wrapper{
     font-family: 'AAvanteTitlerCpsUpCBold';
     font-size: 32px;
     color: #F15A22;
 }
-.FlightTicket .commoner{
+.ResultTickets .FlightTicket .commoner{
     padding: 4px 0;
 }
 
 
-.FlightTicket.mini .StartTime {
+.ResultTickets .FlightTicket.mini .StartTime {
     font-size: 13px;
     color: #1D1D1D;
 }
-.FlightTicket.mini .bold {
+.ResultTickets .FlightTicket.mini .bold {
     font-size: 13px;
     color: #1D1D1D;
 }
-.FlightTicket.mini .nowrap {
+.ResultTickets .FlightTicket.mini .nowrap {
     font-size: 13px;
     color: #1D1D1D;
 }
-.FlightTicket.mini .pf_stops, .FlightTicket .pf_stops .nowrap {
+.ResultTickets .FlightTicket.mini .pf_stops, .ResultTickets .FlightTicket .pf_stops .nowrap {
     font-size: 10px;
     color: #F15A22;
 }
-.FlightTicket.mini .showTripInfo {
+.ResultTickets .FlightTicket.mini .showTripInfo {
     text-decoration: underline;
     cursor: pointer;
     color: #0f9dec;
 }
-.FlightTicket.mini .pf_bottom table {
+.ResultTickets .FlightTicket.mini .pf_bottom table {
     border-collapse: collapse;
     width: 100%;
 }
-.FlightTicket.mini .pf_bottom .info_time {
+.ResultTickets .FlightTicket.mini .pf_bottom .info_time {
     float: right;
     text-align: right;
     white-space: nowrap;
@@ -183,30 +187,30 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.FlightTicket.mini .pf_button{
+.ResultTickets .FlightTicket.mini .pf_button{
     margin: 5px 18px 10px; 
 }
-.FlightTicket.mini .pf_button .showAKvariants span{
+.ResultTickets .FlightTicket.mini .pf_button .showAKvariants span{
     color: #0F9DEC;
     text-decoration: underline;
 }
-.FlightTicket.mini .pf_button .showAKvariants span:hover{
+.ResultTickets .FlightTicket.mini .pf_button .showAKvariants span:hover{
     color: #0A6DA4;
 }
 
-.FlightTicket.mini .pf_button .price_button{
+.ResultTickets .FlightTicket.mini .pf_button .price_button{
     border: none;
     background: none;
     float: right;
     padding: 0;
     margin-top: -22px;
 }
-.FlightTicket.mini .pf_button .price_button .price_wrapper{
+.ResultTickets .FlightTicket.mini .pf_button .price_button .price_wrapper{
     font-family: 'AAvanteTitlerCpsUpCBold';
     font-size: 22px;
     color: #F15A22;
 }
-.FlightTicket.mini .commoner{
+.ResultTickets .FlightTicket.mini .commoner{
     padding: 4px 0;
 }
 
@@ -264,29 +268,36 @@ aside article.side .inn .direction_option {
 }
 aside article.side .inn .direction_option ul{
     list-style: none;
-    margin: 15px 10px 10px 10px;
+    margin: 15px 0px 10px 5px;
 }
 aside article.side .inn .direction_option ul label{
     display: inline;
     padding-left: 0;
     margin-bottom: 0;
     vertical-align: middle;
-    padding-top: 0;
+    padding: 0 0 0 10px;
     line-height: 25px;
+}
+aside article.side .inn .direction_option ul label.inline{
+    padding: 0;
 }
 
 
 aside article.side .inn .fl1 {
     background: url(../i/fl1.png) no-repeat bottom;
+    cursor: pointer;
 }
 aside article.side .inn .fl1.active {
     background: url(../i/fl1.png) no-repeat top;
+    cursor: initial;
 }
 aside article.side .inn .fl2 {
     background: url(../i/fl2.png) no-repeat bottom;
+    cursor: pointer;
 }
 aside article.side .inn .fl2.active {
     background: url(../i/fl2.png) no-repeat top;
+    cursor: initial;
 }
 
 .ui-slider-range {
@@ -302,10 +313,9 @@ aside article.side .inn .fl2.active {
 .direction_option .option_row {
     position: relative;
     line-height: 1.5;
-    padding: 0 5px;
 }
 .direction_option .direction_item.short {
-    width: 84px;
+    width: 100px;
 }
 .direction_option .direction_item {
     position: relative;
@@ -459,6 +469,10 @@ section .mainSearch .well .input-append input {
             border-radius: 4px;
 }
 
+aside article.side .inn .slider.sliderType2 .ui-slider-handle {
+    cursor: pointer;   
+}
+
 
 #layout_recentSearches{
     position: absolute;
@@ -474,4 +488,183 @@ section .mainSearch .well .input-append input {
 #recentSearches li{
     display: inline;
     padding: 0 20px 0 0;
+}
+
+
+
+
+.loader { z-index:5; position: relative; width: 189px; height: 186px; margin: 200px auto 0; }
+.loader div { position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+.loader .l_background { z-index: 1; background: none; width: 189px; height: 186px; }
+.loader .l_shadow { z-index: 2; background: none; width: 189px; height: 186px; }
+.loader .l_arrows { z-index: 2; width: 76px; height: 76px; background-position: 0px 0px; left: 57px; top: 1px; }
+.loader .content { position: relative; z-index: 1; padding-top: 100px; font-size: 16px; color: #808080; text-align: center;}
+
+
+
+
+
+.direction_option .direction_item {
+    position: relative;
+    z-index: 2;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.direction_option .direction_price {
+    white-space: nowrap;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    z-index: 2;
+    font-size: 12px;
+    color: #8D8D8D;
+    line-height: 25px;
+}
+
+div#layout_body {
+    z-index: 11;
+}
+
+
+.sm_popup {
+    bottom: auto;
+    width: 316px;
+    padding-bottom: 12px;
+    color: #FFF;
+    background: url(../i/star_big_popup-angle.png) no-repeat bottom left;
+    z-index: 140;
+}
+.sm_popup_inn table.starTbl th {
+  width: 70px;
+  padding: 0 12px 7px 0;
+  border: none;
+}
+
+
+.infoBlock {
+  background: url(../i/infoBlockArr.png) no-repeat bottom left;
+  padding-bottom: 12px;
+  display: none;
+  position: absolute;
+  z-index: 30;
+  bottom: auto;
+  left: -18px;
+  width: 316px;
+  font-size: 13px;
+}
+.infoBlock .infoBlockArr {
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.infoBlock time {
+  background: #eaeaea;
+  color: #414141;
+  display: block;
+  line-height: 38px;
+  font-size: 1em;
+  padding-left: 40px;
+}
+.infoBlock .infoBlockFoot {
+  color: #868686;
+  height: 35px;
+  padding-top: 15px;
+  padding-left: 35px;
+  background: #313131;
+}
+.infoBlock .infoBlockFoot span {
+  color: #f2f2f4;
+  font-size: 24px;
+}
+.infoBlock .infoBlockInn {
+  padding-left: 35px;
+  color: #ffffff;
+  background-color: #464646;
+  background-image: -moz-linear-gradient(top, #5a5a5a, #272727);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5a5a5a), to(#272727));
+  background-image: -webkit-linear-gradient(top, #5a5a5a, #272727);
+  background-image: -o-linear-gradient(top, #5a5a5a, #272727);
+  background-image: linear-gradient(to bottom, #5a5a5a, #272727);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5a5a5a', endColorstr='#ff272727', GradientType=0);
+  padding-bottom: 5px;
+}
+.infoBlock .infoBlockInn h3 {
+  margin: 0;
+  color: #ffffff;
+  padding-left: 5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 2.5em;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+.infoBlock .infoBlockInn p {
+  margin: 0;
+  color: #f2f2f4;
+  padding-bottom: 5px;
+}
+.infoBlock .infoBlockInn .onmap {
+  padding-left: 15px;
+  background: url(../i/onmap-bg.png) no-repeat top left;
+}
+.infoBlock .infoBlockInn .onmap a {
+  color: inherit;
+  text-decoration: none;
+}
+.infoBlock .infoBlockInn .temp {
+  margin: 0;
+  font-size: 80px;
+  line-height: 1em;
+  margin-right: 25px;
+  padding-right: 105px;
+}
+
+.infoBlock .infoBlockInn .temp.icon_temperature_positive{
+  background: url(../i/tempSunShyne.png) no-repeat right top;
+}
+.infoBlock .infoBlockInn .temp.icon_temperature_negative{
+  background: url(../i/tempRain.png) no-repeat right top;
+}
+.infoBlock .infoBlockInn .temp.snow {
+  background: url(../i/tempSnow.png) no-repeat right top;
+}
+.infoBlock .infoBlockInn .temp.light {
+  background: url(../i/tempLight.png) no-repeat right top;
+}
+.infoBlock .infoBlockInn .temp.sun {
+  background: url(../i/tempSun.png) no-repeat right top;
+}
+.infoBlock .infoBlockInn .temp.cloud {
+  background: url(../i/tempCloud.png) no-repeat right top;
+}
+.infoBlock .infoBlockInn .temp.rain {
+  background: url(../i/tempRain.png) no-repeat right top;
+}
+.infoBlock .infoBlockInn .phone {
+  color: #008cd4;
+}
+
+
+
+.PriceButtonWrapper .additionalText{
+    display: none;
+}
+
+.multivariants .simpleVariants .PriceButtonWrapper {
+    z-index: 10;
+}
+
+.modal#modalVariants .modal-header .head a .selected {
+    color: #262626;
+    cursor: default;
+}
+
+.modal {
+    position: absolute;
+}
+
+div.popup {
+    background: #FFF;
+    padding: 10px;
 }

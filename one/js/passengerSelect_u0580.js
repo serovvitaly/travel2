@@ -24,9 +24,9 @@ function PassengerSelect(data){
 	this.elPageTitlePanel = document.getElementById('pageTitlePanel');
 	this.elForm = $.tmpl(tmpl_PassengerSelect, this.params)[0];
 
-	this.elADTblock = $("http://www.onetwotrip.com/js/div.ADT", this.elForm)[0];
-	this.elCNNblock = $("http://www.onetwotrip.com/js/div.CNN", this.elForm)[0];
-	this.elINFblock = $("http://www.onetwotrip.com/js/div.INF", this.elForm)[0];
+	this.elADTblock = $("div.ADT", this.elForm)[0];
+	this.elCNNblock = $("div.CNN", this.elForm)[0];
+	this.elINFblock = $("div.INF", this.elForm)[0];
 	this.elToPay = $(".toPay", this.elForm)[0];
 	this.elStAvl = $(".stAvl", this.elForm)[0];
 	this.elWarnDate = $(".warn .date", this.elForm)[0];

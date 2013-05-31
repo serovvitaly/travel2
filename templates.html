@@ -126,7 +126,7 @@
 </script>
         
 <script id="tmpl_ResultStructure" type="text/x-jquery-tmpl">
-    <div class="FlightPriceInformation" style="display:none">
+    <div class="FlightPriceInformation disnone" style="display:none">
         {{if tw.language == 'ru'}}
             Цена
             <div class="ComparePriceSelection">
@@ -581,7 +581,7 @@
         </div>
     {{/if}}
 </script> 
-<script id="tmpl_AirlineFlights" type="text/x-jquery-tmpl">
+<script id="tmpl_AirlineFlights" type="text/x-jquery-tmpl">    
     <div class="FlightTicket multivariants">
         <div class="akPlate ${AK}">
             <div class="pf_light_speck"><div></div></div>
@@ -728,26 +728,39 @@
     </tbody>
 </script>
 <script id="tmpl_newAirlineFlights" type="text/x-jquery-tmpl">
-    <div class="FlightTicket multivariants">
+  <div class="modal" id="modalVariants">
+    <div class="modal-header">
+      <div class="head">
+        <h2>${ref.Airlines[AK]}</h2>
+        <div class="RedrawOptions invisible">
+          <p>варианты сортировать по
+            <a href="javascript:;"><span data-sort="byPrice">${l10n.searchResult.block.sort[1]}</span></a>
+            <a href="javascript:;"><span data-sort="byTravelTime">${l10n.searchResult.block.sort[2]}</span></a>
+            <a href="javascript:;"><span data-sort="ByDeparture">${l10n.searchResult.block.sort[3]}</span></a>
+          </p>
+        </div>
+      </div>
+      <button type="button" class="close">×</button>
+    </div>
+    <div class="modal-body">
+    
+    
+    <div class="FlightTicketVariant multivariants">
         {{if !$data.single}}
             <div class="ReturnToResult default">
                 <div class="return">${l10n.searchResult.block.all}</div>
-                <div class="close_button"></div>
+                <div class="close_button" style="display:none"></div>
             </div>
         {{/if}}
         <div class="pf_bottom">                    
             <div class="content simpleVariants">
-                <table>
+                <table class="table ticketTable">
                     <tr class="noBkg">
                         <td colspan="{{if add.startTime2[0]}}2{{else}}5{{/if}}" class="noPadding">
                             <div class="akPlate ${AK}">
                                 <div class="pf_light_speck"><div></div></div>
-                                <div class="pf_AKname">
-                                    ${ref.Airlines[AK]}
-                                    <div class="RedrawOptions invisible">, ${l10n.searchResult.block.sort[0]} <span data-sort="byPrice">${l10n.searchResult.block.sort[1]}</span> | <span data-sort="byTravelTime">${l10n.searchResult.block.sort[2]}</span> | <span data-sort="ByDeparture">${l10n.searchResult.block.sort[3]}</span></div>
-                                </div>
                                 {{if parseInt(ref.AirlineLogos[AK],10)>0}}
-                                    <div class="logo" style="background: url('images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png'/*tpa=http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png*/);"></div>
+                                    <div class="logo" style="background: url('http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png'/*tpa=http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png*/);"></div>
                                 {{/if}}
                             </div>                        
                         </td>
@@ -1078,6 +1091,10 @@
         </div>
             
     </div>
+    
+    
+    </div>
+  </div>
 </script>
 <script id="tmpl_AirlineFlightsTableHeader" type="text/x-jquery-tmpl">
     <span class="ib opt2">${l10n.searchResult.block.titles[0]}</span>
@@ -1357,19 +1374,9 @@
     </div>
 </script>
 <script id="tmpl_BaloonFlightStars" type="text/x-jquery-tmpl">
-    <div class="stars_baloon">
-        <div class="wrapper">
-            <div class="tl"></div>
-            <div class="t"></div>
-            <div class="tr"></div>
-            <div class="r"></div>
-            <div class="br"></div>
-            <div class="b"></div>
-            <div class="bl"></div>
-            <div class="l"></div>                
-        </div>
-        <div class="content">
-            <div class="ratingInfo">            
+    <div class="stars_baloon sm_popup">
+        <div class="content sm_popup_inn">
+            <p><b>            
                 {{if group}}
                     ${l10n.searchResult.baloon.rating[0]}
                 {{else}}
@@ -1384,13 +1391,15 @@
                         {{/if}}
                     {{/if}} 
                 {{/if}}
-            </div>
-            <ul>
+            </b></p>
+            <table class="starTbl">
                 {{if $data.AKflightInfo}}
                     {{if AKflightInfo.delay}}
-                        <li>
-                            <div class="info_stars" style="width: ${AKflightInfo.delay.width.stars}px"></div><div class="info_half_stars" style="width: ${AKflightInfo.delay.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${AKflightInfo.delay.width.emptystars}px"></div>
-                            <div class="comment">
+                        <tr>
+                            <th>
+                              <div class="info_stars" style="width: ${AKflightInfo.delay.width.stars}px"></div><div class="info_half_stars" style="width: ${AKflightInfo.delay.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${AKflightInfo.delay.width.emptystars}px"></div>
+                            </th>
+                            <td class="comment">
                                 {{if $data.flightInfo[0].delay && $data.flightInfo[1].delay && $data.flightInfo[0].delay.value != $data.flightInfo[1].delay.value}}
                                     {{if $data.flightInfo[0].delay.value < $data.flightInfo[1].delay.value}}
                                         ${l10n.searchResult.baloon.info[1].replaceByArray([Math.round($data.flightInfo[0].delay.value) + "-" + Math.round($data.flightInfo[1].delay.value)])}
@@ -1400,13 +1409,15 @@
                                 {{else}}
                                     ${l10n.searchResult.baloon.info[1].replaceByArray([Math.round(AKflightInfo.delay.value)])}
                                 {{/if}}
-                            </div>
-                        </li>
+                            </td>
+                        </tr>
                     {{/if}}
                     {{if AKflightInfo.late}}
-                        <li>
-                            <div class="info_stars" style="width: ${AKflightInfo.late.width.stars}px"></div><div class="info_half_stars" style="width: ${AKflightInfo.late.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${AKflightInfo.late.width.emptystars}px"></div> 
-                            <div class="comment">
+                        <tr>
+                            <th>
+                              <div class="info_stars" style="width: ${AKflightInfo.late.width.stars}px"></div><div class="info_half_stars" style="width: ${AKflightInfo.late.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${AKflightInfo.late.width.emptystars}px"></div>
+                            </th>
+                            <td class="comment">
                                 {{if $data.flightInfo[0].late && $data.flightInfo[1].late && $data.flightInfo[0].late.value != $data.flightInfo[1].late.value}}
                                     {{if $data.flightInfo[0].late.value < $data.flightInfo[1].late.value}}
                                         ${l10n.searchResult.baloon.info[2].replaceByArray([Math.round($data.flightInfo[0].late.value) + "-" + Math.round($data.flightInfo[1].late.value)])}
@@ -1416,13 +1427,15 @@
                                 {{else}}
                                     ${l10n.searchResult.baloon.info[2].replaceByArray([Math.round(AKflightInfo.late.value)])}
                                 {{/if}}
-                            </div>
-                        </li>
+                            </td>
+                          </tr>
                     {{/if}}
                     {{if AKflightInfo.cancelled}}
-                        <li>
-                            <div class="info_stars" style="width: ${AKflightInfo.cancelled.width.stars}px"></div><div class="info_half_stars" style="width: ${AKflightInfo.cancelled.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${AKflightInfo.cancelled.width.emptystars}px"></div>
-                            <div class="comment">
+                        <tr>
+                            <th>
+                              <div class="info_stars" style="width: ${AKflightInfo.cancelled.width.stars}px"></div><div class="info_half_stars" style="width: ${AKflightInfo.cancelled.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${AKflightInfo.cancelled.width.emptystars}px"></div>
+                            </th>
+                            <td class="comment">
                                 {{if $data.flightInfo[0].cancelled && $data.flightInfo[1].cancelled && $data.flightInfo[0].cancelled.value != $data.flightInfo[1].cancelled.value}}
                                     {{if $data.flightInfo[0].cancelled.value < $data.flightInfo[1].cancelled.value}}
                                         ${l10n.searchResult.baloon.info[3].replaceByArray([Math.round($data.flightInfo[0].cancelled.value) + "-" + Math.round($data.flightInfo[1].cancelled.value)])}
@@ -1432,19 +1445,23 @@
                                 {{else}}
                                     ${l10n.searchResult.baloon.info[3].replaceByArray([Math.round(AKflightInfo.cancelled.value)])}
                                 {{/if}}
-                            </div>
-                        </li>
+                            </td>
+                          </tr>
                     {{/if}}
                     {{if AKflightInfo.ages}}
-                        <li>
-                            <div class="info_stars" style="width: ${AKflightInfo.ages.width.stars}px"></div><div class="info_half_stars" style="width: ${AKflightInfo.ages.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${AKflightInfo.ages.width.emptystars}px"></div>
-                            <div class="comment">{{if !AKflightInfo.ageAbs}}≈{{/if}}${ShowAircraftYears(Math.round(AKflightInfo.ages.value/12))}</div>
-                        </li>
+                        <tr>
+                            <th>
+                              <div class="info_stars" style="width: ${AKflightInfo.ages.width.stars}px"></div><div class="info_half_stars" style="width: ${AKflightInfo.ages.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${AKflightInfo.ages.width.emptystars}px"></div>
+                            </th>
+                            <td class="comment">{{if !AKflightInfo.ageAbs}}≈{{/if}}${ShowAircraftYears(Math.round(AKflightInfo.ages.value/12))}</td>
+                          </tr>
                     {{/if}}
                     {{if AKflightInfo.seatPitch}}
-                        <li>
-                            <div class="info_stars" style="width: ${AKflightInfo.seatPitch.width.stars}px"></div><div class="info_half_stars" style="width: ${AKflightInfo.seatPitch.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${AKflightInfo.seatPitch.width.emptystars}px"></div>
-                            <div class="comment">
+                        <tr>
+                            <th>
+                              <div class="info_stars" style="width: ${AKflightInfo.seatPitch.width.stars}px"></div><div class="info_half_stars" style="width: ${AKflightInfo.seatPitch.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${AKflightInfo.seatPitch.width.emptystars}px"></div>
+                            </th>
+                            <td class="comment">
                                 {{if $data.flightInfo[0].seatPitch && $data.flightInfo[1].seatPitch && $data.flightInfo[0].seatPitch.value != $data.flightInfo[1].seatPitch.value}}
                                     {{if $data.flightInfo[0].seatPitch.value < $data.flightInfo[1].seatPitch.value}}
                                         ${($data.flightInfo[0].seatPitch.value).toFixed()}-${($data.flightInfo[1].seatPitch.value).toFixed()}&thinsp;см
@@ -1455,94 +1472,118 @@
                                     ${(AKflightInfo.seatPitch.value).toFixed()}&thinsp;${l10n.searchResult.baloon.sm}
                                 {{/if}}    
                                  ${l10n.searchResult.baloon.chair} {{if AKflightInfo.seatPitchE}}(${l10n.searchResult.baloon.B}){{/if}}
-                            </div>
-                        </li>
+                            </td>
+                          </tr>
                     {{/if}}
                     {{if AKflightInfo.seatPitchE}}
-                        <li>
-                            {{if AKflightInfo.seatPitch}}
-                                <div class="info_empty_stars" style="width: 70px;"></div>
-                                <div class="comment">${(AKflightInfo.seatPitchE.value).toFixed()} ${l10n.searchResult.baloon.sm} ${l10n.searchResult.baloon.chair} (${l10n.searchResult.baloon.E})</div>
-                            {{else}}
-                                <div class="info_stars" style="width: ${AKflightInfo.seatPitchE.width.stars}px"></div><div class="info_half_stars" style="width: ${AKflightInfo.seatPitchE.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${AKflightInfo.seatPitchE.width.emptystars}px"></div>
-                                <div class="comment">${(AKflightInfo.seatPitchE.value).toFixed()} ${l10n.searchResult.baloon.sm} ${l10n.searchResult.baloon.chair}</div>
-                            {{/if}}                                
-                        </li>
+                        {{if AKflightInfo.seatPitch}}
+                          <tr>
+                            <th>
+                              <div class="info_empty_stars" style="width: 70px;"></div>
+                            </th>
+                            <td class="comment">${(AKflightInfo.seatPitchE.value).toFixed()} ${l10n.searchResult.baloon.sm} ${l10n.searchResult.baloon.chair} (${l10n.searchResult.baloon.E})</td>
+                          </tr>
+                        {{else}}
+                          <tr>
+                            <th>
+                              <div class="info_stars" style="width: ${AKflightInfo.seatPitchE.width.stars}px"></div><div class="info_half_stars" style="width: ${AKflightInfo.seatPitchE.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${AKflightInfo.seatPitchE.width.emptystars}px"></div>
+                            </th>
+                            <td class="comment">${(AKflightInfo.seatPitchE.value).toFixed()} ${l10n.searchResult.baloon.sm} ${l10n.searchResult.baloon.chair}</td>
+                          </tr>
+                        {{/if}}                                
+                     
                     {{/if}}
                 {{else}}
                     {{if flightInfo.delay && flightInfo.delay15 && flightInfo.delay30}}
-                        <li>
-                            <div class="info_stars" style="width: ${flightInfo.delay.width.stars}px"></div><div class="info_half_stars" style="width: ${flightInfo.delay.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${flightInfo.delay.width.emptystars}px"></div>
-                            <div class="comment">
-                                ${l10n.searchResult.baloon.info[0].replaceByArray([Math.round(flightInfo.delay15.value)])}
-                            </div>
-                        </li>
-                        <li>
-                            <div class="info_stars" style="width: ${flightInfo.delay.width.stars}px"></div><div class="info_half_stars" style="width: ${flightInfo.delay.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${flightInfo.delay.width.emptystars}px"></div>
-                            <div class="comment">
-                                ${l10n.searchResult.baloon.info[1].replaceByArray([Math.round(flightInfo.delay30.value)])}
-                            </div>
-                        </li>
+                        <tr>
+                            <th>
+                              <div class="info_stars" style="width: ${flightInfo.delay.width.stars}px"></div><div class="info_half_stars" style="width: ${flightInfo.delay.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${flightInfo.delay.width.emptystars}px"></div>
+                            </th>
+                            <td class="comment">${l10n.searchResult.baloon.info[0].replaceByArray([Math.round(flightInfo.delay15.value)])}</td>
+                        </tr>
+                        <tr>
+                            <th>
+                              <div class="info_stars" style="width: ${flightInfo.delay.width.stars}px"></div><div class="info_half_stars" style="width: ${flightInfo.delay.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${flightInfo.delay.width.emptystars}px"></div>
+                            </th>
+                            <td class="comment">${l10n.searchResult.baloon.info[1].replaceByArray([Math.round(flightInfo.delay30.value)])}</td>
+                        </tr>
                     {{/if}}
                     {{if flightInfo.late}}
-                        <li>
-                            <div class="info_stars" style="width: ${flightInfo.late.width.stars}px"></div><div class="info_half_stars" style="width: ${flightInfo.late.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${flightInfo.late.width.emptystars}px"></div> 
-                            <div class="comment">
-                                ${l10n.searchResult.baloon.info[2].replaceByArray([Math.round(flightInfo.late.value)])}
-                            </div>
-                        </li>
+                        <tr>
+                            <th>
+                              <div class="info_stars" style="width: ${flightInfo.late.width.stars}px"></div><div class="info_half_stars" style="width: ${flightInfo.late.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${flightInfo.late.width.emptystars}px"></div>
+                            </th>
+                            <td class="comment">${l10n.searchResult.baloon.info[2].replaceByArray([Math.round(flightInfo.late.value)])}</td>
+                        </tr>
                     {{/if}}
                     {{if flightInfo.cancelled}}
-                        <li>
-                            <div class="info_stars" style="width: ${flightInfo.cancelled.width.stars}px"></div><div class="info_half_stars" style="width: ${flightInfo.cancelled.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${flightInfo.cancelled.width.emptystars}px"></div>
-                            <div class="comment">
-                                ${l10n.searchResult.baloon.info[3].replaceByArray([Math.round(flightInfo.cancelled.value)])}
-                            </div>
-                        </li>
+                        <tr>
+                            <th>
+                              <div class="info_stars" style="width: ${flightInfo.cancelled.width.stars}px"></div><div class="info_half_stars" style="width: ${flightInfo.cancelled.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${flightInfo.cancelled.width.emptystars}px"></div>
+                            </th>
+                            <td class="comment">${l10n.searchResult.baloon.info[3].replaceByArray([Math.round(flightInfo.cancelled.value)])}</td>
+                        </tr>
                     {{/if}}
                     {{if flightInfo.ages}}
-                        <li>
-                            <div class="info_stars" style="width: ${flightInfo.ages.width.stars}px"></div><div class="info_half_stars" style="width: ${flightInfo.ages.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${flightInfo.ages.width.emptystars}px"></div>
-                            <div class="comment">{{if !flightInfo.ageAbs}}≈{{/if}}${ShowAircraftYears(Math.round(flightInfo.ages.value/12))}</div>
-                        </li>
+                        <tr>
+                            <th>
+                              <div class="info_stars" style="width: ${flightInfo.ages.width.stars}px"></div><div class="info_half_stars" style="width: ${flightInfo.ages.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${flightInfo.ages.width.emptystars}px"></div>
+                            </th>
+                            <td class="comment">{{if !flightInfo.ageAbs}}≈{{/if}}${ShowAircraftYears(Math.round(flightInfo.ages.value/12))}</td>
+                        </tr>
                     {{/if}}
                     {{if flightInfo.seatPitch}}
-                        <li>
-                            <div class="info_stars" style="width: ${flightInfo.seatPitch.width.stars}px"></div><div class="info_half_stars" style="width: ${flightInfo.seatPitch.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${flightInfo.seatPitch.width.emptystars}px"></div>
-                            <div class="comment">${(flightInfo.seatPitch.value).toFixed()} ${l10n.searchResult.baloon.sm} ${l10n.searchResult.baloon.chair} {{if flightInfo.seatPitchE}}(${l10n.searchResult.baloon.B}){{/if}}</div>
-                        </li>
+                        <tr>
+                            <th>
+                              <div class="info_stars" style="width: ${flightInfo.seatPitch.width.stars}px"></div><div class="info_half_stars" style="width: ${flightInfo.seatPitch.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${flightInfo.seatPitch.width.emptystars}px"></div>
+                            </th>
+                            <td class="comment">${(flightInfo.seatPitch.value).toFixed()} ${l10n.searchResult.baloon.sm} ${l10n.searchResult.baloon.chair} {{if flightInfo.seatPitchE}}(${l10n.searchResult.baloon.B}){{/if}}</td>
+                          </tr>
                     {{/if}}
                     {{if flightInfo.seatPitchE}}
-                        <li>
+                        <tr>
                             {{if flightInfo.seatPitch}}
-                                <div class="info_empty_stars" style="width: 70px;"></div>
-                                <div class="comment">${(flightInfo.seatPitchE.value).toFixed()} ${l10n.searchResult.baloon.sm} ${l10n.searchResult.baloon.chair} (${l10n.searchResult.baloon.E})</div>
+                                <th>
+                                  <div class="info_empty_stars" style="width: 70px;"></div>
+                                </th>
+                                <td class="comment">${(flightInfo.seatPitchE.value).toFixed()} ${l10n.searchResult.baloon.sm} ${l10n.searchResult.baloon.chair} (${l10n.searchResult.baloon.E})</td>
                             {{else}}
-                                <div class="info_stars" style="width: ${flightInfo.seatPitchE.width.stars}px"></div><div class="info_half_stars" style="width: ${flightInfo.seatPitchE.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${flightInfo.seatPitchE.width.emptystars}px"></div>
-                                <div class="comment">${(flightInfo.seatPitchE.value).toFixed()} ${l10n.searchResult.baloon.sm} ${l10n.searchResult.baloon.chair}</div>
+                                <th>
+                                  <div class="info_stars" style="width: ${flightInfo.seatPitchE.width.stars}px"></div><div class="info_half_stars" style="width: ${flightInfo.seatPitchE.width.halfstar}px"></div><div class="info_empty_stars" style="width: ${flightInfo.seatPitchE.width.emptystars}px"></div>
+                                </th>
+                                <td class="comment">${(flightInfo.seatPitchE.value).toFixed()} ${l10n.searchResult.baloon.sm} ${l10n.searchResult.baloon.chair}</td>
                             {{/if}}
-                        </li>
+                        </tr>
                     {{/if}}
                     {{if !flightInfo.seatPitch && !flightInfo.seatPitchE}}
                         {{if flightInfo.seatsminPE && flightInfo.seatsmaxPE}}
-                            <li>
+                        
+                            <tr>
+                              <th>
                                 <div class="info_empty_stars" style="width: 70px;"></div>
-                                <div class="comment">${(flightInfo.seatsminPE.value).toFixed()}-${(flightInfo.seatsmaxPE.value).toFixed()} ${l10n.searchResult.baloon.sm} ${l10n.searchResult.baloon.chair} (${l10n.searchResult.baloon.E})</div>
-                                {{if flightInfo.seatsminPB && flightInfo.seatsmaxPB}}
-                                    <div class="info_empty_stars" style="width: 70px;"></div>
-                                    <div class="comment">${(flightInfo.seatsminPB.value).toFixed()}-${(flightInfo.seatsmaxPB.value).toFixed()} ${l10n.searchResult.baloon.sm} (${l10n.searchResult.baloon.B})</div>
-                                {{/if}}
-                            </li>
+                              </th>
+                              <td class="comment">${(flightInfo.seatsminPE.value).toFixed()}-${(flightInfo.seatsmaxPE.value).toFixed()} ${l10n.searchResult.baloon.sm} ${l10n.searchResult.baloon.chair} (${l10n.searchResult.baloon.E})</td>
+                            </tr>
+                            {{if flightInfo.seatsminPB && flightInfo.seatsmaxPB}}
+                            <tr>
+                              <th>
+                                <div class="info_empty_stars" style="width: 70px;"></div>
+                              </th>
+                              <td class="comment">{(flightInfo.seatsminPB.value).toFixed()}-${(flightInfo.seatsmaxPB.value).toFixed()} ${l10n.searchResult.baloon.sm} (${l10n.searchResult.baloon.B})</td>
+                            </tr>
+                            {{/if}}
                         {{/if}}
                         {{if flightInfo.seatsminPB && flightInfo.seatsmaxPB && !flightInfo.seatsminPE}}
-                            <li>
+                            <tr>
+                              <th>
                                 <div class="info_empty_stars" style="width: 70px;"></div>
-                                <div class="comment">${(flightInfo.seatsminPB.value).toFixed()}-${(flightInfo.seatsmaxPB.value).toFixed()} ${l10n.searchResult.baloon.sm} ${l10n.searchResult.baloon.chair} (${l10n.searchResult.baloon.B})</div>
-                            </li>
+                              </th>
+                              <td class="comment">${(flightInfo.seatsminPB.value).toFixed()}-${(flightInfo.seatsmaxPB.value).toFixed()} ${l10n.searchResult.baloon.sm} ${l10n.searchResult.baloon.chair} (${l10n.searchResult.baloon.B})</td>
+                            </tr>
                         {{/if}}
                     {{/if}}
                 {{/if}}
-            </ul>
+            </table>
         <div>                
     </div>                
 </script>
@@ -1579,57 +1620,44 @@
 </script>
 
 <script id="tmpl_AirportTooltip" type="text/x-jquery-tmpl">
-    <div class="stars_baloon airport_info_balloon">
-        <div class="wrapper">
-            <div class="tl"></div>
-            <div class="t"></div>
-            <div class="tr"></div>
-            <div class="r"></div>
-            <div class="br"></div>
-            <div class="b"></div>
-            <div class="bl"></div>
-            <div class="l"></div>
-        </div>
-        <div class="content"><div>
+    <div class="infoBlock stars_baloon airport_info_balloon">
+      <div class="content"><div>
     </div>
 </script>
 
 <script id="tmpl_AirportTooltipContent" type="text/x-jquery-tmpl">
-    <div class="airport_info_content">
-        <ul class="airport_info_list">
-            {{if temperature}}
-                <li class="temperature">
-                    <span class="icon_temperature_{{if temperature > 0}}positive{{else}}negative{{/if}}" title="${l10n.searchResult.baloon.temperature}"></span>
-                     ${l10n.searchResult.baloon.forToday} {{if temperature > 0}}+{{/if}}${temperature}
-                </li>
-            {{/if}}
-            {{if lat && lon}}
-                <li class="location">
-                    <span class="icon_map_marker" title="${l10n.searchResult.baloon.showOnMap}"></span>
-                    <a href="https://maps.google.com/?q=${lat},${lon}&z=12" target="_blank">${l10n.searchResult.baloon.showOnMap}</a>
-                </li>
-            {{/if}}
-            {{if fullUrl}}
-                <li class="site">
-                    <span class="icon_home" title="${l10n.searchResult.baloon.site}"></span>
+    <div class="infoBlockArr airport_info_content">
+        <time>${airportTime.format("dd mmmm, dddd")}</time>
+        <article class="infoBlockInn">
+          <h3>${city}</h3>
+          {{if temperature}}
+                <div class="temperature">                     
+                    <p class="temp icon_temperature_{{if temperature > 0}}positive{{else}}negative{{/if}}">{{if temperature < 0}}-{{/if}}${temperature}&deg;</p>
+                </div>
+          {{/if}}
+          {{if lat && lon}}
+              <p class="onmap"><a href="https://maps.google.com/?q=${lat},${lon}&z=12" target="_blank">Показать аэропорт на карте</a></p>
+          {{/if}}
+          {{if phone}}
+              <p>${l10n.searchResult.baloon.airportPhone}:</p>
+              <p class="phone">${phone}</p>
+          {{/if}}
+          {{if fullUrl}}
+                <p class="site">
                     <a href="${fullUrl}" target="_blank">${l10n.searchResult.baloon.viewAirportSite}</a>
-                </li>
-            {{/if}}
-            {{if phone}}
-                <li>
-                    <span class="icon_info_sign" title="${l10n.searchResult.baloon.airportPhone}"></span>
-                    ${l10n.searchResult.baloon.airportPhone}:&nbsp;
-                    ${phone}
-                </li>
-            {{/if}}
+                </p>
+          {{/if}}
+        </article>
+        <div class="infoBlockFoot">
             {{if airportTime}}
-                <li>
+                <div>
                     <span class="icon_time" title="${l10n.searchResult.baloon.currentDateTime}"></span>
                     ${l10n.searchResult.baloon.currentDateTime}:&nbsp;
-                    ${airportTime.format("HH:MM / ddd dd-mmm-yyyy")}
-                </li>
+                    <span>${airportTime.format("HH:MM")}</span>
+                </div>
             {{/if}}
-        </ul>
+          <!--p>Текущее время: <span>20:19</span></p-->
+        </div>
     </div>
 </script>
 
@@ -1778,6 +1806,21 @@
 </script>
         
 <script id="tmpl_PassengerSelect" type="text/x-jquery-tmpl">
+  <div class="modal" id="modalPrice">
+    <div class="modal-header">
+      <div class="head">
+        <h2>AirBaltic</h2>
+        <a href="javascript:;">подробнее о перелете</a>
+        <a href="javascript:;">правила обмена и возврата</a>
+      </div>
+      <div class="headLogo">
+        <img src="./i/headLogo.jpg" alt="">
+      </div>
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    </div>
+    <div class="modal-body">
+    
+    
     <form id="popup_passengerSelect">
         <div class="ConfirmInfoFlight"></div>
         <div class="innerContent">
@@ -1917,6 +1960,14 @@
         </div>
         <div class="close_button"></div>
     </form>
+    
+    
+    </div>
+    <div class="modal-footer">
+      <p>Сумма к оплате 48 679 Р</p>
+      <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">ПЕРЕЙТИ К ОПЛАТЕ</button>
+    </div>
+  </div>
 </script>
 
 <script id="tmpl_ConfirmationFlightInformation" type="text/x-jquery-tmpl">
@@ -2547,17 +2598,6 @@
         {{if $data.close_button}}
             <div class="close_button"></div>
         {{/if}}
-        <div class="abs wrapper">
-            <div class="tl"></div>
-            <div class="t"></div>
-            <div class="tr"></div>
-            <div class="r"></div>
-            <div class="br"></div>
-            <div class="b"></div>
-            <div class="bl"></div>
-            <div class="l"></div>
-            <div class="c"></div>
-        </div>
         {{if $data.error}}
             <div class="wide_s">
                 <table>

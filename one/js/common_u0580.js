@@ -1102,7 +1102,8 @@ function fetchAirportContent($airport, $baloon) {
 					localTime = new Date(Date.parseISO8601(json.localTime));
 					data = {
 						temperature: json.temperature,
-						site: json.site,
+                        site: json.site,
+						city: ref.getCityName(json.city),
 						lat: json.lat,
 						lon: json.lon,
 						phone: json.phone,

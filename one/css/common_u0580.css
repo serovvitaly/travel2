@@ -504,26 +504,9 @@ div.popup .actionButton { padding-top: 10px;}
 
 .StarsInformation {cursor: help;}
 .stars_block {display: inline-block; }
-.stars_baloon { color: black; position: absolute; z-index:101; top: 0px; left:0; display: none; }
-.stars_baloon .wrapper { position: absolute; top:0; right:0; bottom:0; left:0;}
-.stars_baloon .tl, .stars_baloon .t, .stars_baloon .tr, .stars_baloon .r, .stars_baloon .br, .stars_baloon .b, .stars_baloon .bl, .stars_baloon .l { position: absolute;} 
-.stars_baloon .tl, .stars_baloon .tr, .stars_baloon .bl, .stars_baloon .br { background-image: url("../images/stars/baloon_borders2_u0580.png")/*tpa=http://www.onetwotrip.com/images/stars/baloon_borders2_u0580.png*/; width: 60px;}  
-.revert.stars_baloon .tl, .revert.stars_baloon .tr, .revert.stars_baloon .bl, .revert.stars_baloon .br { background-image: url("../images/stars/baloon_borders2_revert_u0580.png")/*tpa=http://www.onetwotrip.com/images/stars/baloon_borders2_revert_u0580.png*/; }
-.stars_baloon .t, .stars_baloon .b { background: url("../images/stars/baloon_tb2_u0580.png")/*tpa=http://www.onetwotrip.com/images/stars/baloon_tb2_u0580.png*/ repeat-x; left:45px; right:45px; }
-.stars_baloon .l, .stars_baloon .r { background: url("../images/stars/baloon_lr_u0580.png")/*tpa=http://www.onetwotrip.com/images/stars/baloon_lr_u0580.png*/ repeat-y; width: 15px; top:0; bottom:0; }
-.stars_baloon .tl, .stars_baloon .tr, .stars_baloon .t { height: 20px; top: -20px; }
-.stars_baloon .bl, .stars_baloon .br, .stars_baloon .b { height: 27px; bottom:-27px; }
-.stars_baloon .tl, .stars_baloon .bl, .stars_baloon .l { left:-15px;}
-.stars_baloon .tr, .stars_baloon .br, .stars_baloon .r { right:-15px;}
 
-.stars_baloon .l { background-position: 0px 0px; }
-.stars_baloon .r { background-position: -15px 0px; }
-.stars_baloon .tl { background-position: 0px 0px; }
-.stars_baloon .tr { background-position: -60px 0px; }
-.stars_baloon .br { background-position: -60px -20px; }
-.stars_baloon .bl { background-position: 0px -20px; }
-.stars_baloon .t { background-position: 0px 0px; }
-.stars_baloon .b { background-position: 0px -20px; }
+
+
 
 .bottom.stars_baloon .tl, .bottom.stars_baloon .tr, .bottom.stars_baloon .bl, .bottom.stars_baloon .br { background-image: url("../images/stars/baloon_borders2_bottom_u0580.png")/*tpa=http://www.onetwotrip.com/images/stars/baloon_borders2_bottom_u0580.png*/; }
 .revert.bottom.stars_baloon .tl, .revert.bottom.stars_baloon .tr, .revert.bottom.stars_baloon .bl, .revert.bottom.stars_baloon .br { background-image: url("../images/stars/baloon_borders2_bottom_revert_u0580.png")/*tpa=http://www.onetwotrip.com/images/stars/baloon_borders2_bottom_revert_u0580.png*/; }
@@ -537,15 +520,12 @@ div.popup .actionButton { padding-top: 10px;}
 .bottom.stars_baloon .t { background-position: 0px 0px;}
 .bottom.stars_baloon .b { background-position: 0px -27px;}
 
-.stars_baloon .cross_close { right: 0px; top: -8px;}
-.stars_baloon .content { font-size: 13px; position: relative; background-color: white; padding: 0px 10px; margin: -5px 0; }
-.stars_baloon .content ul { list-style-type: none; padding: 0px; margin: 0px;}
-.stars_baloon .content ul li { display: block; margin: 0px; padding: 1px 0px; white-space: nowrap; }
-.stars_baloon .content ul li div { display: inline-block; }
+
+
+.stars_baloon .content table th div { display: inline-block; }
 .stars_baloon .content .info_stars { background: url('/images/stars/BaloonStar_u0580.png') repeat-x; height: 13px; width:14px;} 
 .stars_baloon .content .info_half_stars { background: url('/images/stars/BaloonHalfStar_u0580.png') no-repeat; height: 13px; width:14px;}
 .stars_baloon .content .info_empty_stars { background: url('/images/stars/BaloonGrayStar_u0580.png') repeat-x; height: 13px; width:14px;}
-.stars_baloon .content .comment {margin-left: 10px; font-size: 13px}
 /*.stars_baloon .content .noStarsComment {margin-left: 80px;}
 .revert .content .noStarsComment {margin-left: 10px;}*/
 
@@ -559,17 +539,10 @@ div.popup .actionButton { padding-top: 10px;}
 .graystar {background: url('/images/stars/GrayStar_u0580.png') repeat-x;}
 .halfgraystar {background: url('/images/stars/HalfGrayStar_u0580.png') no-repeat;}
 
-.icon_temperature_positive, .icon_temperature_negative, .icon_map_marker, .icon_home, .icon_info_sign, .icon_time { display: inline-block; background: url('/images/airport_icons_u0580.png') no-repeat; }
-.icon_temperature_positive, .icon_temperature_negative { width: 15px; height: 15px; }
-.icon_temperature_positive { background-position: 0 0; }
-.icon_temperature_negative { width: 14px; background-position: -15px 0; }
 .icon_map_marker { width: 9px; height: 13px; background-position: -29px 0; }
 .icon_home { width: 13px; height: 13px; background-position: -38px 0; }
 .icon_info_sign { width: 12px; height: 13px; background-position: -63px 0; }
 .icon_time { width: 12px; height: 13px; background-position: -51px 0; }
-.airport_info_balloon .icon_temperature_positive, .airport_info_balloon .icon_temperature_negative, .airport_info_balloon .icon_map_marker,
-.airport_info_balloon .icon_home, .airport_info_balloon .icon_info_sign, .airport_info_balloon .icon_time { margin: 0; position: absolute; left: 0; top: 2px; }
-.airport_info_balloon .icon_temperature_positive, .airport_info_balloon .icon_temperature_negative { top: 1px; }
 .airport_info_balloon .icon_map_marker { left: 2px; }
 .airport_info_balloon .icon_info_sign, .airport_info_balloon .icon_time { left: 1px; }
 .airport_info_balloon ul.airport_info_list li { padding-left: 18px; margin: 5px 0; position: relative; }
