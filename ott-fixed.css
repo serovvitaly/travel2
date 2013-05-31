@@ -779,3 +779,7 @@ div.calendar div.day {
     display: inline-block;
     vertical-align: top;
 }
+
+section .mainSearch .well {
+    width: 798px;
+}
