@@ -234,7 +234,10 @@
 }
 
 #preferedBlock{
-    width: 100%;
+    width: 760px;
+}
+#preferedBlock .FlightTicket {
+    width: 378px;
 }
 
 #layout_body{
@@ -252,6 +255,8 @@
 
 .ResultTableWrapper table td{
     padding: 0;
+    width: 380px;
+    vertical-align: top;
 }
 
 
