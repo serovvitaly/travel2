@@ -5,6 +5,10 @@
     display: none !important;
 }
 
+.tooltip{
+    display: none !important;
+}
+
 
 .FilterResult ul{
     margin: 0;
