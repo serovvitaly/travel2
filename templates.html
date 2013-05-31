@@ -54,9 +54,7 @@
 <script id="tmpl_SuggestField" type="text/x-jquery-tmpl">
     <div class="suggestField">
         <input type="text" autocomplete="off" name="${name}" id="${name}" value="${value}"/>
-        <input type="text" autocomplete="off" value="${defaultValue}" readonly="readonly" tabindex="-1"/>
-        <div class="abs bg"><div class="c"></div><div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div><div class="t"></div><div class="r"></div><div class="b"></div><div class="l"></div></div>
-        <div class="abs glow"><div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div><div class="t"></div><div class="r"></div><div class="b"></div><div class="l"></div></div>
+        <input type="text" autocomplete="off" value="${defaultValue}" readonly="readonly" tabindex="-1" style="display: none"/>
     </div>
 </script>
 <script id="tmpl_Direction" type="text/x-jquery-tmpl">

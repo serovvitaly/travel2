@@ -763,7 +763,7 @@ SearchForm.prototype.setDate = function(n){
 			};
 		}
 		elButton = $.tmpl(tmpl_CalendarButton, data)[0];
-		$(elButton).click(function(event){
+		$(elButton).click(function(event){ 
 			event.stopPropagation();
 			self.showCalendar(n);
 		});

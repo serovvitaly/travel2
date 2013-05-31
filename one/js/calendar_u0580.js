@@ -311,6 +311,10 @@ Calendar.prototype.getSchedule = function(period){
 			MakeRequest();
 		}
 	};
+    
+    params.source    = twiket.setup.source;
+    params.srcmarker = twiket.setup.marker;
+    
 	MakeRequest();
 	function MakeRequest() {
 		$.ajax({
