@@ -1064,7 +1064,7 @@ function adjustAirportBaloonPosition($airport, $baloon) {
 	var airportOffset = $airport.offset(),
 			  airportWidth = $airport.width(),
 			  leftExtra = Math.round(airportWidth / 2) - 27,
-			  top = airportOffset.top - $baloon.height() - 27;
+			  top = airportOffset.top - $baloon.height() - 10;
 	$baloon.css({
 		left: airportOffset.left + leftExtra,
 		top: top,
