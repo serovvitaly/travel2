@@ -761,7 +761,16 @@ div.calendar table.caption .caption {
 }
 
 div.calendar div.day {
-width: 44px;
-height: 42px;
-position: relative;
+    width: 44px;
+    height: 42px;
+    position: relative;
+}
+
+
+.miniTickets_Fix .FilterResult{
+    margin-top: 32px;
+}
+.miniTickets_Fix .FilterResult ul li {
+    display: inline-block;
+    vertical-align: top;
 }
