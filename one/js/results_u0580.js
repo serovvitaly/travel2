@@ -3789,7 +3789,7 @@ function TicketFlightStars(){
 					$('div[class="ratingInfo"]',baloon).addClass('invisible');	
 				}				
 			var baloon_pos = $(target).offset();
-			var top = baloon_pos.top - $(baloon).height() - 27;	
+			var top = baloon_pos.top - $(baloon).height() - 8;	
 			if($(el).hasClass('revert') || AKstat){
 				$(baloon).addClass('revert');
 				$(baloon).css({

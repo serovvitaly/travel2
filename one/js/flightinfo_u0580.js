@@ -54,7 +54,7 @@ function makeTripStars(){
 			var target = $(e.target).hasClass('stars_block') ? e.target : $(e.target).parents('.stars_block')[0];
 			var baloon_pos = $(target).offset();
 			//var parentInfo = $(target).parents('.TripsInfo')[0];
-			var top = baloon_pos.top - $(baloon).height() - 27;
+			var top = baloon_pos.top - $(baloon).height() - 8;
 			$(baloon).css({
 				left: baloon_pos.left,
 				top: top,
