@@ -217,6 +217,9 @@
 .ResultTickets .FlightTicket.mini .commoner{
     padding: 4px 0;
 }
+.ResultTickets .FlightTicket.mini .moment-flower{
+    width: 150px;
+}
 
 
 #preferedBlock h2 {

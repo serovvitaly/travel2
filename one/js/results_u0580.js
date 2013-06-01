@@ -3793,7 +3793,7 @@ function TicketFlightStars(){
 			if($(el).hasClass('revert') || AKstat){
 				$(baloon).addClass('revert');
 				$(baloon).css({
-					left: baloon_pos.left - $(baloon).width() + 50,
+					left: baloon_pos.left - $(baloon).width() + 320,
 					top: top
 				});
 			} else {
