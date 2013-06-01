@@ -786,3 +786,8 @@ div.calendar div.day {
 section .mainSearch .well {
     width: 798px;
 }
+
+
+.dynamics {
+    z-index: 50;
+}
