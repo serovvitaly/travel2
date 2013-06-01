@@ -506,11 +506,11 @@ aside article.side .inn .slider.sliderType2 .ui-slider-handle {
 
 
 
-.loader { z-index:5; position: relative; width: 189px; height: 186px; margin: 200px auto 0; }
+.loader { z-index:5; position: relative; width: 189px; height: 186px; margin: 100px auto 0; }
 .loader div { position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
-.loader .l_background { z-index: 1; background: none; width: 189px; height: 186px; }
-.loader .l_shadow { z-index: 2; background: none; width: 189px; height: 186px; }
-.loader .l_arrows { z-index: 2; width: 76px; height: 76px; background-position: 0px 0px; left: 57px; top: 1px; }
+.loader .l_background { z-index: 1; background: none; width: 189px; height: 186px; display: none; }
+.loader .l_shadow { z-index: 2; background: none; width: 189px; height: 186px; display: none; }
+.loader .l_arrows { z-index: 2; width: 76px; height: 76px; background-position: 0px 0px; left: 57px; top: 1px; display: none; }
 .loader .content { position: relative; z-index: 1; padding-top: 100px; font-size: 16px; color: #808080; text-align: center;}
 
 
