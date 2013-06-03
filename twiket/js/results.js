@@ -2817,7 +2817,7 @@ DrawResults.prototype.Quicksand = function(){
 	this.QuickSandProcess=true;
 	$(this.FlightSlider).slider("disable");
 	
-	$(this.FlightsBlock).quicksand( $(temp_list).find('li'), function(){   console.log('forever');
+	$(this.FlightsBlock).quicksand( $(temp_list).find('li'), function(){ 
 		self.QuickSandProcess = false;
 		//fade text
 			$('.miniTickets_Fix .TicketOut').removeClass('TicketOut').addClass('TicketIn');
