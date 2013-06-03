@@ -802,3 +802,8 @@ a.labelDynamics.disabled {
     background: url(../i/labelDynamics1_dis.png) no-repeat top;
     cursor: context-menu;
 }
+
+
+.dynamics .dynTo .navbar.dynDateGraph li.selected a, .dynamics .dynFrom .navbar.dynDateGraph li.selected a {
+    background: #F76636;
+}

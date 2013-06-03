@@ -1093,13 +1093,15 @@ PassengerSelect.prototype.getConfirmation = function(){
 				});
 			}
 		}
+        self.params.source    = twiket.setup.source;
+        self.params.srcmarker = twiket.setup.marker;
 		PMCaller.ajax({
 			iframeId: "pm",
 			type: "post",
 			url: 'https://secure.onetwotrip.com/_api/confirmation/checkavail1/',
 			dataType: "json",
 			data: {
-				"params": JSON.stringify(self.params)
+				params: JSON.stringify(self.params)
 			},
 			timeout: 40000,
 			beforeSend: function(){

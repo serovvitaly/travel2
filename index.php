@@ -398,74 +398,14 @@
                 </div>  <!-- /dynMonth -->
 
                 <div class="dynDateGraph navbar">
-                  <ul class="nav">
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;" class="h60"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;" class="h80"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li class="active"><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;" class="h100"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
+                  <ul class="nav" id="dynDateGraph-there">
+
                   </ul>
                 </div>  <!-- /dynDate -->
 
                 <div class="dynDate navbar">
-                  <ul class="nav">
-                    <li><a href="javascript:;">01</a></li>
-                    <li><a href="javascript:;">02</a></li>
-                    <li><a href="javascript:;">03</a></li>
-                    <li><a href="javascript:;">04</a></li>
-                    <li><a href="javascript:;">05</a></li>
-                    <li><a href="javascript:;">06</a></li>
-                    <li><a href="javascript:;">07</a></li>
-                    <li><a href="javascript:;">08</a></li>
-                    <li><a href="javascript:;">09</a></li>
-                    <li><a href="javascript:;">10</a></li>
-                    <li><a href="javascript:;">11</a></li>
-                    <li><a href="javascript:;">12</a></li>
-                    <li class="active"><a href="javascript:;">13</a></li>
-                    <li><a href="javascript:;">14</a></li>
-                    <li><a href="javascript:;">15</a></li>
-                    <li><a href="javascript:;">16</a></li>
-                    <li><a href="javascript:;">17</a></li>
-                    <li><a href="javascript:;">18</a></li>
-                    <li><a href="javascript:;">19</a></li>
-                    <li><a href="javascript:;">20</a></li>
-                    <li><a href="javascript:;">21</a></li>
-                    <li><a href="javascript:;">22</a></li>
-                    <li><a href="javascript:;">23</a></li>
-                    <li><a href="javascript:;">24</a></li>
-                    <li><a href="javascript:;">25</a></li>
-                    <li><a href="javascript:;">26</a></li>
-                    <li><a href="javascript:;">27</a></li>
-                    <li><a href="javascript:;">28</a></li>
-                    <li><a href="javascript:;">29</a></li>
-                    <li><a href="javascript:;">30</a></li>
-                    <li><a href="javascript:;">31</a></li>
+                  <ul class="nav" id="dynDate-there">
+                    
                   </ul>
                 </div>  <!-- /dynDate -->
 
@@ -526,74 +466,14 @@
                 </div>  <!-- /dynMonth -->
 
                 <div class="dynDateGraph navbar">
-                  <ul class="nav">
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li class="active"><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
-                    <li><a href="javascript:;"></a></li>
+                  <ul class="nav" id="dynDateGraph-back">
+                    
                   </ul>
                 </div>  <!-- /dynDate -->
 
                 <div class="dynDate navbar">
-                  <ul class="nav">
-                    <li><a href="javascript:;">01</a></li>
-                    <li><a href="javascript:;">02</a></li>
-                    <li><a href="javascript:;">03</a></li>
-                    <li><a href="javascript:;">04</a></li>
-                    <li><a href="javascript:;">05</a></li>
-                    <li><a href="javascript:;">06</a></li>
-                    <li><a href="javascript:;">07</a></li>
-                    <li><a href="javascript:;">08</a></li>
-                    <li><a href="javascript:;">09</a></li>
-                    <li><a href="javascript:;">10</a></li>
-                    <li><a href="javascript:;">11</a></li>
-                    <li><a href="javascript:;">12</a></li>
-                    <li class="active"><a href="javascript:;">13</a></li>
-                    <li><a href="javascript:;">14</a></li>
-                    <li><a href="javascript:;">15</a></li>
-                    <li><a href="javascript:;">16</a></li>
-                    <li><a href="javascript:;">17</a></li>
-                    <li><a href="javascript:;">18</a></li>
-                    <li><a href="javascript:;">19</a></li>
-                    <li><a href="javascript:;">20</a></li>
-                    <li><a href="javascript:;">21</a></li>
-                    <li><a href="javascript:;">22</a></li>
-                    <li><a href="javascript:;">23</a></li>
-                    <li><a href="javascript:;">24</a></li>
-                    <li><a href="javascript:;">25</a></li>
-                    <li><a href="javascript:;">26</a></li>
-                    <li><a href="javascript:;">27</a></li>
-                    <li><a href="javascript:;">28</a></li>
-                    <li><a href="javascript:;">29</a></li>
-                    <li><a href="javascript:;">30</a></li>
-                    <li><a href="javascript:;">31</a></li>
+                  <ul class="nav" id="dynDate-back">
+                    
                   </ul>
                 </div>  <!-- /dynDate -->
 
@@ -638,13 +518,13 @@
             <div class="row">
               <div class="span12 dynamicsFoot">
                 <div class="dynamicsFootDate">
-                  <p>13 Февраля 2013 г. - 27 Февряля 2013 г.</p>
+                  <p></p>
                 </div>
-                <input type="submit" class="btn btn-danger" value="ИСКАТЬ НА ЭТИ ДАТЫ">
+                <input type="submit" class="btn btn-danger" value="ИСКАТЬ НА ЭТИ ДАТЫ" onclick="alert('Неверные параметры')">
               </div>  <!-- /dynamicsFoot-->
             </div>  <!-- /row -->
           </div>  <!-- /hided -->
-          <a href="javascript:;" class="labelDynamics">Календарь цен</a>
+          <a href="javascript:;" class="labelDynamics disabled">Календарь цен</a>
         </div>  <!-- /dynamics -->
       </div>  <!-- /mainSearch -->
 

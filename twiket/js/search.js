@@ -50,7 +50,7 @@ function initTicker(){
 		$(tickerFrame).addClass('invisible');
 	});
 }
-function loadMapFiles() {
+function loadMapFiles() { return;
 	var mapUrls = [
 		"http://www.onetwotrip.com/js/extendedApi.js"/*tpa=http://www.onetwotrip.com/js/extendedApi.js*/,
 		"http://www.onetwotrip.com/js/map.js"/*tpa=http://www.onetwotrip.com/js/map.js*/
@@ -1218,8 +1218,150 @@ Avia.prototype.drawResults = function(data){
 		this.getFares(data);
 	}
 };
+Avia.prototype.getStatisticQuery = function(data, direct){
+    
+    var date = new Date(data.date);
+    
+    var currentCurrency = 'RUB';
+
+    var collection = {}, 
+        dateTo = new Date(), 
+        dateFrom = new Date();
+    
+    if (date.getTime() > dateFrom.getTime() + 5 * 3600000 * 24) {           
+        dateFrom.setTime(date.getTime() - 5 * 3600000 * 24);
+    }
+    
+    var dynamicsFootDate = dateFrom.format('dd mmmm yyyy') + 'г.';
+    
+    dateTo.setTime(dateFrom.getTime() + 14 * 3600000 * 24);
+    
+    $.ajax({
+        url: twiket.setup.urls.statistics,
+        dataType: "jsonp",
+        data: {
+            route:    data.from + data.to,
+            dateFrom: dateFrom.format('ddmm'),
+            dateTo:   dateTo.format('ddmm'),
+            asArray:  true,
+            //days:     12
+        },
+        success: function(json){
+            
+            if (json.dates) {
+                
+                var amount, rate, maxAmount = 0;
+                $.each(json.dates, function(index, item){
+                    var minAmount = 10000000000, key;
+                    for (st=0; st < item.length; st++) {
+                        
+                        if (item[st].currency != currentCurrency) {
+                            rate = json.rates[item[st].currency + currentCurrency] ? item[st].currency + currentCurrency : currentCurrency + item[st].currency;
+                            amount = item[st].amount * json.rates[rate]; 
+                        } else {
+                            amount = item[st].amount;
+                        }
+                        
+                        if (amount < minAmount) {
+                            minAmount = amount;
+                            key = item[st].key;
+                        }
+                        
+                        if (amount > maxAmount) {
+                            maxAmount = amount;
+                        }
+                    }
+                                        
+                    collection[index] = new Object({
+                        amount: amount,
+                        key: key
+                    });
+                });
+                
+                dateFrom.setTime(dateTo.getTime() + 1 * 3600000 * 24);
+                dateTo.setTime(dateFrom.getTime() + 14 * 3600000 * 24);
+                
+                dynamicsFootDate += ' - ' + dateTo.format('dd mmmm yyyy') + 'г.';
+                
+                $.ajax({
+                    url: twiket.setup.urls.statistics,
+                    dataType: "jsonp",
+                    data: {
+                        route:    data.from + data.to,
+                        dateFrom: dateFrom.format('ddmm'),
+                        dateTo:   dateTo.format('ddmm'),
+                        asArray:  true,
+                        //days:     12
+                    },
+                    success: function(json){
+                        if (json.dates) {
+                            
+                            $.each(json.dates, function(index, item){
+                                var minAmount = 10000000000, key;
+                                for (st=0; st < item.length; st++) {
+                                    
+                                    if (item[st].currency != currentCurrency) {
+                                        rate = json.rates[item[st].currency + currentCurrency] ? item[st].currency + currentCurrency : currentCurrency + item[st].currency;
+                                        amount = item[st].amount * json.rates[rate]; 
+                                    } else {
+                                        amount = item[st].amount;
+                                    }
+                                    
+                                    if (amount < minAmount) {
+                                        minAmount = amount;
+                                        key = item[st].key;
+                                    }
+                                    if (amount > maxAmount) {
+                                        maxAmount = amount;
+                                    }
+                                }
+                                
+                                collection[index] = new Object({
+                                    amount: amount,
+                                    key: key
+                                });
+                            });
+                            
+                            $.each(collection, function(index, item){
+                                var bar_height = Math.ceil(item.amount * 100 / maxAmount);
+                                $('<li data-amount="'+Math.ceil(item.amount)+'"><a href="javascript:;" style="height:'+bar_height+'%"></a></li>').appendTo('#dynDateGraph-' + direct);
+                                $('<li"><a href="javascript:;">'+index.substring(0,2)+'</a></li>').appendTo($('#dynDate-' + direct));
+                            });
+                            
+                            $('.dynDateGraph li').hover(function(){
+                                $('.dynDateGraph').find('div.price').remove();
+                                $('.dynDateGraph li.active').removeClass('active');
+                                $(this).addClass('active').prepend('<div class="price">' + $(this).attr('data-amount') + ' руб.</div>');
+                                
+                            }).click(function(){
+                                $(this).addClass('selected');
+                            });
+                            
+                            $('.dynamicsFootDate p').html(dynamicsFootDate);
+                            
+                            $('.labelDynamics').removeClass('disabled');
+                        }
+                    }
+                });
+                //                
+            }
+        }
+    });
+};
+Avia.prototype.getStatistic = function(data){
+    var result;
+    if (data.directions[0]) {
+        result = this.getStatisticQuery(data.directions[0], 'there');
+    }
+    if (data.directions[1]) {
+        result = this.getStatisticQuery(data.directions[1], 'back');
+    }
+};
 Avia.prototype.getFares = function(data){
 	var self = this;
+    
+    this.getStatistic(data);
+    
 	var params = tw.params.twiket?tw.params:{};
 		if(tw.params.srcmarker){
 			params.srcmarker = tw.params.srcmarker;
@@ -1393,7 +1535,7 @@ PromoCodePopup.prototype.checkData = function(){
 	}
 	return true;
 };
-PromoCodePopup.prototype.submitForm = function(){
+PromoCodePopup.prototype.submitForm = function(){  return;
 	var self = this;
 	if (!this.inProcess) {
 		$.ajax({

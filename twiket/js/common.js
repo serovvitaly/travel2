@@ -3,12 +3,12 @@ var infoBaloonHidden = true;
 for(var i in l10n.currency) {l10n.currency[i].code = i;}
 $(function(){
 	//setLogo();
-	setBackground();
+	//setBackground();
 	if (document.getElementById('tmpl_Popup')) {
-		$.template('tmpl_Popup', $("#tmpl_Popup").trim());
+		//$.template('tmpl_Popup', $("#tmpl_Popup").trim());
 	}
-	new initLanguage();
-	new initTopMenu();
+	//new initLanguage();
+	//new initTopMenu();
 	initTagPrice();
 	var referrerToUse = 'empty';
 	if(document.referrer && document.referrer !== ""){
