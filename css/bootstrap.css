@@ -8,51 +8,61 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 @font-face {
+  font-family: 'ALSRublRegular';
+  src: url('/font/rouble-webfont.eot');
+  src: local('☺'), url('/font/rouble-webfont.woff') format('woff'), url('/font/rouble-webfont.ttf') format('truetype'), url('/font/rouble-webfont.svg#ALSRublRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;/* IE:EOT; Firefox:TTF,OTF,WOFF; Opera:TTF,OTF; Chrome:SVG,TTF,OTF; Safari:TTF,OTF */
+}
+.rub {
+  font-family: 'ALSRublRegular';
+}
+@font-face {
   font-family: 'PFAgoraSansPro-Medium';
-  src: url('../font/pfagorasanspromedium.eot');
-  src: url('../font/pfagorasanspromedium.eot?#iefix') format('embedded-opentype'), url('../font/pfagorasanspromedium.woff') format('woff'), url('../font/pfagorasanspromedium.ttf') format('truetype'), url('../font/pfagorasanspromedium.svg#PFAgoraSansPro-Medium') format('svg');
+  src: url('/font/pfagorasanspromedium.eot');
+  src: url('/font/pfagorasanspromedium.eot?#iefix') format('embedded-opentype'), url('/font/pfagorasanspromedium.woff') format('woff'), url('/font/pfagorasanspromedium.ttf') format('truetype'), url('/font/pfagorasanspromedium.svg#PFAgoraSansPro-Medium') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'PFAgoraSansPro-Black';
-  src: url('../font/pfagorasansproblack.eot');
-  src: url('../font/pfagorasansproblack.eot?#iefix') format('embedded-opentype'), url('../font/pfagorasansproblack.woff') format('woff'), url('../font/pfagorasansproblack.ttf') format('truetype'), url('../font/pfagorasansproblack.svg#PFAgoraSansPro-Black') format('svg');
+  src: url('/font/pfagorasansproblack.eot');
+  src: url('/font/pfagorasansproblack.eot?#iefix') format('embedded-opentype'), url('/font/pfagorasansproblack.woff') format('woff'), url('/font/pfagorasansproblack.ttf') format('truetype'), url('/font/pfagorasansproblack.svg#PFAgoraSansPro-Black') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'PFAgoraSansPro-Bold';
-  src: url('../font/pfagorasansprobold.eot');
-  src: url('../font/pfagorasansprobold.eot?#iefix') format('embedded-opentype'), url('../font/pfagorasansprobold.woff') format('woff'), url('../font/pfagorasansprobold.ttf') format('truetype'), url('../font/pfagorasansprobold.svg#PFAgoraSansPro-Bold') format('svg');
+  src: url('/font/pfagorasansprobold.eot');
+  src: url('/font/pfagorasansprobold.eot?#iefix') format('embedded-opentype'), url('/font/pfagorasansprobold.woff') format('woff'), url('/font/pfagorasansprobold.ttf') format('truetype'), url('/font/pfagorasansprobold.svg#PFAgoraSansPro-Bold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'PFAgoraSansPro-BoldItalic';
-  src: url('../font/pfagorasansprobolditalic.eot');
-  src: url('../font/pfagorasansprobolditalic.eot?#iefix') format('embedded-opentype'), url('../font/pfagorasansprobolditalic.woff') format('woff'), url('../font/pfagorasansprobolditalic.ttf') format('truetype'), url('../font/pfagorasansprobolditalic.svg#PFAgoraSansPro-BoldItalic') format('svg');
+  src: url('/font/pfagorasansprobolditalic.eot');
+  src: url('/font/pfagorasansprobolditalic.eot?#iefix') format('embedded-opentype'), url('/font/pfagorasansprobolditalic.woff') format('woff'), url('/font/pfagorasansprobolditalic.ttf') format('truetype'), url('/font/pfagorasansprobolditalic.svg#PFAgoraSansPro-BoldItalic') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'PFAgoraSansPro-Light';
-  src: url('../font/pfagorasansprolight.eot');
-  src: url('../font/pfagorasansprolight.eot?#iefix') format('embedded-opentype'), url('../font/pfagorasansprolight.woff') format('woff'), url('../font/pfagorasansprolight.ttf') format('truetype'), url('../font/pfagorasansprolight.svg#PFAgoraSansPro-Light') format('svg');
+  src: url('/font/pfagorasansprolight.eot');
+  src: url('/font/pfagorasansprolight.eot?#iefix') format('embedded-opentype'), url('/font/pfagorasansprolight.woff') format('woff'), url('/font/pfagorasansprolight.ttf') format('truetype'), url('/font/pfagorasansprolight.svg#PFAgoraSansPro-Light') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'AAvanteTitlerCpsUpCBold';
-  src: url('../font/ava_tcub.eot');
-  src: url('../font/ava_tcub.eot?#iefix') format('embedded-opentype'), url('../font/ava_tcub.woff') format('woff'), url('../font/ava_tcub.ttf') format('truetype'), url('../font/ava_tcub.svg#ava_tcub') format('svg');
+  src: url('/font/ava_tcub.eot');
+  src: url('/font/ava_tcub.eot?#iefix') format('embedded-opentype'), url('/font/ava_tcub.woff') format('woff'), url('/font/ava_tcub.ttf') format('truetype'), url('/font/ava_tcub.svg#ava_tcub') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'AAvanteTitlerCpsUpCLight';
-  src: url('../font/ava_tcul.eot');
-  src: url('../font/ava_tcul.eot?#iefix') format('embedded-opentype'), url('../font/ava_tcul.woff') format('woff'), url('../font/ava_tcul.ttf') format('truetype'), url('../font/ava_tcul.svg#ava_tcul') format('svg');
+  src: url('/font/ava_tcul.eot');
+  src: url('/font/ava_tcul.eot?#iefix') format('embedded-opentype'), url('/font/ava_tcul.woff') format('woff'), url('/font/ava_tcul.ttf') format('truetype'), url('/font/ava_tcul.svg#ava_tcul') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -5318,7 +5328,24 @@ span.center,
   margin: 0;
   height: 32px;
   position: relative;
-  background: url(../i/select_center.jpg) repeat-x;
+  background: url(/i/select_center.jpg) repeat-x;
+}
+.selectArea.smallSel {
+  height: 27px;
+  background: url(/i/select_center_sm.jpg) repeat-x;
+}
+.selectArea.smallSel a.selectButton {
+  height: 27px;
+}
+.selectArea.smallSel span.left {
+  height: 27px;
+  background: url(/i/select_left_sm.jpg) no-repeat;
+}
+.selectArea.smallSel span.center {
+  line-height: 25px;
+}
+.selectArea.smallSel a.selectButton {
+  background: url(/i/select_button_sm.jpg) no-repeat 0 0;
 }
 a.selectButton {
   height: 32px;
@@ -5330,7 +5357,7 @@ span.left {
   height: 32px;
   position: absolute;
   top: 0;
-  background: url(../i/select_left.jpg) no-repeat;
+  background: url(/i/select_left.jpg) no-repeat;
 }
 span.center {
   line-height: 30px;
@@ -5342,7 +5369,7 @@ a.selectButton {
   width: 20px;
   right: 0px;
   top: 0;
-  background: url(../i/select_button.jpg) no-repeat 0 0;
+  background: url(/i/select_button.jpg) no-repeat 0 0;
   outline: none;
 }
 /*option*/
@@ -5365,8 +5392,6 @@ a.selectButton {
 .select-center ul li {
   width: auto;
   text-align: left;
-  /*line-height: 24px;*/
-
   height: 24px;
 }
 .select-center a {
@@ -5380,7 +5405,7 @@ a.selectButton {
 }
 .select-center a:hover {
   color: #fff;
-  background: url(../i/select_center-a.png) repeat-x top;
+  background: url(/i/select_center-a.png) repeat-x top;
 }
 .radioArea,
 .radioAreaChecked,
@@ -5395,10 +5420,10 @@ a.selectButton {
   height: 16px;
 }
 .checkboxArea {
-  background: url(../i/chkUn.jpg) no-repeat 0 0px;
+  background: url(/i/chkUn.jpg) no-repeat 0 0px;
 }
 .checkboxAreaChecked {
-  background: url(../i/chkChk.jpg) no-repeat 0 0px;
+  background: url(/i/chkChk.jpg) no-repeat 0 0px;
 }
 /*radio*/
 .radioArea,
@@ -5408,10 +5433,10 @@ a.selectButton {
   margin-top: 6px;
 }
 .radioArea {
-  background: url(../i/radioUn.png) no-repeat;
+  background: url(/i/radioUn.png) no-repeat;
 }
 .radioAreaChecked {
-  background: url(../i/radioChk.png) no-repeat;
+  background: url(/i/radioChk.png) no-repeat;
 }
 .navbar-inner .container {
   position: relative;
@@ -5426,7 +5451,7 @@ a.selectButton {
   right: 0px;
   left: auto;
   padding: 0 37px;
-  background: url(../i/navAdd-bg.png) no-repeat top;
+  background: url(/i/navAdd-bg.png) no-repeat top;
   /* /li */
 
 }
@@ -5467,13 +5492,13 @@ a.selectButton {
 }
 .navbar-inner .container .navAdd > li.navMsg a.dropdown-toggle {
   padding-left: 30px;
-  background: url(../i/navMsg-bg.jpg) no-repeat left;
+  background: url(/i/navMsg-bg.jpg) no-repeat left;
 }
 .navbar-inner .container .navAdd > li.navMsg a.dropdown-toggle span {
   width: 16px;
   height: 15px;
   display: inline-block;
-  background: url(../i/navMsgSpan1-bg.png) no-repeat;
+  background: url(/i/navMsgSpan1-bg.png) no-repeat;
   text-align: center;
   line-height: 15px;
   margin-left: 5px;
@@ -5529,7 +5554,7 @@ a.selectButton {
 .navbar-inner .container .navAdd > li.navLang a.dropdown-toggle {
   color: #0ba6fd;
   text-decoration: none;
-  background: url(../i/navLang-bg.png) no-repeat right;
+  background: url(/i/navLang-bg.png) no-repeat right;
   padding-right: 22px;
 }
 .navbar-inner .container .navAdd > li.navLang .dropdown-menu {
@@ -5541,7 +5566,7 @@ a.selectButton {
 .navbar-inner .container .navAdd > li.navCurr a.dropdown-toggle {
   color: #0ba6fd;
   text-decoration: none;
-  background: url(../i/navCurr-bg.png) no-repeat right;
+  background: url(/i/navCurr-bg.png) no-repeat right;
   padding-right: 22px;
 }
 .navbar-inner .container .navAdd > li.navCurr .dropdown-menu {
@@ -5853,7 +5878,7 @@ p.searchResult a {
   left: -63px;
   width: 147px;
   height: 75px;
-  background: url(../i/dynDatePrice1.png) no-repeat top;
+  background: url(/i/dynDatePrice1.png) no-repeat top;
   font-family: 'AAvanteTitlerCpsUpCBold';
   font-size: 30px;
   color: #ffffff;
@@ -5886,7 +5911,7 @@ a.labelDynamics {
   position: absolute;
   bottom: -33px;
   left: 41%;
-  background: url(../i/labelDynamics1.png) no-repeat top;
+  background: url(/i/labelDynamics1.png) no-repeat top;
   width: 176px;
   height: 33px;
   text-align: center;
@@ -5897,14 +5922,36 @@ a.labelDynamics {
 }
 .selectors {
   margin-bottom: 30px;
-  margin-left: 240px;
-  width: 770px;
+  margin-left: 30px;
+  width: 980px;
+}
+.selectors .FlightsDifficulties {
+  display: inline-block;
+}
+.selectors .FlightsDifficulties .btn {
+  width: 100px;
+}
+.selectors .FlightPriceInformation {
+  display: inline-block;
+  width: 510px;
+}
+.selectors .ComparePriceSelection {
+  display: inline-block;
+}
+.selectors .ComparePriceSelection .btn {
+  width: 130px;
+}
+.selectors .classSearch_wrapper {
+  display: inline-block;
+}
+.selectors .classSearch_wrapper .btn-group {
+  margin-right: 0;
 }
 .selectors label.last {
   float: right;
 }
 .selectors .btn-group {
-  margin-right: 38px;
+  margin-right: 20px;
 }
 .selectors .btn-group.last {
   margin-right: 0;
@@ -5989,7 +6036,7 @@ div.datepicker.dp2 .ui-datepicker-prev {
   display: none !important;
 }
 div.datepicker.dp2 table.ui-datepicker-calendar td .ui-state-default.ui-state-active span.grad {
-  background: url(../i/datepicTd_ui-state-active2-bg.png) no-repeat scroll 0 0 transparent;
+  background: url(/i/datepicTd_ui-state-active2-bg.png) no-repeat scroll 0 0 transparent;
 }
 div.datepicker .dateHeader {
   font-size: 13px;
@@ -6068,13 +6115,13 @@ div.datepicker .ui-widget-header .ui-datepicker-prev {
   left: 0;
 }
 div.datepicker .ui-widget-header .ui-datepicker-prev span.ui-icon {
-  background: url(../i/datepicPrevBtn.png) no-repeat;
+  background: url(/i/datepicPrevBtn.png) no-repeat;
 }
 div.datepicker .ui-widget-header .ui-datepicker-next {
   right: 0;
 }
 div.datepicker .ui-widget-header .ui-datepicker-next span.ui-icon {
-  background: url(../i/datepicNextBtn.png) no-repeat;
+  background: url(/i/datepicNextBtn.png) no-repeat;
 }
 div.datepicker table.ui-datepicker-calendar {
   font-family: Arial;
@@ -6101,7 +6148,7 @@ div.datepicker table.ui-datepicker-calendar td .ui-state-default {
   border: none;
   line-height: 42px;
   position: relative;
-  background: #000000 url(../i/datepicTd_ui-state-default-bg.png) no-repeat;
+  background: #000000 url(/i/datepicTd_ui-state-default-bg.png) no-repeat;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -6116,7 +6163,7 @@ div.datepicker table.ui-datepicker-calendar td .ui-state-default span.grad {
   display: block;
   height: 40px;
   width: 41px;
-  background: url(../i/datepicTd_ui-state-default-grad-bg4.png) no-repeat;
+  background: url(/i/datepicTd_ui-state-default-grad-bg4.png) no-repeat;
 }
 div.datepicker table.ui-datepicker-calendar td .ui-state-default.ui-state-active {
   color: #ffffff;
@@ -6129,7 +6176,7 @@ div.datepicker table.ui-datepicker-calendar td .ui-state-default.ui-state-active
   height: 37px;
 }
 div.datepicker table.ui-datepicker-calendar td .ui-state-default.ui-state-active span.grad {
-  background: url(../i/datepicTd_ui-state-active1-bg.png) no-repeat;
+  background: url(/i/datepicTd_ui-state-active1-bg.png) no-repeat;
 }
 aside {
   width: 200px !important;
@@ -6214,20 +6261,20 @@ aside article.side .inn .fl1 {
   height: 33px;
   display: inline-block;
   float: left;
-  background: url(../i/fl1.png) no-repeat top;
+  background: url(/i/fl1.png) no-repeat top;
 }
 aside article.side .inn .fl2 {
   width: 53px;
   height: 33px;
   display: inline-block;
   float: right;
-  background: url(../i/fl2.png) no-repeat bottom;
+  background: url(/i/fl2.png) no-repeat bottom;
 }
 aside article.side .inn.toggle .fl1 {
-  background: url(../i/fl1.png) no-repeat bottom;
+  background: url(/i/fl1.png) no-repeat bottom;
 }
 aside article.side .inn.toggle .fl2 {
-  background: url(../i/fl2.png) no-repeat top;
+  background: url(/i/fl2.png) no-repeat top;
 }
 aside article.side .inn .slider {
   float: left;
@@ -6255,7 +6302,7 @@ aside article.side .inn .slider.sliderType2 .ui-slider-handle {
   border: none;
   top: -5px;
   margin-left: -22px;
-  background: url(../i/flSliderHandle.png) no-repeat;
+  background: url(/i/flSliderHandle.png) no-repeat;
   border-radius: 0;
 }
 aside article.side .inn .slider.sliderType2 .ui-slider-range {
@@ -6271,7 +6318,7 @@ aside article.side .inn .slider.sliderType1 .ui-slider-handle {
   outline: none;
   border: none;
   top: -5px;
-  background: url(../i/sliderHandle.png) no-repeat;
+  background: url(/i/sliderHandle.png) no-repeat;
 }
 aside article.side .inn .slider.sliderType1 .ui-slider-range {
   background-color: #dd5627;
@@ -6313,23 +6360,23 @@ aside article.side .inn form .control-group .star {
   height: 10px;
   margin-top: 8px;
   display: inline-block;
-  background: url(../i/star-bg.png) no-repeat;
+  background: url(/i/star-bg.png) no-repeat;
 }
 .star-ok {
   width: 60%;
   height: 10px;
-  background: url(../i/star-ok-bg.png) no-repeat;
+  background: url(/i/star-ok-bg.png) no-repeat;
 }
 .star_big {
   width: 91px;
   height: 16px;
-  background: url(../i/star_big-bg.png) no-repeat;
+  background: url(/i/star_big-bg.png) no-repeat;
   position: relative;
 }
 .star_big-ok {
   width: 60%;
   height: 16px;
-  background: url(../i/star_big-ok-bg.png) no-repeat;
+  background: url(/i/star_big-ok-bg.png) no-repeat;
   cursor: pointer;
 }
 .sm_popup {
@@ -6340,7 +6387,7 @@ aside article.side .inn form .control-group .star {
   width: 316px;
   padding-bottom: 12px;
   color: #ffffff;
-  background: url(../i/star_big_popup-angle.png) no-repeat bottom left;
+  background: url(/i/star_big_popup-angle.png) no-repeat bottom left;
 }
 .sm_popup_inn {
   width: 284px;
@@ -6378,7 +6425,7 @@ aside article.side .inn form .control-group .star {
   position: relative;
 }
 .cityInfo .infoBlock {
-  background: url(../i/infoBlockArr.png) no-repeat bottom left;
+  background: url(/i/infoBlockArr.png) no-repeat bottom left;
   padding-bottom: 12px;
   display: none;
   position: absolute;
@@ -6442,7 +6489,7 @@ aside article.side .inn form .control-group .star {
 }
 .cityInfo .infoBlock .infoBlockInn .onmap {
   padding-left: 15px;
-  background: url(../i/onmap-bg.png) no-repeat top left;
+  background: url(/i/onmap-bg.png) no-repeat top left;
 }
 .cityInfo .infoBlock .infoBlockInn .onmap a {
   color: inherit;
@@ -6456,22 +6503,22 @@ aside article.side .inn form .control-group .star {
   padding-right: 105px;
 }
 .cityInfo .infoBlock .infoBlockInn .temp.sunShyne {
-  background: url(../i/tempSunShyne.png) no-repeat right top;
+  background: url(/i/tempSunShyne.png) no-repeat right top;
 }
 .cityInfo .infoBlock .infoBlockInn .temp.snow {
-  background: url(../i/tempSnow.png) no-repeat right top;
+  background: url(/i/tempSnow.png) no-repeat right top;
 }
 .cityInfo .infoBlock .infoBlockInn .temp.light {
-  background: url(../i/tempLight.png) no-repeat right top;
+  background: url(/i/tempLight.png) no-repeat right top;
 }
 .cityInfo .infoBlock .infoBlockInn .temp.sun {
-  background: url(../i/tempSun.png) no-repeat right top;
+  background: url(/i/tempSun.png) no-repeat right top;
 }
 .cityInfo .infoBlock .infoBlockInn .temp.cloud {
-  background: url(../i/tempCloud.png) no-repeat right top;
+  background: url(/i/tempCloud.png) no-repeat right top;
 }
 .cityInfo .infoBlock .infoBlockInn .temp.rain {
-  background: url(../i/tempRain.png) no-repeat right top;
+  background: url(/i/tempRain.png) no-repeat right top;
 }
 .cityInfo .infoBlock .infoBlockInn .phone {
   color: #008cd4;
@@ -6795,7 +6842,7 @@ article.ticket table tfoot td {
   border-bottom: none;
   height: 85px;
   padding: 0;
-  background: url(../i/modalVarHeadBg.jpg) no-repeat top;
+  background: url(/i/modalVarHeadBg.jpg) no-repeat top;
 }
 .modal#modalVariants .modal-header .head {
   padding: 25px 25px 25px 40px;
@@ -6849,7 +6896,142 @@ article.ticket table tfoot td {
   padding: 23px 15px 30px 22px;
   color: #5a5a5a;
   max-height: 800px;
-  background: url(../i/modalVarBodyBg.jpg) repeat-y top right;
+  background: url(/i/modalVarBodyBg.jpg) repeat-y top right;
+}
+.modal#modalMoreInfo {
+  top: 10%;
+  width: 990px;
+  margin-left: -495px;
+  border-radius: 0px;
+}
+.modal#modalMoreInfo .modal-header {
+  border-bottom: none;
+  height: 34px;
+  padding: 0;
+  background-color: #0f9dec;
+}
+.modal#modalMoreInfo .modal-header .head {
+  padding: 0px 25px;
+  overflow: hidden;
+}
+.modal#modalMoreInfo .modal-header .head h2 {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1.75em;
+  line-height: 34px;
+  color: #ffffff;
+  margin: 0;
+  margin-right: 35px;
+  font-weight: bold;
+  float: left;
+}
+.modal#modalMoreInfo .modal-header .head p {
+  color: #ffffff;
+  font-size: 1.33em;
+  line-height: 22px;
+  margin: 5px 15px 0 0;
+  display: inline-block;
+  float: left;
+}
+.modal#modalMoreInfo .modal-header .head a {
+  color: #ffffff;
+  padding: 0 15px;
+  display: inline-block;
+  border-left: 1px solid #ffffff;
+  text-decoration: none;
+}
+.modal#modalMoreInfo .modal-header .head a.sel {
+  color: #262626;
+  cursor: default;
+}
+.modal#modalMoreInfo .modal-header .head a:first-child {
+  border: none;
+}
+.modal#modalMoreInfo .modal-header button.close {
+  color: #ffffff;
+  opacity: 1;
+  position: absolute;
+  top: -20px;
+  right: -15px;
+}
+.modal#modalMoreInfo .modal-header button.close:hover {
+  opacity: 1;
+}
+.modal#modalMoreInfo .modal-body {
+  width: auto;
+  padding: 23px 15px 30px 22px;
+  color: #5a5a5a;
+  max-height: 800px;
+}
+.modal#modalMoreInfo .trip.last {
+  margin-bottom: 1em;
+}
+.modal#modalMoreInfo .directionTitle {
+  position: relative;
+}
+.modal#modalMoreInfo .directionTitle .from {
+  font-size: 2em;
+  color: #5a5a5a;
+}
+.modal#modalMoreInfo .stars_block {
+  display: inline-block;
+}
+.modal#modalMoreInfo .StarsInformation {
+  cursor: help;
+}
+.modal#modalMoreInfo .directionBody {
+  margin: 0.4em 0;
+}
+.modal#modalMoreInfo .directionBody table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+.modal#modalMoreInfo .directionBody table col.departure {
+  width: 6.5%;
+}
+.modal#modalMoreInfo .directionBody table col.place {
+  width: 20.5%;
+}
+.modal#modalMoreInfo .directionBody table col.arrival {
+  width: 6.5%;
+}
+.modal#modalMoreInfo .directionBody table col.flightNumber {
+  width: 11%;
+}
+.modal#modalMoreInfo .directionBody table col.ak {
+  width: 15%;
+}
+.modal#modalMoreInfo .directionBody table col.cs {
+  width: 11%;
+}
+.modal#modalMoreInfo .directionBody table col.plane {
+  width: 13%;
+}
+.modal#modalMoreInfo .directionBody table th,
+.modal#modalMoreInfo .directionBody table td {
+  font-size: 70%;
+  font-weight: normal;
+  padding: 0;
+  text-align: left;
+  vertical-align: baseline;
+}
+.modal#modalMoreInfo .directionBody .airport {
+  cursor: help;
+}
+.modal#modalMoreInfo .duration span {
+  border-top: 1px solid #BFC7C9;
+  display: inline-block;
+  font-size: 80%;
+  padding-right: 1em;
+  padding-top: 0.2em;
+}
+.modal#modalMoreInfo .change {
+  color: #C94B00;
+  margin: 1em 0;
+}
+.pf_bottom {
+  text-shadow: 0 1px 0 #E6E6E6;
 }
 p.ticketFoot {
   color: #616161;
@@ -6858,9 +7040,12 @@ p.ticketFoot {
   margin-left: 10px;
   margin-bottom: 30px;
 }
+.multivariants .pf_bottom {
+  background: none;
+}
 .multivariants table tr td {
   border: none;
-  padding: 7px 10px 5px;
+  padding: 7px 10px 5px 25px;
   vertical-align: top;
 }
 .multivariants .DirRoute {
@@ -6880,7 +7065,7 @@ p.ticketFoot {
   font-size: 1em;
 }
 .multivariants .table_header td {
-  padding: 0 10px 10px 10px;
+  padding: 0 0 0 20px;
 }
 .multivariants .table_header td span {
   color: #5a5a5a;
@@ -6940,6 +7125,7 @@ p.ticketFoot {
 }
 .multivariants .second_dir {
   width: 320px;
+  padding-right: 30px;
 }
 .multivariants .variant_direction .label .opt1 {
   line-height: 16px;
@@ -7007,17 +7193,17 @@ p.ticketFoot {
   color: #5a5a5a;
 }
 .multivariants .selected .slat .bg {
-  background: url(../i/flVariantBg.jpg) repeat-x top;
+  background: url(/i/flVariantBg.jpg) repeat-x top;
   left: 0;
   right: 3px;
   z-index: -1;
 }
 .multivariants .selected .slat .bg .l {
-  background: url(../i/flVariantBgLeft.jpg) no-repeat top left;
+  background: url(/i/flVariantBgLeft.jpg) no-repeat top left;
   width: 5px;
 }
 .multivariants .selected .slat .bg .r {
-  background: url(../i/flVariantBgRight.jpg) no-repeat top right;
+  background: url(/i/flVariantBgRight.jpg) no-repeat top right;
   width: 5px;
 }
 .multivariants .slat .bg .l {
@@ -7070,18 +7256,78 @@ p.ticketFoot {
   cursor: pointer;
   display: none;
 }
+.multivariants .akPlate {
+  font-size: 20px;
+  text-shadow: none;
+}
+.multivariants .akPlate .pf_light_speck {
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+  bottom: 0;
+  height: 17px;
+  left: 0;
+  opacity: 0.1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+.multivariants .akPlate .pf_AKname {
+  display: inline-block;
+  padding: 25px 40px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+}
+.multivariants .akPlate .pf_AKname h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 30px 0 0;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+}
+.multivariants .akPlate .RedrawOptions {
+  display: inline-block;
+}
+.multivariants .akPlate .RedrawOptions .selected {
+  cursor: default;
+  color: #262626;
+  font-weight: normal;
+}
+.multivariants .akPlate .RedrawOptions span {
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  line-height: 30px;
+  display: inline-block;
+  padding: 0 15px;
+}
+.multivariants .akPlate .logo {
+  float: right;
+  height: 80px;
+  width: 200px;
+  background: #cad;
+}
+.multivariants .simpleVariants tr.noBkg {
+  background: url(/i/modalVarHeadBg.jpg) no-repeat scroll center top;
+}
+.multivariants .simpleVariants tr.noBkg td {
+  padding: 0;
+}
 .multivariants .simpleVariants .variant_direction {
   width: 365px;
 }
 .multivariants .simpleVariants .variant_direction .HRspline {
-  right: -16px;
+  right: -20px;
   top: 22px;
-  width: 15px;
+  width: 18px;
 }
 .multivariants .simpleVariants .HLspline {
   height: 1px;
   top: 22px;
-  width: 12px;
+  width: 20px;
 }
 .multivariants .simpleVariants .HRspline {
   height: 1px;
@@ -7102,7 +7348,7 @@ p.ticketFoot {
   border: 0 none;
 }
 .multivariants .simpleVariants .Vspline {
-  right: -13px;
+  right: -20px;
   top: 0;
   width: 1px;
 }
@@ -7115,19 +7361,21 @@ p.ticketFoot {
   display: block;
 }
 .multivariants .simpleVariants .variant .HLspline {
-  left: -17px;
+  left: -25px;
 }
 .multivariants .simpleVariants .variant .HRspline {
-  right: -28px;
-  width: 26px;
+  right: -38px;
+  width: 36px;
 }
 .multivariants .simpleVariants td.cellButton {
   padding: 0px;
   text-align: right;
   width: 103px;
+  padding-right: 5px;
 }
 .multivariants .simpleVariants .PriceButtonWrapper {
   position: relative;
+  width: 103px;
 }
 .multivariants .simpleVariants .PriceButtonWrapper .price_button {
   margin-top: 7px;
@@ -7136,7 +7384,7 @@ p.ticketFoot {
   width: 103px;
   height: 43px;
   border: none;
-  background: url(../i/cellButtonBg.jpg) no-repeat top right;
+  background: url(/i/cellButtonBg.jpg) no-repeat top right;
   font-size: 1.5em;
   color: #ffffff;
 }
@@ -7155,13 +7403,661 @@ p.ticketFoot {
   display: none;
 }
 .multivariants.FlightTicketVariant .table_header .leftIndent {
-  padding-left: 110px;
+  padding-left: 125px;
 }
 .multivariants.FlightTicketVariant .simpleVariants .variant_direction {
   width: 410px;
 }
+.multivariants .infotitle {
+  color: #f15a22;
+}
+div#layout_body {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: 99;
+}
+div.spreader {
+  -moz-box-sizing: border-box;
+  margin-left: -495px;
+  width: 990px;
+}
+#layout_results {
+  position: relative;
+  z-index: 10;
+}
+.FlightsByAKBlock {
+  display: block;
+  padding-bottom: 20px;
+  position: relative;
+  background: url("../i/modalVarBodyBg.jpg") repeat-y scroll right top;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.FlightTicket {
+  padding: 0;
+  position: relative;
+  z-index: 11;
+}
+.ReturnToResult {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  z-index: 5;
+}
+.ReturnToResult .return {
+  border-bottom: 1px dashed;
+  font-size: 14px;
+}
+.ReturnToResult .default {
+  color: #1A3968;
+}
+.ReturnToResult .close_button {
+  right: -30px;
+  top: -20px;
+}
+#popup_passengerSelect {
+  -moz-box-sizing: border-box;
+  margin: -30px auto auto;
+  width: 820px;
+}
+#popup_passengerSelect #popup_passengerSelect_wrapper {
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+#popup_passengerSelect .close_button {
+  right: 70px;
+  top: -12px;
+}
+#popup_passengerSelect .simpleVariants .variant_direction {
+  width: 360px !important;
+}
+#popup_passengerSelect .simpleVariants .variant {
+  width: 360px !important;
+}
+#popup_passengerSelect .simpleVariants td {
+  padding-left: 18px;
+}
+#popup_passengerSelect .ConfirmInfoFlight {
+  background: #eaeaea;
+  padding-bottom: 5px;
+}
+#popup_passengerSelect .ConfirmInfoFlight .akPlate {
+  background: #008cd4;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  height: 80px;
+  line-height: 30px;
+  padding: 0 0 0 40px;
+  width: 780px;
+}
+#popup_passengerSelect .ConfirmInfoFlight .akPlate .name {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #ffffff;
+}
+#popup_passengerSelect .ConfirmInfoFlight .akPlate span {
+  padding: 25px 0;
+  display: inline-block;
+}
+#popup_passengerSelect .ConfirmInfoFlight .akPlate span a {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 30px;
+  margin-left: 14px;
+  display: inline-block;
+}
+#popup_passengerSelect .ConfirmInfoFlight .akPlate .logo {
+  width: 200px;
+  height: 80px;
+  float: right;
+}
+#popup_passengerSelect .ConfirmInfoFlight .showFareRules {
+  white-space: nowrap;
+}
+#popup_passengerSelect .ConfirmInfoFlight .FlightTicket {
+  padding: 0 19px;
+}
+#popup_passengerSelect .ConfirmInfoFlight .pf_bottom table {
+  table-layout: fixed;
+}
+#popup_passengerSelect .innerContent {
+  background-color: #eaeaea;
+  position: relative;
+  padding: 0 40px 80px 35px;
+}
+#popup_passengerSelect .innerContent .ageinfo {
+  font-size: 16px;
+  color: #616161;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+#popup_passengerSelect div.popupTitle span.Passenger {
+  font-size: 140%;
+}
+#popup_passengerSelect .seats {
+  font-size: 80%;
+}
+#popup_passengerSelect div.ADT,
+#popup_passengerSelect div.CNN,
+#popup_passengerSelect div.INF {
+  padding-top: 18px;
+}
+#popup_passengerSelect td.category {
+  width: 140px;
+}
+#popup_passengerSelect div.categoryTitle {
+  font-size: 1.5em;
+  margin-bottom: 3px;
+}
+#popup_passengerSelect div.annotation {
+  font-size: 14px;
+  color: #8a8a8a;
+}
+#popup_passengerSelect div.priceInf {
+  font-size: 14px;
+  color: #8a8a8a;
+}
+#popup_passengerSelect td.controls {
+  width: 126px;
+}
+#popup_passengerSelect td.controls table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+#popup_passengerSelect td.controls td {
+  font-size: 30px;
+  height: 42px;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 42px;
+}
+#popup_passengerSelect td.controls td.count {
+  font-size: 30px;
+}
+#popup_passengerSelect td.controls td.plus,
+#popup_passengerSelect td.controls td.minus {
+  background: url("../i/day_u0862.png") no-repeat scroll left top transparent;
+  color: white;
+  cursor: pointer;
+}
+#popup_passengerSelect td.controls td.plus:hover,
+#popup_passengerSelect td.controls td.minus:hover {
+  background-position: left -42px;
+}
+#popup_passengerSelect td.controls td.plus.disabled,
+#popup_passengerSelect td.controls td.minus.disabled {
+  background-position: left top;
+  cursor: default;
+  opacity: 0.3;
+}
+#popup_passengerSelect td.fields {
+  padding-left: 20px;
+  width: 100%;
+}
+#popup_passengerSelect td.fields table {
+  border-collapse: collapse;
+  margin-bottom: 0.8em;
+  margin-top: -20px;
+  table-layout: fixed;
+  width: 100%;
+}
+#popup_passengerSelect td.fields th {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.2em;
+  padding: 0;
+  text-align: left;
+  padding-left: 10px;
+}
+#popup_passengerSelect td.fields td {
+  border: 1px solid #CCCCCC;
+  padding: 0;
+}
+#popup_passengerSelect td.fields th:first-child,
+#popup_passengerSelect td.fields td:first-child {
+  width: 41px;
+}
+#popup_passengerSelect td.fields .field {
+  width: 100%;
+}
+#popup_passengerSelect #addCildrenLink {
+  font-size: 16px;
+  display: inline-block;
+  margin: 10px 0;
+}
+#popup_passengerSelect div.footer {
+  bottom: 0;
+  height: 54px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+#popup_passengerSelect div.footer > .bg {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+#popup_passengerSelect div.footer > table {
+  height: 70px;
+}
+#popup_passengerSelect div.footer > table > tbody > tr > td {
+  text-align: right;
+  vertical-align: middle;
+  color: #ffffff;
+}
+#popup_passengerSelect div.footer > table > tbody > tr > td:first-child {
+  padding: 0 35px;
+  font-size: 2em;
+  background: #535353;
+  padding-right: 0;
+  text-align: left;
+  width: 585px;
+}
+#popup_passengerSelect input[type="submit"] {
+  background: #f15a22;
+  text-transform: uppercase;
+  color: #eaeaea;
+  font-size: 16px;
+  height: 70px;
+  margin: 0;
+  text-align: center;
+  width: 200px;
+  border: none;
+  font-weight: bold;
+}
+.field {
+  background: none repeat scroll 0 0 white;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.field input[type="text"],
+.field input[type="password"] {
+  background: none repeat scroll 0 0 transparent;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 10px;
+  position: relative;
+  text-overflow: ellipsis;
+  z-index: 6;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+}
+.field div.focus {
+  display: none;
+}
+.field .bg {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.field .bg .tl,
+.field .bg .tr,
+.field .bg .bl,
+.field .bg .br {
+  background-image: url("../i/field_corners_u0861.png");
+  height: 6px;
+  width: 6px;
+}
+.field .bg .t,
+.field .bg .b {
+  background-image: url("../i/field_tb_u0861.png");
+  height: 6px;
+  left: 6px;
+  right: 6px;
+}
+.field .bg .l,
+.field .bg .r {
+  background-image: url("../i/field_lr_u0861.png");
+  bottom: 6px;
+  top: 6px;
+  width: 6px;
+}
+.abs,
+.abs > * {
+  background-repeat: no-repeat;
+  position: absolute;
+}
+.abs > .tl {
+  background-position: left top;
+  left: 0;
+  top: 0;
+}
+.abs > .tr {
+  background-position: right top;
+  right: 0;
+  top: 0;
+}
+.abs > .bl {
+  background-position: left bottom;
+  bottom: 0;
+  left: 0;
+}
+.abs > .br {
+  background-position: right bottom;
+  bottom: 0;
+  right: 0;
+}
+.abs > .t {
+  background-position: center top;
+  background-repeat: repeat-x;
+  top: 0;
+}
+.abs > .b {
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  bottom: 0;
+}
+.abs > .l {
+  background-position: left center;
+  background-repeat: repeat-y;
+  left: 0;
+  padding: 0;
+}
+.abs > .r {
+  background-position: right center;
+  background-repeat: repeat-y;
+  right: 0;
+  padding: 0;
+}
+.genderSelect {
+  height: 40px;
+  text-align: center;
+}
+.genderSelect label {
+  background: url("../i/gender_u0861.png") no-repeat scroll 0 0 transparent;
+  cursor: pointer;
+  display: inline-block;
+  height: 21px;
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 13px;
+  z-index: 77;
+}
+.genderSelect label.ADT.M {
+  background-position: left top;
+}
+.genderSelect label.ADT.M.checked {
+  background-position: left -21px;
+}
+.genderSelect label.ADT.F {
+  background-position: -13px top;
+}
+.genderSelect label.ADT.F.checked {
+  background-position: -13px -21px;
+}
+.genderSelect label.CNN.M {
+  background-position: -26px top;
+}
+.genderSelect label.CNN.M.checked {
+  background-position: -26px -21px;
+}
+.genderSelect label.CNN.F {
+  background-position: -39px top;
+}
+.genderSelect label.CNN.F.checked {
+  background-position: -39px -21px;
+}
+.genderSelect label.INF.M {
+  background-position: -52px top;
+}
+.genderSelect label.INF.M.checked {
+  background-position: -52px -21px;
+}
+.genderSelect label.INF.F {
+  background-position: -65px top;
+}
+.genderSelect label.INF.F.checked {
+  background-position: -65px -21px;
+}
+.genderSelect input[type="radio"] {
+  left: -40px;
+  position: absolute;
+}
+.genderSelect .radioArea,
+.genderSelect .radioAreaChecked {
+  display: none;
+}
+span.gender {
+  background: url("../i/gender_u0861.png") no-repeat scroll 0 0 transparent;
+  cursor: pointer;
+  display: inline-block;
+  height: 21px;
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 13px;
+  z-index: 77;
+}
+span.gender.ADT.M {
+  background-position: left -21px;
+}
+span.gender.ADT.F {
+  background-position: -13px -21px;
+}
+span.gender.CNN.M {
+  background-position: -26px -21px;
+}
+span.gender.CNN.F {
+  background-position: -39px -21px;
+}
+span.gender.INF.M {
+  background-position: -52px -21px;
+}
+span.gender.INF.F {
+  background-position: -65px -21px;
+}
+table.layout {
+  table-layout: fixed;
+  width: 100%;
+}
+table.layout > tbody > tr > td {
+  padding: 0;
+  vertical-align: top;
+}
+.invisible {
+  display: none !important;
+}
+.dashed,
+.dotted {
+  border-bottom: 1px dashed;
+  cursor: pointer;
+  text-decoration: none;
+}
+.close_button {
+  background: url("../i/close_button2.png") no-repeat;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: -12px;
+  top: -12px;
+  z-index: 7;
+}
 .clear {
   clear: both;
+}
+div.popup {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: relative;
+  right: 0;
+  top: 0;
+  display: none;
+  width: 630px;
+  z-index: 100;
+}
+div.popup.TripsInfo {
+  width: 870px;
+}
+.ticket {
+  background-color: #FBFBFB;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.ticket .directionBody {
+  margin: 0.4em 0;
+}
+.ticket .directionBody table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+.ticket .directionBody table col.plane {
+  width: 20%;
+}
+.ticket .directionBody table th {
+  padding: 5px 0;
+  text-align: left;
+  vertical-align: baseline;
+  font-weight: normal;
+  font-size: 12px;
+}
+.ticket .directionBody table td {
+  padding: 0;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 16px;
+  height: 30px;
+}
+.ticket .directionBody table td .time {
+  font-size: 21px;
+}
+.ticket .directionBody table td.flightNumber {
+  font-size: 21px;
+}
+.ticket .directionBody table td.plane {
+  font-size: 21px;
+}
+.ticket .directionBody table td img {
+  max-height: 30px;
+  display: inline-block;
+}
+.ticket .akPlate {
+  padding: 0 40px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 30px;
+  height: 33px;
+  color: #ffffff;
+  background: #008cd4;
+}
+.ticket .akPlate * {
+  vertical-align: middle;
+}
+.ticket .akPlate .logo {
+  background-position: 117px center !important;
+  width: 392px;
+}
+.ticket .akPlate.TK .logo {
+  opacity: 0.25;
+}
+.ticket .akPlate.head {
+  background-color: #f15a22;
+}
+.ticket .direction {
+  padding: 40px 40px 10px 40px;
+  background-color: #fafafa;
+}
+.ticket .direction.planeTo {
+  background: #f2f2f2 url(/i/planeTo.jpg) no-repeat 40px 10px;
+}
+.ticket .trip {
+  margin-top: 1em;
+}
+.ticket .trip:first-child {
+  margin-top: 0;
+}
+.ticket .trip .directionTitle {
+  font-size: 18px;
+}
+.ticket .trip .directionTitle span.from,
+.ticket .trip .directionTitle span.to {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5a5a5a;
+}
+.ticket .trip .directionTitle span.vylet {
+  margin-left: 40px;
+}
+.ticket .trip.last {
+  margin-bottom: 1em;
+}
+.ticket .directionTitle {
+  position: relative;
+}
+.ticket .directionTitle span.date {
+  font-size: 24px;
+  color: #f15a22;
+}
+.ticket .duration {
+  border-top: 1px solid #BFC7C9;
+}
+.ticket .duration span {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 2em;
+}
+.ticket .change {
+  color: #008cd4;
+  margin: 0.5em 0 1.5em 0;
+  font-size: 16px;
+}
+.ticket .baggage {
+  font-size: 14px;
+  margin-top: 55px;
+}
+.ticket .fund {
+  font-size: 14px;
+  margin-top: 15px;
+}
+.ticket .fund span.timeTill,
+.ticket .fund span.timeLast {
+  font-weight: bold;
+  color: #0f9dec;
+}
+.ticket .visaInfo {
+  font-size: 14px;
+}
+.ticket .visaInfo .select {
+  position: relative;
+  display: inline-block;
+}
+.ticket .visaInfo select {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 100%;
+  line-height: 40px;
+  opacity: 0;
+  border: none;
+  cursor: pointer;
+}
+.ticket .visaInfo .selectArea {
+  display: none;
+}
+.link {
+  color: #0f9dec;
 }
 .ticketPers .infants {
   display: none;
@@ -7206,7 +8102,7 @@ p.ticketFoot {
   width: 42px;
   height: 42px;
   display: inline-block;
-  background: url(../i/minus.png) no-repeat top left;
+  background: url(/i/minus.png) no-repeat top left;
 }
 .ticketPers table.tablePers .plus {
   width: 42px;
@@ -7216,7 +8112,7 @@ p.ticketFoot {
   width: 42px;
   height: 42px;
   display: inline-block;
-  background: url(../i/plus.png) no-repeat top left;
+  background: url(/i/plus.png) no-repeat top left;
 }
 .ticketPers table.tablePers .num {
   width: 42px;
@@ -7324,4 +8220,253 @@ hr {
 }
 a.moreInfo {
   color: #0f9dec !important;
+}
+.textPage {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.textPage form#form_makeorder {
+  margin: 0;
+}
+.textPage form#form_makeorder .btn.submit {
+  width: 100%;
+  background: #f15a22;
+  font-size: 2em;
+  color: #ffffff;
+  font-family: 'PFAgoraSansPro-Medium';
+  text-transform: uppercase;
+  border-radius: 0;
+  border: none;
+  height: 67px;
+  text-shadow: 0 0 0;
+  line-height: 30px;
+}
+.textPage form#form_makeorder .btn.submit .rub {
+  text-transform: none;
+}
+.textPage .ticket {
+  box-shadow: 0 0 0;
+}
+.textPage .paymentTable {
+  padding: 10px 40px;
+  background-color: #e6e6e6;
+}
+.textPage .paymentTable table.paymentTable {
+  font-size: 14px;
+  color: #5a5a5a;
+  width: 100%;
+}
+.textPage .paymentTable table.paymentTable th {
+  font-weight: normal;
+  text-align: center;
+  padding-right: 25px;
+}
+.textPage .paymentTable table.paymentTable td {
+  padding-right: 25px;
+}
+.textPage .paymentTable table.paymentTable td.tarif,
+.textPage .paymentTable table.paymentTable td.tax,
+.textPage .paymentTable table.paymentTable td.markup {
+  font-size: 18px;
+  text-align: right;
+}
+.textPage .paymentTable table.paymentTable td.amount {
+  font-size: 24px;
+  text-align: right;
+}
+.textPage .paymentTable table.paymentTable td.sign.amount {
+  padding-right: 0px;
+}
+.textPage .paymentTable table.paymentTable td.fareRules {
+  padding-right: 0;
+  width: 200px;
+}
+.textPage .block_buyer {
+  padding: 10px 10px 10px 40px;
+}
+.textPage .block_buyer .note {
+  line-height: 13px;
+  color: #808080;
+}
+.textPage .block_buyer .note b {
+  color: #151515;
+  font-weight: normal;
+}
+.textPage .block_buyer .phone {
+  display: inline-block;
+  margin-right: 25px;
+}
+.textPage .block_buyer .phone label {
+  font-size: 1.166em;
+  margin-bottom: 0;
+}
+.textPage .block_buyer .email {
+  display: inline-block;
+}
+.textPage .block_buyer .email label {
+  font-size: 1.166em;
+  margin-bottom: 0;
+}
+.textPage .block_buyer .email input {
+  width: 230px;
+}
+.textPage.bying h2,
+.textPage.bying h3,
+.textPage.bying h4 {
+  font-family: Arial, sans-serif;
+}
+.textPage #layout_passengers {
+  padding-left: 15px;
+}
+.textPage #layout_passengers div.title {
+  padding-left: 25px;
+}
+.textPage div.passengersTable h4 {
+  padding-left: 25px;
+  font-size: 14px;
+}
+.textPage div.passengersTable .note {
+  line-height: 13px;
+  color: #808080;
+  padding: 20px 0 20px 25px;
+}
+.textPage div.passengersTable .note b {
+  color: #151515;
+  font-weight: normal;
+}
+.textPage div.passengersTable th {
+  font-weight: normal;
+  color: #5a5a5a;
+  text-align: left;
+  padding-left: 8px;
+  font-size: 11px;
+}
+.textPage div.passengersTable td {
+  vertical-align: middle;
+}
+.textPage div.passengersTable td.gender {
+  width: 15px;
+}
+.textPage div.passengersTable td.gender span {
+  margin: 0;
+}
+.textPage div.passengersTable td.name {
+  font-size: 1.166em;
+  padding-left: 8px;
+}
+.textPage div.passengersTable td input {
+  width: 88px;
+  margin: 0;
+  margin-left: 5px;
+}
+.textPage div.passengersTable td.passCountry {
+  padding-left: 5px;
+}
+.textPage div.passengersTable td.passCountry select {
+  width: 110px;
+}
+.textPage div.passengersTable td.passCountry .select {
+  position: relative;
+  width: 90px;
+}
+.textPage .paymentInfoblock {
+  padding: 10px 150px 5px 40px;
+  font-size: 16px;
+  line-height: normal;
+}
+.textPage .paymentInfoblock label {
+  font-size: 16px;
+}
+.textPage .paymentInfoblock li {
+  line-height: normal;
+}
+.textPage .radioArea {
+  margin-top: 2px;
+  background: url("../i/radioUnWhite.png") no-repeat scroll 0 0 transparent;
+}
+.textPage .radioAreaChecked {
+  margin-top: 2px;
+  background: url("../i/radioChkWhite.png") no-repeat scroll 0 0 transparent;
+}
+.textPage .paym .brdDot {
+  background: #ececec;
+}
+.textPage .paym .brdDot .span6:first-child {
+  background: #f3f3f3;
+}
+.textPage .toBuy {
+  padding: 50px 45px 50px 35px;
+}
+.textPage .toBuy .card {
+  font-size: 14px;
+}
+.textPage .toBuy .card h3 {
+  margin-bottom: 20px;
+}
+.textPage .toBuy .card .btn-group {
+  margin-bottom: 40px;
+}
+.textPage .toBuy .card .btn-group .btn {
+  outline: none;
+  font-size: 16px;
+  line-height: 55px;
+  text-transform: uppercase;
+  width: 200px;
+  float: left;
+}
+.textPage .toBuy .card .btn-group .btn.btn-primary {
+  cursor: default;
+}
+.textPage .toBuy .card div.byCard .cardNumber {
+  margin-bottom: 5px;
+}
+.textPage .toBuy .card div.byCard .expDate {
+  margin-bottom: 15px;
+}
+.textPage .toBuy .card div.byCard .holderName input {
+  width: 300px;
+}
+.textPage .toBuy .card div.byCard .holderName p {
+  font-size: 12px;
+}
+.textPage .toBuy .card div.byCard .holderName label {
+  padding-bottom: 5px;
+}
+.textPage .toBuy .card div.byCard label {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.textPage .toBuy .card div.byCard table td {
+  vertical-align: middle;
+}
+.textPage .toBuy .card div.byCard table td input {
+  width: 42px;
+  margin-right: 7px;
+  margin-bottom: 0;
+}
+.textPage .toBuy .card div.byCard table td.expMonth label {
+  font-size: 16px;
+  line-height: 1em;
+  width: 63px;
+}
+.textPage .toBuy .card div.byCard table td.expMonthLabel label,
+.textPage .toBuy .card div.byCard table td.expYearLabel label {
+  padding-right: 8px;
+  font-size: 12px;
+  text-align: center;
+}
+.textPage .toBuy .card div.byCard table td.cvv label {
+  font-size: 16px;
+  line-height: 1em;
+  width: 60px;
+  text-align: center;
+}
+.textPage .toBuy .card div.byCash {
+  display: none;
+}
+.textPage .toBuy .card div.byCash .price {
+  font-size: 24px;
+  color: #5a5a5a;
+}
+.brdDot {
+  border-bottom: 1px gray dotted;
 }

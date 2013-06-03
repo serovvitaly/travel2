@@ -24,15 +24,15 @@
   outline:none \0/;
 }
 
-.selectors .btn-group{
+/*.selectors .btn-group{
   margin-right:26px \0/;
-}
-:root .selectors .btn-group{
+}*/
+/*:root .selectors .btn-group{
   margin-right:38px \0/;
 }
 :root .selectors .btn-group.last{
   margin-right:0px \0/;
-}
+}*/
 
 .box-shadow{
   -webkit-box-shadow:  0px 0px 8px rgba(0, 0, 0, 0.3);

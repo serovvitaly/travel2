@@ -1,7 +1,7 @@
 window.tw = window.tw || {};
 var tmpl_Direction, tmpl_Multiway;
-var tmpl_FlightTypeButtons = '<div class="flightTypeButtons"><span class="oneway"></span><span class="round"></span><span class="multiway"></span></div>';
-var tmpl_CalendarButton = '<div class="calendarButton"><div class="lineSpreader"> </div><div class="text">{{if date}}<div class="date">${date}</div><div class="month">${month}</div>{{else}}?{{/if}}</div></div>';
+var tmpl_FlightTypeButtons = '<div class="flightTypeButtons  btn-group calend" data-toggle="buttons-radio"><span class="btn oneway"></span><span class="btn round"></span><span class="btn multiway"></span></div>';
+var tmpl_CalendarButton = '<div class="calendarButton btn btn-primary"><div class="lineSpreader" style="display: none;"> </div><div class="text">{{if date}}<div class="date">${date}</div><div class="month">${month}</div>{{else}}?{{/if}}</div></div>';
 var tmpl_Hint = '<div class="hint ${$data.className}"><div class="abs"><div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div><div class="t"></div><div class="r"></div><div class="b"></div><div class="l"></div><div class="c"></div><div class="arrUp"></div></div></div>';
 var objAvia, objSearchForm, objRecentSearches;
 $(function(){

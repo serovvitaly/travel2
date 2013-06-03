@@ -381,51 +381,6 @@ div#topPanel2 {
 }
 
 
-.flightTypeButtons {
-    width: 151px;
-    margin: 0 auto;
-}
-.flightTypeButtons .selected {
-    cursor: default;
-}
-.flightTypeButtons * {
-    display: inline-block;
-    vertical-align: middle;
-    width: 52px;
-    height: 42px;
-    background: url('/images/buttons_flightType_u0861.png');
-    cursor: pointer;
-}
-
-.flightTypeButtons .oneway.selected, .flightTypeButtons .oneway.selected:hover {
-    background-position: -312px 0;
-}
-.flightTypeButtons .oneway:hover {
-    background-position: -155px 0;
-}
-.flightTypeButtons .oneway {
-    background-position: 0 0;
-}
-
-.flightTypeButtons .round.selected, .flightTypeButtons .round.selected:hover {
-    background-position: -364px 0;
-}
-.flightTypeButtons .round:hover {
-    background-position: -208px;
-}
-.flightTypeButtons .round {
-    background-position: -52px 0;
-}
-
-.flightTypeButtons .multiway.selected, .flightTypeButtons .multiway.selected:hover {
-    background-position: -416px 0;
-}
-.flightTypeButtons .multiway {
-    background-position: -104px 0;
-}
-.flightTypeButtons .multiway:hover {
-    background-position: -260px 0;
-}
 
 
 
@@ -475,9 +430,9 @@ div#topPanel2 {
 }
 
 section .mainSearch .well .input-append input {
-    width: 205px;
+    /*width: 205px;
     padding-right: 50px;
-    background: #FFF;
+    background: #FFF;*/
 }
 
 
