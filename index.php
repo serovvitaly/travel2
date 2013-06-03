@@ -25,8 +25,8 @@
     
     
     
-<link rel="stylesheet" type="text/css" href="/one/css/common_u0580.css">
-<link rel="stylesheet" type="text/css" href="/one/css/calendar_u0580.css">
+<link rel="stylesheet" type="text/css" href="/twiket/css/common.css">
+<link rel="stylesheet" type="text/css" href="/twiket/css/calendar.css">
 <link rel="stylesheet" type="text/css" href="/ott-fixed.css"> 
    
 </head>

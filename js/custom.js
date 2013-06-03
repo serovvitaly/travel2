@@ -74,6 +74,11 @@ $(document).ready(function(){
 	}) */
 
 	$('.labelDynamics').click(function(){
+        
+        if ($(this).hasClass('disabled')) {
+            return false;
+        }
+        
 		$('.dynamics .hided').slideToggle();
 		$(this).toggleClass('open');
 		if($(this).hasClass('open')){

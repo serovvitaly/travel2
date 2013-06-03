@@ -170,6 +170,11 @@
     font-size: 13px;
     color: #1D1D1D;
 }
+.ResultTickets .FlightTicket.mini .pf_stops .nowrap{
+    width: 130px;
+    overflow: hidden;
+    height: 16px;
+}
 .ResultTickets .FlightTicket.mini .pf_stops, .ResultTickets .FlightTicket .pf_stops .nowrap {
     font-size: 10px;
     color: #F15A22;
@@ -790,4 +795,10 @@ section .mainSearch .well {
 
 .dynamics {
     z-index: 50;
+}
+
+
+a.labelDynamics.disabled {
+    background: url(../i/labelDynamics1_dis.png) no-repeat top;
+    cursor: context-menu;
 }
