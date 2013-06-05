@@ -435,6 +435,7 @@ section .mainSearch .well .input-append input {
 
 section .mainSearch .well .input-append input {
     width: 249px;
+    background: #FFF;
 }
 .input-append input, .input-append select, .input-append .uneditable-input {
     -webkit-border-radius: 4px;
@@ -675,8 +676,8 @@ a.labelDynamics.disabled {
 div.calendar{
     top: auto !important;
     margin: 21px 0 0 0;
-    width: 791px;
     z-index: 70px;
+    display: block;
 }
 
 
@@ -693,4 +694,8 @@ div.calendar{
 
 .multivariants .akPlate .logo {
     background: none;
+}
+
+.btn-group > .btn:hover, .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active {
+    z-index: 1;
 }
