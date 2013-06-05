@@ -9,8 +9,8 @@
  */
 @font-face {
   font-family: 'ALSRublRegular';
-  src: url('/font/rouble-webfont.eot');
-  src: local('☺'), url('/font/rouble-webfont.woff') format('woff'), url('/font/rouble-webfont.ttf') format('truetype'), url('/font/rouble-webfont.svg#ALSRublRegular') format('svg');
+  src: url('../font/rouble-webfont.eot');
+  src: local('☺'), url('../font/rouble-webfont.woff') format('woff'), url('../font/rouble-webfont.ttf') format('truetype'), url('../font/rouble-webfont.svg#ALSRublRegular') format('svg');
   font-weight: normal;
   font-style: normal;/* IE:EOT; Firefox:TTF,OTF,WOFF; Opera:TTF,OTF; Chrome:SVG,TTF,OTF; Safari:TTF,OTF */
 }
@@ -19,50 +19,50 @@
 }
 @font-face {
   font-family: 'PFAgoraSansPro-Medium';
-  src: url('/font/pfagorasanspromedium.eot');
-  src: url('/font/pfagorasanspromedium.eot?#iefix') format('embedded-opentype'), url('/font/pfagorasanspromedium.woff') format('woff'), url('/font/pfagorasanspromedium.ttf') format('truetype'), url('/font/pfagorasanspromedium.svg#PFAgoraSansPro-Medium') format('svg');
+  src: url('../font/pfagorasanspromedium.eot');
+  src: url('../font/pfagorasanspromedium.eot?#iefix') format('embedded-opentype'), url('../font/pfagorasanspromedium.woff') format('woff'), url('../font/pfagorasanspromedium.ttf') format('truetype'), url('../font/pfagorasanspromedium.svg#PFAgoraSansPro-Medium') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'PFAgoraSansPro-Black';
-  src: url('/font/pfagorasansproblack.eot');
-  src: url('/font/pfagorasansproblack.eot?#iefix') format('embedded-opentype'), url('/font/pfagorasansproblack.woff') format('woff'), url('/font/pfagorasansproblack.ttf') format('truetype'), url('/font/pfagorasansproblack.svg#PFAgoraSansPro-Black') format('svg');
+  src: url('../font/pfagorasansproblack.eot');
+  src: url('../font/pfagorasansproblack.eot?#iefix') format('embedded-opentype'), url('../font/pfagorasansproblack.woff') format('woff'), url('../font/pfagorasansproblack.ttf') format('truetype'), url('../font/pfagorasansproblack.svg#PFAgoraSansPro-Black') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'PFAgoraSansPro-Bold';
-  src: url('/font/pfagorasansprobold.eot');
-  src: url('/font/pfagorasansprobold.eot?#iefix') format('embedded-opentype'), url('/font/pfagorasansprobold.woff') format('woff'), url('/font/pfagorasansprobold.ttf') format('truetype'), url('/font/pfagorasansprobold.svg#PFAgoraSansPro-Bold') format('svg');
+  src: url('../font/pfagorasansprobold.eot');
+  src: url('../font/pfagorasansprobold.eot?#iefix') format('embedded-opentype'), url('../font/pfagorasansprobold.woff') format('woff'), url('../font/pfagorasansprobold.ttf') format('truetype'), url('../font/pfagorasansprobold.svg#PFAgoraSansPro-Bold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'PFAgoraSansPro-BoldItalic';
-  src: url('/font/pfagorasansprobolditalic.eot');
-  src: url('/font/pfagorasansprobolditalic.eot?#iefix') format('embedded-opentype'), url('/font/pfagorasansprobolditalic.woff') format('woff'), url('/font/pfagorasansprobolditalic.ttf') format('truetype'), url('/font/pfagorasansprobolditalic.svg#PFAgoraSansPro-BoldItalic') format('svg');
+  src: url('../font/pfagorasansprobolditalic.eot');
+  src: url('../font/pfagorasansprobolditalic.eot?#iefix') format('embedded-opentype'), url('../font/pfagorasansprobolditalic.woff') format('woff'), url('../font/pfagorasansprobolditalic.ttf') format('truetype'), url('../font/pfagorasansprobolditalic.svg#PFAgoraSansPro-BoldItalic') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'PFAgoraSansPro-Light';
-  src: url('/font/pfagorasansprolight.eot');
-  src: url('/font/pfagorasansprolight.eot?#iefix') format('embedded-opentype'), url('/font/pfagorasansprolight.woff') format('woff'), url('/font/pfagorasansprolight.ttf') format('truetype'), url('/font/pfagorasansprolight.svg#PFAgoraSansPro-Light') format('svg');
+  src: url('../font/pfagorasansprolight.eot');
+  src: url('../font/pfagorasansprolight.eot?#iefix') format('embedded-opentype'), url('../font/pfagorasansprolight.woff') format('woff'), url('../font/pfagorasansprolight.ttf') format('truetype'), url('../font/pfagorasansprolight.svg#PFAgoraSansPro-Light') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'AAvanteTitlerCpsUpCBold';
-  src: url('/font/ava_tcub.eot');
-  src: url('/font/ava_tcub.eot?#iefix') format('embedded-opentype'), url('/font/ava_tcub.woff') format('woff'), url('/font/ava_tcub.ttf') format('truetype'), url('/font/ava_tcub.svg#ava_tcub') format('svg');
+  src: url('../font/ava_tcub.eot');
+  src: url('../font/ava_tcub.eot?#iefix') format('embedded-opentype'), url('../font/ava_tcub.woff') format('woff'), url('../font/ava_tcub.ttf') format('truetype'), url('../font/ava_tcub.svg#ava_tcub') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'AAvanteTitlerCpsUpCLight';
-  src: url('/font/ava_tcul.eot');
-  src: url('/font/ava_tcul.eot?#iefix') format('embedded-opentype'), url('/font/ava_tcul.woff') format('woff'), url('/font/ava_tcul.ttf') format('truetype'), url('/font/ava_tcul.svg#ava_tcul') format('svg');
+  src: url('../font/ava_tcul.eot');
+  src: url('../font/ava_tcul.eot?#iefix') format('embedded-opentype'), url('../font/ava_tcul.woff') format('woff'), url('../font/ava_tcul.ttf') format('truetype'), url('../font/ava_tcul.svg#ava_tcul') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -5328,24 +5328,24 @@ span.center,
   margin: 0;
   height: 32px;
   position: relative;
-  background: url(/i/select_center.jpg) repeat-x;
+  background: url(../i/select_center.jpg) repeat-x;
 }
 .selectArea.smallSel {
   height: 27px;
-  background: url(/i/select_center_sm.jpg) repeat-x;
+  background: url(../i/select_center_sm.jpg) repeat-x;
 }
 .selectArea.smallSel a.selectButton {
   height: 27px;
 }
 .selectArea.smallSel span.left {
   height: 27px;
-  background: url(/i/select_left_sm.jpg) no-repeat;
+  background: url(../i/select_left_sm.jpg) no-repeat;
 }
 .selectArea.smallSel span.center {
   line-height: 25px;
 }
 .selectArea.smallSel a.selectButton {
-  background: url(/i/select_button_sm.jpg) no-repeat 0 0;
+  background: url(../i/select_button_sm.jpg) no-repeat 0 0;
 }
 a.selectButton {
   height: 32px;
@@ -5357,7 +5357,7 @@ span.left {
   height: 32px;
   position: absolute;
   top: 0;
-  background: url(/i/select_left.jpg) no-repeat;
+  background: url(../i/select_left.jpg) no-repeat;
 }
 span.center {
   line-height: 30px;
@@ -5369,7 +5369,7 @@ a.selectButton {
   width: 20px;
   right: 0px;
   top: 0;
-  background: url(/i/select_button.jpg) no-repeat 0 0;
+  background: url(../i/select_button.jpg) no-repeat 0 0;
   outline: none;
 }
 /*option*/
@@ -5405,7 +5405,7 @@ a.selectButton {
 }
 .select-center a:hover {
   color: #fff;
-  background: url(/i/select_center-a.png) repeat-x top;
+  background: url(../i/select_center-a.png) repeat-x top;
 }
 .radioArea,
 .radioAreaChecked,
@@ -5420,10 +5420,10 @@ a.selectButton {
   height: 16px;
 }
 .checkboxArea {
-  background: url(/i/chkUn.jpg) no-repeat 0 0px;
+  background: url(../i/chkUn.jpg) no-repeat 0 0px;
 }
 .checkboxAreaChecked {
-  background: url(/i/chkChk.jpg) no-repeat 0 0px;
+  background: url(../i/chkChk.jpg) no-repeat 0 0px;
 }
 /*radio*/
 .radioArea,
@@ -5433,10 +5433,10 @@ a.selectButton {
   margin-top: 6px;
 }
 .radioArea {
-  background: url(/i/radioUn.png) no-repeat;
+  background: url(../i/radioUn.png) no-repeat;
 }
 .radioAreaChecked {
-  background: url(/i/radioChk.png) no-repeat;
+  background: url(../i/radioChk.png) no-repeat;
 }
 .navbar-inner .container {
   position: relative;
@@ -5451,7 +5451,7 @@ a.selectButton {
   right: 0px;
   left: auto;
   padding: 0 37px;
-  background: url(/i/navAdd-bg.png) no-repeat top;
+  background: url(../i/navAdd-bg.png) no-repeat top;
   /* /li */
 
 }
@@ -5492,13 +5492,13 @@ a.selectButton {
 }
 .navbar-inner .container .navAdd > li.navMsg a.dropdown-toggle {
   padding-left: 30px;
-  background: url(/i/navMsg-bg.jpg) no-repeat left;
+  background: url(../i/navMsg-bg.jpg) no-repeat left;
 }
 .navbar-inner .container .navAdd > li.navMsg a.dropdown-toggle span {
   width: 16px;
   height: 15px;
   display: inline-block;
-  background: url(/i/navMsgSpan1-bg.png) no-repeat;
+  background: url(../i/navMsgSpan1-bg.png) no-repeat;
   text-align: center;
   line-height: 15px;
   margin-left: 5px;
@@ -5554,7 +5554,7 @@ a.selectButton {
 .navbar-inner .container .navAdd > li.navLang a.dropdown-toggle {
   color: #0ba6fd;
   text-decoration: none;
-  background: url(/i/navLang-bg.png) no-repeat right;
+  background: url(../i/navLang-bg.png) no-repeat right;
   padding-right: 22px;
 }
 .navbar-inner .container .navAdd > li.navLang .dropdown-menu {
@@ -5566,7 +5566,7 @@ a.selectButton {
 .navbar-inner .container .navAdd > li.navCurr a.dropdown-toggle {
   color: #0ba6fd;
   text-decoration: none;
-  background: url(/i/navCurr-bg.png) no-repeat right;
+  background: url(../i/navCurr-bg.png) no-repeat right;
   padding-right: 22px;
 }
 .navbar-inner .container .navAdd > li.navCurr .dropdown-menu {
@@ -5878,7 +5878,7 @@ p.searchResult a {
   left: -63px;
   width: 147px;
   height: 75px;
-  background: url(/i/dynDatePrice1.png) no-repeat top;
+  background: url(../i/dynDatePrice1.png) no-repeat top;
   font-family: 'AAvanteTitlerCpsUpCBold';
   font-size: 30px;
   color: #ffffff;
@@ -5911,7 +5911,7 @@ a.labelDynamics {
   position: absolute;
   bottom: -33px;
   left: 41%;
-  background: url(/i/labelDynamics1.png) no-repeat top;
+  background: url(../i/labelDynamics1.png) no-repeat top;
   width: 176px;
   height: 33px;
   text-align: center;
@@ -6010,174 +6010,6 @@ a.labelDynamics {
   font-size: 15px;
   color: #5a5a5a;
 }
-div.calendar {
-  position: absolute;
-  margin-left: -16px;
-  margin-top: 20px;
-  z-index: 100;
-  width: 828px;
-  display: none;
-}
-div.datepicker {
-  font-size: 13px;
-  float: left;
-  padding: 25px 32px;
-  width: 765px;
-  background-color: #3e3e3f;
-  background-image: -moz-linear-gradient(top, #545455, #1d1d1d);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#545455), to(#1d1d1d));
-  background-image: -webkit-linear-gradient(top, #545455, #1d1d1d);
-  background-image: -o-linear-gradient(top, #545455, #1d1d1d);
-  background-image: linear-gradient(to bottom, #545455, #1d1d1d);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff545455', endColorstr='#ff1d1d1d', GradientType=0);
-}
-div.datepicker.dp2 .ui-datepicker-prev {
-  display: none !important;
-}
-div.datepicker.dp2 table.ui-datepicker-calendar td .ui-state-default.ui-state-active span.grad {
-  background: url(/i/datepicTd_ui-state-active2-bg.png) no-repeat scroll 0 0 transparent;
-}
-div.datepicker .dateHeader {
-  font-size: 13px;
-  font-family: Arial;
-  color: #ffffff;
-  height: 50px;
-}
-div.datepicker .dateHeader p {
-  display: inline-block;
-}
-div.datepicker .dateHeader span.selDate {
-  color: #0f9dec;
-}
-div.datepicker .dateHeader img {
-  margin: 0 10px;
-}
-div.datepicker .dateHeader span.from {
-  text-decoration: underline;
-}
-div.datepicker .dateHeader .btn-group {
-  float: right;
-  margin: 0;
-}
-div.datepicker .dateHeader .btn-group .btn {
-  width: auto;
-  height: auto;
-}
-div.datepicker .dateHeader .btn-group .btn.active {
-  color: #eaeaea !important;
-}
-div.datepicker .ui-widget-content {
-  padding: 0;
-  border-radius: 0;
-  border: none;
-  background: none;
-  width: 760px !important;
-}
-div.datepicker .ui-widget-header {
-  background: none;
-  border: none;
-  height: 33px;
-}
-div.datepicker .ui-widget-header .ui-datepicker-title {
-  font-family: 'PFAgoraSansPro-Light';
-  font-size: 21px;
-  color: #eaeaea;
-  font-weight: normal;
-  line-height: 33px;
-  height: 33px;
-}
-div.datepicker .ui-widget-header .ui-datepicker-prev,
-div.datepicker .ui-widget-header .ui-datepicker-next {
-  height: 33px;
-  position: absolute;
-  top: 2px;
-  cursor: pointer;
-  width: 19px;
-}
-div.datepicker .ui-widget-header .ui-datepicker-prev span.ui-icon,
-div.datepicker .ui-widget-header .ui-datepicker-next span.ui-icon {
-  height: 33px;
-  width: 19px;
-  margin-top: 0;
-  top: 0;
-  right: 0;
-}
-div.datepicker .ui-widget-header .ui-datepicker-prev.ui-state-hover,
-div.datepicker .ui-widget-header .ui-datepicker-next.ui-state-hover {
-  border: none;
-  background: none;
-  top: 2px;
-  padding: 0;
-  margin: 0;
-}
-div.datepicker .ui-widget-header .ui-datepicker-prev {
-  left: 0;
-}
-div.datepicker .ui-widget-header .ui-datepicker-prev span.ui-icon {
-  background: url(/i/datepicPrevBtn.png) no-repeat;
-}
-div.datepicker .ui-widget-header .ui-datepicker-next {
-  right: 0;
-}
-div.datepicker .ui-widget-header .ui-datepicker-next span.ui-icon {
-  background: url(/i/datepicNextBtn.png) no-repeat;
-}
-div.datepicker table.ui-datepicker-calendar {
-  font-family: Arial;
-}
-div.datepicker table.ui-datepicker-calendar th {
-  color: #0f9dec;
-  font-size: 13px;
-  line-height: 20px;
-  font-weight: normal;
-  text-transform: lowercase;
-}
-div.datepicker table.ui-datepicker-calendar td {
-  font-size: 27px;
-  line-height: 1em;
-  padding: 4px;
-  height: 40px;
-  color: #ffffff;
-}
-div.datepicker table.ui-datepicker-calendar td .ui-state-default {
-  width: 41px;
-  height: 42px;
-  padding: 0;
-  text-align: center;
-  border: none;
-  line-height: 42px;
-  position: relative;
-  background: #000000 url(/i/datepicTd_ui-state-default-bg.png) no-repeat;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-div.datepicker table.ui-datepicker-calendar td .ui-state-default span.grad {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0;
-  content: '';
-  display: block;
-  height: 40px;
-  width: 41px;
-  background: url(/i/datepicTd_ui-state-default-grad-bg4.png) no-repeat;
-}
-div.datepicker table.ui-datepicker-calendar td .ui-state-default.ui-state-active {
-  color: #ffffff;
-  font-size: 10px;
-  text-align: right;
-  line-height: 15px;
-  padding-right: 5px;
-  padding-top: 3px;
-  width: 36px;
-  height: 37px;
-}
-div.datepicker table.ui-datepicker-calendar td .ui-state-default.ui-state-active span.grad {
-  background: url(/i/datepicTd_ui-state-active1-bg.png) no-repeat;
-}
 aside {
   width: 200px !important;
   margin-left: 30px !important;
@@ -6261,20 +6093,20 @@ aside article.side .inn .fl1 {
   height: 33px;
   display: inline-block;
   float: left;
-  background: url(/i/fl1.png) no-repeat top;
+  background: url(../i/fl1.png) no-repeat top;
 }
 aside article.side .inn .fl2 {
   width: 53px;
   height: 33px;
   display: inline-block;
   float: right;
-  background: url(/i/fl2.png) no-repeat bottom;
+  background: url(../i/fl2.png) no-repeat bottom;
 }
 aside article.side .inn.toggle .fl1 {
-  background: url(/i/fl1.png) no-repeat bottom;
+  background: url(../i/fl1.png) no-repeat bottom;
 }
 aside article.side .inn.toggle .fl2 {
-  background: url(/i/fl2.png) no-repeat top;
+  background: url(../i/fl2.png) no-repeat top;
 }
 aside article.side .inn .slider {
   float: left;
@@ -6302,7 +6134,7 @@ aside article.side .inn .slider.sliderType2 .ui-slider-handle {
   border: none;
   top: -5px;
   margin-left: -22px;
-  background: url(/i/flSliderHandle.png) no-repeat;
+  background: url(../i/flSliderHandle.png) no-repeat;
   border-radius: 0;
 }
 aside article.side .inn .slider.sliderType2 .ui-slider-range {
@@ -6318,7 +6150,7 @@ aside article.side .inn .slider.sliderType1 .ui-slider-handle {
   outline: none;
   border: none;
   top: -5px;
-  background: url(/i/sliderHandle.png) no-repeat;
+  background: url(../i/sliderHandle.png) no-repeat;
 }
 aside article.side .inn .slider.sliderType1 .ui-slider-range {
   background-color: #dd5627;
@@ -6360,23 +6192,23 @@ aside article.side .inn form .control-group .star {
   height: 10px;
   margin-top: 8px;
   display: inline-block;
-  background: url(/i/star-bg.png) no-repeat;
+  background: url(../i/star-bg.png) no-repeat;
 }
 .star-ok {
   width: 60%;
   height: 10px;
-  background: url(/i/star-ok-bg.png) no-repeat;
+  background: url(../i/star-ok-bg.png) no-repeat;
 }
 .star_big {
   width: 91px;
   height: 16px;
-  background: url(/i/star_big-bg.png) no-repeat;
+  background: url(../i/star_big-bg.png) no-repeat;
   position: relative;
 }
 .star_big-ok {
   width: 60%;
   height: 16px;
-  background: url(/i/star_big-ok-bg.png) no-repeat;
+  background: url(../i/star_big-ok-bg.png) no-repeat;
   cursor: pointer;
 }
 .sm_popup {
@@ -6387,7 +6219,7 @@ aside article.side .inn form .control-group .star {
   width: 316px;
   padding-bottom: 12px;
   color: #ffffff;
-  background: url(/i/star_big_popup-angle.png) no-repeat bottom left;
+  background: url(../i/star_big_popup-angle.png) no-repeat bottom left;
 }
 .sm_popup_inn {
   width: 284px;
@@ -6425,7 +6257,7 @@ aside article.side .inn form .control-group .star {
   position: relative;
 }
 .cityInfo .infoBlock {
-  background: url(/i/infoBlockArr.png) no-repeat bottom left;
+  background: url(../i/infoBlockArr.png) no-repeat bottom left;
   padding-bottom: 12px;
   display: none;
   position: absolute;
@@ -6489,7 +6321,7 @@ aside article.side .inn form .control-group .star {
 }
 .cityInfo .infoBlock .infoBlockInn .onmap {
   padding-left: 15px;
-  background: url(/i/onmap-bg.png) no-repeat top left;
+  background: url(../i/onmap-bg.png) no-repeat top left;
 }
 .cityInfo .infoBlock .infoBlockInn .onmap a {
   color: inherit;
@@ -6503,22 +6335,22 @@ aside article.side .inn form .control-group .star {
   padding-right: 105px;
 }
 .cityInfo .infoBlock .infoBlockInn .temp.sunShyne {
-  background: url(/i/tempSunShyne.png) no-repeat right top;
+  background: url(../i/tempSunShyne.png) no-repeat right top;
 }
 .cityInfo .infoBlock .infoBlockInn .temp.snow {
-  background: url(/i/tempSnow.png) no-repeat right top;
+  background: url(../i/tempSnow.png) no-repeat right top;
 }
 .cityInfo .infoBlock .infoBlockInn .temp.light {
-  background: url(/i/tempLight.png) no-repeat right top;
+  background: url(../i/tempLight.png) no-repeat right top;
 }
 .cityInfo .infoBlock .infoBlockInn .temp.sun {
-  background: url(/i/tempSun.png) no-repeat right top;
+  background: url(../i/tempSun.png) no-repeat right top;
 }
 .cityInfo .infoBlock .infoBlockInn .temp.cloud {
-  background: url(/i/tempCloud.png) no-repeat right top;
+  background: url(../i/tempCloud.png) no-repeat right top;
 }
 .cityInfo .infoBlock .infoBlockInn .temp.rain {
-  background: url(/i/tempRain.png) no-repeat right top;
+  background: url(../i/tempRain.png) no-repeat right top;
 }
 .cityInfo .infoBlock .infoBlockInn .phone {
   color: #008cd4;
@@ -6842,7 +6674,7 @@ article.ticket table tfoot td {
   border-bottom: none;
   height: 85px;
   padding: 0;
-  background: url(/i/modalVarHeadBg.jpg) no-repeat top;
+  background: url(../i/modalVarHeadBg.jpg) no-repeat top;
 }
 .modal#modalVariants .modal-header .head {
   padding: 25px 25px 25px 40px;
@@ -6896,7 +6728,7 @@ article.ticket table tfoot td {
   padding: 23px 15px 30px 22px;
   color: #5a5a5a;
   max-height: 800px;
-  background: url(/i/modalVarBodyBg.jpg) repeat-y top right;
+  background: url(../i/modalVarBodyBg.jpg) repeat-y top right;
 }
 .modal#modalMoreInfo {
   top: 10%;
@@ -7193,17 +7025,17 @@ p.ticketFoot {
   color: #5a5a5a;
 }
 .multivariants .selected .slat .bg {
-  background: url(/i/flVariantBg.jpg) repeat-x top;
+  background: url(../i/flVariantBg.jpg) repeat-x top;
   left: 0;
   right: 3px;
   z-index: -1;
 }
 .multivariants .selected .slat .bg .l {
-  background: url(/i/flVariantBgLeft.jpg) no-repeat top left;
+  background: url(../i/flVariantBgLeft.jpg) no-repeat top left;
   width: 5px;
 }
 .multivariants .selected .slat .bg .r {
-  background: url(/i/flVariantBgRight.jpg) no-repeat top right;
+  background: url(../i/flVariantBgRight.jpg) no-repeat top right;
   width: 5px;
 }
 .multivariants .slat .bg .l {
@@ -7311,7 +7143,7 @@ p.ticketFoot {
   background: #cad;
 }
 .multivariants .simpleVariants tr.noBkg {
-  background: url(/i/modalVarHeadBg.jpg) no-repeat scroll center top;
+  background: url(../i/modalVarHeadBg.jpg) no-repeat scroll center top;
 }
 .multivariants .simpleVariants tr.noBkg td {
   padding: 0;
@@ -7384,7 +7216,7 @@ p.ticketFoot {
   width: 103px;
   height: 43px;
   border: none;
-  background: url(/i/cellButtonBg.jpg) no-repeat top right;
+  background: url(../i/cellButtonBg.jpg) no-repeat top right;
   font-size: 1.5em;
   color: #ffffff;
 }
@@ -7411,21 +7243,21 @@ p.ticketFoot {
 .multivariants .infotitle {
   color: #f15a22;
 }
-/*div#layout_body {
+div#layout_body {
   position: fixed;
   top: 10%;
   left: 50%;
   z-index: 99;
-} */
+}
 div.spreader {
   -moz-box-sizing: border-box;
   margin-left: -495px;
   width: 990px;
 }
-/*#layout_results {
+#layout_results {
   position: relative;
   z-index: 10;
-} */
+}
 .FlightsByAKBlock {
   display: block;
   padding-bottom: 20px;
@@ -7977,7 +7809,7 @@ div.popup.TripsInfo {
   background-color: #fafafa;
 }
 .ticket .direction.planeTo {
-  background: #f2f2f2 url(/i/planeTo.jpg) no-repeat 40px 10px;
+  background: #f2f2f2 url(../i/planeTo.jpg) no-repeat 40px 10px;
 }
 .ticket .trip {
   margin-top: 1em;
@@ -8102,7 +7934,7 @@ div.popup.TripsInfo {
   width: 42px;
   height: 42px;
   display: inline-block;
-  background: url(/i/minus.png) no-repeat top left;
+  background: url(../i/minus.png) no-repeat top left;
 }
 .ticketPers table.tablePers .plus {
   width: 42px;
@@ -8112,7 +7944,7 @@ div.popup.TripsInfo {
   width: 42px;
   height: 42px;
   display: inline-block;
-  background: url(/i/plus.png) no-repeat top left;
+  background: url(../i/plus.png) no-repeat top left;
 }
 .ticketPers table.tablePers .num {
   width: 42px;

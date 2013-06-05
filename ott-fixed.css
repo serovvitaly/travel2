@@ -136,6 +136,7 @@
 .ResultTickets .FlightTicket .pf_button .showAKvariants span{
     color: #0F9DEC;
     text-decoration: underline;
+    cursor: pointer;
 }
 .ResultTickets .FlightTicket .pf_button .showAKvariants span:hover{
     color: #0A6DA4;
@@ -202,6 +203,7 @@
 .ResultTickets .FlightTicket.mini .pf_button .showAKvariants span{
     color: #0F9DEC;
     text-decoration: underline;
+    cursor: pointer;
 }
 .ResultTickets .FlightTicket.mini .pf_button .showAKvariants span:hover{
     color: #0A6DA4;
@@ -248,10 +250,6 @@
     width: 378px;
 }
 
-#layout_body{
-    padding: 0 !important;
-    width: auto !important;
-}
 .ResultTable{
     width: 100%;
 }
@@ -263,7 +261,7 @@
 
 .ResultTableWrapper table td{
     padding: 0;
-    width: 380px;
+   /* width: 380px;  */
     vertical-align: top;
 }
 
@@ -272,9 +270,6 @@
 .selectors {
     margin-left: 30px;
     width: 980px;
-}
-.selectors .btn-group {
-    margin-right: 29px;
 }
 
 
@@ -383,7 +378,10 @@ div#topPanel2 {
 
 
 
-
+section .mainSearch .well .input-append .btn{
+    height: 32px;
+    width: 37px;  
+}
 .suggestField .calendarButton {
     z-index: 7;
     position: absolute;
@@ -435,7 +433,9 @@ section .mainSearch .well .input-append input {
     background: #FFF;*/
 }
 
-
+section .mainSearch .well .input-append input {
+    width: 249px;
+}
 .input-append input, .input-append select, .input-append .uneditable-input {
     -webkit-border-radius: 4px;
        -moz-border-radius: 4px;
@@ -493,11 +493,6 @@ aside article.side .inn .slider.sliderType2 .ui-slider-handle {
     color: #8D8D8D;
     line-height: 25px;
 }
-
-div#layout_body {
-    z-index: 11;
-}
-
 
 .sm_popup {
     bottom: auto;
@@ -638,8 +633,7 @@ div#layout_body {
 }
 
 div.popup {
-    background: #FFF;
-    padding: 10px;
+    display: block;
 }
 
 
@@ -647,92 +641,6 @@ div#layout_panels {
     color: #585858;
 }
 
-
-div.calendar {
-    display: block;
-    z-index: 77; position: absolute; left: 0; right: 0;
-    margin: 21px auto 0;
-    color: white; background-color: #222222;
-    -webkit-border-radius: 0;
-       -moz-border-radius: 0;
-            border-radius: 0;
-    -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-            box-shadow: none;
-    border: none;    
-    
-    font-size: 13px;
-    padding: 25px 32px;
-    width: 765px;
-    background-color: #3e3e3f;
-    background-image: -moz-linear-gradient(top, #545455, #1d1d1d);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#545455), to(#1d1d1d));
-    background-image: -webkit-linear-gradient(top, #545455, #1d1d1d);
-    background-image: -o-linear-gradient(top, #545455, #1d1d1d);
-    background-image: linear-gradient(to bottom, #545455, #1d1d1d);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff545455', endColorstr='#ff1d1d1d', GradientType=0);
-}
-
-div.calendar div.caption { 
-    margin: 0; 
-    padding: 0 0 10px; 
-    background: none;
-    -webkit-border-top-left-radius: 0;
-    -webkit-border-top-right-radius: 0;
-    -webkit-border-radius: 0;
-       -moz-border-radius: 0;
-            border-radius: 0;
-}
-
-div.calendar div.date {
-    line-height: 42px;
-    font-size: 27px;
-    text-align: center;
-}
-div.calendar div.day.disabled {
-    color: #777575;
-    text-shadow: #333 1px 1px 0px;
-}
-div.calendar table.months td.roll span.arr {
-    display: inline-block;
-    width: 25px;
-    height: 31px;
-    margin: auto;
-    background: url(../i/datepicPrevBtn.png) no-repeat;
-    vertical-align: middle;
-}
-div.calendar table.months td.roll.right span.arr {
-    background: url(../i/datepicNextBtn.png) no-repeat;
-}
-div.calendar table.months td.roll.left {
-    font-size: 0;
-    width: 25px;
-}
-div.calendar table.months td.roll.right {
-    font-size: 0;
-    width: 25px;
-}
-div.calendar table.months td.month.left, div.calendar table.months td.month.right {
-    text-align: center;
-    font-family: 'PFAgoraSansPro-Light';
-    font-size: 21px;
-    color: #EAEAEA;
-    font-weight: normal;
-    line-height: 33px;
-}
-
-div.calendar table.caption .caption {
-    height: 30px;
-    padding: 0;
-    margin: 0;
-}
-
-div.calendar div.day {
-    width: 44px;
-    height: 42px;
-    position: relative;
-}
 
 
 .miniTickets_Fix .FilterResult{
@@ -761,4 +669,28 @@ a.labelDynamics.disabled {
 
 .dynamics .dynTo .navbar.dynDateGraph li.selected a, .dynamics .dynFrom .navbar.dynDateGraph li.selected a {
     background: #F76636;
+}
+
+
+div.calendar{
+    top: auto !important;
+    margin: 21px 0 0 0;
+    width: 791px;
+    z-index: 70px;
+}
+
+
+.FlightsByAKBlock{
+    z-index: 100;
+    width: 990px;
+    position: absolute;
+    margin-left: 25px;
+    display: none;
+}
+.multivariants .akPlate .pf_light_speck {
+    background: none;
+}
+
+.multivariants .akPlate .logo {
+    background: none;
 }

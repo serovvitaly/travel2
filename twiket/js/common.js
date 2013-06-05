@@ -5,7 +5,7 @@ $(function(){
 	//setLogo();
 	//setBackground();
 	if (document.getElementById('tmpl_Popup')) {
-		//$.template('tmpl_Popup', $("#tmpl_Popup").trim());
+		$.template('tmpl_Popup', $("#tmpl_Popup").trim());
 	}
 	//new initLanguage();
 	//new initTopMenu();

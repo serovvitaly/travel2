@@ -10,10 +10,13 @@
   <link rel="stylesheet" type="text/css" href="/css/sliderkit-core.css" rel="stylesheet"/>
   <link rel="stylesheet" type="text/css" href="/css/sliderkit-demos.css" rel="stylesheet"/>
   <link rel="stylesheet" type="text/css" href="/css/sliderkit-demos-ie8.css" rel="stylesheet"/>
+  
   <link href="/css/bootstrap.css" rel="stylesheet">  
   <link href="/css/jquery-ui-1.10.2.custom.min.css" rel="stylesheet">
   <!-- <link href="/css/responsive.css" rel="stylesheet"> -->
   <link href="/css/browser-hack.css" rel="stylesheet">
+  
+  <link rel="stylesheet" type="text/css" href="/css/calendar.css">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -34,140 +37,7 @@
   <? include 'content.html'; ?>
   <? include 'templates.html'; ?>
 
-  <!-- Modal -->
 
-  <div class="popup TripsInfo" style="height: 391px; position: fixed; display:none;">
-    <div>
-      <div>
-        <div class="ticket">
-          <div class="akPlate TK">
-            <span class="name">Turkish Airlines</span>
-            <div style="background: url(/images/ak/big/TK_u0861.png)" class="logo"></div>
-          </div>
-          <div class="direction planeTo"> 
-            <div class="trip">
-              <div class="directionTitle">
-                <span class="from">Лондон, </span>Великобритания
-                <span>&nbsp;→ </span>
-                <span class="to">Москва, </span>Россия <span class="vylet">вылет</span> 
-                <span class="date">17 июня, </span>
-                <span class="weekDay">понедельник</span>
-              </div>
-              <div class="directionBody">
-                <table>
-                  <colgroup>
-                    <col class="departure">
-                    <col class="place">
-                    <col class="arrival">
-                    <col class="place">
-                    <col class="flightNumber">
-                    <col class="ak">
-                    <col class="cs">
-                    <col class="plane">
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th>вылет</th>
-                      <th>аэропорт</th>
-                      <th>прилёт</th>
-                      <th>аэропорт</th>
-                      <th>рейс</th>
-                      <th>перевозчик</th>
-                      <th>класс</th>
-                      <th>самолёт</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <span class="time">18:35</span>
-                      </td>
-                      <td>
-                        <span data-code="LHR" class="airport">Хитроу&nbsp;(1)</span>
-                      </td>
-                      <td>
-                        <span class="time">01:35</span>
-                      </td>
-                      <td>
-                        <span data-code="VKO" class="airport">Внуково&nbsp;(A)</span>
-                      </td>
-                      <td class="flightNumber">UN-354</td>
-                      <td class="ak"><img src="/i/ak01.jpg" alt=""></td>
-                      <td class="cs">Эконом&nbsp;(I)</td>
-                      <td class="plane">Boeing 737-700</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="duration">
-                <span>4 часа</span>
-              </div>
-            </div>
-            <div class="change">Прибытие 28 апреля, пересадка 2 часа 30 мин, вылет на следующий день</div> 
-            <div class="trip last">
-              <div class="directionTitle">
-                <span class="from">Лондон, </span>Великобритания
-                <span>&nbsp;→ </span>
-                <span class="to">Москва, </span>Россия <span class="vylet">вылет</span>
-                <span class="date">17 июня, </span>
-                <span class="weekDay">понедельник</span>
-              </div>
-              <div class="directionBody">
-                <table>
-                  <colgroup>
-                    <col class="departure">
-                    <col class="place">
-                    <col class="arrival">
-                    <col class="place">
-                    <col class="flightNumber">
-                    <col class="ak">
-                    <col class="cs">
-                    <col class="plane">
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th>Вылет</th>
-                      <th>аэропорт</th>
-                      <th>Прилёт</th>
-                      <th>аэропорт</th>
-                      <th>Рейс</th>
-                      <th>Перевозчик</th>
-                      <th>Класс</th>
-                      <th>Самолёт</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <span class="time">18:35</span>
-                      </td>
-                      <td>
-                        <span data-code="LHR" class="airport">Хитроу&nbsp;(1)</span>
-                      </td>
-                      <td>
-                        <span class="time">01:35</span>
-                      </td>
-                      <td>
-                        <span data-code="VKO" class="airport">Внуково&nbsp;(A)</span>
-                      </td>
-                      <td class="flightNumber">UN-354</td>
-                      <td class="ak">Transaero</td>
-                      <td class="cs">Эконом&nbsp;(I)</td>
-                      <td class="plane">Boeing 737-700</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="duration">
-                <span>4 часа</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="close_button"></div>
-  </div>
 
 
   <!-- Modal -->
@@ -454,8 +324,8 @@
                 </div>
             </div>
         </div>
-        <div style="height: 50px;"></div>
-        <form id="form_search_2" class="form-inline row" action="">
+        
+        <!--form id="form_search_2" class="form-inline row" action="">
           <div class="well span10">
             <div class="btn-toolbar">
               <div class="input-append">
@@ -497,11 +367,11 @@
                     </div>
                   </div>
                 </div>
-              </div>  <!-- /calendar -->
-          </div>  <!-- /well -->
+              </div> 
+          </div> 
 
           <input type="submit" class="btn btn-danger span2" value="ПОИСК">
-        </form>
+        </form-->
 
         <div class="span12 dynamics">
           <div class="hided">
@@ -661,47 +531,50 @@
       <div class="span12 selectors">
         <div class="btn-row">
           <div class="btn-toolbar">
-            <div class="FlightsDifficulties">
+            
+            <div class="FlightsDifficulties" style="display: inline-block;">
               <div class="btn-group d_option" data-toggle="buttons-radio">
                 <button class="d_direction btn d_first active">Все рейсы</button>
                 <button class="d_direction btn d_last">Прямые</button>
               </div>
             </div>
-
-            <div class="FlightPriceInformation">
-              <div class="ComparePriceSelection">
+            
+            <div class="FlightPriceInformation" style="display: inline-block;">
+              <div class="ComparePriceSelection" style="display: inline-block;">
                 <div class="btn-group d_option" data-toggle="buttons-radio">
-                  <button class="d_direction btn d_first active">Итоговая</button>
+                  <button class="d_direction btn d_first">Итоговая</button>
                   <button class="d_direction btn d_last">Сравнительная</button>
                 </div>
               </div>
 
-              <div class="classSearch_wrapper">
+              <div class="classSearch_wrapper" style="display: inline-block;">
                 <label class="checkbox">класс: </label>
                 <div class="btn-group d_option" data-toggle="buttons-radio">
-                  <button class="d_direction btn d_first active" cs="E">Эконом</button>
+                  <button class="d_direction btn d_first" cs="E">Эконом</button>
                   <button class="d_direction btn d_middle" cs="B">Бизнес</button>
                 </div>
               </div>
             </div>
             
-            <div class="btn-group last" data-toggle="buttons-radio">
-              <button class="btn">RUB</button>
-              <button class="btn active">USD</button>
-              <button class="btn">EUR</button>
+            <div id="CurrenciesBlock" style="float: right;">
+              <div class="btn-group last d_option" data-toggle="buttons-radio">
+                <button class="d_direction btn" data-cur="RUB">RUB</button>
+                <button class="d_direction btn" data-cur="USD">USD</button>
+                <button class="d_direction btn" data-cur="EUR">EUR</button>
+              </div>
             </div>
             <label class="last">валюта:</label>
           </div>  <!-- /btn-toolbar -->
         </div>
       </div>  <!-- /selectors -->
 
-      <div class="span10 tickets">
+      
         
-          <div id="layout_body" class="spreader">
-            <div id="layout_results"></div>
-          </div>
+      <div id="layout_body">
+        <div id="layout_results"></div>
+      </div>
         
-      </div>  <!-- /tickets -->
+      
       
     </div>
   </section> <!-- /container -->

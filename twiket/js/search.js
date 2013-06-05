@@ -1,6 +1,6 @@
 window.tw = window.tw || {};
 var tmpl_Direction, tmpl_Multiway;
-var tmpl_FlightTypeButtons = '<div class="flightTypeButtons  btn-group calend" data-toggle="buttons-radio"><span class="btn oneway"></span><span class="btn round"></span><span class="btn multiway"></span></div>';
+var tmpl_FlightTypeButtons = '<div class="flightTypeButtons  btn-group calend" data-toggle="buttons-radio"><span class="btn oneway"><img src="/i/btnFlight1.png"></span><span class="btn round"><img src="/i/btnFlight2.png"></span><span class="btn multiway"><img src="/i/btnFlight3.png"></span></div>';
 var tmpl_CalendarButton = '<div class="calendarButton btn btn-primary"><div class="lineSpreader" style="display: none;"> </div><div class="text">{{if date}}<div class="date">${date}</div><div class="month">${month}</div>{{else}}?{{/if}}</div></div>';
 var tmpl_Hint = '<div class="hint ${$data.className}"><div class="abs"><div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div><div class="t"></div><div class="r"></div><div class="b"></div><div class="l"></div><div class="c"></div><div class="arrUp"></div></div></div>';
 var objAvia, objSearchForm, objRecentSearches;
@@ -252,7 +252,7 @@ RecentSearches.prototype.draw = function(){
 			var elLi = document.createElement("li");
 				elLi.className = data.cs;
 			if (objAvia.currentRequestKey == data.getKey()) {
-				$(elLi).addClass("selected");
+				$(elLi).addClass("active");
 			} else {
 				elLi.style.zIndex = length - i;
 			}
@@ -574,13 +574,13 @@ SearchForm.prototype.setFlightTypeButtons = function(){
 	
 	var betweenFromTo = $(".betweenFromTo", this.dirRows[0].layout)[0];
 		betweenFromTo.appendChild(this.flightTypeButtons);
-	$("span." + this.data.flightType, this.flightTypeButtons).addClass("selected");
+	$("span." + this.data.flightType, this.flightTypeButtons).addClass("active");
 };
 SearchForm.prototype.setFlightType = function(flightType){
-	var selectedButton = $("span.selected", this.flightTypeButtons);
+	var selectedButton = $("span.active", this.flightTypeButtons);
 	if (!$(selectedButton).hasClass(flightType)) {
-		$("span.selected", this.flightTypeButtons).removeClass("selected");
-		$("span." + flightType, this.flightTypeButtons).addClass("selected");
+		$("span.active", this.flightTypeButtons).removeClass("active");
+		$("span." + flightType, this.flightTypeButtons).addClass("active");
 		this.data.flightType = flightType;
 		var length = this.data.directions.length;
 		this.data.directions.splice(1, length - 1);

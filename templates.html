@@ -356,14 +356,6 @@
             <div id="ticket_rotation"/>
         </div>
     {{else}}
-        {{if $item.markClass}}
-            <div class="pf_mark ${$item.markClass}"></div>
-            {{if $item.markClass=="time"}}
-                <h2 class="blue">САМЫЙ БЫСТРЫЙ БИЛЕТ</h2>
-            {{else}}
-                <h2>САМЫЙ дешевый БИЛЕТ</h2>
-            {{/if}}
-        {{/if}}
         <div class="FlightTicket {{if $item.mini}}mini{{/if}}">
             <div class="akPlate ${AK}">
                 <div class="pf_light_speck"><div></div></div>
@@ -380,7 +372,9 @@
                 {{if parseInt(ref.AirlineLogos[AK],10)>0}}
                     <div class="logo{{if $item.markClass}} moved{{/if}}" style="background: url('images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png'/*tpa=http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png*/);"></div>
                 {{/if}}
-                
+                {{if $item.markClass}}
+                    <div class="pf_mark ${$item.markClass}"></div>
+                {{/if}}
             </div>
             <div class="pf_bottom{{if $item.mini}} TicketOut{{/if}}">
                 <div class="color_puller">
@@ -403,7 +397,7 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <div class="moment-flower">
+                                        <div>
                                             <span class="StartTime">${html_tmpl.StartTime[$index]}</span>&mdash;<span class="bold">${html_tmpl.EndTime[$index]}</span>
                                             {{if html_tmpl.StartDate[$index] != html_tmpl.EndDate[$index]}}
                                                 <span class="nowrap">${MakeArrivalDateFlightInfo(html_tmpl.EndDate[$index])}</span>
@@ -468,7 +462,7 @@
                                         <table>
                                             <tr>
                                                 <td>
-                                                    <div class="commoner">
+                                                    <div>
                                                         ${l10n.searchResult.block.noChangeBoard}
                                                         {{if !$item.mini}}
                                                             ${', '}<span class="showTripInfo" info="${FlightIndex},${$index}">${l10n.searchResult.block.moreInfo}</span>
@@ -549,10 +543,8 @@
                 </div>
                 {{if $item.count>1}}
                     <div class="showAKvariants{{if $item.mini}} TicketOut{{/if}}" opt="${$item.direct},${AK}">
-                        <div><span>${l10n.searchResult.block.more} ${l10n.searchResult.block.variants}</span></div>
+                        <div><span>${l10n.searchResult.block.more} {{if $item.markClass}}${l10n.searchResult.block.variants}{{/if}}</span></div>
                     </div>
-                {{else}}
-                    <div style="height:16px"></div>
                 {{/if}}
                 <button class="price_button{{if $item.mini}} TicketOut{{/if}}" onclick="FareConfirmation({FlightIndex: ${FlightIndex}, element: this})" data-markclass="${$item.markClass}">
                     <div class="price_wrapper">
@@ -578,8 +570,8 @@
             {{/if}}
         </div>
     {{/if}}
-</script> 
-<script id="tmpl_AirlineFlights" type="text/x-jquery-tmpl">    
+</script>
+<script id="tmpl_AirlineFlights" type="text/x-jquery-tmpl">
     <div class="FlightTicket multivariants">
         <div class="akPlate ${AK}">
             <div class="pf_light_speck"><div></div></div>
@@ -726,39 +718,26 @@
     </tbody>
 </script>
 <script id="tmpl_newAirlineFlights" type="text/x-jquery-tmpl">
-  <div class="modal" id="modalVariants">
-    <div class="modal-header">
-      <div class="head">
-        <h2>${ref.Airlines[AK]}</h2>
-        <div class="RedrawOptions invisible">
-          <p>варианты сортировать по
-            <a href="javascript:;"><span data-sort="byPrice">${l10n.searchResult.block.sort[1]}</span></a>
-            <a href="javascript:;"><span data-sort="byTravelTime">${l10n.searchResult.block.sort[2]}</span></a>
-            <a href="javascript:;"><span data-sort="ByDeparture">${l10n.searchResult.block.sort[3]}</span></a>
-          </p>
-        </div>
-      </div>
-      <button type="button" class="close">×</button>
-    </div>
-    <div class="modal-body">
-    
-    
-    <div class="FlightTicketVariant multivariants">
+    <div class="FlightTicket multivariants">
         {{if !$data.single}}
             <div class="ReturnToResult default">
                 <div class="return">${l10n.searchResult.block.all}</div>
-                <div class="close_button" style="display:none"></div>
+                <div class="close_button"></div>
             </div>
         {{/if}}
         <div class="pf_bottom">                    
             <div class="content simpleVariants">
-                <table class="table ticketTable">
+                <table>
                     <tr class="noBkg">
                         <td colspan="{{if add.startTime2[0]}}2{{else}}5{{/if}}" class="noPadding">
                             <div class="akPlate ${AK}">
                                 <div class="pf_light_speck"><div></div></div>
+                                <div class="pf_AKname">
+                                    <h2>${ref.Airlines[AK]}</h2>
+                                    <div class="RedrawOptions invisible">, ${l10n.searchResult.block.sort[0]} <span data-sort="byPrice">${l10n.searchResult.block.sort[1]}</span> | <span data-sort="byTravelTime">${l10n.searchResult.block.sort[2]}</span> | <span data-sort="ByDeparture">${l10n.searchResult.block.sort[3]}</span></div>
+                                </div>
                                 {{if parseInt(ref.AirlineLogos[AK],10)>0}}
-                                    <div class="logo" style="background: url('http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png'/*tpa=http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png*/);"></div>
+                                    <div class="logo" style="background: url('images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png'/*tpa=http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png*/);"></div>
                                 {{/if}}
                             </div>                        
                         </td>
@@ -1089,10 +1068,6 @@
         </div>
             
     </div>
-    
-    
-    </div>
-  </div>
 </script>
 <script id="tmpl_AirlineFlightsTableHeader" type="text/x-jquery-tmpl">
     <span class="ib opt2">${l10n.searchResult.block.titles[0]}</span>
@@ -1804,21 +1779,6 @@
 </script>
         
 <script id="tmpl_PassengerSelect" type="text/x-jquery-tmpl">
-  <div class="modal" id="modalPrice">
-    <div class="modal-header">
-      <div class="head">
-        <h2>AirBaltic</h2>
-        <a href="javascript:;">подробнее о перелете</a>
-        <a href="javascript:;">правила обмена и возврата</a>
-      </div>
-      <div class="headLogo">
-        <img src="./i/headLogo.jpg" alt="">
-      </div>
-      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    </div>
-    <div class="modal-body">
-    
-    
     <form id="popup_passengerSelect">
         <div class="ConfirmInfoFlight"></div>
         <div class="innerContent">
@@ -1958,14 +1918,6 @@
         </div>
         <div class="close_button"></div>
     </form>
-    
-    
-    </div>
-    <div class="modal-footer">
-      <p>Сумма к оплате 48 679 Р</p>
-      <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">ПЕРЕЙТИ К ОПЛАТЕ</button>
-    </div>
-  </div>
 </script>
 
 <script id="tmpl_ConfirmationFlightInformation" type="text/x-jquery-tmpl">

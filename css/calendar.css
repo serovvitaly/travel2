@@ -1,0 +1,80 @@
+div.calendar {
+	display: block !important;
+	z-index: 77; position: absolute; left: 0; right: 0;
+	padding: 19px;
+	color: #eaeaea;
+	background:#1d1d1d url(../i/calendar_bg.png) repeat-x top;
+	/*-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+			border-radius: 10px;*/
+	-webkit-box-shadow: 5px 5px 20px black;
+	   -moz-box-shadow: 5px 5px 20px black;
+			box-shadow: 5px 5px 20px black;
+	/*border: 1px solid; border-color: #414141 #101010 #0c0c0c;*/
+	width: 788px;
+	position: absolute;
+    margin-top:20px;
+}
+div.calendar .icoPlane { display: inline-block; width: 26px; height: 25px; background: url("../i/planes.png") no-repeat center left; }
+div.calendar .icoPlane.returnFlight { background-position: center right !important; }
+div.calendar .withStop { color: #ff7000; }
+div.calendar .prevdoStraight { color: #FFB880; }
+
+div.calendar table { border-collapse: collapse; table-layout: fixed; }
+div.calendar table td { padding: 0; vertical-align: top; }
+
+div.calendar div.caption { margin: -20px -20px 0; padding: 20px 20px 0 20px; 
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-radius: 10px 10px 0 0;
+	   -moz-border-radius: 10px 10px 0 0;
+			border-radius: 10px 10px 0 0;
+}
+div.calendar table.caption { width: 100%; overflow: hidden; }
+div.calendar table.caption td.caption>div { min-height: 2em; }
+div.calendar table.caption td { padding: 0 2px; text-align: right; vertical-align: middle; }
+div.calendar table.caption td:first-child { text-align: left; }
+div.calendar table.caption .icoPlane { margin: 0 10px; height: 25px; vertical-align: text-bottom; background: url(../i/planes_white.png) no-repeat; vertical-align: middle;}
+div.calendar td.caption span.caption1 { color: #0f9dec; font-size: 13px; }
+div.calendar td.caption span.caption { font-size: 13px; position: relative; color:#eaeaea; display: inline-block; line-height: 25px;}
+div.calendar td.caption span.dashed { font-size: 80%; margin-left: 1em; color: #8c8c8c; }
+div.calendar td.legend { font-size: 80%; width: 7.5em; position: relative; }
+div.calendar td.legend>span { display: inline-block; }
+
+div.calendar table.months { width: 100%; margin: 10px 0; }
+div.calendar table.months td { height: 25px; vertical-align: baseline; }
+div.calendar table.months td.center { width: 40px; }
+div.calendar table.months td.month { font-size: 21px; color:#eaeaea;}
+div.calendar table.months td.month.left { text-align: center; }
+div.calendar table.months td.month.right { text-align: center; }
+div.calendar table.months td.month span { color: #E4A200; }
+div.calendar table.months td.roll { color: #888; width:50px;}
+div.calendar table.months td.roll.left { text-align: left; }
+div.calendar table.months td.roll.right { text-align: right; }
+div.calendar table.months td.roll>span { cursor: pointer; }
+div.calendar table.months td.roll span.arr { display: inline-block; width: 19px; height: 33px; margin: auto; background: url(../i/arrows.png) no-repeat left top; vertical-align: middle; }
+div.calendar table.months td.roll.right span.arr { background-position: right top; }
+div.calendar table.months td.roll span.month { text-transform: lowercase; font-size: 80%; text-decoration: underline; }
+
+
+div.calendar table.weekdays { width: 100%; margin: 8px 0; }
+div.calendar table.weekdays table { width: 100%; }
+
+div.calendar div.body { width: 100%; overflow: hidden; }
+div.calendar table.roll>tbody>tr>td { padding-left: 36px; }
+div.calendar table.roll>tbody>tr>td:first-child { padding-left: 0; }
+div.calendar table.calendar {  }
+div.calendar table.calendar td { text-align: center; padding: 5.5px; }
+div.calendar table.calendar thead td { vertical-align: bottom; color: #0f9dec; font-size: 13px; text-transform: uppercase; padding: 2px; text-align: center; }
+div.calendar table.calendar thead td.weekend { color: #9e0205; }
+div.calendar table.calendar tbody td { color: #ccc; }
+div.calendar div.day { width: 43px; height:42px; position: relative; }
+div.calendar div.day.disabled { color: #444; text-shadow: #333333 1px 1px 0px; background: url("../i/day_bg.png") no-repeat left top;}
+div.calendar div.day.enabled { background: url("../i/day_bg.png") no-repeat left bottom; cursor: pointer; }
+div.calendar div.day.enabled:hover { background-position: left -43px; }
+div.calendar div.day.today { color: #308BE2; }
+div.calendar div.date { line-height: 42px; font-size: 28px; text-align: center; font-weight: bold;}
+div.calendar div.stroke { z-index: 7; position: absolute; margin: auto; top: 0; bottom: 0; left: 3px; right: 2px; height: 0; border-top: 1px solid rgba(0,0,0,0.9); border-bottom: 1px solid rgba(255,255,255,0.2); }
+div.calendar div.day .icoPlane { z-index: 3; position:absolute; margin: auto; top: 0; right: 0; bottom: 0; left: 0; }
+div.calendar div.flight { text-align: left; }
+div.calendar div.flight div.date { float:right;font-size: 10px; text-align: center; line-height: normal; padding: 3px 4px; display: inline-block; vertical-align: top; }
