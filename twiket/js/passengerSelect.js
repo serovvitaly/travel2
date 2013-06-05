@@ -719,10 +719,10 @@ PassengerSelect.prototype.show = function(data){
 	if ($(this.$table[1]).hasClass('invisible') && $(this.$table[2]).hasClass('invisible')) {
 		$(this.showChildrenLink).removeClass('invisible');
 		$(this.childrenBlock).css({
-			//display: 'none'
+			display: 'none'
 		});
 	} else {
-		//$(this.showChildrenLink).addClass('invisible');
+		$(this.showChildrenLink).addClass('invisible');
 		$(this.childrenBlock).css({
 			display: 'block'
 		});
@@ -797,14 +797,16 @@ PassengerSelect.prototype.show = function(data){
 	if(tw.oResult.isAKVisible) {
 		resultShowBlock = tw.oResult.AKFlightInformation;
 	}
-	fadeOutBlock($('.FlightPriceInformation'));
+	//fadeOutBlock($('.FlightPriceInformation'));
 	fadeOutBlock(resultShowBlock, function(){
 		fadeInBlock(self.elForm);
 	});
-	objSearchForm.hide(function(){
+	/*objSearchForm.hide(function(){
 		self.setPageTitle()
-	});
+	}); */
 	objRecentSearches.hide();
+    
+    ShadingShow();
 };
 PassengerSelect.prototype.setPageTitle = function(){
 	$('#pageTitle', this.elPageTitlePanel)[0].innerHTML = l10n.searchResult.passengers.pageTitle;

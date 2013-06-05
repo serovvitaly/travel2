@@ -36,11 +36,8 @@ div.spreader {
 .multivariants .optTime{
   width:110px;
 }
-.multivariants .opt4{
-  width:90px;
-}
-.multivariants .opt4{
-  width:110px;
+.multivariants .stat_info .opt1{
+	width:90px;
 }
 .multivariants .opt2{
 	width:55px;
@@ -48,15 +45,15 @@ div.spreader {
 .multivariants .opt3{
 	width:55px;
 }
+.multivariants .opt4{
+  width:110px;
+}
 .multivariants .simpleVariants td.cellButton{
   width:105px;
   padding:0 10px;
 }
 .FlightTicket.multivariants .table_header .leftIndent{
   padding-left:120px;
-}
-.multivariants .stat_info .opt1{
-	width:90px;
 }
 #popup_passengerSelect .ConfirmInfoFlight .akPlate span.dashed{
 	padding:23px 0;
@@ -71,4 +68,47 @@ div.spreader {
 	position: relative;
 	width:820px;
 	margin:50px 100px;
+}
+#popup_passengerSelect .simpleVariants tr.single td{
+	width:800px;
+}
+#popup_passengerSelect .simpleVariants tr.single .opt2{
+	width:190px;
+}
+#popup_passengerSelect .simpleVariants tr.single .opt3{
+	width:190px;
+}
+#popup_passengerSelect .simpleVariants tr.single .opt4{
+  width:190px;
+}
+
+
+.FlightTicket.multivariants .simpleVariants tr.single .m_row_item .opt2{
+  width:190px;
+}
+.FlightTicket.multivariants .simpleVariants tr.single .m_row_item .opt3{
+  width:190px;
+}
+.FlightTicket.multivariants .simpleVariants tr.single .m_row_item .opt4{
+  width:190px;
+}
+.FlightTicket.multivariants .simpleVariants tr.single .m_row_item .TripsStars{
+  display: none;
+}
+
+.ticket .trip .directionTitle .TripStars{
+  display: none;
+}
+
+.ticket .directionBody table col.place{
+  width:120px;
+}
+.ticket .directionBody table col.departure{
+  width:70px;
+}
+.ticket .directionBody table col.arrival{
+  width:70px;
+}
+.ticket .directionBody table col.cs{
+  width:90px;
 }
