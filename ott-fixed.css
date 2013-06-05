@@ -684,7 +684,6 @@ div.calendar{
 .FlightsByAKBlock{
     z-index: 100;
     width: 990px;
-    position: absolute;
     margin-left: 25px;
     display: none;
 }
