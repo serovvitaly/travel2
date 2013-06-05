@@ -474,12 +474,16 @@ PassengerSelect.prototype.setStAvl = function(){
 PassengerSelect.prototype.getChildrenPrices = function(){
 	var self = this;
 	var params = this.params;
+    
+    params.source    = twiket.setup.source;
+    params.srcmarker = twiket.setup.marker;
+    
 	MakeRequest();
 	function MakeRequest(){
 		$.ajax({
 			iframeId: "pm",
 			type: "post",
-			dataType: "json",
+			dataType: "jsonp",
 			url: 'https://secure.onetwotrip.com/_api/confirmation/searchfare/',
 			data: {
 				"params": JSON.stringify(params)
@@ -709,16 +713,16 @@ PassengerSelect.prototype.setFlightInformationData = function(){
 PassengerSelect.prototype.show = function(data){
 	var self = this;
 	if(this.needUserInfo && !this.progressUserInfo){
-		this.getUserInfo();
+		//this.getUserInfo();
 	}
 	
 	if ($(this.$table[1]).hasClass('invisible') && $(this.$table[2]).hasClass('invisible')) {
 		$(this.showChildrenLink).removeClass('invisible');
 		$(this.childrenBlock).css({
-			display: 'none'
+			//display: 'none'
 		});
 	} else {
-		$(this.showChildrenLink).addClass('invisible');
+		//$(this.showChildrenLink).addClass('invisible');
 		$(this.childrenBlock).css({
 			display: 'block'
 		});

@@ -1,0 +1,74 @@
+div#layout_body {
+}
+div.spreader {
+}
+#layout_results {
+    display: inline-block;
+}
+
+.ticket .direction button{
+	display: none;
+}
+
+.multivariants .akPlate .logo {
+    background: none;
+    height:1px;
+}
+
+.ReturnToResult .return {
+  display: none;
+}
+.table th, .table td {
+    border-top: 1px solid #DDDDDD;
+    line-height: 16px;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+.multivariants .simpleVariants .variant_direction{
+  width:450px;
+}
+.multivariants table tr td {
+    border: medium none;
+    padding: 7px 10px 5px 25px;
+    vertical-align: top;
+}
+.multivariants .optTime{
+  width:110px;
+}
+.multivariants .opt4{
+  width:90px;
+}
+.multivariants .opt4{
+  width:110px;
+}
+.multivariants .opt2{
+	width:55px;
+}
+.multivariants .opt3{
+	width:55px;
+}
+.multivariants .simpleVariants td.cellButton{
+  width:105px;
+  padding:0 10px;
+}
+.FlightTicket.multivariants .table_header .leftIndent{
+  padding-left:120px;
+}
+.multivariants .stat_info .opt1{
+	width:90px;
+}
+#popup_passengerSelect .ConfirmInfoFlight .akPlate span.dashed{
+	padding:23px 0;
+	border:none;
+	color:white;
+	text-decoration: underline;
+}
+#popup_passengerSelect .close_button{
+	right:-12px;
+}
+#popup_passengerSelect{
+	position: relative;
+	width:820px;
+	margin:50px 100px;
+}
