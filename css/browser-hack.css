@@ -1,37 +1,37 @@
 .dropdown-menu {
-  background: #3c3c3c \0/;
+  background: #3c3c3c;
 }
 :root .dropdown-menu {
-  background: rgba(0,0,0,.8) \0/;
+  background: rgba(0,0,0,.8);
 }
 
 .dropdown-menu:after{
-  border-bottom:6px solid #3c3c3c \0/;
+  border-bottom:6px solid #3c3c3c;
 }
 
 .ui-datepicker-title{
-  font-family: Arial \0/ !important;
+  font-family: Arial !important;
 }
 
 .navbar.dynDate a {
-  padding:0 2px 0 0 \0/;
+  padding:0 2px 0 0;
 }
 
 .dynamics, .mainSearch{
-  outline:1px solid #bababc \0/;
+  outline:1px solid #bababc;
 }
 :root .dynamics, .mainSearch{
-  outline:none \0/;
+  outline:none;
 }
 
 /*.selectors .btn-group{
-  margin-right:26px \0/;
+  margin-right:26px;
 }*/
 /*:root .selectors .btn-group{
-  margin-right:38px \0/;
+  margin-right:38px;
 }
 :root .selectors .btn-group.last{
-  margin-right:0px \0/;
+  margin-right:0px;
 }*/
 
 .box-shadow{

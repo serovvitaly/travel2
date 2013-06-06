@@ -544,7 +544,7 @@
               <div class="ComparePriceSelection" style="display: inline-block;">
                 <div class="btn-group d_option" data-toggle="buttons-radio">
                   <button class="d_direction btn d_first">Итоговая</button>
-                  <button class="d_direction btn d_last">Сравнительная</button>
+                  <button class="d_direction btn d_last" style="padding: 4px 12px;">Сравнительная</button>
                 </div>
               </div>
 
