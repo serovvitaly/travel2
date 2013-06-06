@@ -1275,16 +1275,13 @@ DrawResults.prototype.initStructure = function(){
 	this.initOperatedAKList();
 	//this.initSeats();
     
-    $('aside article.side h2').click(function(){
-        $(this).next('.inn').toggle();
-    });
-
 	this.ResultTable = $('.ResultTableWrapper')[0];
 	this.FilterResult = $('.FilterResult')[0];
 	this.FlightsBlock = $('ul',this.FilterResult)[0];
 	this.AKFlightInformation = $('.FlightsByAKBlock')[0];
 	this.QuickSandBlock = $('#QuickSandBlock')[0];
-	
+    
+    
 	this.initSlider();
 	this.initFlightsDifficulties();
 	//если есть и прямые и с пересадками
@@ -1345,6 +1342,13 @@ DrawResults.prototype.initStructure = function(){
 		this.FlightsToShow = this.allFlights;
 		this.MakeClickEvent();
 	}
+    
+    
+    $('aside article.side h2').click(function(){
+        $(this).next('.inn').toggle();
+    });
+    $('.FlightFilter input:radio').customRadio();
+    
 };
 DrawResults.prototype.RedrawResults = function(redraw){
 	$(document.body).trigger("redrawResults");
@@ -2253,7 +2257,7 @@ DrawResults.prototype.initFilter = function(){
 	
 	// чекбоксы - radio
 	FilterRadioButtons = $('input[type="radio"]', this.filter);
-	$(FilterRadioButtons).click(function(){
+	$(FilterRadioButtons).change(function(){
 		if(self.QuickSandProcess){
 			return
 		}
@@ -2276,7 +2280,7 @@ DrawResults.prototype.initOperatedAKList = function(){
 	this.FlightsByAKListBlock = document.getElementById('FlightsByAKList');
 	this.FlightsByAKList = $('.list',this.FlightsByAKListBlock)[0];
 	
-	$('input[type="radio"]', this.FlightsByAKList).live('click',function(){
+	$('input[type="radio"]', this.FlightsByAKList).live('change',function(){
 		//если сыпучка в процессе или уже выбранный вариант - ретурн
 			if(self.QuickSandProcess){return}
 			var option_row = $(this).parents('.option_row')[0]; 
@@ -2682,6 +2686,12 @@ DrawResults.prototype.GetFlightsToShow = function(arr){
 	this.AKListClicked = false;
 	this.FilterClicked = false;
 	this.SortFlightsBlock();
+    
+    
+    $('aside article.side h2').click(function(){
+        $(this).next('.inn').toggle();
+    });
+    $('.FlightFilter input:radio').customRadio();
 };
 DrawResults.prototype.WriteCoefs = function(){
 	var self = this;
@@ -3487,14 +3497,14 @@ DrawResults.prototype.initSimpleAKTripSelectionEvents = function(input){
 	var top, bottom;
 	//TODO rewrite
 	if(leftTop === rightTop || leftTop < rightTop) {
-		top = 13;
+		top = 22;
 	} else {
-		top = 14 -(leftTop - rightTop)*61;
+		top = 23 -(leftTop - rightTop)*78;
 	}
 	if (leftTop === rightBottom || leftTop > rightBottom) {
-		bottom = 13;
+		bottom = 25;
 	} else {
-		bottom = 13 -(rightBottom - leftTop)*61;
+		bottom = 25 -(rightBottom - leftTop)*78;
 		if(rightSelected >4) {
 			bottom-= Math.floor(rightSelected/4);
 		}

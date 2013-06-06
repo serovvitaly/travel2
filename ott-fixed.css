@@ -702,8 +702,7 @@ div.calendar{
 
 .FlightsByAKBlock{
     z-index: 100;
-    width: 980px;
-    margin-left: 30px;
+    margin: 0 auto;
     display: none;
 }
 .multivariants .akPlate .pf_light_speck {
@@ -750,4 +749,13 @@ a.labelDynamics {
 
 .ticket .akPlate {
     background: url(/i/modalVarHeadBg.jpg) #008cd4 no-repeat scroll right -20px;
+}
+
+.radioArea, .radioAreaChecked {
+    margin-right: 0px;
+    cursor: pointer;
+}
+
+.multivariants table tr td {
+    width: 350px;
 }
