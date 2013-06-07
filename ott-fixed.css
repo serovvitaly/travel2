@@ -89,10 +89,10 @@
     border: 1px solid #DDD;
 }
 .ResultTickets .FlightTicket.mini .logo{
-    height: 100px;
-    width: 200px;
+    height: 86px;
+    width: 171px;
     background-color: red;
-    display: none;
+   /* display: none; */
 }
 
 .ResultTickets .FlightTicket .StartTime {
@@ -435,12 +435,17 @@ section .mainSearch .well .input-append .btn{
 }
 .suggestField .calendarButton div.text {
     font-size: 21px;
-    line-height: 14px;
+    line-height: 27px;
     padding-top: 3px;
+    text-align: center;
+}
+.suggestField .calendarButton div.date{
+    line-height: 14px;
     text-align: center;
 }
 .suggestField .calendarButton div.month {
     font-size: 14px;
+    line-height: 14px;
     text-align: center;
 }
 
@@ -854,3 +859,15 @@ a.labelDynamics {
 .suggest table { border-collapse: collapse; width: 100%; }
 .suggest table td { padding: 0; vertical-align: baseline; }
 .suggest table td.code { color: #7f7f7f; font: small "Lucida Console", Monaco, monospace; width: 3ex; padding-left: 1em; }
+
+
+
+.commonPopup{
+    background: #FFF;
+    padding: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+div.calendar .withStop {
+    color: #CCC;
+}

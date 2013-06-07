@@ -70,10 +70,10 @@ function PassengerSelect(data){
 	
 	this.activeCheckAvail = false;
 	$(this.elForm).submit(function(event){
-		event.preventDefault();
+		event.preventDefault();  
 		if(tw.ajaxCheckNames || self.activeCheckAvail) {
 			return;
-		}
+		}  
 		self.getData();
 		if (self.checkData()) {
 			checkNames(self.passengersForChechNames, function(){
@@ -87,7 +87,7 @@ function PassengerSelect(data){
 					rows[id].fields.lastName.addWarn();
 				}*/
 			});
-		}
+		} 
 	});
 
 	this.analyzeFlight();
@@ -1107,7 +1107,7 @@ PassengerSelect.prototype.getConfirmation = function(){
 			iframeId: "pm",
 			type: "post",
 			url: 'https://secure.onetwotrip.com/_api/confirmation/checkavail1/',
-			dataType: "json",
+			dataType: "jsonp",
 			data: {
 				params: JSON.stringify(self.params)
 			},

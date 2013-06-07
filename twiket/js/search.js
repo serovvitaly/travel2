@@ -1220,8 +1220,6 @@ Avia.prototype.drawResults = function(data){
 };
 Avia.prototype.getStatisticQuery = function(data, direct){
     
-    var me = this;
-    
     var date = new Date(data.date);
     
     var currentCurrency = 'RUB';
@@ -1273,7 +1271,7 @@ Avia.prototype.getStatisticQuery = function(data, direct){
                             maxAmount = amount;
                         }
                     }
-                                        
+                                      
                     collection[index] = new Object({
                         amount: amount,
                         date: index,
@@ -1333,7 +1331,7 @@ Avia.prototype.getStatisticQuery = function(data, direct){
                                 $('<li><a href="javascript:;">'+index.substring(0,2)+'</a></li>').appendTo($('#dynDate-' + direct));
                             });
                             
-                            $('.dynDateGraph li').hover(function(){
+                            $('#dynDateGraph-' + direct + ' li').hover(function(){
                                 $('.dynDateGraph').find('div.price').remove();
                                 $('.dynDateGraph li.active').removeClass('active');
                                 $(this).addClass('active').prepend('<div class="price">' + $(this).attr('data-amount') + ' руб.</div>');
@@ -1342,7 +1340,17 @@ Avia.prototype.getStatisticQuery = function(data, direct){
                                 $(this).parents('#dynDateGraph-' + direct).find('li').removeClass('selected');
                                 $(this).addClass('selected');
                                 
-                                me.statictic_mix[direct] = $(this).attr('data-date'); 
+                                var direct = (direct == 'back') ? 1 : 0;
+                                
+                                var tdate = new Date();
+                                var qdate_attr = $(this).attr('data-date');
+                                var qdate = new Date(tdate.getFullYear(), 1, qdate_attr.substr(0,2) * 1);
+                                
+                                console.log(tdate.getFullYear(), qdate_attr.substr(2,2) * 1, qdate_attr.substr(0,2) * 1);
+                                
+                                console.log( objSearchForm.data.directions[direct].date );
+                                objSearchForm.data.directions[direct].date = qdate;
+                                console.log( objSearchForm.data.directions[direct].date );
                             });
                             
                             $('.dynamicsFootDate p').html(dynamicsFootDate);
@@ -1356,14 +1364,7 @@ Avia.prototype.getStatisticQuery = function(data, direct){
         }
     });
 };
-Avia.prototype.statictic_mix = {
-    there: null, 
-    back:  null 
-};
 Avia.prototype.getStatistic = function(data){
-    
-    var me = this;
-       
     var result;
     if (data.directions[0]) {
         result = this.getStatisticQuery(data.directions[0], 'there');
@@ -1374,7 +1375,7 @@ Avia.prototype.getStatistic = function(data){
     
 };
 Avia.prototype.searchStatistic = function(){
-    console.log(this.statictic_mix);
+    objSearchForm.onSubmit('startSearch');
 }
 Avia.prototype.getFares = function(data){
 	var self = this;

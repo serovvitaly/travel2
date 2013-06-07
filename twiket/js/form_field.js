@@ -41,12 +41,8 @@ function checkNames(passengers, callback, errorCallback){
 		return names;
 	};
 	
-	var dataType = 'json';
+	var dataType = 'jsonp';
 	var url = 'https://secure.onetwotrip.com/_api/name_validator/validate/';
-	if (window.location.protocol == 'http:') {
-		dataType = 'jsonp';
-		url = 'https://' + getSecureHost() + url;
-	}
 	var makeRequest = function(){
 		$.ajax({
 			dataType: dataType,
