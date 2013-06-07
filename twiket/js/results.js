@@ -2982,6 +2982,8 @@ DrawResults.prototype.DrawSelectedAK = function(){
 					$('.ReturnToResult',self.AKFlightInformation).addClass('invisible');	
 				}
 			}
+            
+            ShadingIn('DrawSelectedAK');
 			fadeInBlock(self.AKFlightInformation,function(){
 				self.setSimilarPriceButtonWidth();
 				if(self.ClickedAKBlock){
@@ -3013,6 +3015,7 @@ DrawResults.prototype.DrawSelectedAK = function(){
 							}
 					});
 				}
+                
 			});	
 		});
 }
@@ -3633,6 +3636,8 @@ DrawResults.prototype.DestroyAKFlights = function(){
 			}				
 			fadeInBlock(self.ResultTable);
 			PlanePositioning();
+            
+            ShadingOut('DrawSelectedAK');
 		});
 	}
 };
@@ -3942,6 +3947,12 @@ function getFareConfirmationParams(obj){
 	};
 }
 function FareConfirmation(obj){
+    
+    var noClass = /noFareConfirmation/;
+    if (noClass.test(event.target.className)) {
+        return false;
+    }
+    
 	$.scrollTo(0, 500);
 	//kmq
 		var mark = $(obj.element).data('markclass');

@@ -358,7 +358,7 @@
             <div id="ticket_rotation"/>
         </div>
     {{else}}
-        <div class="FlightTicket {{if $item.mini}}mini{{/if}}">
+        <div class="FlightTicket {{if $item.mini}}mini{{/if}}" onclick="FareConfirmation({FlightIndex: ${FlightIndex}, element: this})">
             <div class="akPlate ${AK}">
                 <div class="pf_light_speck"><div></div></div>
                 <div class="pf_AKname ${html_tmpl.AirlineNameClass}">
@@ -372,7 +372,7 @@
                     {{tmpl($data) "tmpl_Stars"}}
                 </div>
                 {{if parseInt(ref.AirlineLogos[AK],10)>0}}
-                    <div class="logo{{if $item.markClass}} moved{{/if}}" style="background: url('images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png'/*tpa=http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png*/);"></div>
+                    <div class="logo{{if $item.markClass}} moved{{/if}}" style="background-image: url('http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png');"></div>
                 {{/if}}
                 {{if $item.markClass}}
                     <div class="pf_mark ${$item.markClass}"></div>
@@ -426,7 +426,7 @@
                                                         ${html_tmpl.StopPoints[$index].length} ${l10n.searchResult.block.changeBoard}
                                                     {{/if}}
                                                     {{if !$item.mini}}
-                                                        ${', '}<span class="showTripInfo" info="${FlightIndex},${$index}">${l10n.searchResult.block.moreInfo}</span>
+                                                        ${', '}<span class="showTripInfo noFareConfirmation" info="${FlightIndex},${$index}">${l10n.searchResult.block.moreInfo}</span>
                                                     {{/if}}
                                                 </div>
                                             </td>
@@ -449,7 +449,7 @@
                                                     <div class="pf_stops">
                                                         ${html_tmpl.ChangeBoardPoints[$index].length} {{if html_tmpl.ChangeBoardPoints[$index].length==1}}${l10n.searchResult.block.stops[0]}{{else}}${l10n.searchResult.block.stops[1]}{{/if}}
                                                         {{if !$item.mini}}
-                                                            ${', '}<span class="showTripInfo" info="${FlightIndex},${$index}">${l10n.searchResult.block.moreInfo}</span>
+                                                            ${', '}<span class="showTripInfo noFareConfirmation" info="${FlightIndex},${$index}">${l10n.searchResult.block.moreInfo}</span>
                                                         {{/if}}
                                                     </div>
                                                 </td>
@@ -467,7 +467,7 @@
                                                     <div>
                                                         ${l10n.searchResult.block.noChangeBoard}
                                                         {{if !$item.mini}}
-                                                            ${', '}<span class="showTripInfo" info="${FlightIndex},${$index}">${l10n.searchResult.block.moreInfo}</span>
+                                                            ${', '}<span class="showTripInfo noFareConfirmation" info="${FlightIndex},${$index}">${l10n.searchResult.block.moreInfo}</span>
                                                         {{/if}}
                                                     </div>
                                                 </td>
@@ -489,7 +489,7 @@
                                         <td>
                                             {{if $item.mini}}
                                                 <span title="${ref.getAirportName(html_tmpl.AirportByCodeFrom[$index])}" class="airport" data-code="${html_tmpl.AirportByCodeFrom[$index]}">${html_tmpl.AirportByCodeFrom[$index]}</span> &rarr; <span title="${ref.getAirportName(html_tmpl.AirportByCodeTo[$index])}" class="airport" data-code="${html_tmpl.AirportByCodeTo[$index]}">${html_tmpl.AirportByCodeTo[$index]}</span>
-                                                ${', '}<span class="showTripInfo" info="${FlightIndex},${$index}">${l10n.searchResult.block.moreInfo}</span>
+                                                ${', '}<span class="showTripInfo noFareConfirmation" info="${FlightIndex},${$index}">${l10n.searchResult.block.moreInfo}</span>
                                             {{else}}
                                                 {{if (tw.ticketParams.singleFrom[$index]>1 && tw.ticketParams.singleTo[$index]>1) || (tw.ticketParams.singleFrom[$index]==1 && tw.ticketParams.singleTo[$index]==1)}}
                                                     <span title="${html_tmpl.longAirportByCodeFrom[$index]}" class="airport" data-code="${html_tmpl.AirportByCodeFrom[$index]}">${html_tmpl.shortAirportByCodeFrom[$index]}</span>
@@ -545,7 +545,7 @@
                 </div>
                 {{if $item.count>1}}
                     <div class="showAKvariants{{if $item.mini}} TicketOut{{/if}}" opt="${$item.direct},${AK}">
-                        <div><span>${l10n.searchResult.block.more} {{if $item.markClass}}${l10n.searchResult.block.variants}{{/if}}</span></div>
+                        <div><span class="noFareConfirmation">${l10n.searchResult.block.more} {{if $item.markClass}}${l10n.searchResult.block.variants}{{/if}}</span></div>
                     </div>
                 {{/if}}
                 <button class="price_button{{if $item.mini}} TicketOut{{/if}}" onclick="FareConfirmation({FlightIndex: ${FlightIndex}, element: this})" data-markclass="${$item.markClass}">
@@ -847,7 +847,7 @@
                                                     {{/if}}
                                             {{/if}}
                                             <span class="ib opt5 flightLate">${add.startTime1[$index].flightLate}</span>
-                                            <span class="showTripInfo" info="${add.startTime1[$index].flight.FlightIndex},0">${l10n.searchResult.block.moreInfo}</span>                                                    
+                                            <span class="showTripInfo noFareConfirmation" info="${add.startTime1[$index].flight.FlightIndex},0">${l10n.searchResult.block.moreInfo}</span>                                                    
                                         </div>
                                     {{/if}}
                                 </td>
@@ -925,7 +925,7 @@
                                                         {{/if}}
                                                 {{/if}}                                                        
                                                 <span class="ib opt5 flightLate">${add.startTime2[$index].flightLate}</span>
-                                                <span class="showTripInfo" info="${add.startTime2[$index].flight.FlightIndex},1">${l10n.searchResult.block.moreInfo}</span>
+                                                <span class="showTripInfo noFareConfirmation" info="${add.startTime2[$index].flight.FlightIndex},1">${l10n.searchResult.block.moreInfo}</span>
                                             </div>
                                         </div>
                                     {{/if}}
@@ -1930,7 +1930,7 @@
             {{if Flight.combined && Flight.direct && Flight.AK != Flight.EveryDirectionAK[1]}} + ${ref.Airlines[Flight.EveryDirectionAK[1]]}{{/if}}
         </span>, <span class="showTripInfo dashed" info="${Flight.FlightIndex}">${l10n.searchResult.passengers.flight.more}</span>, <span class="showFareRules dashed">${l10n.searchResult.passengers.flight.rules}</span>
         {{if parseInt(ref.AirlineLogos[Flight.AK],10)>0}}
-            <div class="logo" style="background: url(/images/ak/big/${Flight.AK}_u0580.png)"></div>
+            <div class="logo" style="background: url(http://www.onetwotrip.com/images/ak/big/${Flight.AK}_u0580.png)"></div>
         {{/if}}
     </div>
     <div class="FlightTicket multivariants">

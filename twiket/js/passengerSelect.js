@@ -806,7 +806,7 @@ PassengerSelect.prototype.show = function(data){
 	}); */
 	objRecentSearches.hide();
     
-    ShadingShow();
+    ShadingIn('PassengerSelect');
 };
 PassengerSelect.prototype.setPageTitle = function(){
 	$('#pageTitle', this.elPageTitlePanel)[0].innerHTML = l10n.searchResult.passengers.pageTitle;
@@ -844,6 +844,8 @@ PassengerSelect.prototype.hideBack = function(){
 		objSearchForm.show();
 		objRecentSearches.show();
 	});
+    
+    ShadingOut('PassengerSelect');
 };
 PassengerSelect.prototype.hide = function(){
 	$('.hint').remove();

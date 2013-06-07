@@ -1211,3 +1211,21 @@ function WelcomeBonusText(el){
 	text = '<span class="nowrap">' + text + '</span>';
 	el.innerHTML += '<div>' + l10n.makeorder.bonus.welcome[0] + ' ' + text + '</div>';
 }
+
+function ShadingIn(id){
+    id = 'shading-' + id;
+    var div = document.getElementById(id);
+    if (!div) {
+        div = document.createElement('div');
+        div.id = id;
+        document.body.appendChild(div);
+    }
+    div.className = 'shading';
+    $(div).show();
+    return div;
+}
+
+function ShadingOut(id){
+    id = 'shading-' + id;
+    $('#' + id).remove();
+}

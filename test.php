@@ -319,60 +319,13 @@
                 </form>
                 <div id="pageTitlePanel" class="spreader invisible"><div id="pageTitle"></div></div>
             </div>
-            <div id="layout_recentSearches" style="display: none;">
-                <div class="spreader">
-                    <ul class="spreader" id="recentSearches"></ul>
+            <div id="layout_recentSearches">
+                <div>
+                    <ul id="recentSearches"></ul>
                 </div>
             </div>
         </div>
         
-        <!--form id="form_search_2" class="form-inline row" action="">
-          <div class="well span10">
-            <div class="btn-toolbar">
-              <div class="input-append">
-                <input type="text" class="input-large" value="Москва (Россия)">
-                <button class="btn btn-primary"><h3>16</h3><h4>дек</h4></button>
-              </div>
-              
-              <div class="btn-group calend" data-toggle="buttons-radio">
-                <a href="javascript:;" class="btn" id="flightType1"><img src="/i/btnFlight1.png" alt="Туда"></a>
-                <a href="javascript:;" class="btn active" id="flightType2"><img src="/i/btnFlight2.png" alt="Туда-сюда"></a>
-                <a href="javascript:;" class="btn" id="flightType3"><img src="/i/btnFlight3.png" alt="Туда-туда"></a>
-              </div>
-
-              <div class="input-append">
-                <input type="text" class="input-large" value="Нью-Йорк (США)">
-                <button class="btn btn-primary"><h3>16</h3><h4>дек</h4></button>
-              </div>
-            </div>
-
-            <div class="btn-toolbar toolbar2">
-              <div class="input-append">
-                <input type="text" class="input-large" value="Москва (Россия)">
-                <button class="btn btn-primary"><h3>16</h3><h4>дек</h4></button>
-              </div>
-
-              <div class="input-append">
-                <input type="text" class="input-large" value="Нью-Йорк (США)">
-                <button class="btn btn-primary"><h3>16</h3><h4>дек</h4></button>
-              </div>
-            </div>
-
-             <div class="calendar" style="display: none;">
-                <div class="datepicker dp1">
-                  <div class="dateHeader">
-                    <p><span class="selDate">Выберите дату</span> <img src="/i/dateHeaderPlane.png" alt=""><span class="from">Москва</span> &rarr; <span class="to">Лондон</span></p>
-                    <div class="btn-group" data-toggle="buttons-radio">
-                      <span class="btn">прямые рейсы</span>
-                      <span class="btn active">с пересадкой</span>
-                    </div>
-                  </div>
-                </div>
-              </div> 
-          </div> 
-
-          <input type="submit" class="btn btn-danger span2" value="ПОИСК">
-        </form-->
 
         <div class="span12 dynamics">
           <div class="hided">
