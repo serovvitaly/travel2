@@ -341,7 +341,8 @@ function fadeIn(options){
 		document.body.appendChild(div);
 	}
 	div.className = options.className || "";
-	$(div).show();
+	$(div).height( $(document).height() );
+    $(div).show();
 	return div;
 }
 function fadeOut() {
@@ -1221,6 +1222,7 @@ function ShadingIn(id){
         document.body.appendChild(div);
     }
     div.className = 'shading';
+    $(div).height( $(document).height() );
     $(div).show();
     return div;
 }

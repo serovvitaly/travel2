@@ -1482,7 +1482,7 @@ Avia.prototype.getFares = function(data){
 	}
 };
 
-$(document).on('visitormanager_get_success', function(event) {
+$(document).on('visitormanager_get_success', function(event) { return;
 	if (tw.language == 'ru' && event.json.promo) {
 		new PromoCodePopup({
 			serverTime: event.json.serverTime,

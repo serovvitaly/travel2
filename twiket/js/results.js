@@ -2983,7 +2983,7 @@ DrawResults.prototype.DrawSelectedAK = function(){
 				}
 			}
             
-            ShadingIn('DrawSelectedAK');
+            
 			fadeInBlock(self.AKFlightInformation,function(){
 				self.setSimilarPriceButtonWidth();
 				if(self.ClickedAKBlock){
@@ -3016,6 +3016,7 @@ DrawResults.prototype.DrawSelectedAK = function(){
 					});
 				}
                 
+                ShadingIn('DrawSelectedAK');
 			});	
 		});
 }
