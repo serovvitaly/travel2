@@ -331,7 +331,7 @@
           <div class="hided">
             <div class="row">
               <div class="span12">
-                <p class="searchResult"><a href="javascript:;">Москва - Нью-Йорк с 13 фев по 27 фев</a></p>
+                <!--p class="searchResult"><a href="javascript:;">Москва - Нью-Йорк с 13 фев по 27 фев</a></p-->
               </div>
             </div>
             <div class="row">
@@ -355,12 +355,14 @@
                 </div>  <!-- /dynMonth -->
 
                 <div class="dynDateGraph navbar">
-                  <ul class="nav">
+                  <ul class="nav" id="dynDateGraph-there">
+
                   </ul>
                 </div>  <!-- /dynDate -->
 
                 <div class="dynDate navbar">
-                  <ul class="nav">
+                  <ul class="nav" id="dynDate-there">
+                    
                   </ul>
                 </div>  <!-- /dynDate -->
 
@@ -421,12 +423,14 @@
                 </div>  <!-- /dynMonth -->
 
                 <div class="dynDateGraph navbar">
-                  <ul class="nav">
+                  <ul class="nav" id="dynDateGraph-back">
+                    
                   </ul>
                 </div>  <!-- /dynDate -->
 
                 <div class="dynDate navbar">
-                  <ul class="nav">
+                  <ul class="nav" id="dynDate-back">
+                    
                   </ul>
                 </div>  <!-- /dynDate -->
 
@@ -471,13 +475,13 @@
             <div class="row">
               <div class="span12 dynamicsFoot">
                 <div class="dynamicsFootDate">
-                  <p>13 Февраля 2013 г. - 27 Февряля 2013 г.</p>
+                  <p></p>
                 </div>
-                <input type="submit" class="btn btn-danger" value="ИСКАТЬ НА ЭТИ ДАТЫ">
+                <input type="submit" class="btn btn-danger" value="ИСКАТЬ НА ЭТИ ДАТЫ" onclick="objAvia.searchStatistic()">
               </div>  <!-- /dynamicsFoot-->
             </div>  <!-- /row -->
           </div>  <!-- /hided -->
-          <a href="javascript:;" class="labelDynamics">Календарь цен</a>
+          <a href="javascript:;" class="labelDynamics disabled">Календарь цен</a>
         </div>  <!-- /dynamics -->
       </div>  <!-- /mainSearch -->
 
