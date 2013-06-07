@@ -809,3 +809,48 @@ a.labelDynamics {
 .dynamics .dynTo .navbar.dynDateGraph li, .dynamics .dynFrom .navbar.dynDateGraph li, .dynamics .dynDate .nav li {
     width: 18px;
 }
+
+
+.stars_baloon .content table th div { display: inline-block; }
+.stars_baloon .content .info_stars { background: url('/images/stars/BaloonStar.png') repeat-x; height: 13px; width:14px;} 
+.stars_baloon .content .info_half_stars { background: url('/images/stars/BaloonHalfStar.png') no-repeat; height: 13px; width:14px;}
+.stars_baloon .content .info_empty_stars { background: url('/images/stars/BaloonGrayStar.png') repeat-x; height: 13px; width:14px;}
+
+
+.suggest {
+    z-index: 78; position: absolute;
+    margin-top: 2px;
+    background: white; color: black;
+    border: 1px solid #535353;
+    -webkit-border-bottom-left-radius: 7px;
+    -webkit-border-bottom-right-radius: 7px;
+    -webkit-border-radius: 0 0 7px 7px;
+       -moz-border-radius: 0 0 7px 7px;
+            border-radius: 0 0 7px 7px;
+    -webkit-box-shadow: 10px 10px 14px 14px rgba(0,0,0,0.4);
+       -moz-box-shadow: 10px 10px 14px 14px rgba(0,0,0,0.4);
+            box-shadow: 10px 10px 14px 14px rgba(0,0,0,0.4);
+}
+.suggest ul { display: block; list-style: none; margin:0; padding:0; }
+.suggest li { display:block; margin:0; padding: 0.4em 10px; }
+.suggest li:last-child {
+    -webkit-border-bottom-left-radius: 7px;
+    -webkit-border-bottom-right-radius: 7px;
+    -webkit-border-radius: 0 0 7px 7px;
+       -moz-border-radius: 0 0 7px 7px;
+            border-radius: 0 0 7px 7px;
+}
+.suggest li:hover, .suggest li.hover {
+    cursor: pointer;
+    background: #78a8cc url(../images/suggestHoverRow.gif)/*tpa=http://www.onetwotrip.com/images/suggestHoverRow.gif*/ repeat-x top; background-size: 100% 100%;/* IE & Old */
+    /* @alternate */ background: -webkit-linear-gradient(top, #9cc1de, #bbdbf4 1px, #78a8cc);
+    /* @alternate */ background:    -moz-linear-gradient(top, #9cc1de, #bbdbf4 1px, #78a8cc);
+    /* @alternate */ background:     -ms-linear-gradient(top, #9cc1de, #bbdbf4 1px, #78a8cc);
+    /* @alternate */ background:      -o-linear-gradient(top, #9cc1de, #bbdbf4 1px, #78a8cc);
+    /* @alternate */ background:         linear-gradient(to bottom, #9cc1de, #bbdbf4 1px, #78a8cc);
+}
+
+.suggest span { color: #7f7f7f; }
+.suggest table { border-collapse: collapse; width: 100%; }
+.suggest table td { padding: 0; vertical-align: baseline; }
+.suggest table td.code { color: #7f7f7f; font: small "Lucida Console", Monaco, monospace; width: 3ex; padding-left: 1em; }
