@@ -112,12 +112,3 @@ div.spreader {
 .ticket .directionBody table col.cs{
   width:90px;
 }
-.multivariants .simpleVariants tr.noBkg{
-  background:#008cd4;
-}
-.multivariants .simpleVariants tr.noBkg td.cellButton{
-  background:#008cd4;
-}
-.multivariants .simpleVariants tr.noBkg td:first-child{
-  background:#008cd4 url("/i/modalVarHeadBg.jpg") no-repeat scroll right top;
-}
