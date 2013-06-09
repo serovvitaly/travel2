@@ -12,7 +12,7 @@ function Calendar(options){
 	this.dataDir = this.dataDirs[this.dirNumber];
 	this.dataDirsCount = this.dataDirs.length;
 	
-	this.appendTo = 'section .mainSearch .well'; //document.body;
+	this.appendTo = '.mainSearch'; //document.body;
 	
 	this.today = (new Date()).cutTime();
 	this.yesterday = new Date(this.today);

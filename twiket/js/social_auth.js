@@ -117,7 +117,7 @@ SocialAuth.prototype.initVisitor = function(isFromSocialRedirect){
 	$.ajax({
 		type: "get",
 		cache: false,
-		url: (testLocalHost() ? ("https://" + getSecureHost()) : "") + "/_api/visitormanager/get/",
+		url: "https://secure.onetwotrip.com/_api/visitormanager/get/",
 		dataType: (testLocalHost() ? "jsonp" : "json"),
 		data: tw.params,
 		timeout: 10000,

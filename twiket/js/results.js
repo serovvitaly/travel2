@@ -2663,13 +2663,13 @@ DrawResults.prototype.GetFlightsToShow = function(arr){
 	}
 
 	if(this.DirectFlightsCount===0) {
-		$('.d_last',this.FlightsDifficulties).addClass('disabled').removeClass('selected');
+		$('.d_last',this.FlightsDifficulties).attr('disabled', 'disabled').addClass('disabled').removeClass('selected');
 		$('.d_first',this.FlightsDifficulties).addClass('selected');
 		//fadeInBlock(this.FlightSliderBlock);
 		$(this.FlightsDifficulties).removeClass('invisible');
 		this.showFlightsDifficulties = true;
 	} else {
-		$('.d_last',this.FlightsDifficulties).removeClass('disabled');
+		$('.d_last',this.FlightsDifficulties).removeAttr('disabled').removeClass('disabled');
 	}
 
 	if(!this.AKListClicked) {

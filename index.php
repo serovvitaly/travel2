@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="utf-8">
-	<title>Travel Online</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Travel Online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <link rel="stylesheet" type="text/css" href="./css/sliderkit-core.css" rel="stylesheet"/>
-  <link rel="stylesheet" type="text/css" href="./css/sliderkit-demos.css" rel="stylesheet"/>
-  <link rel="stylesheet" type="text/css" href="./css/sliderkit-demos-ie8.css" rel="stylesheet"/>  
-  <link href="./css/bootstrap.css" rel="stylesheet">  
-  <link href="./css/jquery-ui-1.10.2.custom.min.css" rel="stylesheet">
-  <!-- <link href="./css/responsive.css" rel="stylesheet"> -->
-  <link href="./css/browser-hack.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/sliderkit-core.css" rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href="/css/sliderkit-demos.css" rel="stylesheet"/>
+  <link rel="stylesheet" type="text/css" href="/css/sliderkit-demos-ie8.css" rel="stylesheet"/>
+  
+  <link href="/css/bootstrap.css" rel="stylesheet">  
+  <link href="/css/jquery-ui-1.10.2.custom.min.css" rel="stylesheet">
+  <!-- <link href="/css/responsive.css" rel="stylesheet"> -->
+  <link href="/css/browser-hack.css" rel="stylesheet">
+  
+  <link rel="stylesheet" type="text/css" href="/css/calendar.css">
 
-	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     
-    
 <? include 'scripts.html'; ?>
     
-    
-    
-<link rel="stylesheet" type="text/css" href="/twiket/css/common.css">
-<link rel="stylesheet" type="text/css" href="/twiket/css/calendar.css">
-<link rel="stylesheet" type="text/css" href="/ott-fixed.css"> 
-   
+
+<link rel="stylesheet" type="text/css" href="/ott-fixed.css">  
+<link rel="stylesheet" type="text/css" href="/fixer2.css">  
+
 </head>
 
 
 <body>
 
+
   <? include 'content.html'; ?>
   <? include 'templates.html'; ?>
+
+
+
+
+  <!-- Modal -->
 
   <div class="h-popupSide">
   <!-- popupSideHelp -->
     <div class="popupSide text-center" id="popupSideHelp">
-      <a href="javascript:;" class="popupSideBtn"><img src="./i/popupSideHelp-btn.png" alt="Помощь"></a>
+      <a href="javascript:;" class="popupSideBtn"><img src="/i/popupSideHelp-btn.png" alt="Помощь"></a>
       <button type="button" class="close">×</button>
       <h3>Выберите раздел в котором Вам нужна помощь</h3>
       <table class="popupSideTable">
         <tr>
-          <th><a href="javascript:;"><img src="./i/popupSideHelpFly.png" alt=""></a></th>
-          <th><a href="javascript:;"><img src="./i/popupSideHelpHotel.png" alt=""></a></th>
-          <th><a href="javascript:;"><img src="./i/popupSideHelpTour.png" alt=""></a></th>
-          <th><a href="javascript:;"><img src="./i/popupSideHelpTrip.png" alt=""></a></th>
-          <th><a href="javascript:;"><img src="./i/popupSideHelpCruise.png" alt=""></a></th>
-          <th><a href="javascript:;"><img src="./i/popupSideHelpRent.png" alt=""></a></th>
+          <th><a href="javascript:;"><img src="/i/popupSideHelpFly.png" alt=""></a></th>
+          <th><a href="javascript:;"><img src="/i/popupSideHelpHotel.png" alt=""></a></th>
+          <th><a href="javascript:;"><img src="/i/popupSideHelpTour.png" alt=""></a></th>
+          <th><a href="javascript:;"><img src="/i/popupSideHelpTrip.png" alt=""></a></th>
+          <th><a href="javascript:;"><img src="/i/popupSideHelpCruise.png" alt=""></a></th>
+          <th><a href="javascript:;"><img src="/i/popupSideHelpRent.png" alt=""></a></th>
         </tr>
         <tr>
           <td><a href="javascript:;">АВИАБИЛЕТЫ</a></td>
@@ -74,8 +80,8 @@
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     </div>
     <div class="modal-body">
-      <a class="ent" href="javascript:;"><img src="./i/modalEnter1.png" alt=""></a>
-      <a class="ent" href="javascript:;"><img src="./i/modalEnterFb.png" alt=""></a>
+      <a class="ent" href="javascript:;"><img src="/i/modalEnter1.png" alt=""></a>
+      <a class="ent" href="javascript:;"><img src="/i/modalEnterFb.png" alt=""></a>
     </div>
     <div class="modal-footer">
       <form action="">
@@ -89,7 +95,7 @@
         </div>
       </form>
       <a class="btn btn-link" href="javascript:;">Забыли пароль?</a>
-      <a class="btn btn-link" href="javascript:;">Хотите хавести аккаунт?</a>
+      <a class="btn btn-link" href="javascript:;">Хотите завести аккаунт?</a>
     </div>
   </div>
 <!-- /modalEnter -->
@@ -101,8 +107,8 @@
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     </div>
     <div class="modal-body">
-      <a class="ent" href="javascript:;"><img src="./i/modalEnter1.png" alt=""></a>
-      <a class="ent" href="javascript:;"><img src="./i/modalEnterFb.png" alt=""></a>
+      <a class="ent" href="javascript:;"><img src="/i/modalEnter1.png" alt=""></a>
+      <a class="ent" href="javascript:;"><img src="/i/modalEnterFb.png" alt=""></a>
     </div>
     <div class="modal-footer text-center">
       <form action="">
@@ -120,7 +126,7 @@
   <nav class="navbar navbar-inverse navbar-static-top">  <!-- .navbar-static-top, navbar-fixed-top, navbar-fixed-bottom -->
     <div class="navbar-inner">
       <div class="container">
-        <a class="brand" href="./index.html"><img src="./i/brand.png" alt="TravelOnline"></a>
+        <a class="brand" href="./index.html"><img src="/i/brand.png" alt="TravelOnline"></a>
         <ul class="nav">
           <li class="active"><a href="./tickets.html">Авиабилеты</a></li>
           <li><a href="./hotels.hmtl">Отели</a></li>
@@ -157,7 +163,7 @@
         </ul>
 
         <ul class="nav navAdd regOn">
-          <li class="navPersPhoto"><img src="./i/navPersPhoto.jpg" alt=""></li>
+          <li class="navPersPhoto"><img src="/i/navPersPhoto.jpg" alt=""></li>
           <li class="navPers dropdown">
             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">ФЕДОР БЕЛЬТЮГОВ</a>
             <ul class="dropdown-menu" role="menu">
@@ -181,7 +187,7 @@
             <ul class="dropdown-menu" role="menu">
               <li class="media">
                 <a class="mediaMsg" href="javascript:;">
-                  <img class="media-object pull-left" src="./i/mediaMsg.png">
+                  <img class="media-object pull-left" src="/i/mediaMsg.png">
                   <div class="media-body">
                     <h5 class="media-heading">ФЕДОР БЕЛЬТЮГОВ</h5>
                     <p>Федор, меня так достал твой... </p>
@@ -194,7 +200,7 @@
 
               <li class="media">
                 <a class="mediaMsg" href="javascript:;">
-                  <img class="media-object pull-left" src="./i/mediaMsg.png">
+                  <img class="media-object pull-left" src="/i/mediaMsg.png">
                   <div class="media-body">
                     <h5 class="media-heading">ФЕДОР БЕЛЬТЮГОВ</h5>
                     <p>Федор, когда запустищь свой...</p>
@@ -207,7 +213,7 @@
 
               <li class="media">
                 <a class="mediaMsg" href="javascript:;">
-                  <img class="media-object pull-left" src="./i/mediaMsg.png">
+                  <img class="media-object pull-left" src="/i/mediaMsg.png">
                   <div class="media-body">
                     <h5 class="media-heading">ФЕДОР БЕЛЬТЮГОВ</h5>
                     <p>Пойдем на турники</p>
@@ -248,11 +254,11 @@
 
   <section class="container">
     <div class="row">
-      <div class="span12 mainSearch">
+      <div class="span12 mainSearch"> 
       
-        <div id="layout_panels">
-            <div id="rotationPanel"><div class="spreader" id="rotationPanelTop"></div></div>
-            <div id="infoPanel">
+      <div id="layout_panels">
+            <div id="rotationPanel" style="display: none;"><div class="spreader" id="rotationPanelTop"></div></div>
+            <div id="infoPanel" style="display: none;">
                 <div class="spreader"><div class="advText"></div></div>
             </div>
             <div id="topPanel" style="display: none;">
@@ -302,79 +308,31 @@
             </div>
             <div id="topPanel2">
                 <form id="form_search" class="form-inline row" action="">
-                    <div class="spreader well span10" id="topPanel2spreader"></div>
+                  <div class="well">
+                    <div class="span10" id="topPanel2spreader"></div>
                     <div class="spreader invisible" id="priceDynamicSpreader"><div class="priceDynamic"></div></div>
-                    <div class="spreader" id="tongueSpreader"><div class="height0">
+                    <div class="span10" id="tongueSpreader"><div class="height0">
                         <div id="dirTongue" class="invisible"></div>
-                        <div id="searchButtonTongue" class="invis">
-                            <input type="submit" class="btn btn-danger span2" value="ПОИСК"/>
-                        </div>
+                        
                     </div></div>
+                  </div>
+                  <div id="searchButtonTongue" class="invis"><input type="submit" class="btn btn-danger span2" value="ПОИСК"/></div>
                 </form>
                 <div id="pageTitlePanel" class="spreader invisible"><div id="pageTitle"></div></div>
             </div>
             <div id="layout_recentSearches">
-                <div class="spreader">
-                    <ul class="spreader" id="recentSearches"></ul>
+                <div>
+                    <ul id="recentSearches"></ul>
                 </div>
             </div>
         </div>
-      
-        <form class="form-inline row" action="" style="display: none;">
         
-          
-          <div class="well span10">
-            <div class="btn-toolbar">
-              <div class="input-append">
-                <input type="text" class="input-large" value="Москва (Россия)">
-                <button class="btn btn-primary"><h3>16</h3><h4>дек</h4></button>
-              </div>
-              
-              <div class="btn-group calend" data-toggle="buttons-radio">
-                <a href="javascript:;" class="btn" id="flightType1"><img src="./i/btnFlight1.png" alt="Туда"></a>
-                <a href="javascript:;" class="btn active" id="flightType2"><img src="./i/btnFlight2.png" alt="Туда-сюда"></a>
-                <a href="javascript:;" class="btn" id="flightType3"><img src="./i/btnFlight3.png" alt="Туда-туда"></a>
-              </div>
-
-              <div class="input-append">
-                <input type="text" class="input-large" value="Нью-Йорк (США)">
-                <button class="btn btn-primary"><h3>16</h3><h4>дек</h4></button>
-              </div>
-            </div>
-
-            <div class="btn-toolbar toolbar2">
-              <div class="input-append">
-                <input type="text" class="input-large" value="Москва (Россия)">
-                <button class="btn btn-primary"><h3>16</h3><h4>дек</h4></button>
-              </div>
-
-              <div class="input-append">
-                <input type="text" class="input-large" value="Нью-Йорк (США)">
-                <button class="btn btn-primary"><h3>16</h3><h4>дек</h4></button>
-              </div>
-            </div>
-
-             <div class="calendar">
-                <div class="datepicker dp1">
-                  <div class="dateHeader">
-                    <p><span class="selDate">Выберите дату</span> <img src="./i/dateHeaderPlane.png" alt=""><span class="from">Москва</span> &rarr; <span class="to">Лондон</span></p>
-                    <div class="btn-group" data-toggle="buttons-radio">
-                      <span class="btn">прямые рейсы</span>
-                      <span class="btn active">с пересадкой</span>
-                    </div>
-                  </div>
-                </div>
-              </div>  <!-- /calendar -->
-          </div>  <!-- /well -->
-
-          <input type="submit" class="btn btn-danger span2" value="ПОИСК">
-        </form>
 
         <div class="span12 dynamics">
           <div class="hided">
             <div class="row">
               <div class="span12">
-                <p class="searchResult"><a href="javascript:;">Москва - Нью-Йорк с 13 фев по 27 фев</a></p>
+                <!--p class="searchResult"><a href="javascript:;">Москва - Нью-Йорк с 13 фев по 27 фев</a></p-->
               </div>
             </div>
             <div class="row">
@@ -520,7 +478,7 @@
                 <div class="dynamicsFootDate">
                   <p></p>
                 </div>
-                <input type="submit" class="btn btn-danger" value="ИСКАТЬ НА ЭТИ ДАТЫ" onclick="alert('Неверные параметры')">
+                <input type="submit" class="btn btn-danger" value="ИСКАТЬ НА ЭТИ ДАТЫ" onclick="objAvia.searchStatistic()">
               </div>  <!-- /dynamicsFoot-->
             </div>  <!-- /row -->
           </div>  <!-- /hided -->
@@ -529,7 +487,7 @@
       </div>  <!-- /mainSearch -->
 
 
-      <div class="span9 offset3 selectors">
+      <div class="span12 selectors">
         <div class="btn-row">
           <div class="btn-toolbar">
             
@@ -544,7 +502,7 @@
               <div class="ComparePriceSelection" style="display: inline-block;">
                 <div class="btn-group d_option" data-toggle="buttons-radio">
                   <button class="d_direction btn d_first">Итоговая</button>
-                  <button class="d_direction btn d_last">Сравнительная</button>
+                  <button class="d_direction btn d_last" style="padding: 4px 12px;">Сравнительная</button>
                 </div>
               </div>
 
@@ -570,9 +528,16 @@
       </div>  <!-- /selectors -->
 
       
-      <div id="layout_body" class="spreader">
-        <div id="layout_results"></div>                   
+        
+      <div id="layout_body">
+        <div id="layout_results"></div>
       </div>
+      
+      <div id="layout_bying">
+        <? /*include("bying.php");*/ ?>
+      </div>
+        
+      
       
     </div>
   </section> <!-- /container -->
@@ -601,22 +566,22 @@
     <div class="container">
       <div class="row">
         <div class="span12 social text-center">
-          <a href="javascript:;"><img src="./i/socialFb.png" alt=""></a>
-          <a href="javascript:;"><img src="./i/socialGoogle.png" alt=""></a>
-          <a href="javascript:;"><img src="./i/socialVk.png" alt=""></a>
-          <a href="javascript:;"><img src="./i/socialLj.png" alt=""></a>
-          <a href="javascript:;"><img src="./i/socialTw.png" alt=""></a>
-          <a href="javascript:;"><img src="./i/socialLi.png" alt=""></a>
+          <a href="javascript:;"><img src="/i/socialFb.png" alt=""></a>
+          <a href="javascript:;"><img src="/i/socialGoogle.png" alt=""></a>
+          <a href="javascript:;"><img src="/i/socialVk.png" alt=""></a>
+          <a href="javascript:;"><img src="/i/socialLj.png" alt=""></a>
+          <a href="javascript:;"><img src="/i/socialTw.png" alt=""></a>
+          <a href="javascript:;"><img src="/i/socialLi.png" alt=""></a>
         </div>  <!-- /social -->
 
         <div class="span12 fbLine text-center">
-          <a href="javascript:;"><img src="./i/fbookLine.jpg" alt=""></a>
+          <a href="javascript:;"><img src="/i/fbookLine.jpg" alt=""></a>
         </div>  <!-- /fbLine -->
 
         <div class="span4 offset2 footRights">
           <p>© Photo square   2012  Все права защищены</p>
           <p class="footDev">Разработка сайта <a href="http://re-branding.ru/">
-            <img alt="re-branding.ru" src="./i/footDev.png"></a>
+            <img alt="re-branding.ru" src="/i/footDev.png"></a>
           </p>
         </div>  <!-- /footRights -->
 
@@ -629,25 +594,16 @@
     </div> <!-- /container -->
   </footer>
 
+  <div class="shading"></div>
+  
   <!-- javascript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <!--
-  <script src="/js/jquery-1.9.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/jquery.sliderkit.1.9.2.js"></script>
-  <script src="/js/jquery-ui-1.10.2.custom.min.js"></script>
-  <script src="/js/custom_el.js"></script>
-  <script src="/js/jquery.ui.datepicker-ru.js"></script>
-  <script src="/js/custom.js"></script>
-  -->
-
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/jquery.sliderkit.1.9.2.js"></script>
 
   <script src="/js/custom_el.js"></script>
 
   <script src="/js/custom.js"></script>
-  
 </body>
 </html>

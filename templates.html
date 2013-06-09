@@ -579,7 +579,7 @@
             <div class="pf_light_speck"><div></div></div>
             <div class="pf_AKname">${ref.Airlines[AK]}</div>
             {{if parseInt(ref.AirlineLogos[AK],10)>0}}
-                <div class="logo moved" style="background: url('images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png'/*tpa=http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png*/);"></div>
+                <div style="display:none" class="logo moved" style="background: url('http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png');"></div>
             {{/if}}
             {{if !$data.single}}
                 <div class="ReturnToResult">
@@ -729,17 +729,17 @@
         {{/if}}
         <div class="pf_bottom">                    
             <div class="content simpleVariants">
-                <table>
+                <table class="simpleVariants-table">
                     <tr class="noBkg">
                         <td colspan="{{if add.startTime2[0]}}2{{else}}5{{/if}}" class="noPadding">
                             <div class="akPlate ${AK}">
                                 <div class="pf_light_speck"><div></div></div>
                                 <div class="pf_AKname">
                                     <h2>${ref.Airlines[AK]}</h2>
-                                    <div class="RedrawOptions invisible">, ${l10n.searchResult.block.sort[0]} <span data-sort="byPrice">${l10n.searchResult.block.sort[1]}</span> | <span data-sort="byTravelTime">${l10n.searchResult.block.sort[2]}</span> | <span data-sort="ByDeparture">${l10n.searchResult.block.sort[3]}</span></div>
+                                    <div class="RedrawOptions invisible"> ${l10n.searchResult.block.sort[0]} <span data-sort="byPrice">${l10n.searchResult.block.sort[1]}</span> | <span data-sort="byTravelTime">${l10n.searchResult.block.sort[2]}</span> | <span data-sort="ByDeparture">${l10n.searchResult.block.sort[3]}</span></div>
                                 </div>
                                 {{if parseInt(ref.AirlineLogos[AK],10)>0}}
-                                    <div class="logo" style="background: url('images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png'/*tpa=http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png*/);"></div>
+                                    <div class="logo" style="background: url('http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png');"></div>
                                 {{/if}}
                             </div>                        
                         </td>
@@ -2244,7 +2244,7 @@
                     {{/if}}
                 </span>
                 {{if parseInt(ref.AirlineLogos[$data.directions[0].trips[0].airCmp],10)>0}}
-                    <div class="logo" style="background: url(/images/ak/big/${$data.directions[0].trips[0].airCmp}_u0580.png)"></div>
+                    <div class="logo" style="background: url(http://www.onetwotrip.com/images/ak/big/${$data.directions[0].trips[0].airCmp}_u0580.png)"></div>
                 {{/if}}
             </div>
         {{/if}}
@@ -2473,7 +2473,7 @@
             <div class="akPlate ieBottomAKPlate ${$data.directions[0].trips[0].airCmp}">
                 <span class="name">${ref.Airlines[$data.directions[0].trips[0].airCmp]}</span>
                 {{if parseInt(ref.AirlineLogos[$data.directions[0].trips[0].airCmp],10)>0}}
-                    <div class="logo" style="background: url(/images/ak/big/${$data.directions[0].trips[0].airCmp}_u0580.png)"></div>
+                    <div class="logo" style="background: url(http://www.onetwotrip.com/images/ak/big/${$data.directions[0].trips[0].airCmp}_u0580.png)"></div>
                 {{/if}}
             </div>
         {{/if}}

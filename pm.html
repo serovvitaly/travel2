@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://secure.onetwotrip.com/pm.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="robots" content="noindex, nofollow">
+		<!--[if lte IE 8]>
+			<script type="text/javascript" src="/js/json2_u0864.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="./pm_files/jquery_u0864.js"></script>
+		<script type="text/javascript">
+			if (window.addEventListener) {
+				window.addEventListener("message", listener, false);
+			} else {
+				window.attachEvent("onmessage", listener);
+			}
+			function callRemoteCallback(event, name, args){
+				var arrArgs = [];
+				for (var i = 0, length = args.length; i < length; i++) {
+					arrArgs.push(args[i]);
+				}
+				window.parent.postMessage(JSON.stringify({
+					callbackName: name,
+					callbackArgs: arrArgs,
+					request: event.data
+				}), event.origin);
+			}
+			function listener(event){
+				if (event.data.type == 'cookie') {
+					setCookie(event.data.options);
+					return;
+				}
+				var messageData = JSON.parse(event.data);
+				jQuery.ajax({
+					type: messageData.type,
+					dataType: messageData.dataType,
+					url: messageData.url,
+					data: messageData.data,
+					timeout: messageData.timeout,
+					sourceData: {
+						origin: event.origin,
+						data: event.data
+					},
+					beforeSend: function(){
+						callRemoteCallback(this.sourceData, "beforeSend", arguments);
+					},
+					success: function(){
+						callRemoteCallback(this.sourceData, "success", arguments);
+					},
+					error: function(){
+						callRemoteCallback(this.sourceData, "error", arguments);
+					},
+					complete: function(){
+						callRemoteCallback(this.sourceData, "complete", arguments);
+					}
+				});
+			}
+			function setCookie(options){
+				if (!options || !options.name || !options.value) {
+					return;
+				}
+				var str = options.name + '=' + encodeURIComponent(options.value);
+				if (options.days) {
+					var date = new Date();
+					date.setTime(date.getTime() + (options.days * 24 * 60 * 60 * 1000));
+					str += '; expires=' + date.toGMTString();
+				}
+				if (options.path) {
+					str += ';path=' + options.path;
+				} else {
+					str += ';path=/';
+				}
+				if (!options.domain && window.location.hostname.indexOf("onetwotrip.com") > -1) {
+					options.domain = "onetwotrip.com";
+				}
+				if (options.domain) {
+					str += ';domain=' + options.domain;
+				}
+				if (options.secure) {
+					str += ';secure';
+				}
+				document.cookie = str;
+			}
+		</script>
+	</head>
+<body></body></html>

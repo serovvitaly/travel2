@@ -319,13 +319,13 @@ RecentSearches.prototype.setFixed = function(){
 	var panelsHeight = this.elLayoutPanels.offsetHeight;
 	if ($(window).scrollTop() >= panelsHeight) {
 		$(this.elLayoutRecentSearches).css({
-			position: "fixed",
-			top: 0
+			//position: "fixed",
+			//top: 0
 		});
 	} else {
 		$(this.elLayoutRecentSearches).css({
-			position: "absolute",
-			top: "auto"
+			//position: "absolute",
+			//top: "auto"
 		});
 	}
 };

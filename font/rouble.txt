@@ -1,0 +1,15 @@
+﻿@font-face {
+    font-family: 'ALSRublRegular';
+    /* IE:EOT; Firefox:TTF,OTF,WOFF; Opera:TTF,OTF; Chrome:SVG,TTF,OTF; Safari:TTF,OTF */
+    src: url('../fonts/rouble-webfont.eot'); 
+    src: local('☺'), 
+    url('../fonts/rouble-webfont.woff') format('woff'), 
+    url('../fonts/rouble-webfont.ttf') format('truetype'), 
+    url('../fonts/rouble-webfont.svg#ALSRublRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.rub {
+  font-family: 'ALSRublRegular';
+}

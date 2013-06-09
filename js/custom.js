@@ -17,21 +17,21 @@ $(document).ready(function(){
 			hex = hexFromRGB( red );
 	}
 	
-	$( ".slider" ).slider({
-		orientation: "horizontal",
-		range: "min",
-		max: 100,
-		value: 50
-	});
+    if ($.slider) {
+	    $( ".slider" ).slider({
+		    orientation: "horizontal",
+		    range: "min",
+		    max: 100,
+		    value: 50
+	    });
+        
+	    $( ".slider.sliderType1" ).slider( "value", 60 );
+	    //$( ".slider.sliderType2" ).slider( "value", 0 );
 
-	
-	
-	$( ".slider.sliderType1" ).slider( "value", 60 );
-	//$( ".slider.sliderType2" ).slider( "value", 0 );
-
-	$( ".slider.sliderType2" ).slider({
-		//slide: function(){$(this).parent().toggleClass('toggle');}
-	});
+	    $( ".slider.sliderType2" ).slider({
+		    //slide: function(){$(this).parent().toggleClass('toggle');}
+	    });
+    }
 
 	//$.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
 	/*$( ".datepicker" ).datepicker({

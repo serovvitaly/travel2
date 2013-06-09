@@ -9,12 +9,27 @@
     display: none !important;
 }
 
+#layout_body.spreader{
+    margin-left: 0;
+    width: auto;
+}
+
 
 .FilterResult ul{
     margin: 0;
     list-style: none;
 }
 
+
+iframe.pm {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 1px;
+    width: 1px;
+    border: none;
+    visibility: hidden;
+}
 
 
 .pf_AKname{
@@ -38,13 +53,13 @@
 }
 
 .star {
-    background: url('/images/stars/Star_u0859.png') repeat-x;
+    background: url('/images/stars/Star.png') repeat-x;
 }
 .halfstar {
-    background: url('/images/stars/HalfStar_u0859.png') no-repeat;
+    background: url('/images/stars/HalfStar.png') no-repeat;
 }
 .emptystar {
-    background: url('/images/stars/EmptyStar_u0859.png') repeat-x;
+    background: url('/images/stars/EmptyStar.png') repeat-x;
 }
 
 .ResultTickets .pf_bottom .content {
@@ -663,6 +678,7 @@ aside article.side .inn .slider.sliderType2 .ui-slider-handle {
 
 div.popup {
     display: block;
+    background: #FFF;
 }
 
 
@@ -680,8 +696,16 @@ div#layout_panels {
     vertical-align: top;
 }
 
+section .mainSearch {
+    
+}
 section .mainSearch .well {
     width: 798px;
+    float: left;
+}
+
+#form_search.row{
+    margin: 0;
 }
 
 
@@ -703,7 +727,7 @@ a.labelDynamics.disabled {
 
 div.calendar{
     top: auto !important;
-    margin: 21px 0 0 0;
+    margin: 0 0 0 -20px;
     z-index: 70;
     display: block;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
@@ -749,6 +773,7 @@ div.calendar{
 
 a.labelDynamics {
     line-height: 33px;
+    bottom: -32px;
 }
 
 .selectors .btn {
@@ -756,11 +781,14 @@ a.labelDynamics {
 }
 
 .selectors label {
-    margin-right: 4px;
+    margin-right: 2px;
 }
 
 .ticket .akPlate {
     background: url(/i/modalVarHeadBg.jpg) #008cd4 no-repeat scroll right -20px;
+}
+.bying .ticket .akPlate {
+    background-image: none;
 }
 
 .radioArea, .radioAreaChecked {
@@ -870,4 +898,73 @@ a.labelDynamics {
 
 div.calendar .withStop {
     color: #CCC;
+}
+
+
+.multivariants .simpleVariants-table {
+    background: url(/i/modalVarHeadBg.jpg) no-repeat scroll right top;
+}
+.multivariants .simpleVariants tr.noBkg {
+    background: none;
+}
+
+
+.field input[type="text"], .field input[type="password"] {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+    color: #8A8A8A;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    margin: 0;
+    padding: 4px 6px;
+    vertical-align: middle;
+    width: 150px;
+}
+
+.textPage div.passengersTable td input {
+    width: 88px;
+    margin: 0;
+}
+
+
+#tongueSpreader .dirRow{
+    margin-top: 10px;
+}
+#tongueSpreader .betweenFromTo{
+    width: 184px;
+}
+
+.suggestField.multiway {
+    font-size: 12px;
+    margin: 15px 15px 0;
+}
+.suggestField.multiway .content{
+    float: left;
+}
+.suggestField.multiway .change{
+    float: left;
+    color: #0f9dec;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.suggestField.multiway .change:hover{
+    float: left;
+    color: #0a6da4;
+    text-decoration: underline;
+}
+
+#form_search .span10{
+    margin: 0;
+}
+
+
+section .mainSearch .btn.span2 {
+    height: 86px;
 }

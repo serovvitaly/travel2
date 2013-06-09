@@ -1,19 +1,23 @@
+<script type="text/javascript">
+    var elIframe = createIframe('/pm.html', 'pm');
+    $("#pm").load(function(){
+        setCookie({
+            name: "franchise_id",
+            value: window.location.hostname,
+            days: 180,
+            xdm: true
+        });
+        initDefaultCurrency();
+    });
+</script>
 
-        <div id="layout_bg" style="display: none;"><div></div></div>
-        
-        <div id="layout_map" class="invisible" style="display: none;">
-            <div class="shadow"></div>
-        </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+<div id="layout_bg" style="display: none;"><div></div></div>
+
+<div id="layout_map" class="invisible" style="display: none;">
+    <div class="shadow"></div>
+</div>
+            
         
 <script type="text/javascript">
     var _gaq = _gaq || [];

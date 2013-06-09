@@ -809,7 +809,7 @@ PassengerSelect.prototype.show = function(data){
     ShadingIn('PassengerSelect');
 };
 PassengerSelect.prototype.setPageTitle = function(){
-	$('#pageTitle', this.elPageTitlePanel)[0].innerHTML = l10n.searchResult.passengers.pageTitle;
+	//$('#pageTitle', this.elPageTitlePanel)[0].innerHTML = l10n.searchResult.passengers.pageTitle;
 	this.setPageButtons();
 	fadeInBlock(this.elPageTitlePanel);
 	window.scrollTo(0, 0);
@@ -1103,6 +1103,7 @@ PassengerSelect.prototype.getConfirmation = function(){
 		}
         self.params.source    = twiket.setup.source;
         self.params.srcmarker = twiket.setup.marker;
+        
 		PMCaller.ajax({
 			iframeId: "pm",
 			type: "post",
