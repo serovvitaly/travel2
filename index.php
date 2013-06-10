@@ -418,7 +418,7 @@
                 <div class="dynamicsFootDate">
                   <p></p>
                 </div>
-                <input type="submit" class="btn btn-danger" value="ИСКАТЬ НА ЭТИ ДАТЫ" onclick="objAvia.searchStatistic()">
+                <input type="submit" id="dynamics-submit-button" class="btn btn-danger" disabled="disabled" value="ИСКАТЬ НА ЭТИ ДАТЫ" onclick="objAvia.searchStatistic()">
               </div>  <!-- /dynamicsFoot-->
             </div>  <!-- /row -->
           </div>  <!-- /hided -->

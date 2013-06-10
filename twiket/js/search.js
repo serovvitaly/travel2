@@ -1218,10 +1218,9 @@ Avia.prototype.drawResults = function(data){
 		this.getFares(data);
 	}
 };
-Avia.prototype.getStatisticQuery = function(data, direct){
-    
+Avia.prototype.getStatisticQuery = function(data, direct, flightType){
+    var self = this;
     var date = new Date(data.date);
-    
     var currentCurrency = 'RUB';
 
     var daysCollection = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
@@ -1358,6 +1357,7 @@ Avia.prototype.getStatisticQuery = function(data, direct){
                                 $('<li data-date="'+item.date+'"'+(curDay==0 || curDay==6 ? ' class="active"' : '')+'><span>'+daysCollection[curDay]+'</span></li>').appendTo($('#dynDay-' + direct));
                             });
                             
+                            
                             $('#dynDateGraph-' + direct + ' li').hover(function(){                                
                                 $('.dynDateGraph li:not(.selected)').find('div.price').remove();
                                 $('.dynDateGraph li.active').removeClass('active');
@@ -1377,7 +1377,22 @@ Avia.prototype.getStatisticQuery = function(data, direct){
                                 var tDate = new Date();
                                 tDate.setMonth(qdate_attr.substring(2) * 1 - 1, qdate_attr.substring(0,2) * 1);
                                 
+                                var calendar = new Calendar({
+                                    parent: objSearchForm,
+                                    directionNumber: dir
+                                });
+                                calendar.onclickDay(null, tDate);
+                                
                                 objSearchForm.data.directions[dir].date = tDate;
+                                
+                                if (flightType == 'oneway') {
+                                    $('#dynamics-submit-button').removeAttr('disabled');
+                                }
+                                else if (flightType == 'round') {                                    
+                                    if ($('#dynDateGraph-there li.selected').length > 0 && $('#dynDateGraph-back li.selected').length > 0) {
+                                        $('#dynamics-submit-button').removeAttr('disabled');
+                                    }
+                                }
                             });
                             
                             $('.dynamicsFootDate p').html(dynamicsFootDate);
@@ -1398,10 +1413,10 @@ Avia.prototype.getStatistic = function(data){
     
     var result;
     if (data.directions[0]) {
-        result = this.getStatisticQuery(data.directions[0], 'there');
+        result = this.getStatisticQuery(data.directions[0], 'there', data.getFlightType());
     }
     if (data.directions[1]) {
-        result = this.getStatisticQuery(data.directions[1], 'back');
+        result = this.getStatisticQuery(data.directions[1], 'back', data.getFlightType());
     }
     
 };

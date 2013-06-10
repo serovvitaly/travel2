@@ -977,3 +977,20 @@ section .mainSearch .btn.span2 {
     font-size: 11px;
     width: 17px;
 }
+
+
+
+ul#recentSearches .close {
+    z-index: 2;
+    width: 15px;
+    height: 14px;
+    display: inline-block;
+    float: none;
+    background: url(/images/small_cross_close.png) no-repeat left center;
+    cursor: pointer;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+ul#recentSearches .close:hover {
+    background-position: -15px center;
+}
