@@ -146,6 +146,7 @@ Calendar.prototype.getFirstMonthIndex = function(){
 	if (this.dataDir.date) {
 		date = new Date(this.dataDir.date);
 	}
+     
 	for (var i = this.dirNumber - 1; i >= 0; i--) {
 		var dir = this.dataDirs[i];
 		if (dir.date) {
@@ -158,6 +159,9 @@ Calendar.prototype.getFirstMonthIndex = function(){
 	}
 	this.firstMonthIndex = date.getFullYear() * 12 + date.getMonth() - this.min.getFullYear() * 12 - this.min.getMonth();
 	if (this.firstMonthIndex > this.maxFirstMonthIndex) this.firstMonthIndex = this.maxFirstMonthIndex;
+    if (this.dirNumber == 1 && this.firstMonthIndex > 0) {
+        this.firstMonthIndex = this.firstMonthIndex - 1;
+    }
 	return this.firstMonthIndex;
 };
 Calendar.prototype.drawMonths = function(){
