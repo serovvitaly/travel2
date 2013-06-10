@@ -372,7 +372,7 @@
                     {{tmpl($data) "tmpl_Stars"}}
                 </div>
                 {{if parseInt(ref.AirlineLogos[AK],10)>0}}
-                    <div class="logo{{if $item.markClass}} moved{{/if}}" style="background-image: url('http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png');"></div>
+                    <div class="logo{{if $item.markClass}} moved{{/if}}" style="display:none; background-image: url('http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png');"></div>
                 {{/if}}
                 {{if $item.markClass}}
                     <div class="pf_mark ${$item.markClass}"></div>
@@ -579,7 +579,7 @@
             <div class="pf_light_speck"><div></div></div>
             <div class="pf_AKname">${ref.Airlines[AK]}</div>
             {{if parseInt(ref.AirlineLogos[AK],10)>0}}
-                <div style="display:none" class="logo moved" style="background: url('http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png');"></div>
+                <div class="logo moved" style="display:none; background: url('http://www.onetwotrip.com/images/ak/${tw.ticketParams.logopath}small/${AK}_u0580.png');"></div>
             {{/if}}
             {{if !$data.single}}
                 <div class="ReturnToResult">

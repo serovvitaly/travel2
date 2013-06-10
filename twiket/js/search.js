@@ -1224,7 +1224,9 @@ Avia.prototype.getStatisticQuery = function(data, direct){
     
     var currentCurrency = 'RUB';
 
-    var collection = {}, 
+    var daysCollection = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
+    
+    var collection = [], 
         dateTo = new Date(), 
         dateFrom = new Date();
     
@@ -1247,11 +1249,16 @@ Avia.prototype.getStatisticQuery = function(data, direct){
             //days:     12
         },
         success: function(json){
+            /*console.log(direct);
+            $.each(json.dates, function(ind, el){
+                console.log(ind);
+            })*/
             
             if (json.dates) {
                 
                 var amount, rate, maxAmount = 0;
                 $.each(json.dates, function(index, item){
+                    
                     var minAmount = 10000000000, key;
                     for (st=0; st < item.length; st++) {
                         
@@ -1272,7 +1279,7 @@ Avia.prototype.getStatisticQuery = function(data, direct){
                         }
                     }
                                       
-                    collection[index] = new Object({
+                    collection.push({
                         amount: amount,
                         date: index,
                         key: key
@@ -1298,6 +1305,7 @@ Avia.prototype.getStatisticQuery = function(data, direct){
                         if (json.dates) {
                             
                             $.each(json.dates, function(index, item){
+                                
                                 var minAmount = 10000000000, key;
                                 for (st=0; st < item.length; st++) {
                                     
@@ -1317,7 +1325,7 @@ Avia.prototype.getStatisticQuery = function(data, direct){
                                     }
                                 }
                                 
-                                collection[index] = new Object({
+                                collection.push({
                                     amount: amount,
                                     date: index,
                                     key: key
@@ -1325,10 +1333,33 @@ Avia.prototype.getStatisticQuery = function(data, direct){
                             });
                             $('#dynDateGraph-' + direct).empty();
                             $('#dynDate-' + direct).empty();
+                            $('#dynDay-' + direct).empty();
+                            
+                            
+                            collection.sort(function(a, b){
+                                var aDay = a.date.substring(0,2) * 1, 
+                                    bDay = b.date.substring(0,2) * 1,
+                                    aMonth = a.date.substring(2) * 1, 
+                                    bMonth = b.date.substring(2) * 1; 
+                                
+                                if (aMonth == bMonth) {                                    
+                                    return aDay - bDay;
+                                } else {
+                                    return aMonth - bMonth;
+                                }
+                            });
+                                                        
                             $.each(collection, function(index, item){
+                                
+                                var tDate = new Date();
+                                tDate.setMonth(item.date.substring(2) * 1 - 1, item.date.substring(0,2) * 1);
+                                
                                 var bar_height = Math.ceil(item.amount * 100 / maxAmount);
                                 $('<li data-date="'+item.date+'" data-amount="'+Math.ceil(item.amount)+'"><a href="javascript:;" style="height:'+bar_height+'%"></a></li>').appendTo('#dynDateGraph-' + direct);
-                                $('<li><a href="javascript:;">'+index.substring(0,2)+'</a></li>').appendTo($('#dynDate-' + direct));
+                                $('<li data-date="'+item.date+'"><a href="javascript:;">'+tDate.getDate()+'</a></li>').appendTo($('#dynDate-' + direct));
+                                
+                                var curDay = tDate.getDay();
+                                $('<li data-date="'+item.date+'"'+(curDay==0 || curDay==6 ? ' class="active"' : '')+'><span>'+daysCollection[curDay]+'</span></li>').appendTo($('#dynDay-' + direct));
                             });
                             
                             $('#dynDateGraph-' + direct + ' li').hover(function(){
@@ -1337,20 +1368,23 @@ Avia.prototype.getStatisticQuery = function(data, direct){
                                 $(this).addClass('active').prepend('<div class="price">' + $(this).attr('data-amount') + ' руб.</div>');
                                 
                             }).click(function(){
-                                $(this).parents('#dynDateGraph-' + direct).find('li').removeClass('selected');
-                                $(this).addClass('selected');
                                 
-                                var direct = (direct == 'back') ? 1 : 0;
-                                
-                                var tdate = new Date();
                                 var qdate_attr = $(this).attr('data-date');
-                                var qdate = new Date(tdate.getFullYear(), 1, qdate_attr.substr(0,2) * 1);
                                 
-                                console.log(tdate.getFullYear(), qdate_attr.substr(2,2) * 1, qdate_attr.substr(0,2) * 1);
+                                $('ul[id*="'+direct+'"] li[data-date]').removeClass('selected');
+                                $('ul[id*="'+direct+'"] li[data-date="'+qdate_attr+'"]').addClass('selected');
                                 
-                                console.log( objSearchForm.data.directions[direct].date );
-                                objSearchForm.data.directions[direct].date = qdate;
-                                console.log( objSearchForm.data.directions[direct].date );
+                                var dir = (direct == 'back') ? 1 : 0;
+                                
+                                var tDate = new Date();
+                                tDate.setMonth(qdate_attr.substring(2) * 1 - 1, qdate_attr.substring(0,2) * 1);
+                                //var qdate = new Date(tdate.getFullYear(), 1, qdate_attr.substr(0,2) * 1);
+                                
+                                //console.log(tdate.getFullYear(), qdate_attr.substr(2) * 1 - 1, qdate_attr.substr(0,2) * 1);
+                                
+                                console.log( objSearchForm.data.directions[dir].date );
+                                objSearchForm.data.directions[dir].date = tDate;
+                                console.log( objSearchForm.data.directions[dir].date );
                             });
                             
                             $('.dynamicsFootDate p').html(dynamicsFootDate);
@@ -1365,6 +1399,10 @@ Avia.prototype.getStatisticQuery = function(data, direct){
     });
 };
 Avia.prototype.getStatistic = function(data){
+    if ( data.getFlightType() == 'multiway') {
+        return;
+    }
+    
     var result;
     if (data.directions[0]) {
         result = this.getStatisticQuery(data.directions[0], 'there');

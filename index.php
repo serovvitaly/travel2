@@ -368,38 +368,8 @@
                 </div>  <!-- /dynDate -->
 
                 <div class="dynDay navbar">
-                  <ul class="nav">
-                    <li><span>п</span></li>
-                    <li><span>в</span></li>
-                    <li><span>с</span></li>
-                    <li><span>ч</span></li>
-                    <li><span>п</span></li>
-                    <li class="active"><span>с</span></li>
-                    <li class="active"><span>в</span></li>
-                    <li><span>п</span></li>
-                    <li><span>в</span></li>
-                    <li><span>с</span></li>
-                    <li><span>ч</span></li>
-                    <li><span>п</span></li>
-                    <li class="active"><span>с</span></li>
-                    <li class="active"><span>в</span></li>
-                    <li><span>п</span></li>
-                    <li><span>в</span></li>
-                    <li><span>с</span></li>
-                    <li><span>ч</span></li>
-                    <li><span>п</span></li>
-                    <li class="active"><span>с</span></li>
-                    <li class="active"><span>в</span></li>
-                    <li><span>п</span></li>
-                    <li><span>в</span></li>
-                    <li><span>с</span></li>
-                    <li><span>ч</span></li>
-                    <li><span>п</span></li>
-                    <li class="active"><span>с</span></li>
-                    <li class="active"><span>в</span></li>
-                    <li><span>п</span></li>
-                    <li><span>в</span></li>
-                    <li><span>с</span></li>
+                  <ul class="nav" id="dynDay-there">
+                  
                   </ul>
                 </div>  <!-- /dynDate -->
               </span>  <!-- /dynTo -->
@@ -436,38 +406,8 @@
                 </div>  <!-- /dynDate -->
 
                 <div class="dynDay navbar">
-                  <ul class="nav">
-                    <li><span>п</span></li>
-                    <li><span>в</span></li>
-                    <li><span>с</span></li>
-                    <li><span>ч</span></li>
-                    <li><span>п</span></li>
-                    <li class="active"><span>с</span></li>
-                    <li class="active"><span>в</span></li>
-                    <li><span>п</span></li>
-                    <li><span>в</span></li>
-                    <li><span>с</span></li>
-                    <li><span>ч</span></li>
-                    <li><span>п</span></li>
-                    <li class="active"><span>с</span></li>
-                    <li class="active"><span>в</span></li>
-                    <li><span>п</span></li>
-                    <li><span>в</span></li>
-                    <li><span>с</span></li>
-                    <li><span>ч</span></li>
-                    <li><span>п</span></li>
-                    <li class="active"><span>с</span></li>
-                    <li class="active"><span>в</span></li>
-                    <li><span>п</span></li>
-                    <li><span>в</span></li>
-                    <li><span>с</span></li>
-                    <li><span>ч</span></li>
-                    <li><span>п</span></li>
-                    <li class="active"><span>с</span></li>
-                    <li class="active"><span>в</span></li>
-                    <li><span>п</span></li>
-                    <li><span>в</span></li>
-                    <li><span>с</span></li>
+                  <ul class="nav" id="dynDay-back">
+                  
                   </ul>
                 </div>  <!-- /dynDate -->
               </span>  <!-- /dynFrom -->
