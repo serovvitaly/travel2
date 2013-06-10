@@ -51,12 +51,6 @@ $(document).ready(function(){
 	});
 
 
-	$('.dynDateGraph li').hover(function(){
-		$('.dynDateGraph').find('div.price').remove();
-		$('.dynDateGraph li.active').removeClass('active');
-		$(this).addClass('active').prepend('<div class="price">230 $</div>');
-	})
-
 	$('#regOpen').click(function(){
 		$('.regOn, unReg').toggle();
 	});

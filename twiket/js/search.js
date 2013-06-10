@@ -1249,10 +1249,6 @@ Avia.prototype.getStatisticQuery = function(data, direct){
             //days:     12
         },
         success: function(json){
-            /*console.log(direct);
-            $.each(json.dates, function(ind, el){
-                console.log(ind);
-            })*/
             
             if (json.dates) {
                 
@@ -1362,12 +1358,14 @@ Avia.prototype.getStatisticQuery = function(data, direct){
                                 $('<li data-date="'+item.date+'"'+(curDay==0 || curDay==6 ? ' class="active"' : '')+'><span>'+daysCollection[curDay]+'</span></li>').appendTo($('#dynDay-' + direct));
                             });
                             
-                            $('#dynDateGraph-' + direct + ' li').hover(function(){
-                                $('.dynDateGraph').find('div.price').remove();
+                            $('#dynDateGraph-' + direct + ' li').hover(function(){                                
+                                $('.dynDateGraph li:not(.selected)').find('div.price').remove();
                                 $('.dynDateGraph li.active').removeClass('active');
-                                $(this).addClass('active').prepend('<div class="price">' + $(this).attr('data-amount') + ' руб.</div>');
+                                $(this).not('.selected').addClass('active').prepend('<div class="price">' + $(this).attr('data-amount') + ' руб.</div>');
                                 
                             }).click(function(){
+                                
+                                $(this).prepend('<div class="price">' + $(this).attr('data-amount') + ' руб.</div>');
                                 
                                 var qdate_attr = $(this).attr('data-date');
                                 
@@ -1378,13 +1376,8 @@ Avia.prototype.getStatisticQuery = function(data, direct){
                                 
                                 var tDate = new Date();
                                 tDate.setMonth(qdate_attr.substring(2) * 1 - 1, qdate_attr.substring(0,2) * 1);
-                                //var qdate = new Date(tdate.getFullYear(), 1, qdate_attr.substr(0,2) * 1);
                                 
-                                //console.log(tdate.getFullYear(), qdate_attr.substr(2) * 1 - 1, qdate_attr.substr(0,2) * 1);
-                                
-                                console.log( objSearchForm.data.directions[dir].date );
                                 objSearchForm.data.directions[dir].date = tDate;
-                                console.log( objSearchForm.data.directions[dir].date );
                             });
                             
                             $('.dynamicsFootDate p').html(dynamicsFootDate);
@@ -1414,6 +1407,7 @@ Avia.prototype.getStatistic = function(data){
 };
 Avia.prototype.searchStatistic = function(){
     objSearchForm.onSubmit('startSearch');
+    $('.dynamics .hided').slideToggle();
 }
 Avia.prototype.getFares = function(data){
 	var self = this;
