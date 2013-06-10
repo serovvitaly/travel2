@@ -911,7 +911,7 @@ div.calendar .withStop {
     background: none;
 }
 
-
+/*
 .field input[type="text"], .field input[type="password"] {
     -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
 
@@ -929,12 +929,12 @@ div.calendar .withStop {
     padding: 4px 6px;
     vertical-align: middle;
     width: 150px;
-}
-
+} */
+ /*
 .textPage div.passengersTable td input {
     width: 88px;
     margin: 0;
-}
+} */
 
 
 #tongueSpreader .dirRow{
