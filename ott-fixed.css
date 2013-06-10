@@ -994,3 +994,22 @@ ul#recentSearches .close {
 ul#recentSearches .close:hover {
     background-position: -15px center;
 }
+
+
+.flightTypeButtons .oneway i{
+    background: url(/i/btnFlight1.png) no-repeat center top;  
+}
+.flightTypeButtons .round i{
+    background: url(/i/btnFlight2.png) no-repeat center top; 
+}
+.flightTypeButtons .multiway i{
+    background: url(/i/btnFlight3.png) no-repeat center top; 
+}
+.flightTypeButtons i{
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+.flightTypeButtons .active i{
+    background-position: bottom;
+}
