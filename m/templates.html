@@ -44,8 +44,8 @@
                             <tbody></tbody>
                         </table>
                     </div>
-                    <div class="amount"></div>
-                    <div class="transactions"></div>
+                    <!--div class="amount" style="display:none"></div-->
+                    <div class="transactions" style="display:none"></div>
                 </div>
                 
                 <div class="layout_paymentNote" style="display:none">
@@ -89,14 +89,17 @@
                         <div class="passengersTable">
                             <h4>ФАМИЛИЯ/ИМЯ</h4>
                         </div>
+                        <div class="SSL"><span class="padlock"></span>{{html l10n.payment.html_ssl}}</div>
                     </div>
                     </div>  <!-- /span6 -->
                     <div class="span6">
                       <div class="toBuy">
                         <div class="card">
                             <div class="block_cardsList invisible"></div>
-                            <div class="SSL"><span class="padlock"></span>{{html l10n.payment.html_ssl}}</div>
                             {{tmpl "#tmpl_Card"}}
+                            <div class="byCash" style="display:block">
+                              <span class="price"><span class="amount"></span> <!--span class="rub">i</span--></span> по России в салонах Связной <!--a href="#">адреса салонов</a-->
+                            </div>
                         </div>
                       </div>  <!-- /toBuy -->
                     </div>  <!-- /span6 -->
@@ -578,44 +581,59 @@
       <button class="btn byCard btn-primary">картой</button>
       <button class="btn byCash">наличными</button>
     </div>
-    <div class="block_creditCard">
+    <div class="block_creditCard byCard">
         <div class="creditCard avers">
             <div class="visa"></div>
             <div class="masterCard"></div>
             <div class="amex invisible"></div>
             <div class="maestro invisible"></div>
             <div class="cardNumber">
-                <label for="input_number1">${l10n.card.fields[0]}</label>
+                <label for="input_number1">Номер карты</label>
                 <table><tr>
                     <td class="number1"></td>
                     <td class="number2"></td>
                     <td class="number3"></td>
                     <td class="number4"></td>
+                    <td><img src="/i/mcLogo.png" alt=""></td>
+                    <td><img src="/i/visaLogo.png" alt=""></td>
                 </tr></table>
                 <div class="numberAmex invisible"></div>
             </div>
-            <div class="expDate">
-                <table>
-                    <tr>
-                        <td class="expMonthLabel"><label for="input_expMonth">${l10n.card.fields[1]}</label></td>
-                        <td class="expYearLabel"><label for="input_expYear">${l10n.card.fields[2]}</label></td>
-                    </tr>
-                    <tr>
-                        <td class="expMonth">
-                            <label for="input_expMonth">{{html l10n.card.fields[3]}}</label>
-                        </td>
-                    <td class="expYear"></td>
-                    </tr>
-                </table>
+            
+            <div class="expDate">     
+              <table>      
+                <tbody>
+                  <tr>
+                    <td></td>       
+                    <td class="expMonthLabel">
+                      <label for="input_expMonth">Month</label>
+                    </td>       
+                    <td class="expYearLabel">
+                      <label for="input_expYear">Year</label>
+                    </td>  
+                    <td></td>
+                    <td></td>    
+                    <td></td>
+                  </tr>      
+                  <tr>
+                    <td class="expMonthLabel"><label for="input_expMonth">VALID<br>THRU</label></td>       
+                    <td class="expMonth"></td>    
+                    <td class="expYear"></td> 
+                    <td class="cvvLabel"><label for="input_cvv">CVV/<br>CVC</label></td> 
+                    <td class="cvv"></td>
+                    <td class="que"><a href="#"><img src="/i/queImg.png" alt=""></a></td>
+                  </tr>     
+                </tbody>
+              </table>    
             </div>
+            
             <div class="holderName">
-                <label for="input_holderName">${l10n.card.fields[4]}</label>
+              <label for="input_holderName">Владелец карты</label>              
             </div>
+            <!--p>Перед началом оплаты ознакомтесь пожалуйста <br> со следующей <a href="#">информацией</a></p-->
+            
         </div>
-        <div class="creditCard reverse">
-            <div class="cvv">
-                <label for="input_cvv">${l10n.card.fields[5]}</label>
-            </div>
+        <div class="creditCard reverse" style="display:none">
             <div class="cid invisible">
                 <label for="input_cid">CID</label>
             </div>

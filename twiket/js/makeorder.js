@@ -71,8 +71,8 @@ function Makeorder(){
 	this.topPanel2spreader = document.getElementById("topPanel2spreader");
 	this.setPageTitle();
 	this.params = getURLParams();
-	this.PrevHref = "http://";
-	this.PrevHref += (tw.franchise.local)?window.location.hostname:'onetwotrip.'+tw.franchise.a;
+	this.PrevHref = "";
+	//this.PrevHref += (tw.franchise.local)?window.location.hostname:'onetwotrip.'+tw.franchise.a;
 	this.PrevHref += "/?s#" + this.params.r;
 	if (this.params.B) {
 		this.PrevHref += "&B";

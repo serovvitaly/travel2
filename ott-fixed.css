@@ -1036,6 +1036,22 @@ ul#recentSearches .close:hover {
 .textPage .block_buyer .note {
     padding-bottom: 20px;
 }
-.textPage .paym .brdDot .span6:first-child {
-    padding-bottom: 20px;
+
+.textPage #layout_passengers .SSL {
+    line-height: 13px;
+    color: #808080;
+    padding: 20px 0 20px 25px;
+}
+
+.textPage .toBuy .card div.byCard table td.expMonthLabel label {
+    font-size: 16px;
+    line-height: 1em;
+    width: 63px;
+}
+
+.textPage .toBuy .card div.byCard table td.cvvLabel label {
+    font-size: 16px;
+    line-height: 1em;
+    width: 60px;
+    text-align: center;
 }
