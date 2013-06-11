@@ -88,27 +88,6 @@
                         <div class="title"><h3>${l10n.makeorder.passengers}</h3></div>
                         <div class="passengersTable">
                             <h4>ФАМИЛИЯ/ИМЯ</h4>
-                            <table>
-                                <col class="gender"/>
-                                <col class="name"/>
-                                <col class="birthDate"/>
-                                <col class="passCountry"/>
-                                <col class="passNumber"/>
-                                <col class="passExpDate"/>
-                                <col class="bonusCard"/>
-                                <!--col class="delete"/-->
-                                <thead><tr>
-                                    <th></th>
-                                    <th>${l10n.makeorder.pasTable[0]}</th>
-                                    <th>${l10n.makeorder.pasTable[1]}</th>
-                                    <th>${l10n.makeorder.pasTable[2]}</th>
-                                    <th>${l10n.makeorder.pasTable[3]}</th>
-                                    <th>${l10n.makeorder.pasTable[4]}</th>
-                                    <th class="bonusCard">${l10n.makeorder.pasTable[5]}&nbsp; <span class="bonusMiles"></span></th>
-                                    <!--td></td-->
-                                </tr></thead>
-                                <tbody></tbody>
-                            </table>
                         </div>
                     </div>
                     </div>  <!-- /span6 -->
@@ -199,14 +178,13 @@
     </div>
 </script>
 <script id="tmpl_Field" type="text/x-jquery-tmpl">
-    <div class="field{{if $data.checkbox}} checkbox{{/if}}">
+    <div class="field2{{if $data.checkbox}} checkbox{{/if}}">
         {{if $data.checkbox}}
             <div class="checkbox">
                 <input type="checkbox" autocomplete="off" name="${name}_flag" id="input_${name}_flag" value="true" checked="checked"/>
             </div>
         {{/if}}
-        <input type="{{if $data.inputType}}${$data.inputType}{{else}}text{{/if}}" autocomplete="${$data.autocomplete}" name="${name}" id="input_${name}" value="${value}" maxlength="${maxlength}"/>
-        <div class="abs bg focus"><div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div><div class="t"></div><div class="r"></div><div class="b"></div><div class="l"></div></div>
+        <input type="{{if $data.inputType}}${$data.inputType}{{else}}text{{/if}}" class="input-medium" autocomplete="${$data.autocomplete}" name="${name}" id="input_${name}" value="${value}" maxlength="${maxlength}"/>
     </div>
 </script>
 <script id="tmpl_WarnNamesPopup" type="text/x-jquery-tmpl">
@@ -595,6 +573,11 @@
     </div>
 </script>
 <script id="tmpl_Card" type="text/x-jquery-tmpl">
+    <h3>Способ оплаты</h3>
+    <div class="btn-group">
+      <button class="btn byCard btn-primary">картой</button>
+      <button class="btn byCash">наличными</button>
+    </div>
     <div class="block_creditCard">
         <div class="creditCard avers">
             <div class="visa"></div>

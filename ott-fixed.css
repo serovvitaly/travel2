@@ -1013,3 +1013,29 @@ ul#recentSearches .close:hover {
 .flightTypeButtons .active i{
     background-position: bottom;
 }
+
+
+#form_makeorder .passengers .phone span{
+    position: absolute;
+    margin: 6px;
+}
+#form_makeorder .passengers .phone input{
+    padding-left: 16px;
+    width: 140px;
+}
+.textPage div.passengersTable .passCountry span.dashed{
+    display: none;
+}
+.textPage div.passengersTable .passCountry select{
+    margin: 0;
+}
+.textPage div.passengersTable .passExpDate .checkbox .checkbox{
+    display: none;
+}
+
+.textPage .block_buyer .note {
+    padding-bottom: 20px;
+}
+.textPage .paym .brdDot .span6:first-child {
+    padding-bottom: 20px;
+}

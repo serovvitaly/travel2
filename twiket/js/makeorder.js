@@ -1,5 +1,5 @@
 var tmpl_topPanel2Button = '<a href="${href}" class="button ${className}"><div class="l"></div><div class="r"></div><div class="c"></div>${title}</a>';
-var tmpl_FieldStyle = '<div class="field"><div class="fade"></div><div class="abs bg focus"><div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div><div class="t"></div><div class="r"></div><div class="b"></div><div class="l"></div></div></div>';
+var tmpl_FieldStyle = '<div class="field2"><div class="fade"></div></div>';
 var tmpl_Blank, tmpl_Ticket, tmpl_Form; /* IE<9 bug */
 var disablePassExpire=true;
 var objOrder;
@@ -88,6 +88,7 @@ function Makeorder(){
 	} else {
 		warn("Makeorder - 404");
 	}
+    
 }
 Makeorder.prototype.setPageTitle = function(){
 	var elTitle = document.createElement("div");
@@ -594,7 +595,7 @@ Makeorder.prototype.setForm = function(arrTrips){
 		self.onSubmit();
 	};
 	this.initEmailPhone();
-	this.initBonusMiles();
+	//this.initBonusMiles();
 	this.initPassengers();
 	this.setBonus();
 	this.initServices();
@@ -655,7 +656,7 @@ Makeorder.prototype.initBonusMiles = function(){
 Makeorder.prototype.initPassengers = function(){
 	this.passIndex = 0;
 	this.passengersFields = [];
-	this.elPassengersTable = $(".passengersTable table", this.elForm)[0];
+	this.elPassengersTable = $(".passengersTable", this.elForm)[0];
 
 	for (var i = 0, length_i = this.request.reservations.length; i < length_i; i++) {
 		var reservation = this.request.reservations[i];
@@ -668,14 +669,29 @@ Makeorder.prototype.initPassengers = function(){
 Makeorder.prototype.createPassengerForm = function(data){
 	var self = this;
 	var objFields = {};
-	var row = this.elPassengersTable.tBodies[0].insertRow(-1);
+    
+    var table = $('<table></table>');
+    table.append('<colgroup><col class="gender"><col class="name"><col class="birthDate"><col class="passCountry"><col class="passNumber"><col class="passExpDate"></colgroup>');
+    table.append('<thead></thead>');
+    table.append('<tbody></tbody>');
+    table = table.get()[0];
+    $(this.elPassengersTable).append(table);
+    
+    var hrow1 = table.tHead.insertRow(-1);
+    
+    var hrow2 = table.tHead.insertRow(-1);
+        hrow2.innerHTML = '<th></th><th>Дата рождения</th><th>Гражданство</th><th>Серия № документа</th><th>Действителен до</th>';
+    
+	var row = table.tBodies[0].insertRow(-1);
+    row.insertCell(-1);
 	
-	var tdGender = row.insertCell(-1);
+	var tdGender = hrow1.insertCell(-1);
 		tdGender.className = "gender";
 		tdGender.innerHTML = '<span class="gender ' + data.ageType + ' ' + data.gender + '"></span>';
 	
-	var tdName = row.insertCell(-1);
-		tdName.className = "name";
+	var tdName = hrow1.insertCell(-1);
+        tdName.className = "name";
+		tdName.colSpan   = 4;
 		tdName.innerHTML = data.lastName + " / " + data.firstName;
 	
 	var tdBirthDate = row.insertCell(-1);
@@ -737,6 +753,7 @@ Makeorder.prototype.createPassengerForm = function(data){
 	}
 	
 	var tdPassExpDate = row.insertCell(-1);
+        tdPassExpDate.className = "passExpDate";
 	var passExpDate = Date.parseAPI(data.passExpDate);
 	objFields.passExpDate = new Field({
 		appendTo: tdPassExpDate,
@@ -748,7 +765,7 @@ Makeorder.prototype.createPassengerForm = function(data){
 		disabled: !data.needPassExpDate
 	});
 	objFields.passExpDate.checkExpDate();
-	
+	/*
 	var tdBonusCard = row.insertCell(-1);
 		tdBonusCard.className = "bonusCard";
 	objFields.freqFlyerNumber = new Field({
@@ -760,7 +777,7 @@ Makeorder.prototype.createPassengerForm = function(data){
 		type: "bonusCard",
 		checkbox: true,
 		disabled: true
-	});
+	});*/
 	
 	this.passengersFields.push(objFields);
 	this.passIndex++;
@@ -1538,7 +1555,9 @@ Makeorder.prototype.drawPriceRow = function(reservation, age){
 		elRulesLink.innerHTML = l10n.makeorder.linkRules;
 		$(elRulesLink).click(function(){
 			showFareRules({
-				url: "/_api/confirmation/getfarerules/",
+				url: "https://secure.onetwotrip.com/_api/confirmation/getfarerules/",
+                dataType: "jsonp",
+                type: "post",
 				data: {
 					params: JSON.stringify({
 						trips: reservation.trps,
