@@ -220,6 +220,11 @@ Makeorder.prototype.getInfo = function(params){
 					if (self.json.isAuth && self.json.cards[0]) {
 						self.setCardsList();
 					}
+                    
+                    $('#subscriptions input:radio').customRadio();
+                    $('input:checkbox').customCheckbox();
+                    $('#layout_passengers select').customSelect();
+                    
 				} else {
 					addPopup({
 						error: true,
@@ -964,6 +969,8 @@ Makeorder.prototype.drawSubscriptions = function(){
 		});
 	}
 	this.recountServices();
+    
+    $('#subscriptions input:radio').customRadio();
 };
 Makeorder.prototype.serviceCheckCitizenship = function(){
 	var passengerCount = 0;
@@ -1490,6 +1497,7 @@ Makeorder.prototype.drawPriceRow = function(reservation, age){
 
 
 	var tdBase = row.insertCell(-1);
+        tdBase.className = "tarif";
 		tdBase.innerHTML = formatMoney(oPrices.base);
 	
 	var tdSign1 = row.insertCell(-1);
@@ -1497,6 +1505,7 @@ Makeorder.prototype.drawPriceRow = function(reservation, age){
 		tdSign1.innerHTML = "+";
 	
 	var tdTaxe = row.insertCell(-1);
+        tdTaxe.className = "tax";
 		tdTaxe.innerHTML = formatMoney(oPrices.taxes);
 
 	var tdSign2 = row.insertCell(-1);
@@ -1518,6 +1527,7 @@ Makeorder.prototype.drawPriceRow = function(reservation, age){
 		tdSignEquals.innerHTML = "=";
 		
 	var tdAmount = row.insertCell(-1);
+        tdAmount.className = "amount";
 		tdAmount.innerHTML = formatMoney(oPrices.amount);
 
 	//PriceDiffCheck

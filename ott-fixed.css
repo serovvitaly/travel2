@@ -1058,6 +1058,7 @@ ul#recentSearches .close:hover {
 
 .textPage .toBuy {
     padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 .textPage .toBuy .card .btn-group .btn {
@@ -1077,4 +1078,50 @@ ul#recentSearches .close:hover {
 
 .ticket .direction:last-child {
     border: none;
+}
+
+#subscriptions ul{
+    list-style: none;
+    margin: 0;
+}
+
+.textPage .paymentTable table.paymentTable th {
+    font-size: 13px;
+}
+
+.textPage .paymentTable table.paymentTable td {
+    padding-top: 16px;
+}
+.textPage .paymentTable table.paymentTable td.fareRules {
+    text-align: center;
+}
+
+.textPage .paymentInfoblock label {
+    display: inline;
+}
+.textPage .paymentInfoblock li {
+    padding-bottom: 5px;
+}
+
+.textPage .radioArea, .textPage .radioAreaChecked {
+    margin-right: 10px;
+}
+.textPage .checkboxArea, .textPage .checkboxAreaChecked {
+    margin-right: 10px;
+    margin-top: 2px;
+    z-index: -1;
+    position: relative;
+}
+
+.textPage .paymentInfoblock {
+    padding: 20px 150px 20px 40px;
+}
+.textPage .paymentInfoblock .title{
+    color: #4B4B4B;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    line-height: 32px;
+    margin: 8px 0;
+
 }
