@@ -1729,7 +1729,8 @@ Makeorder.prototype.drawAgreements = function(){
 };
 Makeorder.prototype.testCard = function(){
 	if (this.json.pmtVrntsHash[this.pmtVrnt].tp == 'card') {
-		$('.card', this.elForm).removeClass('invisible');
+        $('.blockByCard', this.elForm).removeClass('invisible');
+		$('.blockByCash', this.elForm).addClass('invisible');
 		if (this.pmtVrnt == 'ott_amex') {
 			this.showAmex();
 		} else {
@@ -1746,7 +1747,8 @@ Makeorder.prototype.testCard = function(){
 		}
 		this.elButton.value = l10n.makeorder.buy;
 	} else {
-		$('.card', this.elForm).addClass('invisible');
+        $('.blockByCard', this.elForm).addClass('invisible');
+		$('.blockByCash', this.elForm).removeClass('invisible');
 		$('.block_cardsList', this.elForm).addClass('invisible');
 		this.elButton.value = l10n.makeorder.book;
 	}

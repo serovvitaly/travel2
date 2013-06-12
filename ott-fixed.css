@@ -1055,3 +1055,26 @@ ul#recentSearches .close:hover {
     width: 60px;
     text-align: center;
 }
+
+.textPage .toBuy {
+    padding-top: 10px;
+}
+
+.textPage .toBuy .card .btn-group .btn {
+    width: 170px;
+}
+
+
+.fund {
+    font-size: 14px;
+    padding: 10px 40px;
+    background: #fafafa;
+    border-bottom: 1px #808080 dotted;
+}
+.fund .title, .fund .date{
+    font-weight: bold;
+}
+
+.ticket .direction:last-child {
+    border: none;
+}

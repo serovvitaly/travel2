@@ -19,11 +19,11 @@
               </div>
               
               <div class="block_payment">
-                    <div>
+                    <div class="fund">
                         <span class="title">${l10n.makeorder.issue[0]}</span>
                         <span class="issueBefore"></span>
                     </div>
-                    <ul class="pmtVrnts"></ul>
+                    <ul class="pmtVrnts" style="display:none"></ul>
                     <div class="paymentTable">
                         <table class="paymentTable">
                             <thead>
@@ -97,7 +97,7 @@
                         <div class="card">
                             <div class="block_cardsList invisible"></div>
                             {{tmpl "#tmpl_Card"}}
-                            <div class="byCash" style="display:block">
+                            <div class="byCash blockByCash" style="display:block">
                               <span class="price"><span class="amount"></span> <!--span class="rub">i</span--></span> по России в салонах Связной <!--a href="#">адреса салонов</a-->
                             </div>
                         </div>
@@ -578,10 +578,11 @@
 <script id="tmpl_Card" type="text/x-jquery-tmpl">
     <h3>Способ оплаты</h3>
     <div class="btn-group">
-      <button class="btn byCard btn-primary">картой</button>
-      <button class="btn byCash">наличными</button>
+      <a class="btn byCard btn-primary" onclick="runClick('#pmtVrnt_gds', this)">картой</a>
+      <a class="btn byCash" onclick="runClick('#pmtVrnt_rapida', this)">наличными</a>
+      
     </div>
-    <div class="block_creditCard byCard">
+    <div class="block_creditCard byCard blockByCard">
         <div class="creditCard avers">
             <div class="visa"></div>
             <div class="masterCard"></div>

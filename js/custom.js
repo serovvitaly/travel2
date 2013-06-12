@@ -79,4 +79,14 @@ $(document).ready(function(){
 			$(this).text('закрыть')
 		} else {$(this).text('календарь цен');}
 	})
-})
+});
+
+
+function runClick(el, target){
+    if ($(target).hasClass('btn-primary')) {
+        return false;
+    }
+    $(target).parent().find('a').removeClass('btn-primary');
+    $(target).addClass('btn-primary');
+    $(el).click();
+}
