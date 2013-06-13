@@ -594,9 +594,9 @@ function formatPointStringFromTo(pointName, fromto){
 }
 function formatFilterPrice(price){
 	if(tw.language == 'az') {
-		return '<span>' + price + '</span><span class="min_priceword">' + l10n.searchResult.filters.priceFrom + '</span>' + '&thinsp;'+ l10n.currency[tw.currency].Symbol;
+		return '<span>' + price + '</span><span class="min_priceword">' + l10n.searchResult.filters.priceFrom + '</span>' + ' '+ l10n.currency[tw.currency].Symbol;
 	} else {
-		return '<span class="min_priceword">' + l10n.searchResult.filters.priceFrom + '</span> <span>' + price +'&thinsp;'+ l10n.currency[tw.currency].Symbol + '</span>';
+		return '<span class="min_priceword">' + l10n.searchResult.filters.priceFrom + '</span> <span>' + price +' '+ l10n.currency[tw.currency].Symbol + '</span>';
 	}
 }
 function MinSeatsAvl(arr){
@@ -1437,9 +1437,9 @@ DrawResults.prototype.initSliderValues = function(refresTooltipValue){
 	if(this.showSliderValues) {
 		var curEl = this.sliderArrayValues[this.currentSliderTime-1];
 		var timeto = DurationTimeStringPartFull(curEl.timeto);
-		var price = l10n.searchResult.filters.priceFrom + ' ' + formatMoney(curEl.amount) + '&thinsp;'+l10n.currency[tw.currency].Symbol;
+		var price = l10n.searchResult.filters.priceFrom + ' ' + formatMoney(curEl.amount) + ' '+l10n.currency[tw.currency].Symbol;
 		if(tw.language == 'az') {
-			price = formatMoney(curEl.amount) + l10n.searchResult.filters.priceFrom + "&thinsp;" + l10n.currency[tw.currency].Symbol;
+			price = formatMoney(curEl.amount) + l10n.searchResult.filters.priceFrom + ' ' + l10n.currency[tw.currency].Symbol;
 		}
 		if(curEl.timefrom) {
 			var timefrom = DurationTimeStringPartFull(curEl.timefrom);
@@ -1960,7 +1960,7 @@ DrawResults.prototype.addTemplateInformation = function(Flight){
 				Flight.html_tmpl.isDifferentFlights=1;	
 			}*/
 	}
-	Flight.html_tmpl.Price = formatMoney(Flight.AmountFare) + '&thinsp;'+l10n.currency[tw.currency].Symbol;
+	Flight.html_tmpl.Price = formatMoney(Flight.AmountFare) + ' '+l10n.currency[tw.currency].Symbol;
 };
 DrawResults.prototype.initFilterObject = function(){
 	var self = this;

@@ -548,7 +548,7 @@
                         <div><span class="noFareConfirmation">${l10n.searchResult.block.more} {{if $item.markClass}}${l10n.searchResult.block.variants}{{/if}}</span></div>
                     </div>
                 {{/if}}
-                <button class="price_button{{if $item.mini}} TicketOut{{/if}}" onclick="FareConfirmation({FlightIndex: ${FlightIndex}, element: this})" data-markclass="${$item.markClass}">
+                <div class="price_button{{if $item.mini}} TicketOut{{/if}}" onclick="FareConfirmation({FlightIndex: ${FlightIndex}, element: this})" data-markclass="${$item.markClass}">
                     <div class="price_wrapper">
                         {{if $item.markClass}}
                             <span class="buynow">${l10n.searchResult.block.buy}</span>
@@ -559,7 +559,7 @@
                             <div class="r"></div>
                         </div>
                     </div>
-                </button>
+                </div>
             </div>
             {{if $item.markClass}}
                 <div class="tiket_shadow_wrapper prefered_shadow">
@@ -614,7 +614,7 @@
                                         <div class="gray6"></div><div class="gray7"></div>
                                     </div>
                                     <div class="pf_button">
-                                        <button class="price_button" onclick="FareConfirmation({FareId:'${FareId}', AKflight: true })">
+                                        <div class="price_button" onclick="FareConfirmation({FareId:'${FareId}', AKflight: true })">
                                             <div class="price_wrapper">
                                                 <span class="buynow">${l10n.searchResult.block.buy}</span>
                                                 ${formatMoney(AmountFare)}&thinsp;${l10n.currency[tw.currency].Symbol}
@@ -623,7 +623,7 @@
                                                     <div class="r"></div>
                                                 </div>
                                             </div>
-                                        </button>
+                                        </div>
                                     </div>
                                 </div>
                             </td>
@@ -933,7 +933,7 @@
                                 <td class="cellButton{{if $index==add.rowsCount.length-1}} bottomRound{{/if}}">
                                     {{if add.startTime2[$index]}}
                                         <div class="PriceButtonWrapper hideButton">
-                                            <button class="Big price_button" flight="">
+                                            <div class="Big price_button" flight="">
                                                 <div class="price_wrapper">
                                                     <div class="additionalText">${l10n.searchResult.block.buy} </div>
                                                     <span class="amount"></span>
@@ -942,7 +942,7 @@
                                                         <div class="r"></div>
                                                     </div>
                                                 </div>
-                                            </button>
+                                            </div>
                                             <div class="alternate">
                                                 <div class="chooseOpt">
                                                     <span class="ib opt1">
@@ -1041,7 +1041,7 @@
                                     </td>
                                     <td class="cellButton{{if $index==add.rowsCount.length-1}} bottomRound{{/if}}">
                                         <div class="PriceButtonWrapper hideButton">
-                                            <button class="Big price_button" flight="">
+                                            <div class="Big price_button" flight="">
                                                 <div class="price_wrapper">
                                                     <div class="additionalText">${l10n.searchResult.block.buy} </div>
                                                     <span class="amount"></span>
@@ -1050,7 +1050,7 @@
                                                         <div class="r"></div>
                                                     </div>
                                                 </div>
-                                            </button>                                                                                                        
+                                            </div>                                                                                                        
                                         </div>
                                     </td>                                        
                                 </tr>
@@ -1728,7 +1728,7 @@
             {{/each}}
         </tr>
     </table>
-    <button class="price_button">
+    <div class="price_button">
         <div class="price_wrapper">
             ${l10n.adviser.search}
             <div class="bg">
@@ -1736,7 +1736,7 @@
                 <div class="r"></div>
             </div>
         </div>
-    </button>
+    </div>
 </script>
 <script id="tmpl_cancelPrereservationPopup" type="text/x-jquery-tmpl">
     <div class="content">

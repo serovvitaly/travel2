@@ -23,7 +23,8 @@ l10n.m = ['&thinsp;мин'];
 l10n.m_letter = ['&thinsp;м'];
 l10n.currency = {
 	RUB: {
-		Symbol: '<span class="rub">i</span>',
+        //Symbol: '<span class="rub">i</span>',
+		Symbol: 'р.',
 		Abbr: 'руб.',
 		Full: 'Российский рубль',
 		Nominative: 'рубль',
