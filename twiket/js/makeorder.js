@@ -1204,7 +1204,7 @@ Makeorder.prototype.setPaymentMethods = function(){
 			li.className = 'pmtVrnt_' + pmtVrnt.tag;
 		var label = document.createElement('label');
 			label.htmlFor = 'pmtVrnt_' + pmtVrnt.tag;
-			label.innerHTML = '<b>' + formatMoney(Math.ceil(oPmtVrnt.amount)) + ' ' + l10n.currency[tw.currency].Symbol + '</b> — ';
+			label.innerHTML = '<b>' + formatMoney(Math.ceil(oPmtVrnt.amount)) + ' ' + l10n.currency[tw.currency].Symbol + '</b> ';
 		if (l10n.payment.variants[pmtVrnt.tag]) {
 			label.innerHTML += l10n.payment.variants[pmtVrnt.tag];
 		} else {
@@ -1291,6 +1291,7 @@ Makeorder.prototype.setPaymentMethods = function(){
 			domClass: 'content1'
 		});
 	});
+    
 };
 Makeorder.prototype.drawAgentComment = function(){
 	this.AgentPult = $('.AgentPult', this.elForm)[0];

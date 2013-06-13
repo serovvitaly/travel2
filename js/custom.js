@@ -86,6 +86,9 @@ function runClick(el, target){
     if ($(target).hasClass('btn-primary')) {
         return false;
     }
+    
+    $('.blockByCash').html( $('label[for="pmtVrnt_rapida"]').html() );
+    
     $(target).parent().find('a').removeClass('btn-primary');
     $(target).addClass('btn-primary');
     $(el).click();

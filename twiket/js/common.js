@@ -58,7 +58,7 @@ function initDefaultCurrency(){
 	});
 }
 getCurrentPosition();
-function getCurrentPosition(){  return;
+function getCurrentPosition(){
 	tw.position = false;
 	if (navigator.geolocation && 1 == 2) {
 		navigator.geolocation.getCurrentPosition(function(position){
@@ -86,7 +86,7 @@ function getCurrentPosition(){  return;
 	function getByIp(){
 		$.ajax({
 			cache: false,
-			dataType: "json",
+			dataType: "jsonp",
 			url: "https://secure.onetwotrip.com/_api/ipinfo/get/",
             data: {
                 source:    twiket.setup.source,

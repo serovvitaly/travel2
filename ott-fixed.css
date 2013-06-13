@@ -1125,3 +1125,9 @@ ul#recentSearches .close:hover {
     margin: 8px 0;
 
 }
+
+
+.blockByCash b{
+    font-size: 24px;
+    font-weight: normal;
+}
