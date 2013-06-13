@@ -176,6 +176,7 @@ iframe.pm {
     padding: 0;
     height: 30px;
     margin-top: -6px;
+    cursor: pointer;
 }
 .ResultTickets .FlightTicket .pf_button .price_button .price_wrapper{
     font-family: 'AAvanteTitlerCpsUpCBold';
