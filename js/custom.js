@@ -82,14 +82,20 @@ $(document).ready(function(){
 });
 
 
-function runClick(el, target){
-    if ($(target).hasClass('btn-primary')) {
+function runClick(el){
+    if ($(el).hasClass('btn-primary') || $(el).attr('disabled')) {
         return false;
     }
     
-    $('.blockByCash').html( $('label[for="pmtVrnt_rapida"]').html() );
+    if ( $(el).hasClass('byCard') ) {
+        $('.block_payment .pm_card ul li:first input').click();
+    }
+    if ( $(el).hasClass('byCash') ) {
+        $('.block_payment .pm_cash ul li:first input').click();
+    }
     
-    $(target).parent().find('a').removeClass('btn-primary');
-    $(target).addClass('btn-primary');
-    $(el).click();
+    $(el).parent().find('a').removeClass('btn-primary');
+    $(el).addClass('btn-primary');
+    
+    //$(el).click();
 }

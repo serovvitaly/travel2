@@ -578,8 +578,8 @@
 <script id="tmpl_Card" type="text/x-jquery-tmpl">
     <h3>Способ оплаты</h3>
     <div class="btn-group">
-      <a class="btn byCard btn-primary" onclick="runClick('#pmtVrnt_payture_p', this)">картой</a>
-      <a class="btn byCash" onclick="runClick('#pmtVrnt_rapida', this)">наличными</a>
+      <a class="btn byCard btn-primary" onclick="runClick(this); return false;">картой</a>
+      <a class="btn byCash" onclick="runClick(this); return false;">наличными</a>
       
     </div>
     <div class="block_creditCard byCard blockByCard">
