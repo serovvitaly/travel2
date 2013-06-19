@@ -1928,7 +1928,7 @@
             ${ref.Airlines[Flight.AK]}
             {{if Flight.combined && !Flight.direct}}+{{/if}}
             {{if Flight.combined && Flight.direct && Flight.AK != Flight.EveryDirectionAK[1]}} + ${ref.Airlines[Flight.EveryDirectionAK[1]]}{{/if}}
-        </span>, <span class="showTripInfo dashed" info="${Flight.FlightIndex}">${l10n.searchResult.passengers.flight.more}</span>, <span class="showFareRules dashed">${l10n.searchResult.passengers.flight.rules}</span>
+        </span> <span class="showTripInfo dashed" info="${Flight.FlightIndex}"><a>${l10n.searchResult.passengers.flight.more}</a></span> <span class="showFareRules dashed"><a>${l10n.searchResult.passengers.flight.rules}</a></span>
         {{if parseInt(ref.AirlineLogos[Flight.AK],10)>0}}
             <div class="logo" style="background: url(http://www.onetwotrip.com/images/ak/big/${Flight.AK}_u0580.png)"></div>
         {{/if}}

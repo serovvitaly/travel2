@@ -236,7 +236,7 @@ Makeorder.prototype.getInfo = function(params){
 				}
                 
                 if ( $('.block_payment .pm_cash').length < 1) {
-                    $('.toBuy .card .byCash').attr('disabled', 'disabled');
+                    //$('.toBuy .card .byCash').attr('disabled', 'disabled');
                 } else {
                     $('.blockByCash').html( $('label[for="pmtVrnt_rapida"]').html() );
                 }

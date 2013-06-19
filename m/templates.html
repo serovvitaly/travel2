@@ -332,13 +332,7 @@
     <div class="ticket">
         {{if !$item.bottomAKpanel}}
             <div class="akPlate head {{if $data.AKform}}${$data.AKform}{{else}}${$data.directions[0].trips[0].airCmp}{{/if}}">
-                <span class="name">
-                    {{if $data.AKform}}
-                        ${ref.Airlines[$data.AKform]}
-                    {{else}}
-                        ${ref.Airlines[$data.directions[0].trips[0].airCmp]}
-                    {{/if}}
-                </span>
+                <span class="name">Оформление авиабилетов</span>
                 {{if parseInt(ref.AirlineLogos[$data.directions[0].trips[0].airCmp],10)>0}}
                     <div class="logo" style="background: url(http://www.onetwotrip.com/images/ak/big/${$data.directions[0].trips[0].airCmp}_u0864.png)"></div>
                 {{/if}}

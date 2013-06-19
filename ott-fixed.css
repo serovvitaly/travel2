@@ -1091,7 +1091,7 @@ ul#recentSearches .close:hover {
 }
 
 .textPage .paymentTable table.paymentTable td {
-    padding-top: 16px;
+    padding-top: 12px;
 }
 .textPage .paymentTable table.paymentTable td.fareRules {
     text-align: center;
@@ -1131,4 +1131,32 @@ ul#recentSearches .close:hover {
 .blockByCash b{
     font-size: 24px;
     font-weight: normal;
+}
+
+#popup_passengerSelect .innerContent .ageinfo {
+    font-size: 13px;
+}
+
+#popup_passengerSelect .ConfirmInfoFlight .akPlate .name {
+    letter-spacing: 1px;
+}
+
+.multivariants .simpleVariants .PriceButtonWrapper .price_button {
+    line-height: 41px;
+}
+
+.selectors .FlightPriceInformation {
+    width: 495px;
+}
+
+#popup_passengerSelect .ConfirmInfoFlight .akPlate {
+    background: #008cd4 url(/i/modalVarHeadBg.jpg) no-repeat scroll right top;
+}
+
+.textPage .paymentTable table.paymentTable td.tarif, .textPage .paymentTable table.paymentTable td.tax, .textPage .paymentTable table.paymentTable td.markup {
+    text-align: center;
+}
+
+.textPage .paymentTable {
+    padding: 10px 40px 16px;
 }

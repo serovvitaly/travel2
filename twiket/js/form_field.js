@@ -152,7 +152,7 @@ function Field(options) {
 	}
 	if (this.options.type == "expDate") {
 		if(this.value && isValidDate(this.value)){
-			this.options.value = this.value.format('http://www.onetwotrip.com/js/dd.mm.yyyy');
+			this.options.value = this.value.format('dd.mm.yyyy');
 		}
 		this.options.maxlength = this.options.maxlength || 50;
 	}
@@ -175,9 +175,9 @@ function Field(options) {
 			self.removeError();
 			if (self.options.type == "birthDate" || self.options.type == "expDate") {
 				if (self.options.type == "birthDate" && self.value) {
-					this.value = self.value.format('http://www.onetwotrip.com/js/dd.mm.yyyy');
+					this.value = self.value.format('dd.mm.yyyy');
 				}
-				$(this).mask('http://www.onetwotrip.com/js/99.99.9999');
+				$(this).mask('99.99.9999');
 			}
 			$(this).on('blur', onBlur);
 		}
@@ -470,7 +470,7 @@ Field.prototype.checkBirthDate = function() {
 	var self = this;
 	if (this.input.value !== "") {
 		if (this.value && (this.value.format("d mmm yyyy").toLowerCase() === this.input.value || this.value.format("d mmm yyyy") === this.input.value)) {
-			var oDate = this.parseDateString(this.value.format('http://www.onetwotrip.com/js/dd.mm.yyyy'));
+			var oDate = this.parseDateString(this.value.format('dd.mm.yyyy'));
 		} else {
 			var oDate = this.parseDateString(this.input.value);
 		}
