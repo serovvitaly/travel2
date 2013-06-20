@@ -596,7 +596,8 @@ Makeorder.prototype.setForm = function(arrTrips){
 	this.json.metaSearch = this.json.metaSearch||false;
 	this.cantUseBonuses = this.json.bonus.noBonus||false;
 	this.elForm = $.tmpl(tmpl_Form, this.json)[0];
-	this.elButton = $('input[type="submit"]' , this.elForm)[0];
+    //this.elButton = $('input[type="submit"]' , this.elForm)[0];
+    this.elButton = $('button.submit' , this.elForm)[0];
 	
 	$(this.elForm).submit(function(event){
 		event.preventDefault();
@@ -691,7 +692,7 @@ Makeorder.prototype.createPassengerForm = function(data){
     var hrow1 = table.tHead.insertRow(-1);
     
     var hrow2 = table.tHead.insertRow(-1);
-        hrow2.innerHTML = '<th></th><th>Дата рождения</th><th>Гражданство</th><th>Серия № документа</th><th>Действителен до</th>';
+        hrow2.innerHTML = '<th></th><th>Дата рождения</th><th>Гражданство</th><th>Серия № документа</th><th>Действителен до</th><th class="bonusCard">Бонусная карта <span class="bonusMiles"></span></th>';
     
 	var row = table.tBodies[0].insertRow(-1);
     row.insertCell(-1);
@@ -776,9 +777,9 @@ Makeorder.prototype.createPassengerForm = function(data){
 		disabled: !data.needPassExpDate
 	});
 	objFields.passExpDate.checkExpDate();
-	/*
+	
 	var tdBonusCard = row.insertCell(-1);
-		tdBonusCard.className = "bonusCard";
+	tdBonusCard.className = "bonusCard";
 	objFields.freqFlyerNumber = new Field({
 		appendTo: tdBonusCard,
 		name: "freqFlyerNumber" + this.passIndex,
@@ -788,7 +789,7 @@ Makeorder.prototype.createPassengerForm = function(data){
 		type: "bonusCard",
 		checkbox: true,
 		disabled: true
-	});*/
+	});
 	
 	this.passengersFields.push(objFields);
 	this.passIndex++;
@@ -1745,6 +1746,18 @@ Makeorder.prototype.drawAgreements = function(){
 	}
 };
 Makeorder.prototype.testCard = function(){
+    
+    var pmtVrntsHash = this.json.pmtVrntsHash;
+    if (this.useBonus) {
+        pmtVrntsHash = this.json.pmtVrntsBonusHash;
+    }
+    var amt;
+    if(tw.currency == 'RUB'){
+        amt = Math.ceil(pmtVrntsHash[this.pmtVrnt].amount);
+    } else {
+        amt = pmtVrntsHash[this.pmtVrnt].amount;
+    }
+    
 	if (this.json.pmtVrntsHash[this.pmtVrnt].tp == 'card') {
         $('.blockByCard', this.elForm).removeClass('invisible');
 		$('.blockByCash', this.elForm).addClass('invisible');
@@ -1762,12 +1775,14 @@ Makeorder.prototype.testCard = function(){
 			$('.card .masterCard', this.elForm).removeClass('invisible');
 			$('.card .visa', this.elForm).removeClass('invisible');
 		}
-		this.elButton.value = l10n.makeorder.buy;
+        //this.elButton.value = l10n.makeorder.buy;
+		$(this.elButton).html(l10n.makeorder.buy + '<br>'+amt+' <span class="rub">i</span>');
 	} else {
         $('.blockByCard', this.elForm).addClass('invisible');
 		$('.blockByCash', this.elForm).removeClass('invisible');
 		$('.block_cardsList', this.elForm).addClass('invisible');
-		this.elButton.value = l10n.makeorder.book;
+		//this.elButton.value = l10n.makeorder.book;
+        $(this.elButton).html(l10n.makeorder.book + '<br>'+amt+' <span class="rub">i</span>');
 	}
 };
 Makeorder.prototype.showAmex = function(){
@@ -2018,7 +2033,7 @@ Makeorder.prototype.getData = function(){
 				passenger.freqFlyerNumber = passengerFields.freqFlyerNumber.value;
 			}
 			if (this.alliance) {
-				passenger.freqFlyerAirline = this.freqFlyerAirlineField.value;
+				//passenger.freqFlyerAirline = this.freqFlyerAirlineField.value;
 			} else {
 				passenger.freqFlyerAirline = this.ak;
 			}
