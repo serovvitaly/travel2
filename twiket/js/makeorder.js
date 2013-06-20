@@ -1535,7 +1535,7 @@ Makeorder.prototype.drawPriceRow = function(reservation, age){
 		tdSignEquals.innerHTML = "=";
 		
 	var tdAmount = row.insertCell(-1);
-        tdAmount.className = "amount";
+        tdAmount.className = "amount2";
 		tdAmount.innerHTML = formatMoney(oPrices.amount);
 
 	//PriceDiffCheck

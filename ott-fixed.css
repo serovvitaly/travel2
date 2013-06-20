@@ -1233,3 +1233,8 @@ div.passengersTable td.passCountry .selectArea a.selectButton {height:26px;}
 .textPage div.passengersTable .bonusCard {
     display: none;
 }
+
+.textPage .paymentTable table.paymentTable td.amount2 {
+    font-size: 24px;
+    text-align: right;
+}
