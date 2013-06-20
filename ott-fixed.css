@@ -1064,7 +1064,7 @@ ul#recentSearches .close:hover {
 }
 
 .textPage .toBuy {
-    padding-top: 10px;
+    padding-top: 70px;
     padding-bottom: 20px;
 }
 
@@ -1077,7 +1077,7 @@ ul#recentSearches .close:hover {
     font-size: 14px;
     padding: 10px 40px;
     background: #fafafa;
-    border-bottom: 1px #808080 dotted;
+    border-bottom: none;
 }
 .fund .title, .fund .date{
     font-weight: bold;
@@ -1173,19 +1173,15 @@ ul#recentSearches .close:hover {
     background: url("/i/planeTo.png") no-repeat scroll 40px 10px #F2F2F2;
 }
 .ticket .direction.planeFrom {
-    background: url("/i/planeFrom.png") no-repeat scroll 40px 10px #F2F2F2;
-}
-.textPage .block_buyer .phone input {
-    background: url("/i/phone_flag_ru.jpg") no-repeat scroll 5px 50% #FFFFFF;
-    padding-left: 20px;
-    width: 135px;
+    background: url("/i/planeFrom.png") no-repeat scroll 40px 10px;
 }
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
     background-color: #FFFFFF;
     border: 1px solid #CCCCCC;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8) inset;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6) inset;
     transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
 }
+
 .textPage div.passengersTable td.passCountry .selectArea.smallSel a.selectButton {
     background: none repeat scroll 0 0 transparent;
     width: 110px;
@@ -1196,3 +1192,37 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 .textPage div.passengersTable td.passCountry .selectArea.smallSel {
     background: url("/i/select_button_sm2.jpg") no-repeat scroll right top transparent;
 }
+
+
+
+div.passengersTable td.passCountry .selectArea {
+    background: url("/i/select_button_sm2.jpg") no-repeat scroll right top transparent;
+}
+div.passengersTable td.passCountry span.left{
+ background: none;
+}
+div.passengersTable td.passCountry .selectArea a.selectButton {
+    background: none;
+    width: 110px;
+}
+#form_makeorder .passengers .phone span {
+  background: url("/i/phone_flag_ru.jpg") no-repeat scroll 0 40% #FFFFFF;
+  display: inline-block;
+  margin: 6px;
+  padding-left: 17px;
+  position: absolute;
+}
+
+
+.brdDot {
+    border-bottom: 0;
+}
+.dashedBorder {
+    height: 3px;
+    background: url(/i/brdDot.png) repeat-x left;
+}
+
+
+div.passengersTable td.passCountry span.left {height:26px;}
+div.passengersTable td.passCountry span.center{height:26px;}
+div.passengersTable td.passCountry .selectArea a.selectButton {height:26px;}
