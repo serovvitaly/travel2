@@ -434,8 +434,8 @@
                                                 <div class="pf_stops info_time infotitle" title="${html_tmpl.TransferTitle[$index]}">
                                                     {{if StopTimes[$index].length}}&harr;{{/if}}${html_tmpl.DurationStopTime[$index]}
                                                     {{if html_tmpl.TransferTitle[$index] != ''}}
-                                                        {{if html_tmpl.TransferNight[$index]}}&nbsp;<img src="images/eye.gif"/*tpa=http://www.onetwotrip.com/images/eye.gif*/ width="12" height="7" alt=""/>{{/if}}
-                                                        {{if html_tmpl.TransferAirport[$index]}}&nbsp;<img src="images/car.gif"/*tpa=http://www.onetwotrip.com/images/car.gif*/ width="14" height="10" alt=""/>{{/if}}
+                                                        {{if html_tmpl.TransferNight[$index]}}&nbsp;<!--img src="images/eye.gif" width="12" height="7" alt=""/-->{{/if}}
+                                                        {{if html_tmpl.TransferAirport[$index]}}&nbsp;<!--img src="images/car.gif" width="14" height="10" alt=""/-->{{/if}}
                                                     {{/if}}
                                                 </div>
                                             </td>
@@ -691,8 +691,8 @@
                                         ${ref.getCityName(html_tmpl.StopPoints[DirNum][0])}, ${html_tmpl.DurationStopTime[DirNum]}
                                     {{/if}}
                                     {{if html_tmpl.TransferTitle[DirNum] != ''}}
-                                        {{if html_tmpl.TransferNight[DirNum]}}&nbsp;<img src="images/eye.gif"/*tpa=http://www.onetwotrip.com/images/eye.gif*/ width="12" height="7" alt=""/>{{/if}}
-                                        {{if html_tmpl.TransferAirport[DirNum]}}&nbsp;<img src="images/car.gif"/*tpa=http://www.onetwotrip.com/images/car.gif*/ width="14" height="10" alt=""/>{{/if}}                                                
+                                        {{if html_tmpl.TransferNight[DirNum]}}&nbsp;<!--img src="images/eye.gif" width="12" height="7" alt=""/-->{{/if}}
+                                        {{if html_tmpl.TransferAirport[DirNum]}}&nbsp;<!--img src="images/car.gif" width="14" height="10" alt=""/-->{{/if}}                                                
                                     {{/if}}    
                                 </span>
                             {{else}}
@@ -789,8 +789,8 @@
                                                         {{else}}
                                                             ${add.startTime1[$index].flight.html_tmpl.DurationStopTime[0]}
                                                             {{if add.startTime1[$index].flight.html_tmpl.TransferTitle[0] != ''}}
-                                                                {{if add.startTime1[$index].flight.html_tmpl.TransferNight[0]}}&nbsp;<img src="images/eye.gif"/*tpa=http://www.onetwotrip.com/images/eye.gif*/ width="12" height="7" alt=""/>{{/if}}
-                                                                {{if add.startTime1[$index].flight.html_tmpl.TransferAirport[0]}}&nbsp;<img src="images/car.gif"/*tpa=http://www.onetwotrip.com/images/car.gif*/ width="14" height="10" alt=""/>{{/if}}
+                                                                {{if add.startTime1[$index].flight.html_tmpl.TransferNight[0]}}&nbsp;<!--img src="images/eye.gif" width="12" height="7" alt=""/-->{{/if}}
+                                                                {{if add.startTime1[$index].flight.html_tmpl.TransferAirport[0]}}&nbsp;<!--img src="images/car.gif" width="14" height="10" alt=""/-->{{/if}}
                                                             {{/if}}
                                                         {{/if}}
                                                     </span>
@@ -867,8 +867,8 @@
                                                             {{else}}
                                                                 ${add.startTime2[$index].flight.html_tmpl.DurationStopTime[1]}
                                                                 {{if add.startTime2[$index].flight.html_tmpl.TransferTitle[1] != ''}}
-                                                                    {{if add.startTime2[$index].flight.html_tmpl.TransferNight[1]}}&nbsp;<img src="images/eye.gif"/*tpa=http://www.onetwotrip.com/images/eye.gif*/ width="12" height="7" alt=""/>{{/if}}
-                                                                    {{if add.startTime2[$index].flight.html_tmpl.TransferAirport[1]}}&nbsp;<img src="images/car.gif"/*tpa=http://www.onetwotrip.com/images/car.gif*/ width="14" height="10" alt=""/>{{/if}}
+                                                                    {{if add.startTime2[$index].flight.html_tmpl.TransferNight[1]}}&nbsp;<!--img src="images/eye.gif" width="12" height="7" alt=""/-->{{/if}}
+                                                                    {{if add.startTime2[$index].flight.html_tmpl.TransferAirport[1]}}&nbsp;<!--img src="images/car.gif" width="14" height="10" alt=""/-->{{/if}}
                                                                 {{/if}}
                                                             {{/if}}
                                                         </span>
@@ -1011,8 +1011,8 @@
                                                                 ${ref.getCityName(add.startTime1[$index].flight.html_tmpl.StopPoints[0][0])}, ${add.startTime1[$index].flight.html_tmpl.DurationStopTime[0]}
                                                             {{/if}}
                                                             {{if add.startTime1[$index].flight.html_tmpl.TransferTitle[0] != ''}}
-                                                                {{if add.startTime1[$index].flight.html_tmpl.TransferNight[0]}}&nbsp;<img src="images/eye.gif"/*tpa=http://www.onetwotrip.com/images/eye.gif*/ width="12" height="7" alt=""/>{{/if}}
-                                                                {{if add.startTime1[$index].flight.html_tmpl.TransferAirport[0]}}&nbsp;<img src="images/car.gif"/*tpa=http://www.onetwotrip.com/images/car.gif*/ width="14" height="10" alt=""/>{{/if}}
+                                                                {{if add.startTime1[$index].flight.html_tmpl.TransferNight[0]}}&nbsp;<!--img src="images/eye.gif" width="12" height="7" alt=""/-->{{/if}}
+                                                                {{if add.startTime1[$index].flight.html_tmpl.TransferAirport[0]}}&nbsp;<!--img src="images/car.gif" width="14" height="10" alt=""/-->{{/if}}
                                                             {{/if}}                                                                        
                                                         </span>
                                                     {{else}}
@@ -1969,8 +1969,8 @@
                                             {{else}}
                                                 ${Flight.html_tmpl.DurationStopTime[0]}
                                                 {{if Flight.html_tmpl.TransferTitle[0] != ''}}
-                                                    {{if Flight.html_tmpl.TransferNight[0]}}&nbsp;<img src="images/eye.gif"/*tpa=http://www.onetwotrip.com/images/eye.gif*/ width="12" height="7" alt=""/>{{/if}}
-                                                    {{if Flight.html_tmpl.TransferAirport[0]}}&nbsp;<img src="images/car.gif"/*tpa=http://www.onetwotrip.com/images/car.gif*/ width="14" height="10" alt=""/>{{/if}}
+                                                    {{if Flight.html_tmpl.TransferNight[0]}}&nbsp;<!--img src="images/eye.gif" width="12" height="7" alt=""/-->{{/if}}
+                                                    {{if Flight.html_tmpl.TransferAirport[0]}}&nbsp;<!--img src="images/car.gif" width="14" height="10" alt=""/-->{{/if}}
                                                 {{/if}}
                                             {{/if}}
                                         </span>
@@ -2041,8 +2041,8 @@
                                             {{else}}
                                                 ${Flight.html_tmpl.DurationStopTime[1]}
                                                 {{if Flight.html_tmpl.TransferTitle[1] != ''}}
-                                                    {{if Flight.html_tmpl.TransferNight[1]}}&nbsp;<img src="images/eye.gif"/*tpa=http://www.onetwotrip.com/images/eye.gif*/ width="12" height="7" alt=""/>{{/if}}
-                                                    {{if Flight.html_tmpl.TransferAirport[1]}}&nbsp;<img src="images/car.gif"/*tpa=http://www.onetwotrip.com/images/car.gif*/ width="14" height="10" alt=""/>{{/if}}
+                                                    {{if Flight.html_tmpl.TransferNight[1]}}&nbsp;<!--img src="images/eye.gif" width="12" height="7" alt=""/-->{{/if}}
+                                                    {{if Flight.html_tmpl.TransferAirport[1]}}&nbsp;<!--img src="images/car.gif" width="14" height="10" alt=""/-->{{/if}}
                                                 {{/if}}
                                             {{/if}}
                                         </span>
@@ -2143,8 +2143,8 @@
                                                     ${ref.getCityName(Flight.html_tmpl.StopPoints[$index][0])}, ${Flight.html_tmpl.DurationStopTime[$index]}
                                                 {{/if}}
                                                 {{if Flight.html_tmpl.TransferTitle[$index] != ''}}
-                                                    {{if Flight.html_tmpl.TransferNight[$index]}}&nbsp;<img src="images/eye.gif"/*tpa=http://www.onetwotrip.com/images/eye.gif*/ width="12" height="7" alt=""/>{{/if}}
-                                                    {{if Flight.html_tmpl.TransferAirport[$index]}}&nbsp;<img src="images/car.gif"/*tpa=http://www.onetwotrip.com/images/car.gif*/ width="14" height="10" alt=""/>{{/if}}
+                                                    {{if Flight.html_tmpl.TransferNight[$index]}}&nbsp;<!--img src="images/eye.gif" width="12" height="7" alt=""/-->{{/if}}
+                                                    {{if Flight.html_tmpl.TransferAirport[$index]}}&nbsp;<!--img src="images/car.gif" width="14" height="10" alt=""/-->{{/if}}
                                                 {{/if}}                                                                        
                                             </span>
                                         {{else}}

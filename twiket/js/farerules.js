@@ -150,7 +150,7 @@ function getFareRules(options){
 	function MakeRequest(){
 		$.ajax({
 			type: "post",
-			dataType: "json",
+			dataType: "jsonp",
 			url: self.options.url,
 			data: self.options.data,
 			success: function(json){
