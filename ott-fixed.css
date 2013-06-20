@@ -1230,3 +1230,6 @@ div.passengersTable td.passCountry .selectArea a.selectButton {height:26px;}
 .textPage div.passengersTable td {
     vertical-align: top;
 }
+.textPage div.passengersTable .bonusCard {
+    display: none;
+}
