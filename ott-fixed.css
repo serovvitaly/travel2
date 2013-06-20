@@ -1024,11 +1024,11 @@ ul#recentSearches .close:hover {
 
 #form_makeorder .passengers .phone span{
     position: absolute;
-    margin: 6px;
+    margin: 6px 0 0 22px;
 }
 #form_makeorder .passengers .phone input{
-    padding-left: 16px;
-    width: 140px;
+    padding-left: 30px;
+    width: 126px;
 }
 .textPage div.passengersTable .passCountry span.dashed{
     display: none;
