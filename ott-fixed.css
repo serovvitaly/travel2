@@ -1226,3 +1226,7 @@ div.passengersTable td.passCountry .selectArea a.selectButton {
 div.passengersTable td.passCountry span.left {height:26px;}
 div.passengersTable td.passCountry span.center{height:26px;}
 div.passengersTable td.passCountry .selectArea a.selectButton {height:26px;}
+
+.textPage div.passengersTable td {
+    vertical-align: top;
+}
