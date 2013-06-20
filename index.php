@@ -428,7 +428,7 @@
 
 
       <div class="span12 selectors">
-        <div class="btn-row">
+        <div class="btn-row" id="filter-buttons" style="display: none;">
           <div class="btn-toolbar">
             
             <div class="FlightsDifficulties" style="display: inline-block;">
@@ -461,8 +461,9 @@
                 <button class="d_direction btn" data-cur="USD">USD</button>
                 <button class="d_direction btn" data-cur="EUR">EUR</button>
               </div>
+              <label class="last">валюта:</label>
             </div>
-            <label class="last">валюта:</label>
+            
           </div>  <!-- /btn-toolbar -->
         </div>
       </div>  <!-- /selectors -->

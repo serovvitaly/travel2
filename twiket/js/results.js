@@ -53,7 +53,7 @@ $(function(){
 			date: new Date()
 		});*/
 		RequestList[0].json = tw.testResult;
-		DrawFares(RequestList[0]);	
+		DrawFares(RequestList[0]);
 	}	
 	//при клике-скроле убираем балун с инфой звездатости по перелету
 		$('div:not([class*="stars_baloon"])').click(function(){
@@ -685,6 +685,8 @@ function DrawResults(obj){
 	this.initDefaultFlights();
 	this.DefaultParamsForTicket();
 	this.initStructure();
+    
+    $('#filter-buttons').fadeIn();
 }
 DrawResults.prototype.initDefaultStates = function(){
 	var self = this;
@@ -2663,7 +2665,8 @@ DrawResults.prototype.GetFlightsToShow = function(arr){
 	}
 
 	if(this.DirectFlightsCount===0) {
-		$('.d_last',this.FlightsDifficulties).attr('disabled', 'disabled').addClass('disabled').removeClass('selected');
+        //$('.d_last',this.FlightsDifficulties).attr('disabled', 'disabled').addClass('disabled').removeClass('selected');
+		$('.d_last',this.FlightsDifficulties).addClass('disabled').removeClass('selected');
 		$('.d_first',this.FlightsDifficulties).addClass('selected');
 		//fadeInBlock(this.FlightSliderBlock);
 		$(this.FlightsDifficulties).removeClass('invisible');

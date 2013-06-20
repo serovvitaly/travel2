@@ -12,6 +12,10 @@
 #layout_body.spreader{
     margin-left: 0;
     width: auto;
+    position: initial;
+}
+div#layout_body {
+    position: initial;
 }
 
 
@@ -786,6 +790,7 @@ a.labelDynamics {
 
 .selectors label {
     margin-right: 2px;
+    float: left;
 }
 
 .ticket .akPlate {
@@ -831,7 +836,8 @@ a.labelDynamics {
 }
 
 .dynamics .dynTo .navbar.dynDateGraph li div.price, .dynamics .dynFrom .navbar.dynDateGraph li div.price {
-    font-size: 22px;
+    font-size: 20px;
+    font-family: arial,sans-serif;
 }
 
 
@@ -1159,4 +1165,34 @@ ul#recentSearches .close:hover {
 
 .textPage .paymentTable {
     padding: 10px 40px 16px;
+}
+
+
+
+.ticket .direction.planeTo {
+    background: url("/i/planeTo.png") no-repeat scroll 40px 10px #F2F2F2;
+}
+.ticket .direction.planeFrom {
+    background: url("/i/planeFrom.png") no-repeat scroll 40px 10px #F2F2F2;
+}
+.textPage .block_buyer .phone input {
+    background: url("/i/phone_flag_ru.jpg") no-repeat scroll 5px 50% #FFFFFF;
+    padding-left: 20px;
+    width: 135px;
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+.textPage div.passengersTable td.passCountry .selectArea.smallSel a.selectButton {
+    background: none repeat scroll 0 0 transparent;
+    width: 110px;
+}
+.textPage div.passengersTable td.passCountry .selectArea.smallSel span.left {
+    background: none repeat scroll 0 0 transparent;
+}
+.textPage div.passengersTable td.passCountry .selectArea.smallSel {
+    background: url("/i/select_button_sm2.jpg") no-repeat scroll right top transparent;
 }
