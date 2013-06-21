@@ -118,7 +118,7 @@ SocialAuth.prototype.initVisitor = function(isFromSocialRedirect){
 		type: "get",
 		cache: false,
 		url: "https://secure.onetwotrip.com/_api/visitormanager/get/",
-		dataType: (testLocalHost() ? "jsonp" : "json"),
+		dataType: (testLocalHost() ? "jsonp" : "jsonp"),
 		data: tw.params,
 		timeout: 10000,
 		success: function(json){
