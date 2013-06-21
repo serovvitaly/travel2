@@ -1231,3 +1231,21 @@ function ShadingOut(id){
     id = 'shading-' + id;
     $('#' + id).remove();
 }
+
+
+function setMarkup(amount){
+    var buttonText = $('#form_makeorder button.submit').html();
+    var pattern = /(.+)<br\>([0-9]+) (.*)/;
+    var res = pattern.exec(buttonText);
+    
+    switch( $('#subscriptions input:checked').attr('id') ) {
+        case 'airlinechangesbysms_95':
+            amount += 95;
+            break;
+        case 'notify_default':
+            //
+            break;
+    }
+    
+    $('#form_makeorder button.submit').html(res[1]+'<br>'+amount+' '+res[3]);
+}

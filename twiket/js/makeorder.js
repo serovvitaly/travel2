@@ -222,6 +222,19 @@ Makeorder.prototype.getInfo = function(params){
 					}
                     
                     $('#subscriptions input:radio').customRadio();
+                    $('#subscriptions input:radio, #subscriptions .radioArea, #subscriptions .radioAreaChecked').click(function(){
+                        var pmtVrntsHash = self.json.pmtVrntsHash;
+                        if (self.useBonus) {
+                            pmtVrntsHash = self.json.pmtVrntsBonusHash;
+                        }
+                        var amt;
+                        if(tw.currency == 'RUB'){
+                            amt = Math.ceil(pmtVrntsHash[self.pmtVrnt].amount);
+                        } else {
+                            amt = pmtVrntsHash[self.pmtVrnt].amount;
+                        }
+                        setMarkup(amt);
+                    });
                     $('input:checkbox').customCheckbox();
                     $('#layout_passengers select').customSelect();
                     
@@ -978,6 +991,20 @@ Makeorder.prototype.drawSubscriptions = function(){
 	this.recountServices();
     
     $('#subscriptions input:radio').customRadio();
+    $('#subscriptions input:radio, #subscriptions .radioArea, #subscriptions .radioAreaChecked').click(function(){
+        var pmtVrntsHash = self.json.pmtVrntsHash;
+        if (self.useBonus) {
+            pmtVrntsHash = self.json.pmtVrntsBonusHash;
+        }
+        var amt;
+        if(tw.currency == 'RUB'){
+            amt = Math.ceil(pmtVrntsHash[self.pmtVrnt].amount);
+        } else {
+            amt = pmtVrntsHash[self.pmtVrnt].amount;
+        }
+        setMarkup(amt);
+    });
+    
 };
 Makeorder.prototype.serviceCheckCitizenship = function(){
 	var passengerCount = 0;

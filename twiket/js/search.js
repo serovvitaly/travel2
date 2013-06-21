@@ -1365,6 +1365,8 @@ Avia.prototype.getStatisticQuery = function(data, direct, flightType){
                                 
                             }).click(function(){
                                 
+                                $('ul[id*="'+direct+'"] div.price').remove();
+                                
                                 $(this).prepend('<div class="price">' + $(this).attr('data-amount') + ' руб.</div>');
                                 
                                 var qdate_attr = $(this).attr('data-date');

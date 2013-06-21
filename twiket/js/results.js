@@ -2988,6 +2988,21 @@ DrawResults.prototype.DrawSelectedAK = function(){
             
             
 			fadeInBlock(self.AKFlightInformation,function(){
+                
+                
+                var onTop  = 100, // минимальный отступ сверху
+                    nowTop = 340, // сейчас находится от верхней границы
+                    selfHeight = $(self.AKFlightInformation).height(),
+                    winHeight  = $(window).height();
+                
+                if (selfHeight < winHeight + onTop) {
+                    var marginTop = winHeight/2 - selfHeight/2;
+                    if (marginTop < onTop) marginTop = onTop;
+                    $(self.AKFlightInformation).css('margin-top', '-'+(nowTop-marginTop)+'px');
+                } else {
+                    $(self.AKFlightInformation).css('margin-top', '-'+(nowTop-onTop)+'px');
+                }
+                
 				self.setSimilarPriceButtonWidth();
 				if(self.ClickedAKBlock){
 					$(self.ClickedAKBlock).unbind('click');

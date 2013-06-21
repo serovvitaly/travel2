@@ -777,7 +777,7 @@ PassengerSelect.prototype.show = function(data){
 	try {yaCounter18086416.reachGoal('PriceButton');} catch (e) {}
 
 	//for direction info
-		this.setFlightInformationData();
+	this.setFlightInformationData();
 	this.$priceInf[0].innerHTML = " ";
 	this.$priceInf[1].innerHTML = " ";
 	this.$priceInf[2].innerHTML = " ";
@@ -799,7 +799,20 @@ PassengerSelect.prototype.show = function(data){
 	}
 	//fadeOutBlock($('.FlightPriceInformation'));
 	fadeOutBlock(resultShowBlock, function(){
-		fadeInBlock(self.elForm);
+		fadeInBlock(self.elForm, function(){
+            var onTop  = 100, // минимальный отступ сверху
+                nowTop = 340, // сейчас находится от верхней границы
+                selfHeight = $(self.elForm).height(),
+                winHeight  = $(window).height();
+            
+            if (selfHeight < winHeight + onTop) {
+                var marginTop = winHeight/2 - selfHeight/2;
+                if (marginTop < onTop) marginTop = onTop;
+                $(self.elForm).css('margin-top', '-'+(nowTop-marginTop)+'px');
+            } else {
+                $(self.elForm).css('margin-top', '-'+(nowTop-onTop)+'px');
+            }
+        });
 	});
 	/*objSearchForm.hide(function(){
 		self.setPageTitle()
