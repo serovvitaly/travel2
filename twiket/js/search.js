@@ -1237,6 +1237,9 @@ Avia.prototype.getStatisticQuery = function(data, direct, flightType){
     
     dateTo.setTime(dateFrom.getTime() + 14 * 3600000 * 24);
     
+    $('.inst-' + direct + ' .dynMonth li').removeClass('active');
+    $('.inst-' + direct + ' .dynMonth li[data-month="'+ (dateFrom.getMonth()*1+1) +'"]').addClass('active');
+    
     $.ajax({
         url: twiket.setup.urls.statistics,
         dataType: "jsonp",
@@ -1355,8 +1358,7 @@ Avia.prototype.getStatisticQuery = function(data, direct, flightType){
                                 
                                 var curDay = tDate.getDay();
                                 $('<li data-date="'+item.date+'"'+(curDay==0 || curDay==6 ? ' class="active"' : '')+'><span>'+daysCollection[curDay]+'</span></li>').appendTo($('#dynDay-' + direct));
-                            });
-                            
+                            }); 
                             
                             $('#dynDateGraph-' + direct + ' li').hover(function(){                                
                                 $('.dynDateGraph li:not(.selected)').find('div.price').remove();

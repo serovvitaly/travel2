@@ -336,22 +336,22 @@
               </div>
             </div>
             <div class="row">
-              <span class="dynTo span6">
+              <span class="dynTo span6 inst-there">
                 <h2>Исходящий рейс <small>Динамика стоимости</small></h2>
                 <div class="dynMonth navbar clearfix">
                   <ul class="nav">
-                    <li><a href="javascript:;">янв</a></li>
-                    <li><a href="javascript:;">фев</a></li>
-                    <li><a href="javascript:;">мар</a></li>
-                    <li class="active"><a href="javascript:;">апр</a></li>
-                    <li><a href="javascript:;">май</a></li>
-                    <li><a href="javascript:;">июн</a></li>
-                    <li><a href="javascript:;">июл</a></li>
-                    <li><a href="javascript:;">авг</a></li>
-                    <li><a href="javascript:;">сен</a></li>
-                    <li><a href="javascript:;">окт</a></li>
-                    <li><a href="javascript:;">ноя</a></li>
-                    <li><a href="javascript:;">дек</a></li>
+                    <li data-month="1"><a href="javascript:;">янв</a></li>
+                    <li data-month="2"><a href="javascript:;">фев</a></li>
+                    <li data-month="3"><a href="javascript:;">мар</a></li>
+                    <li data-month="4"><a href="javascript:;">апр</a></li>
+                    <li data-month="5"><a href="javascript:;">май</a></li>
+                    <li data-month="6"><a href="javascript:;">июн</a></li>
+                    <li data-month="7"><a href="javascript:;">июл</a></li>
+                    <li data-month="8"><a href="javascript:;">авг</a></li>
+                    <li data-month="9"><a href="javascript:;">сен</a></li>
+                    <li data-month="10"><a href="javascript:;">окт</a></li>
+                    <li data-month="11"><a href="javascript:;">ноя</a></li>
+                    <li data-month="12"><a href="javascript:;">дек</a></li>
                   </ul>
                 </div>  <!-- /dynMonth -->
 
@@ -374,22 +374,22 @@
                 </div>  <!-- /dynDate -->
               </span>  <!-- /dynTo -->
 
-              <span class="dynFrom span6">
+              <span class="dynFrom span6 inst-back">
                 <h2>Обратный рейс <small>Динамика стоимости</small></h2>
                 <div class="dynMonth navbar clearfix">
                   <ul class="nav">
-                    <li><a href="javascript:;">янв</a></li>
-                    <li><a href="javascript:;">фев</a></li>
-                    <li><a href="javascript:;">мар</a></li>
-                    <li class="active"><a href="javascript:;">апр</a></li>
-                    <li><a href="javascript:;">май</a></li>
-                    <li><a href="javascript:;">июн</a></li>
-                    <li><a href="javascript:;">июл</a></li>
-                    <li><a href="javascript:;">авг</a></li>
-                    <li><a href="javascript:;">сен</a></li>
-                    <li><a href="javascript:;">окт</a></li>
-                    <li><a href="javascript:;">ноя</a></li>
-                    <li><a href="javascript:;">дек</a></li>
+                    <li data-month="1"><a href="javascript:;">янв</a></li>
+                    <li data-month="2"><a href="javascript:;">фев</a></li>
+                    <li data-month="3"><a href="javascript:;">мар</a></li>
+                    <li data-month="4"><a href="javascript:;">апр</a></li>
+                    <li data-month="5"><a href="javascript:;">май</a></li>
+                    <li data-month="6"><a href="javascript:;">июн</a></li>
+                    <li data-month="7"><a href="javascript:;">июл</a></li>
+                    <li data-month="8"><a href="javascript:;">авг</a></li>
+                    <li data-month="9"><a href="javascript:;">сен</a></li>
+                    <li data-month="10"><a href="javascript:;">окт</a></li>
+                    <li data-month="11"><a href="javascript:;">ноя</a></li>
+                    <li data-month="12"><a href="javascript:;">дек</a></li>
                   </ul>
                 </div>  <!-- /dynMonth -->
 
